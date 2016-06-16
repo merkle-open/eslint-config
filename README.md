@@ -10,9 +10,11 @@ $ npm install --save-dev eslint @namics/eslint-config
 
 ## Usage
 
-- `namics` - ES6 + browser
-- `namics/configurations/es5-browser` - ES5 + browser
-- `namics/configurations/es6-react` - ES6 + react
+- `defaults` - ES6 + browser
+- `defaults/configurations/es6-react` - ES6 + react
+- `defaults/configurations/es6-node` - ES6 + node
+- `defaults/configurations/es5-browser` - ES5 + browser
+- `defaults/configurations/es5-node` - ES5 + node
 
 
 ## Thanks to

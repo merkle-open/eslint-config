@@ -15,7 +15,7 @@
 	"bugs": {
 		"url": "https://github.com/namics/eslint-config-namics/issues"
 	},
-	"main": "configurations/es6.js",
+	"main": "configurations/es6-browser.js",
 	"keywords": [
 		"code checker",
 		"code linter",
