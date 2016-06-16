@@ -1,0 +1,39 @@
+{
+	"name": "@namics/eslint-config",
+	"version": "0.1.0",
+	"description": "Default configurations for eslint",
+	"author": "Simon Mollweide <simon.mollweide@namics.com>",
+	"license": "MIT",
+	"private": false,
+	"engines":{
+		"node": ">= 0.12.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/namics/eslint-config-namics.git"
+	},
+	"bugs": {
+		"url": "https://github.com/namics/eslint-config-namics/issues"
+	},
+	"main": "configurations/es6.js",
+	"keywords": [
+		"code checker",
+		"code linter",
+		"code standards",
+		"code style",
+		"eslint-config",
+		"eslint",
+		"eslintconfig",
+		"lint",
+		"es2015",
+		"react",
+		"jsx"
+	],
+	"devDependencies": {
+		"eslint": "^2.12.0",
+		"eslint-find-rules": "^1.10.0",
+		"eslint-plugin-import": "^1.8.1",
+		"eslint-plugin-jsx-a11y": "^1.5.0",
+		"eslint-plugin-react": "^5.1.1"
+	}
+}
