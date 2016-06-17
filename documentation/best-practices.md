@@ -222,7 +222,15 @@ function doSomething(condition) {
 
 ```javascript
 
+// Bad
+/*
+if (foo) foo++;
+*/
 
+// Good
+if (foo) {
+	foo++;
+}
 
 ```
 <br />
