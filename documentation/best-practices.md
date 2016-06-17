@@ -287,7 +287,13 @@ switch (foo) {
 
 ```javascript
 
+// Bad
+var b = universe
+	.galaxy;
 
+// Good
+var a = universe.
+	galaxy;
 
 ```
 <br />
@@ -303,7 +309,14 @@ switch (foo) {
 
 ```javascript
 
+// Bad
+/*
+var x = foo['bar'];
+*/
 
+// Good
+var x = foo.bar;
+var x = foo[bar];
 
 ```
 <br />
