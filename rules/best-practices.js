@@ -4,7 +4,6 @@ module.exports = {
 		'accessor-pairs': 0,
 
 		// enforces return statements in callbacks of array's methods
-		// http://eslint.org/docs/rules/array-callback-return
 		'array-callback-return': 2,
 
 		// treat var statements as if they were block scoped
