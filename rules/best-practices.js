@@ -10,7 +10,7 @@ module.exports = {
 		'block-scoped-var': 2,
 
 		// specify the maximum cyclomatic complexity allowed in a program
-		complexity: [0, 11],
+		complexity: [1, 11],
 
 		// require return statements to either always or never specify values
 		'consistent-return': 2,
