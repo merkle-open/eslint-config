@@ -82,6 +82,31 @@ var bar = [1, 2].filter(function (x) {
 
 ```javascript
 
+// Bad
+/*
+example = {
+	doIf: function () {
+		if (1 === 2) {
+			var build = true;
+		}
+
+		document.window.append(build.toString(), null);
+	}
+};
+*/
+
+// Good
+example = {
+	doIf: function () {
+		var build = true;
+
+		if (1 === 2) {
+			build = false;
+		}
+
+		document.window.append(build.toString(), null);
+	}
+};
 
 
 ```
