@@ -46,6 +46,27 @@ example = {
 ```javascript
 
 
+/*
+// Bad
+var bar = [1, 2].filter(function (x) {
+	if (x) {
+		return;
+	}
+
+	document.window.append('', null);
+});
+*/
+
+// Good
+var bar = [1, 2].filter(function (x) {
+	if (x) {
+		return false;
+	}
+
+	document.window.append('', null);
+	return true;
+});
+
 
 ```
 <br />
