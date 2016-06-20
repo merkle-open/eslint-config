@@ -4,44 +4,109 @@ var utils = require('./utils'),
 	fileName,
 	data;
 
-// get all files from fourth directory level in "./test"
-utils.readDir('./test', ig).map(function (fileObj1) {
-	if (!utils.existDir(fileObj1.path)) {
+/**
+ * @method getESLintUrl
+ * @param {String} name fileName
+ * @returns {String} eslint documentation url
+ */
+function getESLintUrl(name) {
+	return 'http://eslint.org/docs/rules/' + name;
+}
+
+/**
+ * @method getStatusIcon
+ * @param {String} fileData string read from file
+ * @returns {String} statusIcon (unicode character)
+ */
+function getStatusIcon(fileData) {
+	var exp = /STATUS = (.*)/.exec(fileData);
+
+	if (exp === null || exp.length < 1) {
+		return '';
+	}
+
+	switch (parseInt(exp[1].trim(), 10)) {
+		case 0: return '&#10006;';
+		case 1:
+		case 2: return '&#10003;';
+		default: return '';
+	}
+}
+
+/**
+ * @method getStatus
+ * @param {String} fileData string read from file
+ * @returns {String} status
+ */
+function getStatus(fileData) {
+	var exp = /STATUS = (.*)/.exec(fileData);
+
+	if (exp === null || exp.length < 1) {
+		return '';
+	}
+
+	switch (parseInt(exp[1].trim(), 10)) {
+		case 0: return 'Disabled';
+		case 1: return 'Enabled (warning)';
+		case 2: return 'Enabled (error)';
+		default: return '';
+	}
+}
+
+/**
+ * @method getDescription
+ * @param {String} fileData string read from file
+ * @returns {String} description
+ */
+function getDescription(fileData) {
+	var exp = /DESCRIPTION = (.*)/.exec(fileData);
+
+	if (exp === null || exp.length < 1) {
+		return '';
+	}
+
+	return exp[1].trim();
+}
+
+/**
+ * @method getTitle
+ * @param {String} name fileName
+ * @returns {String} title from fileName
+ */
+function getTitle(name) {
+	return utils.capitalize(name.replace('-', ' '));
+}
+
+/**
+ * @method addSnippet
+ * @param {Array} arr output readme lines array
+ * @param {String} fileData string read from file
+ * @returns {void}
+ */
+function addSnippet(arr, fileData) {
+	var exp = /<!START([^END!>]*)/.exec(fileData);
+
+	if (exp === null || exp.length < 1) {
 		return;
 	}
-	utils.readDir(fileObj1.path, ig).map(function (fileObj2) {
-		if (!utils.existDir(fileObj2.path)) {
-			return;
-		}
-		utils.readDir(fileObj2.path, ig).map(function (fileObj3) {
-			if (!utils.existDir(fileObj3.path)) {
-				return;
-			}
 
-			fileName = fileObj3.file;
-			data = [''];
+	arr.push('```javascript');
+	arr.push(exp[1].replace(/\/\/ $/, ''));
+	arr.push('```');
+}
 
-			data.push('## ' + getTitle(fileName));
-			data.push('');
-			data.push('');
-
-			utils.readDir(fileObj3.path, ig).map(function (fileObj4) {
-				if (!utils.existFile(fileObj4.path)) {
-					return;
-				}
-				addRule(data, fileObj4.file, fileObj4.path);
-			});
-
-			writeDocumentationFile(fileName, data);
-		});
-	});
-});
-
-function addRule (arr, name, path) {
+/**
+ * @method getESLintUrl
+ * @param {Array} arr output readme lines array
+ * @param {String} name fileName
+ * @param {String} path filepath
+ * @returns {void}
+ */
+function addRule(arr, name, path) {
 
 	var fileData = utils.readFile(path),
 		nameCleaned = name.replace(/\.js$/, ''),
-		title = utils.capitalize(nameCleaned.replace('-', ' '));
+		title = utils.capitalize(nameCleaned.replace(/-/g, ' '));
 
 	arr.push('### [' + title + '](' + getESLintUrl(nameCleaned) + ')');
 	arr.push('');
@@ -57,66 +122,49 @@ function addRule (arr, name, path) {
 	arr.push('');
 }
 
-function getESLintUrl (name) {
-	return 'http://eslint.org/docs/rules/' + name;
+/**
+ * @method writeDocumentationFile
+ * @param {String} name fileName
+ * @param {Array} dataArr array with lines of readme
+ * @returns {void}
+ */
+function writeDocumentationFile(name, dataArr) {
+	utils.writeFile('./documentation/' + name + '.md', dataArr.join('\n'));
 }
 
-function addSnippet (arr, fileData) {
-	var exp = /<!START([^END!>]*)/.exec(fileData);
-
-	if (exp === null || exp.length < 1) {
-		return '';
+// get all files from fourth directory level in "./test"
+utils.readDir('./test', ig).map(function (fileObj1) {
+	if (!utils.existDir(fileObj1.path)) {
+		return true;
 	}
+	utils.readDir(fileObj1.path, ig).map(function (fileObj2) {
+		if (!utils.existDir(fileObj2.path)) {
+			return true;
+		}
+		utils.readDir(fileObj2.path, ig).map(function (fileObj3) {
+			if (!utils.existDir(fileObj3.path)) {
+				return true;
+			}
 
-	arr.push('```javascript');
-	arr.push(exp[1].replace(/\/\/ $/, ''));
-	arr.push('```');
-}
+			fileName = fileObj3.file;
+			data = [''];
 
-function getStatusIcon (fileData) {
-	var exp = /STATUS = (.*)/.exec(fileData);
+			data.push('## ' + getTitle(fileName));
+			data.push('');
+			data.push('');
 
-	if (exp === null || exp.length < 1) {
-		return '';
-	}
+			utils.readDir(fileObj3.path, ig).map(function (fileObj4) {
+				if (!utils.existFile(fileObj4.path)) {
+					return true;
+				}
+				addRule(data, fileObj4.file, fileObj4.path);
+				return true;
+			});
 
-	switch (parseInt(exp[1].trim(), 10)) {
-		case 0: return '&#10006;';
-		case 1:
-		case 2: return '&#10003;';
-		default: return '';
-	}
-}
-
-function getStatus (fileData) {
-	var exp = /STATUS = (.*)/.exec(fileData);
-
-	if (exp === null || exp.length < 1) {
-		return '';
-	}
-
-	switch (parseInt(exp[1].trim(), 10)) {
-		case 0: return 'Disabled';
-		case 1: return 'Enabled (warning)';
-		case 2: return 'Enabled (error)';
-		default: return '';
-	}
-}
-
-function getDescription (fileData) {
-	var exp = /DESCRIPTION = (.*)/.exec(fileData);
-
-	if (exp === null || exp.length < 1) {
-		return '';
-	}
-
-	return exp[1].trim();
-}
-
-function getTitle (name) {
-	return utils.capitalize(name.replace('-', ' '));
-}
-
-function writeDocumentationFile (name, data) {
-	utils.writeFile('./documentation/' + name + '.md', data.join('\n'));
-}
+			writeDocumentationFile(fileName, data);
+			return true;
+		});
+		return true;
+	});
+	return true;
+});
