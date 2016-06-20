@@ -36,7 +36,7 @@ example = {
 
 
 
-### [Array callback-return](http://eslint.org/docs/rules/array-callback-return)
+### [Array callback return](http://eslint.org/docs/rules/array-callback-return)
 
 > enforces return statements in callbacks of array's methods
 
@@ -73,7 +73,7 @@ var bar = [1, 2].filter(function (x) {
 
 
 
-### [Block scoped-var](http://eslint.org/docs/rules/block-scoped-var)
+### [Block scoped var](http://eslint.org/docs/rules/block-scoped-var)
 
 > treat var statements as if they were block scoped
 
@@ -332,14 +332,23 @@ var x = foo[bar];
 
 ```javascript
 
+// Bad
+/*
+if (x == 42) {
 
+}
+*/
+// Good
+if (x === 42) {
+
+}
 
 ```
 <br />
 
 
 
-### [Guard for-in](http://eslint.org/docs/rules/guard-for-in)
+### [Guard for in](http://eslint.org/docs/rules/guard-for-in)
 
 > make sure for-in loops have an if statement
 
@@ -387,7 +396,7 @@ var x = foo[bar];
 
 
 
-### [No case-declarations](http://eslint.org/docs/rules/no-case-declarations)
+### [No case declarations](http://eslint.org/docs/rules/no-case-declarations)
 
 > disallow lexical declarations in case/default clauses
 
@@ -403,7 +412,7 @@ var x = foo[bar];
 
 
 
-### [No div-regex](http://eslint.org/docs/rules/no-div-regex)
+### [No div regex](http://eslint.org/docs/rules/no-div-regex)
 
 > disallow division operators explicitly at beginning of regular expression
 
@@ -419,7 +428,7 @@ var x = foo[bar];
 
 
 
-### [No else-return](http://eslint.org/docs/rules/no-else-return)
+### [No else return](http://eslint.org/docs/rules/no-else-return)
 
 > disallow else after a return in an if
 
@@ -435,7 +444,7 @@ var x = foo[bar];
 
 
 
-### [No empty-function](http://eslint.org/docs/rules/no-empty-function)
+### [No empty function](http://eslint.org/docs/rules/no-empty-function)
 
 > disallow empty functions, except for standalone funcs/arrows
 
@@ -451,7 +460,7 @@ var x = foo[bar];
 
 
 
-### [No empty-pattern](http://eslint.org/docs/rules/no-empty-pattern)
+### [No empty pattern](http://eslint.org/docs/rules/no-empty-pattern)
 
 > disallow empty destructuring patterns
 
@@ -467,7 +476,7 @@ var x = foo[bar];
 
 
 
-### [No eq-null](http://eslint.org/docs/rules/no-eq-null)
+### [No eq null](http://eslint.org/docs/rules/no-eq-null)
 
 > disallow comparisons to null without a type-checking operator
 
@@ -499,7 +508,7 @@ var x = foo[bar];
 
 
 
-### [No extend-native](http://eslint.org/docs/rules/no-extend-native)
+### [No extend native](http://eslint.org/docs/rules/no-extend-native)
 
 > disallow adding to native types
 
@@ -515,7 +524,7 @@ var x = foo[bar];
 
 
 
-### [No extra-bind](http://eslint.org/docs/rules/no-extra-bind)
+### [No extra bind](http://eslint.org/docs/rules/no-extra-bind)
 
 > disallow unnecessary function binding
 
@@ -531,7 +540,7 @@ var x = foo[bar];
 
 
 
-### [No extra-label](http://eslint.org/docs/rules/no-extra-label)
+### [No extra label](http://eslint.org/docs/rules/no-extra-label)
 
 > disallow Unnecessary Labels
 
@@ -563,7 +572,7 @@ var x = foo[bar];
 
 
 
-### [No floating-decimal](http://eslint.org/docs/rules/no-floating-decimal)
+### [No floating decimal](http://eslint.org/docs/rules/no-floating-decimal)
 
 > disallow the use of leading or trailing decimal points in numeric literals
 
@@ -579,7 +588,7 @@ var x = foo[bar];
 
 
 
-### [No implicit-coercion](http://eslint.org/docs/rules/no-implicit-coercion)
+### [No implicit coercion](http://eslint.org/docs/rules/no-implicit-coercion)
 
 > disallow the type conversions with shorter notations
 
@@ -595,7 +604,7 @@ var x = foo[bar];
 
 
 
-### [No implicit-globals](http://eslint.org/docs/rules/no-implicit-globals)
+### [No implicit globals](http://eslint.org/docs/rules/no-implicit-globals)
 
 > disallow var and named functions in global scope
 
@@ -611,7 +620,7 @@ var x = foo[bar];
 
 
 
-### [No implied-eval](http://eslint.org/docs/rules/no-implied-eval)
+### [No implied eval](http://eslint.org/docs/rules/no-implied-eval)
 
 > disallow use of eval()-like methods
 
@@ -627,7 +636,7 @@ var x = foo[bar];
 
 
 
-### [No invalid-this](http://eslint.org/docs/rules/no-invalid-this)
+### [No invalid this](http://eslint.org/docs/rules/no-invalid-this)
 
 > disallow this keywords outside of classes or class-like objects
 
@@ -675,7 +684,7 @@ var x = foo[bar];
 
 
 
-### [No lone-blocks](http://eslint.org/docs/rules/no-lone-blocks)
+### [No lone blocks](http://eslint.org/docs/rules/no-lone-blocks)
 
 > disallow unnecessary nested blocks
 
@@ -691,7 +700,7 @@ var x = foo[bar];
 
 
 
-### [No loop-func](http://eslint.org/docs/rules/no-loop-func)
+### [No loop func](http://eslint.org/docs/rules/no-loop-func)
 
 > disallow creation of functions within loops
 
@@ -707,7 +716,7 @@ var x = foo[bar];
 
 
 
-### [No magic-numbers](http://eslint.org/docs/rules/no-magic-numbers)
+### [No magic numbers](http://eslint.org/docs/rules/no-magic-numbers)
 
 > disallow magic numbers
 
@@ -723,7 +732,7 @@ var x = foo[bar];
 
 
 
-### [No multi-spaces](http://eslint.org/docs/rules/no-multi-spaces)
+### [No multi spaces](http://eslint.org/docs/rules/no-multi-spaces)
 
 > disallow use of multiple spaces
 
@@ -739,7 +748,7 @@ var x = foo[bar];
 
 
 
-### [No multi-str](http://eslint.org/docs/rules/no-multi-str)
+### [No multi str](http://eslint.org/docs/rules/no-multi-str)
 
 > disallow use of multiline strings
 
@@ -755,7 +764,7 @@ var x = foo[bar];
 
 
 
-### [No native-reassign](http://eslint.org/docs/rules/no-native-reassign)
+### [No native reassign](http://eslint.org/docs/rules/no-native-reassign)
 
 > disallow reassignments of native objects
 
@@ -771,7 +780,7 @@ var x = foo[bar];
 
 
 
-### [No new-func](http://eslint.org/docs/rules/no-new-func)
+### [No new func](http://eslint.org/docs/rules/no-new-func)
 
 > disallow use of new operator for Function object
 
@@ -787,7 +796,7 @@ var x = foo[bar];
 
 
 
-### [No new-wrappers](http://eslint.org/docs/rules/no-new-wrappers)
+### [No new wrappers](http://eslint.org/docs/rules/no-new-wrappers)
 
 > disallows creating new instances of String, Number, and Boolean
 
@@ -819,7 +828,7 @@ var x = foo[bar];
 
 
 
-### [No octal-escape](http://eslint.org/docs/rules/no-octal-escape)
+### [No octal escape](http://eslint.org/docs/rules/no-octal-escape)
 
 > disallow use of octal escape sequences in string literals, such as var foo = 'Copyright \251';
 
@@ -851,7 +860,7 @@ var x = foo[bar];
 
 
 
-### [No param-reassign](http://eslint.org/docs/rules/no-param-reassign)
+### [No param reassign](http://eslint.org/docs/rules/no-param-reassign)
 
 > disallow reassignment of function parameters + disallow parameter object manipulation
 
@@ -899,7 +908,7 @@ var x = foo[bar];
 
 
 
-### [No return-assign](http://eslint.org/docs/rules/no-return-assign)
+### [No return assign](http://eslint.org/docs/rules/no-return-assign)
 
 > disallow use of assignment in return statement
 
@@ -915,7 +924,7 @@ var x = foo[bar];
 
 
 
-### [No script-url](http://eslint.org/docs/rules/no-script-url)
+### [No script url](http://eslint.org/docs/rules/no-script-url)
 
 > disallow use of `javascript:` urls.
 
@@ -931,7 +940,7 @@ var x = foo[bar];
 
 
 
-### [No self-assign](http://eslint.org/docs/rules/no-self-assign)
+### [No self assign](http://eslint.org/docs/rules/no-self-assign)
 
 > disallow self assignment
 
@@ -947,7 +956,7 @@ var x = foo[bar];
 
 
 
-### [No self-compare](http://eslint.org/docs/rules/no-self-compare)
+### [No self compare](http://eslint.org/docs/rules/no-self-compare)
 
 > disallow comparisons where both sides are exactly the same
 
@@ -979,7 +988,7 @@ var x = foo[bar];
 
 
 
-### [No throw-literal](http://eslint.org/docs/rules/no-throw-literal)
+### [No throw literal](http://eslint.org/docs/rules/no-throw-literal)
 
 > restrict what can be thrown as an exception
 
@@ -995,7 +1004,7 @@ var x = foo[bar];
 
 
 
-### [No unmodified-loop-condition](http://eslint.org/docs/rules/no-unmodified-loop-condition)
+### [No unmodified loop condition](http://eslint.org/docs/rules/no-unmodified-loop-condition)
 
 > disallow unmodified conditions of loops
 
@@ -1011,7 +1020,7 @@ var x = foo[bar];
 
 
 
-### [No unused-expressions](http://eslint.org/docs/rules/no-unused-expressions)
+### [No unused expressions](http://eslint.org/docs/rules/no-unused-expressions)
 
 > disallow usage of expressions in statement position
 
@@ -1027,7 +1036,7 @@ var x = foo[bar];
 
 
 
-### [No unused-labels](http://eslint.org/docs/rules/no-unused-labels)
+### [No unused labels](http://eslint.org/docs/rules/no-unused-labels)
 
 > disallow unused labels
 
@@ -1043,7 +1052,7 @@ var x = foo[bar];
 
 
 
-### [No useless-call](http://eslint.org/docs/rules/no-useless-call)
+### [No useless call](http://eslint.org/docs/rules/no-useless-call)
 
 > disallow unnecessary .call() and .apply()
 
@@ -1059,7 +1068,7 @@ var x = foo[bar];
 
 
 
-### [No useless-concat](http://eslint.org/docs/rules/no-useless-concat)
+### [No useless concat](http://eslint.org/docs/rules/no-useless-concat)
 
 > disallow useless string concatenation
 
@@ -1075,7 +1084,7 @@ var x = foo[bar];
 
 
 
-### [No useless-escape](http://eslint.org/docs/rules/no-useless-escape)
+### [No useless escape](http://eslint.org/docs/rules/no-useless-escape)
 
 > disallow unnecessary string escaping
 
@@ -1107,7 +1116,7 @@ var x = foo[bar];
 
 
 
-### [No warning-comments](http://eslint.org/docs/rules/no-warning-comments)
+### [No warning comments](http://eslint.org/docs/rules/no-warning-comments)
 
 > disallow usage of configurable warning terms in comments: e.g.
 
@@ -1155,7 +1164,7 @@ var x = foo[bar];
 
 
 
-### [Vars on-top](http://eslint.org/docs/rules/vars-on-top)
+### [Vars on top](http://eslint.org/docs/rules/vars-on-top)
 
 > requires to declare all vars on top of their containing scope
 
