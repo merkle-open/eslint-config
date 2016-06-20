@@ -357,7 +357,18 @@ if (x === 42) {
 
 ```javascript
 
-
+// Bad
+/*
+for (key in foo) {
+	doSomething(key);
+}
+*/
+// Good
+for (key in foo) {
+	if ({}.hasOwnProperty.call(foo, key)) {
+		doSomething(key);
+	}
+}
 
 ```
 <br />
