@@ -384,7 +384,10 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+alert('hallo');
+*/
 
 ```
 <br />
@@ -400,7 +403,25 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+function foo(n) {
+	if (n <= 0) {
+		return;
+	}
 
+	arguments.callee(n - 1);
+}
+*/
+
+// Good
+function foo(n) {
+	if (n <= 0) {
+		return;
+	}
+
+	foo(n - 1);
+}
 
 ```
 <br />
@@ -416,7 +437,40 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+switch (foo) {
+	case 1:
+		let x = 1;
+		break;
+	case 2:
+		const y = 2;
+		break;
+	case 3:
+		function f() {}
+		break;
+	default:
+		class C {}
+}
+*/
+// Good
+switch (foo) {
+	case 1: {
+		let x = 1;
+		break;
+	}
+	case 2: {
+		const y = 2;
+		break;
+	}
+	case 3: {
+		function f() {}
+		break;
+	}
+	default: {
+		class C {}
+	}
+}
 
 ```
 <br />
@@ -432,7 +486,14 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+function bar() {
+	return /=foo/;
+}
+// Good
+function bar2() {
+	return /\=foo/;
+}
 
 ```
 <br />
@@ -448,7 +509,25 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+function foo() {
+	if (x) {
+		return y;
+	} else {
+		return z;
+	}
+}
+*/
 
+// Good
+function foo() {
+	if (x) {
+		return y;
+	}
+
+	return z;
+}
 
 ```
 <br />
@@ -464,7 +543,15 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+function foo() {
+	// do nothing.
+}
 
+// Good
+function foo2() {
+	document.window.append('', null);
+}
 
 ```
 <br />
@@ -480,7 +567,16 @@ for (key in foo) {
 
 ```javascript
 
+// doesn't create any variables
+/*
+var { a: {} } = foo;
+*/
 
+// creates variable b
+var { a: { b } } = foo;
+
+// creates variable a
+var { a = {} } = foo;
 
 ```
 <br />
@@ -492,11 +588,20 @@ for (key in foo) {
 > disallow comparisons to null without a type-checking operator
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
 ```javascript
 
-
+// Bad
+/*
+if (foo == null) {
+	bar();
+}
+*/
+// Good
+if (foo === null) {
+	bar();
+}
 
 ```
 <br />
@@ -512,7 +617,12 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+var obj = { x: 'foo' },
+	key = 'x',
+	value = eval('obj.' + key);
+*/
 
 ```
 <br />
@@ -528,7 +638,10 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+Object.prototype.extra = 55;
+*/
 
 ```
 <br />
@@ -544,7 +657,19 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+var boundGetName = (function getName() {
+	return 'ESLint';
+}).bind({ name: 'ESLint' });
+console.log(boundGetName());      // "ESLint"
+*/
 
+// Good
+var boundGetName2 = (function getName() {
+	return this.name;
+}).bind({ name: 'ESLint' });
+console.log(boundGetName2());      // "ESLint"
 
 ```
 <br />
@@ -560,7 +685,19 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+A: switch (a) {
+	case 0:
+		break A;
+}
+*/
 
+// Good
+B: switch (a) {
+	case 0:
+		break;
+}
 
 ```
 <br />
@@ -576,7 +713,25 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+switch (foo) {
+	case 1:
+		doSomething();
 
+	case 2:
+		doSomethingElse();
+}
+*/
+
+// Good
+switch (foo) {
+	case 1:
+		doSomething();
+		break;
+	case 2:
+		doSomethingElse();
+}
 
 ```
 <br />
@@ -592,7 +747,17 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+var num1 = .5;
+var num2 = 2.;
+var num3 = -.7;
+*/
 
+// Good
+var num1 = 0.5;
+var num2 = 2.0;
+var num3 = -0.7;
 
 ```
 <br />
@@ -608,7 +773,21 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+var b = !!foo;
+var b = ~foo.indexOf('.');
+var n = +foo;
+var n = 1 * foo;
+var s = '' + foo;
+foo += '';
 
+// Good
+var b = Boolean(foo);
+var b = foo.indexOf('.') !== -1;
+var n = Number(foo);
+var n = Number(foo);
+var s = String(foo);
+foo = String(foo);
 
 ```
 <br />
@@ -624,7 +803,19 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+var foo = 1;
+function bar() {}
 
+// Good
+window.foo = 1;
+window.bar = function () {};
+
+// Good
+(function () {
+	var foo = 1;
+	function bar() {}
+})();
 
 ```
 <br />
@@ -640,7 +831,13 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+setTimeout('doSomething();', 100);
+*/
 
+// Good
+setTimeout(doSomething, 100);
 
 ```
 <br />
@@ -656,7 +853,10 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+foo(function () {
+	this.a = 0;
+});
 
 ```
 <br />
@@ -672,7 +872,12 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+Foo.prototype.__iterator__ = function () {
+	return new FooIterator(this);
+};
+*/
 
 ```
 <br />
@@ -688,7 +893,14 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+label:
+	switch (a) {
+		case 0:
+			break label;
+	}
+*/
 
 ```
 <br />
@@ -704,7 +916,12 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+{
+	foo = bar();
+}
+*/
 
 ```
 <br />
@@ -720,7 +937,14 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+for (var i = 0; i < 10; i++) {
+	funcs[i] = function () {
+		return i;
+	};
+}
+*/
 
 ```
 <br />
@@ -736,7 +960,9 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+var now = Date.now(),
+	inOneHour = now + (60 * 60 * 1000);
 
 ```
 <br />
@@ -752,7 +978,10 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+if (foo  === 'bar') {}
+*/
 
 ```
 <br />
@@ -768,7 +997,11 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+var x = 'Line 1 \
+         Line 2';
+*/
 
 ```
 <br />
@@ -784,7 +1017,10 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+String = new Object();
+*/
 
 ```
 <br />
@@ -800,7 +1036,10 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+var x = new Function('a', 'b', 'return a + b');
+*/
 
 ```
 <br />
@@ -816,7 +1055,17 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+var stringObject = new String('Hello world');
+var numberObject = new Number(33);
+var booleanObject = new Boolean(false);
+*/
 
+// Good
+var stringObject = String('Hello world');
+var numberObject = Number(33);
+var booleanObject = Boolean(false);
 
 ```
 <br />
@@ -832,6 +1081,13 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+new Person();
+*/
+
+// Good
+var person = new Person();
 
 
 ```
@@ -848,7 +1104,10 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+var foo = 'Copyright \251';
+*/
 
 ```
 <br />
@@ -864,7 +1123,10 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+var num = 07;
+*/
 
 ```
 <br />
@@ -880,7 +1142,12 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+function foo(bar) {
+	bar = 13;
+}
+*/
 
 ```
 <br />
@@ -896,7 +1163,10 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+var a = obj.__proto__;
+*/
 
 ```
 <br />
@@ -912,7 +1182,11 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+var a = 3;
+var a = 10;
+*/
 
 ```
 <br />
@@ -928,7 +1202,12 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+function doSomething() {
+	return foo = bar + 2;
+}
+*/
 
 ```
 <br />
@@ -944,7 +1223,10 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+location.href = 'javascript:void(0)';
+*/
 
 ```
 <br />
@@ -960,7 +1242,10 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+foo = foo;
+*/
 
 ```
 <br />
@@ -976,7 +1261,13 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+var x = 10;
+if (x === x) {
+	x = 20;
+}
+*/
 
 ```
 <br />
@@ -992,7 +1283,15 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+var a = (3, 5); // a = 5
+a = b += 5, a + b;
+*/
 
+// Good
+var a = (3, 5); // a = 5
+a = (b += 5, a + b);
 
 ```
 <br />
@@ -1008,7 +1307,13 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+throw 'error';
+*/
 
+// Good
+throw new Error('error');
 
 ```
 <br />
@@ -1024,7 +1329,19 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+var node;
+while (node) {
+	doSomething(node);
+}
+node = other;
 
+// Good
+var node = 1;
+while (node) {
+	doSomething(node);
+	node = 2;
+}
 
 ```
 <br />
@@ -1040,7 +1357,10 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+a && b();
+*/
 
 ```
 <br />
@@ -1056,7 +1376,25 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+OUTER_LOOP:
+	for (const student of students) {
+		if (checkScores(student.scores)) {
+			continue;
+		}
+		doSomething(student);
+	}
+*/
 
+// Good
+OUTER_LOOP:
+	for (const student of students) {
+		if (!checkScores(student.scores)) {
+			break OUTER_LOOP;
+		}
+		doSomething(student);
+	}
 
 ```
 <br />
@@ -1072,7 +1410,11 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+foo.call(undefined, 1, 2, 3);
 
+// Good
+foo(1, 2, 3);
 
 ```
 <br />
@@ -1088,7 +1430,13 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+var foo = 'a' + 'b';
+*/
 
+// Good
+var foo = 'ab';
 
 ```
 <br />
@@ -1104,7 +1452,15 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+let foo = 'hol\a';
+let bar = /\:/;
+*/
 
+// Good
+let foo = 'hola';
+let bar = /:/;
 
 ```
 <br />
@@ -1120,7 +1476,16 @@ for (key in foo) {
 
 ```javascript
 
-
+// Bad
+/*
+function test() {
+	return void 0;
+}
+*/
+// Good
+function test() {
+	return;
+}
 
 ```
 <br />
@@ -1136,7 +1501,8 @@ for (key in foo) {
 
 ```javascript
 
-
+// TODO: do something
+// FIXME: this is not a good idea
 
 ```
 <br />
@@ -1152,7 +1518,15 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+with (point) {
+	r = Math.sqrt(x * x + y * y); // is r a member of point?
+}
+*/
 
+// Good
+const r = ({ x, y }) => Math.sqrt(x * x + y * y);
 
 ```
 <br />
@@ -1168,6 +1542,13 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+var num = parseInt('71');
+*/
+
+// Good
+var num = parseInt('71', 10);
 
 
 ```
@@ -1185,6 +1566,34 @@ for (key in foo) {
 ```javascript
 
 
+// Bad
+/*
+function test() {
+	var a = 1;
+	var b = 2;
+
+	if (a === 0) {
+		// do something
+	}
+
+	var c = 3;
+}
+*/
+
+// Good
+function test() {
+	var a = 1;
+	var b = 2;
+	var c;
+
+	if (a === 0) {
+		// do something
+	}
+
+	c = 3;
+}
+
+
 
 ```
 <br />
@@ -1200,7 +1609,13 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+var x = function () { return { y: 1 }; }();
+*/
 
+// Good
+var x = function () { return { y: 1 }; };
 
 ```
 <br />
@@ -1216,7 +1631,17 @@ for (key in foo) {
 
 ```javascript
 
+// Bad
+/*
+if ('red' === color) {
+	// ...
+}
+*/
 
+// Good
+if (color === 'red') {
+	// ...
+}
 
 ```
 <br />

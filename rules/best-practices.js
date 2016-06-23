@@ -65,7 +65,7 @@ module.exports = {
 		'no-empty-pattern': 2,
 
 		// disallow comparisons to null without a type-checking operator
-		'no-eq-null': 0,
+		'no-eq-null': 2,
 
 		// disallow use of eval()
 		'no-eval': 2,
@@ -198,7 +198,7 @@ module.exports = {
 		'no-useless-escape': 2,
 
 		// disallow use of void operator
-		'no-void': 0,
+		'no-void': 2,
 
 		// disallow usage of configurable warning terms in comments: e.g.
 		'no-warning-comments': [0, { terms: ['todo', 'fixme', 'xxx'], location: 'start' }],

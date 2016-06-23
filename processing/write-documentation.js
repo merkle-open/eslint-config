@@ -84,7 +84,7 @@ function getTitle(name) {
  * @returns {void}
  */
 function addSnippet(arr, fileData) {
-	var exp = /<!START([^END!>]*)/.exec(fileData);
+	var exp = /<!START([\s\S]*)(END!>)/.exec(fileData);
 
 	if (exp === null || exp.length < 1) {
 		return;
