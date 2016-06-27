@@ -1,4 +1,4 @@
-
+/* eslint max-len: 0*/
 // DESCRIPTION = Enforce that elements that do not support ARIA roles, states, and properties do not have those attributes.
 // STATUS = 2
 

@@ -1,4 +1,4 @@
-
+/* eslint max-len: 0*/
 // DESCRIPTION = Enforce that elements with explicit or implicit roles defined contain only aria-* properties supported by that role.
 // STATUS = 2
 
