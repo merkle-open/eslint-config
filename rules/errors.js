@@ -7,10 +7,10 @@ module.exports = {
 		'no-cond-assign': [2, 'always'],
 
 		// disallow use of console
-		'no-console': 1,
+		'no-console': 2,
 
 		// disallow use of constant expressions in conditions
-		'no-constant-condition': 1,
+		'no-constant-condition': 2,
 
 		// disallow control characters in regular expressions
 		'no-control-regex': 2,
@@ -93,7 +93,7 @@ module.exports = {
 
 		// ensure JSDoc comments are valid
 		// http://eslint.org/docs/rules/valid-jsdoc
-		'valid-jsdoc': 1,
+		'valid-jsdoc': 2,
 
 		// ensure that the results of typeof are compared against a valid string
 		'valid-typeof': 2

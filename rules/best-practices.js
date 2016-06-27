@@ -35,7 +35,7 @@ module.exports = {
 		'guard-for-in': 2,
 
 		// disallow the use of alert, confirm, and prompt
-		'no-alert': 1,
+		'no-alert': 2,
 
 		// disallow use of arguments.caller or arguments.callee
 		'no-caller': 2,
