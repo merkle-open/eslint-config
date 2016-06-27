@@ -3,7 +3,6 @@
 [![Build Status](https://img.shields.io/travis/namics/eslint-config-namics/master.svg?maxAge=2592000)](https://travis-ci.org/namics/eslint-config-namics)
 [![Dependencies](https://img.shields.io/david/namics/eslint-config-namics/master.svg?maxAge=2592000)](https://david-dm.org/namics/eslint-config-namics)
 [![npm](https://img.shields.io/npm/v/eslint-config-namics.svg?maxAge=2592000)](https://www.npmjs.com/package/eslint-config-namics)
-[![npm](https://img.shields.io/npm/dt/eslint-config-namics.svg?maxAge=2592000)](https://www.npmjs.com/package/eslint-config-namics)
 
 
 ## Installation
@@ -13,11 +12,11 @@ $ npm install --save-dev @namics/eslint-config
 
 
 ## Usage
-- `defaults` - ES6 + browser
-- `defaults/configurations/es6-react` - ES6 + react
-- `defaults/configurations/es6-node` - ES6 + node
-- `defaults/configurations/es5-browser` - ES5 + browser
-- `defaults/configurations/es5-node` - ES5 + node
+- `@namics/eslint-config/configurations/es6-browser` - ES6 + browser
+- `@namics/eslint-config/configurations/es6-react` - ES6 + react
+- `@namics/eslint-config/configurations/es6-node` - ES6 + node
+- `@namics/eslint-config/configurations/es5-browser` - ES5 + browser
+- `@namics/eslint-config/configurations/es5-node` - ES5 + node
 
 ###
 ```
