@@ -1,5 +1,10 @@
 # ESLint config Namics
 
+[![Build Status](https://img.shields.io/travis/namics/eslint-config-namics/master.svg?maxAge=2592000)](https://travis-ci.org/namics/eslint-config-namics)
+[![Dependencies](https://img.shields.io/david/namics/eslint-config-namics/master.svg?maxAge=2592000)](https://david-dm.org/namics/eslint-config-namics)
+[![npm](https://img.shields.io/npm/v/eslint-config-namics.svg?maxAge=2592000)](https://www.npmjs.com/package/eslint-config-namics)
+[![npm](https://img.shields.io/npm/dt/eslint-config-namics.svg?maxAge=2592000)](https://www.npmjs.com/package/eslint-config-namics)
+
 
 ## Installation
 ```bash
@@ -39,4 +44,9 @@ $ npm install --save-dev @namics/eslint-config
 
 
 ## License
-[MIT License](http://opensource.org/licenses/MIT)
+[MIT License](https://github.com/namics/eslint-config-namics/blob/master/LICENSE)
+
+
+## Changelog
+
+Please see the [CHANGELOG.md](https://github.com/namics/eslint-config-namics/blob/master/CHANGELOG.md)
