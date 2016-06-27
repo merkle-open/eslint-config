@@ -4,5 +4,4 @@
 .vscode
 /npm-debug.log
 node_modules
-/test/es5/.*.md
-/test/es6/.*.md
+/test/*/.*.md
