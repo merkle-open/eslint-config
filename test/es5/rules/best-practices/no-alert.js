@@ -1,6 +1,6 @@
 
 // DESCRIPTION = disallow the use of alert, confirm, and prompt
-// STATUS = 1
+// STATUS = 2
 
 // <!START
 // Bad

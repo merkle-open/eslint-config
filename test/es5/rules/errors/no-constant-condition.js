@@ -1,6 +1,6 @@
 
 // DESCRIPTION = disallow use of constant expressions in conditions
-// STATUS = 1
+// STATUS = 2
 
 // <!START
 

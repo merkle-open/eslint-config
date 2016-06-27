@@ -1,6 +1,6 @@
 
 // DESCRIPTION = disallow use of console
-// STATUS = 1
+// STATUS = 2
 
 // <!START
 

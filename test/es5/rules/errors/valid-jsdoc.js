@@ -1,6 +1,6 @@
 
 // DESCRIPTION = ensure JSDoc comments are valid
-// STATUS = 1
+// STATUS = 2
 
 // <!START
 
