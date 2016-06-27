@@ -35,7 +35,7 @@ data.split('\n\n').map(function (rule) {
 
 	nameStatusSpl = nameStatus.split(':');
 
-	destFileName = destPath + nameStatusSpl[0] + '.js';
+	destFileName = destPath + nameStatusSpl[0].replace(/^.*\//, '') + '.js';
 
 	if (utils.existFile(destFileName)) {
 		return;
