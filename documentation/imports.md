@@ -1,0 +1,223 @@
+
+## Imports
+
+
+### [Default](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md)
+
+> ensure default import coupled with default export
+
+
+&#10006; Disabled
+
+<br />
+
+
+
+### [Export](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md)
+
+> disallow invalid exports, e.g. multiple defaults
+
+
+&#10003; Enabled (error)
+
+<br />
+
+
+
+### [Extensions](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md)
+
+> Ensure consistent use of file extension within the import path
+
+
+&#10006; Disabled
+
+<br />
+
+
+
+### [Imports first](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/imports-first.md)
+
+> disallow non-import statements appearing before import statements
+
+
+&#10003; Enabled (error)
+
+<br />
+
+
+
+### [Named](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md)
+
+> ensure named imports coupled with named exports
+
+
+&#10006; Disabled
+
+<br />
+
+
+
+### [Namespace](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md)
+
+> enforces names exist at the time they are dereferenced, when imported as a full namespace
+
+
+&#10006; Disabled
+
+<br />
+
+
+
+### [Newline after import](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md)
+
+> Require a newline after the last import/require in a group
+
+
+&#10006; Disabled
+
+<br />
+
+
+
+### [No amd](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md)
+
+> disallow AMD require/define
+
+
+&#10003; Enabled (error)
+
+<br />
+
+
+
+### [No commonjs](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md)
+
+> disallow require()
+
+
+&#10006; Disabled
+
+<br />
+
+
+
+### [No deprecated](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md)
+
+> disallow use of jsdoc-marked-deprecated imports
+
+
+&#10006; Disabled
+
+<br />
+
+
+
+### [No duplicates](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md)
+
+> disallow duplicate imports
+
+
+&#10003; Enabled (error)
+
+<br />
+
+
+
+### [No extraneous dependencies](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md)
+
+> Forbid the use of extraneous packages
+
+
+&#10006; Disabled
+
+<br />
+
+
+
+### [No mutable exports](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md)
+
+> Forbid mutable exports
+
+
+&#10003; Enabled (error)
+
+<br />
+
+
+
+### [No named as default member](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md)
+
+> warn on accessing default export property names that are also named exports
+
+
+&#10006; Disabled
+
+<br />
+
+
+
+### [No named as default](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md)
+
+> do not allow a default import name to match a named export
+
+
+&#10006; Disabled
+
+<br />
+
+
+
+### [No namespace](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md)
+
+> disallow namespace imports
+
+
+&#10006; Disabled
+
+<br />
+
+
+
+### [No nodejs modules](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md)
+
+> No Node.js builtin modules
+
+
+&#10006; Disabled
+
+<br />
+
+
+
+### [No unresolved](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md)
+
+> ensure imports point to files/modules that can be resolved
+
+
+&#10003; Enabled (error)
+
+<br />
+
+
+
+### [Order](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md)
+
+> Enforce a convention in module import order
+
+
+&#10006; Disabled
+
+<br />
+
+
+
+### [Prefer default export](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md)
+
+> Require modules with a single export to use a default export
+
+
+&#10006; Disabled
+
+<br />
+
+
