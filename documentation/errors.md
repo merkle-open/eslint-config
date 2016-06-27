@@ -29,7 +29,7 @@
 > disallow use of console
 
 
-&#10003; Enabled (warning)
+&#10003; Enabled (error)
 
 <br />
 
@@ -40,7 +40,7 @@
 > disallow use of constant expressions in conditions
 
 
-&#10003; Enabled (warning)
+&#10003; Enabled (error)
 
 <br />
 
@@ -315,7 +315,7 @@
 > ensure JSDoc comments are valid
 
 
-&#10003; Enabled (warning)
+&#10003; Enabled (error)
 
 <br />
 

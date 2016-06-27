@@ -380,7 +380,7 @@ for (key in foo) {
 > disallow the use of alert, confirm, and prompt
 
 
-&#10003; Enabled (warning)
+&#10003; Enabled (error)
 
 ```javascript
 
