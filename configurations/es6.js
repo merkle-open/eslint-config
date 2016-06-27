@@ -1,5 +1,19 @@
 module.exports = {
 
+	env: {
+		es6: true
+	},
+	plugins: [
+		'import'
+	],
+
+	settings: {
+		'import/resolver': {
+			node: {
+				extensions: ['.js', '.json']
+			}
+		}
+	},
 	extends: [
 		'../rules/best-practices',
 		'../rules/errors',
@@ -9,7 +23,6 @@ module.exports = {
 		'../rules/imports',
 		'../rules/es6'
 	].map(require.resolve),
-	env: {},
 
 	// overwrite es5 rules here
 	rules: {

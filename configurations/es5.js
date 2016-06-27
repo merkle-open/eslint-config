@@ -5,8 +5,7 @@ module.exports = {
 		'../rules/errors',
 		'../rules/node',
 		'../rules/style',
-		'../rules/variables',
-		'../rules/imports'
+		'../rules/variables'
 	].map(require.resolve),
 	env: {},
 	parserOptions: {
