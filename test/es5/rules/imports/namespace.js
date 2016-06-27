@@ -1,5 +1,5 @@
 
-// DESCRIPTION = https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md
+// DESCRIPTION = enforces names exist at the time they are dereferenced, when imported as a full namespace
 // STATUS = 0
 
 // <!START

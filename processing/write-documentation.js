@@ -7,10 +7,22 @@ var utils = require('./utils'),
 /**
  * @method getESLintUrl
  * @param {String} name fileName
+ * @param {String} groupName name of group
  * @returns {String} eslint documentation url
  */
-function getESLintUrl(name) {
-	return 'http://eslint.org/docs/rules/' + name;
+function getESLintUrl(name, groupName) {
+
+	switch (groupName) {
+		case 'imports':
+			return 'https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/' + name + '.md';
+		case 'react':
+			return 'https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/' + name + '.md';
+		case 'react-a11y':
+			return 'https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/' + name + '.md';
+		default:
+			return 'http://eslint.org/docs/rules/' + name;
+	}
+
 }
 
 /**
@@ -84,9 +96,16 @@ function getTitle(name) {
  * @returns {void}
  */
 function addSnippet(arr, fileData) {
-	var exp = /<!START([\s\S]*)(END!>)/.exec(fileData);
+	var exp = /<!START([\s\S]*)(END!>)/.exec(fileData),
+		code;
 
 	if (exp === null || exp.length < 1) {
+		return;
+	}
+
+	code = exp[1].replace(/\/\/ $/, '').trim();
+
+	if (code === '') {
 		return;
 	}
 
@@ -100,15 +119,16 @@ function addSnippet(arr, fileData) {
  * @param {Array} arr output readme lines array
  * @param {String} name fileName
  * @param {String} path filepath
+ * @param {String} groupName name of group
  * @returns {void}
  */
-function addRule(arr, name, path) {
+function addRule(arr, name, path, groupName) {
 
 	var fileData = utils.readFile(path),
 		nameCleaned = name.replace(/\.js$/, ''),
 		title = utils.capitalize(nameCleaned.replace(/-/g, ' '));
 
-	arr.push('### [' + title + '](' + getESLintUrl(nameCleaned) + ')');
+	arr.push('### [' + title + '](' + getESLintUrl(nameCleaned, groupName) + ')');
 	arr.push('');
 	arr.push('> ' + getDescription(fileData));
 	arr.push('');
@@ -157,7 +177,7 @@ utils.readDir('./test', ig).map(function (fileObj1) {
 				if (!utils.existFile(fileObj4.path)) {
 					return true;
 				}
-				addRule(data, fileObj4.file, fileObj4.path);
+				addRule(data, fileObj4.file, fileObj4.path, fileName);
 				return true;
 			});
 
