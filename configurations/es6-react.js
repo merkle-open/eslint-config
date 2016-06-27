@@ -1,5 +1,8 @@
 module.exports = {
-
+	plugins: [
+		'jsx-a11y',
+		'react'
+	],
 	extends: [
 		'./es6.js',
 		'../rules/react',
