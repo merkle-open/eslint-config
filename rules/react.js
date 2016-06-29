@@ -74,9 +74,10 @@ module.exports = {
 
 		// Enforce propTypes declarations alphabetical sorting
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md
-		'react/sort-prop-types': [0, {
-			ignoreCase: false,
-			callbacksLast: false
+		'react/sort-prop-types': [2, {
+			ignoreCase: true,
+			callbacksLast: true,
+			requiredFirst: true
 		}],
 
 		// deprecated in favor of react/jsx-sort-props
@@ -84,9 +85,10 @@ module.exports = {
 
 		// Enforce props alphabetical sorting
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
-		'react/jsx-sort-props': [0, {
-			ignoreCase: false,
-			callbacksLast: false
+		'react/jsx-sort-props': [2, {
+			ignoreCase: true,
+			callbacksLast: true,
+			shorthandFirst: true
 		}],
 
 		// Prevent React to be incorrectly marked as unused
