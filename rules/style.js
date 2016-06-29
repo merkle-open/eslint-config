@@ -212,7 +212,13 @@ module.exports = {
 
 		// do not require jsdoc
 		// http://eslint.org/docs/rules/require-jsdoc
-		'require-jsdoc': 2,
+		'require-jsdoc': ['error', {
+			require: {
+				FunctionDeclaration: true,
+				MethodDefinition: true,
+				ClassDeclaration: true
+			}
+		}],
 
 		// require or disallow use of semicolons instead of ASI
 		semi: [2, 'always'],
