@@ -93,7 +93,7 @@ module.exports = {
 
 		// ensure JSDoc comments are valid
 		// http://eslint.org/docs/rules/valid-jsdoc
-		'valid-jsdoc': ['error', {
+		'valid-jsdoc': [2, {
 			prefer: {
 				arg: 'param',
 				argument: 'param',

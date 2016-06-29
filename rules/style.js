@@ -212,7 +212,7 @@ module.exports = {
 
 		// do not require jsdoc
 		// http://eslint.org/docs/rules/require-jsdoc
-		'require-jsdoc': ['error', {
+		'require-jsdoc': [2, {
 			require: {
 				FunctionDeclaration: true,
 				MethodDefinition: true,
