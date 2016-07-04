@@ -3,7 +3,7 @@
 [![Build Status](https://img.shields.io/travis/namics/eslint-config-namics/master.svg)](https://travis-ci.org/namics/eslint-config-namics)
 [![Dependencies](https://img.shields.io/david/namics/eslint-config-namics/master.svg)](https://david-dm.org/namics/eslint-config-namics)
 [![npm](https://img.shields.io/npm/v/@namics/eslint-config.svg)](https://www.npmjs.com/package/@namics/eslint-config)
-
+[![Codestyle](https://img.shields.io/badge/codestyle-namics-green.svg)](https://github.com/namics/eslint-config-namics)
 
 ## Installation
 ```bash
