@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"private": false,
 	"engines": {
-		"node": ">= 0.12.0"
+		"node": ">= 4.4.0"
 	},
 	"repository": {
 		"type": "git",
