@@ -1,3 +1,5 @@
+/* global module */
+/* [08.07.2016] approved by skill group core team */
 module.exports = {
 	rules: {
 		// enforces getter/setter pairs in objects
@@ -10,13 +12,15 @@ module.exports = {
 		'block-scoped-var': 2,
 
 		// specify the maximum cyclomatic complexity allowed in a program
-		complexity: [1, 11],
+		'complexity': [2, 5],
+		// [08.07.2016] enabled error 5
 
 		// require return statements to either always or never specify values
-		'consistent-return': 2,
+		'consistent-return': 0,
+		// [08.07.2016] disabled because undefined
 
 		// specify curly brace conventions for all control statements
-		curly: [2, 'all'],
+		'curly': [2, 'all'],
 
 		// require default case in switch statements
 		'default-case': [2, { commentPattern: '^no default$' }],
@@ -29,7 +33,7 @@ module.exports = {
 
 		// require the use of === and !==
 		// http://eslint.org/docs/rules/eqeqeq
-		eqeqeq: [2, 'allow-null'],
+		'eqeqeq': [2, 'allow-null'],
 
 		// make sure for-in loops have an if statement
 		'guard-for-in': 2,
@@ -87,7 +91,8 @@ module.exports = {
 		'no-floating-decimal': 2,
 
 		// disallow the type conversions with shorter notations
-		'no-implicit-coercion': 0,
+		'no-implicit-coercion': 2,
+		// [08.07.2016] enabled
 
 		// disallow var and named functions in global scope
 		// http://eslint.org/docs/rules/no-implicit-globals
@@ -127,7 +132,8 @@ module.exports = {
 		'no-multi-str': 2,
 
 		// disallow reassignments of native objects
-		'no-native-reassign': 2,
+		'no-native-reassign': 0,
+		// [08.07.2016] disabled
 
 		// disallow use of new operator when not part of the assignment or comparison
 		'no-new': 2,
@@ -199,24 +205,28 @@ module.exports = {
 
 		// disallow use of void operator
 		'no-void': 2,
+		// [08.07.2016] enabled
 
 		// disallow usage of configurable warning terms in comments: e.g.
-		'no-warning-comments': [0, { terms: ['todo', 'fixme', 'xxx'], location: 'start' }],
+		'no-warning-comments': [0,
+			{ terms: ['todo', 'fixme'], location: 'start' }
+		],
 
 		// disallow use of the with statement
 		'no-with': 2,
 
 		// require use of the second argument for parseInt()
-		radix: 2,
+		'radix': 2,
 
 		// requires to declare all vars on top of their containing scope
-		'vars-on-top': 2,
+		'vars-on-top': 0,
+		// [08.07.2016] disabled because use blocks
 
 		// require immediate function invocation to be wrapped in parentheses
 		// http://eslint.org/docs/rules/wrap-iife.html
 		'wrap-iife': [2, 'outside'],
 
 		// require or disallow Yoda conditions
-		yoda: 2
+		'yoda': 2
 	}
 };
