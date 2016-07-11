@@ -84,8 +84,19 @@
 > enforces consistent naming when capturing the current execution context
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+const self = this;
+*/
+// Good
+const _this = this;
+
+
+```
 <br />
 
 
@@ -130,6 +141,17 @@
 
 &#10006; Disabled
 
+```javascript
+
+// Bad
+/*
+function _test(data) {}
+*/
+
+// Good
+function _test(productData) {}
+
+```
 <br />
 
 
@@ -172,7 +194,7 @@
 > specify whether double or single quotes should be used in JSX attributes
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
 <br />
 
@@ -227,7 +249,7 @@
 > specify the maximum depth that blocks can be nested
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
 <br />
 
@@ -249,7 +271,7 @@
 > specify the maximum depth callbacks can be nested
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
 <br />
 
@@ -260,7 +282,7 @@
 > limits the number of parameters that can be used in the function declaration.
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
 <br />
 
@@ -271,7 +293,7 @@
 > restrict the number of statements per line
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
 <br />
 
@@ -304,7 +326,7 @@
 > disallow the omission of parentheses when invoking a constructor with no arguments
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
 <br />
 
@@ -359,7 +381,7 @@
 > disallow use of bitwise operators
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
 <br />
 
@@ -370,7 +392,7 @@
 > disallow use of the continue statement
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
 <br />
 
@@ -392,7 +414,7 @@
 > disallow if as the only statement in an else block
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
 <br />
 
@@ -568,7 +590,7 @@
 > require a newline around variable declaration
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
 <br />
 

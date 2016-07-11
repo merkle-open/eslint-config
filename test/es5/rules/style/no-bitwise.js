@@ -1,6 +1,6 @@
 
 // DESCRIPTION = disallow use of bitwise operators
-// STATUS = 0
+// STATUS = 2
 
 // <!START
 

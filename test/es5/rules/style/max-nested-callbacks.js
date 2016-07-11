@@ -1,6 +1,6 @@
 
 // DESCRIPTION = specify the maximum depth callbacks can be nested
-// STATUS = 0
+// STATUS = 2
 
 // <!START
 

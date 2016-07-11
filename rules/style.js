@@ -74,7 +74,6 @@ module.exports = {
 
 		// disallow mixed 'LF' and 'CRLF' as linebreaks
 		'linebreak-style': 0,
-		// TODO clarify
 
 		// enforces empty lines around comments
 		'lines-around-comment': 0,

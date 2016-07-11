@@ -1,6 +1,6 @@
 
 // DESCRIPTION = require a newline around variable declaration
-// STATUS = 0
+// STATUS = 2
 
 // <!START
 

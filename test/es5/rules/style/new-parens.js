@@ -1,6 +1,6 @@
 
 // DESCRIPTION = disallow the omission of parentheses when invoking a constructor with no arguments
-// STATUS = 0
+// STATUS = 2
 
 // <!START
 

@@ -1,6 +1,6 @@
 
 // DESCRIPTION = restrict the number of statements per line
-// STATUS = 0
+// STATUS = 2
 
 // <!START
 

@@ -1,6 +1,6 @@
 
 // DESCRIPTION = disallow use of the continue statement
-// STATUS = 0
+// STATUS = 2
 
 // <!START
 
