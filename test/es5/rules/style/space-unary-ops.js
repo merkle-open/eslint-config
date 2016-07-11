@@ -5,4 +5,3 @@
 // <!START
 
 // END!>
-document.window.append('', null);

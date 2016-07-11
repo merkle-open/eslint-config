@@ -691,6 +691,45 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+if (a){
+	b();
+}
+
+function a(){}
+
+for (;;) {
+	b();
+}
+
+try {} catch (a){}
+
+class Foo{
+	constructor(){}
+}
+*/
+
+// Good
+if (a) {
+	b();
+}
+
+function a() {}
+
+for (;;) {
+	b();
+}
+
+try {} catch (a) {}
+
+class Foo {
+	constructor() {}
+}
+
+```
 <br />
 
 
@@ -702,6 +741,53 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+function foo () {
+	// ...
+}
+
+var bar = function() {
+	// ...
+};
+
+class Foo {
+	constructor () {
+		// ...
+	}
+}
+
+var foo = {
+	bar () {
+		// ...
+	}
+};
+*/
+
+// Good
+function foo() {
+	// ...
+}
+
+var bar = function () {
+	// ...
+};
+
+class Foo {
+	constructor() {
+		// ...
+	}
+}
+
+var foo = {
+	bar() {
+		// ...
+	}
+};
+
+```
 <br />
 
 
@@ -713,6 +799,19 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+foo( 'bar' );
+var x = ( 1 + 2 ) * 3;
+*/
+
+// Good
+foo('bar');
+var x = (1 + 2) * 3;
+
+```
 <br />
 
 
@@ -724,6 +823,15 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var sum = 1+2;
+*/
+var sum = 1 + 2;
+
+```
 <br />
 
 
@@ -755,7 +863,7 @@
 > require or disallow the Unicode Byte Order Mark
 
 
-&#10003; Enabled (error)
+&#10006; Disabled
 
 <br />
 
@@ -766,8 +874,23 @@
 > require regex literals to be wrapped in parentheses
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+function a() {
+	return /foo/.test('bar');
+}
+*/
+
+// Good
+function a() {
+	return (/foo/).test('bar');
+}
+
+```
 <br />
 
 

@@ -1,3 +1,5 @@
+/* global module */
+/* [11.07.2016] approved by skill group core team */
 module.exports = {
 	rules: {
 		// enforce spacing inside array brackets
@@ -11,7 +13,7 @@ module.exports = {
 		'brace-style': [2, '1tbs', { allowSingleLine: true }],
 
 		// require camel case names
-		camelcase: [2, { properties: 'never' }],
+		'camelcase': [2, { properties: 'never' }],
 
 		// enforce spacing before and after comma
 		'comma-spacing': [2, { before: false, after: true }],
@@ -23,7 +25,8 @@ module.exports = {
 		'computed-property-spacing': [2, 'never'],
 
 		// enforces consistent naming when capturing the current execution context
-		'consistent-this': 0,
+		'consistent-this': [2, '_this'],
+		// [08.07.2016] enabled
 
 		// enforce newline at the end of file, with no multiple empty lines
 		'eol-last': 2,
@@ -36,7 +39,8 @@ module.exports = {
 
 		// Blacklist certain identifiers to prevent them being used
 		// http://eslint.org/docs/rules/id-blacklist
-		'id-blacklist': 0,
+		'id-blacklist': [2, 'data', 'callback'],
+		// [08.07.2016] enabled
 
 		// this option enforces minimum and maximum identifier lengths
 		// (variable names, property names etc.)
@@ -47,11 +51,12 @@ module.exports = {
 
 		// this option sets a specific tab width for your code
 		// http://eslint.org/docs/rules/indent
-		indent: [1, 'tab', { SwitchCase: 1, VariableDeclarator: 1 }],
+		'indent': [2, 'tab', { SwitchCase: 1, VariableDeclarator: 1 }],
 
 		// specify whether double or single quotes should be used in JSX attributes
 		// http://eslint.org/docs/rules/jsx-quotes
-		'jsx-quotes': 0,
+		'jsx-quotes': [2, 'prefer-double'],
+		// [08.07.2016] enabled
 
 		// enforces spacing between keys and values in object literal properties
 		'key-spacing': [2, { beforeColon: false, afterColon: true }],
@@ -69,12 +74,14 @@ module.exports = {
 
 		// disallow mixed 'LF' and 'CRLF' as linebreaks
 		'linebreak-style': 0,
+		// TODO clarify
 
 		// enforces empty lines around comments
 		'lines-around-comment': 0,
 
 		// specify the maximum depth that blocks can be nested
-		'max-depth': [0, 4],
+		'max-depth': [2, 5],
+		// [08.07.2016] enabled
 
 		// specify the maximum length of a line in your program
 		// http://eslint.org/docs/rules/max-len
@@ -82,25 +89,30 @@ module.exports = {
 			ignoreUrls: true,
 			ignoreComments: false
 		}],
+		// TODO clarify ignoreComments:true
 
 		// specify the maximum depth callbacks can be nested
-		'max-nested-callbacks': 0,
+		'max-nested-callbacks': [2, 5],
+		// [08.07.2016] enabled
 
 		// limits the number of parameters that can be used in the function declaration.
-		'max-params': [0, 3],
+		'max-params': [2, 4],
+		// [08.07.2016] enabled
 
 		// specify the maximum number of statement allowed in a function
 		'max-statements': [0, 10],
 
 		// restrict the number of statements per line
 		// http://eslint.org/docs/rules/max-statements-per-line
-		'max-statements-per-line': [0, { max: 1 }],
+		'max-statements-per-line': [2, { max: 2 }],
+		// [08.07.2016] enabled
 
 		// require a capital letter for constructors
 		'new-cap': [2, { newIsCap: true }],
 
 		// disallow the omission of parentheses when invoking a constructor with no arguments
-		'new-parens': 0,
+		'new-parens': 2,
+		// [08.07.2016] enabled
 
 		// allow/disallow an empty newline after var statement
 		'newline-after-var': 0,
@@ -117,16 +129,19 @@ module.exports = {
 		'no-array-constructor': 2,
 
 		// disallow use of bitwise operators
-		'no-bitwise': 0,
+		'no-bitwise': 2,
+		// [08.07.2016] enabled
 
 		// disallow use of the continue statement
-		'no-continue': 0,
+		'no-continue': 2,
+		// [08.07.2016] enabled
 
 		// disallow comments inline after code
-		'no-inline-comments': 0,
+		'no-inline-comments': 2,
 
 		// disallow if as the only statement in an else block
-		'no-lonely-if': 0,
+		'no-lonely-if': 2,
+		// [08.07.2016] enabled TODO clearify
 
 		// disallow mixed spaces and tabs for indentation
 		'no-mixed-spaces-and-tabs': 2,
@@ -149,8 +164,7 @@ module.exports = {
 
 		// disallow certain syntax forms
 		// http://eslint.org/docs/rules/no-restricted-syntax
-		'no-restricted-syntax': [
-			2,
+		'no-restricted-syntax': [2,
 			'DebuggerStatement',
 			'ForInStatement',
 			'LabeledStatement',
@@ -181,18 +195,24 @@ module.exports = {
 		// require padding inside curly braces
 		'object-curly-spacing': [2, 'always'],
 
-		// enforce "same line" or "multiple line" on object properties.
+		// enforce 'same line' or 'multiple line' on object properties.
 		// http://eslint.org/docs/rules/object-property-newline
 		'object-property-newline': [0, {
 			allowMultiplePropertiesPerLine: true
 		}],
 
 		// allow just one var statement per function
-		'one-var': [2, 'always'],
+		'one-var': [2, {
+			'var': 'never',
+			'let': 'never',
+			'const': 'never'
+		}],
+		// [08.07.2016] enabled never
 
 		// require a newline around variable declaration
 		// http://eslint.org/docs/rules/one-var-declaration-per-line
-		'one-var-declaration-per-line': 0,
+		'one-var-declaration-per-line': [2, 'always'],
+		// [08.07.2016] enabled always
 
 		// require assignment operator shorthand where possible or prohibit it entirely
 		'operator-assignment': 0,
@@ -205,10 +225,12 @@ module.exports = {
 
 		// require quotes around object literal property names
 		// http://eslint.org/docs/rules/quote-props.html
-		'quote-props': [2, 'as-needed', { keywords: false, unnecessary: true, numbers: false }],
+		'quote-props': [2, 'consistent'],
+		// [08.07.2016] enabled consistent
 
 		// specify whether double or single quotes should be used
-		quotes: [2, 'single', { avoidEscape: true }],
+		'quotes': [2, 'single', { avoidEscape: true }],
+		// TODO tbd
 
 		// do not require jsdoc
 		// http://eslint.org/docs/rules/require-jsdoc
@@ -219,9 +241,10 @@ module.exports = {
 				ClassDeclaration: true
 			}
 		}],
+		// TODO tbd
 
 		// require or disallow use of semicolons instead of ASI
-		semi: [2, 'always'],
+		'semi': [2, 'always'],
 
 		// enforce spacing before and after semicolons
 		'semi-spacing': [2, { before: false, after: true }],
@@ -248,7 +271,8 @@ module.exports = {
 		// require or disallow a space immediately following the // or /* in a comment
 		'spaced-comment': [2, 'always', {
 			exceptions: ['-', '+'],
-			markers: ['=', '!']           // space here to support sprockets directives
+			// space here to support sprockets directives
+			markers: ['=', '!']
 		}],
 
 		// require or disallow the Unicode Byte Order Mark
@@ -256,6 +280,7 @@ module.exports = {
 		'unicode-bom': [2, 'never'],
 
 		// require regex literals to be wrapped in parentheses
-		'wrap-regex': 0
+		'wrap-regex': 2
+		// [11.07.2016] enabled
 	}
 };

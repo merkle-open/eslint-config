@@ -119,7 +119,7 @@ example = {
 > specify the maximum cyclomatic complexity allowed in a program
 
 
-&#10003; Enabled (warning)
+&#10003; Enabled (error)
 
 ```javascript
 
@@ -166,8 +166,6 @@ function b(x) {
 			return x + 3;
 		case x === 3:
 			return x + 4;
-		case x === 4:
-			return x + 5;
 		default:
 			return 99;
 	}
@@ -184,12 +182,11 @@ function b(x) {
 > require return statements to either always or never specify values
 
 
-&#10003; Enabled (error)
+&#10006; Disabled
 
 ```javascript
 
 // Bad
-/*
 function doSomething(condition) {
 	if (condition) {
 		return true;
@@ -197,7 +194,6 @@ function doSomething(condition) {
 		return;
 	}
 }
-*/
 
 // Good
 function doSomething(condition) {
@@ -662,14 +658,16 @@ Object.prototype.extra = 55;
 var boundGetName = (function getName() {
 	return 'ESLint';
 }).bind({ name: 'ESLint' });
-console.log(boundGetName());      // "ESLint"
+console.log(boundGetName());
+// "ESLint"
 */
 
 // Good
 var boundGetName2 = (function getName() {
 	return this.name;
 }).bind({ name: 'ESLint' });
-console.log(boundGetName2());      // "ESLint"
+console.log(boundGetName2());
+// "ESLint"
 
 ```
 <br />
@@ -769,17 +767,19 @@ var num3 = -0.7;
 > disallow the type conversions with shorter notations
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
 ```javascript
 
 // Bad
+/*
 var b = !!foo;
 var b = ~foo.indexOf('.');
 var n = +foo;
 var n = 1 * foo;
 var s = '' + foo;
 foo += '';
+*/
 
 // Good
 var b = Boolean(foo);
@@ -1138,16 +1138,14 @@ var num = 07;
 > disallow reassignment of function parameters + disallow parameter object manipulation
 
 
-&#10003; Enabled (error)
+&#10006; Disabled
 
 ```javascript
 
 // Bad
-/*
 function foo(bar) {
 	bar = 13;
 }
-*/
 
 ```
 <br />
@@ -1290,7 +1288,8 @@ a = b += 5, a + b;
 */
 
 // Good
-var a = (3, 5); // a = 5
+var a = (3, 5);
+// a = 5
 a = (b += 5, a + b);
 
 ```
@@ -1472,7 +1471,7 @@ let bar = /:/;
 > disallow use of void operator
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
 ```javascript
 
@@ -1561,7 +1560,7 @@ var num = parseInt('71', 10);
 > requires to declare all vars on top of their containing scope
 
 
-&#10003; Enabled (error)
+&#10006; Disabled
 
 ```javascript
 
