@@ -203,7 +203,7 @@ module.exports = {
 
 		// enforce JSX indentation
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
-		'react/jsx-indent': [2, 2],
+		'react/jsx-indent': [2, 'tab'],
 
 		// disallow target="_blank" on links
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md

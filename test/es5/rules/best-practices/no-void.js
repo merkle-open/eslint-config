@@ -1,6 +1,6 @@
 
 // DESCRIPTION = disallow use of void operator
-// STATUS = 0
+// STATUS = 2
 
 /* eslint no-unused-vars: 0*/
 /* eslint require-jsdoc: 0*/

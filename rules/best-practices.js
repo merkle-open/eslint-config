@@ -132,8 +132,8 @@ module.exports = {
 		'no-multi-str': 2,
 
 		// disallow reassignments of native objects
-		'no-native-reassign': 0,
-		// [08.07.2016] disabled
+		'no-native-reassign': 2,
+		// [08.07.2016] enabled
 
 		// disallow use of new operator when not part of the assignment or comparison
 		'no-new': 2,
@@ -154,7 +154,8 @@ module.exports = {
 		// disallow reassignment of function parameters
 		// disallow parameter object manipulation
 		// rule: http://eslint.org/docs/rules/no-param-reassign.html
-		'no-param-reassign': [2, { props: true }],
+		'no-param-reassign': [0, { props: true }],
+		// [08.07.2016] disabled because of options default
 
 		// disallow usage of __proto__ property
 		'no-proto': 2,

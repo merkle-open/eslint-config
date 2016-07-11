@@ -1,6 +1,6 @@
 
 // DESCRIPTION = require return statements to either always or never specify values
-// STATUS = 2
+// STATUS = 0
 
 /* eslint no-unused-vars: 0*/
 /* eslint require-jsdoc: 0*/
@@ -8,7 +8,6 @@
 /* eslint no-redeclare: 0*/
 // <!START
 // Bad
-/*
 function doSomething(condition) {
 	if (condition) {
 		return true;
@@ -16,7 +15,6 @@ function doSomething(condition) {
 		return;
 	}
 }
-*/
 
 // Good
 function doSomething(condition) {

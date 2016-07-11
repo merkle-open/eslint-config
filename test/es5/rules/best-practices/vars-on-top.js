@@ -1,6 +1,6 @@
 
 // DESCRIPTION = requires to declare all vars on top of their containing scope
-// STATUS = 2
+// STATUS = 0
 
 /* eslint require-jsdoc: 0*/
 /* eslint one-var: 0*/

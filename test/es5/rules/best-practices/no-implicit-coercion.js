@@ -1,6 +1,6 @@
 
 // DESCRIPTION = disallow the type conversions with shorter notations
-// STATUS = 0
+// STATUS = 2
 
 /* eslint no-undef: 0*/
 /* eslint no-unused-vars: 0*/
@@ -9,12 +9,14 @@
 /* eslint vars-on-top: 0*/
 // <!START
 // Bad
+/*
 var b = !!foo;
 var b = ~foo.indexOf('.');
 var n = +foo;
 var n = 1 * foo;
 var s = '' + foo;
 foo += '';
+*/
 
 // Good
 var b = Boolean(foo);

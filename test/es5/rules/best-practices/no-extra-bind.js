@@ -10,12 +10,14 @@
 var boundGetName = (function getName() {
 	return 'ESLint';
 }).bind({ name: 'ESLint' });
-console.log(boundGetName());      // "ESLint"
+console.log(boundGetName());
+// "ESLint"
 */
 
 // Good
 var boundGetName2 = (function getName() {
 	return this.name;
 }).bind({ name: 'ESLint' });
-console.log(boundGetName2());      // "ESLint"
+console.log(boundGetName2());
+// "ESLint"
 // END!>

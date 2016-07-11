@@ -1,6 +1,6 @@
 
 // DESCRIPTION = specify the maximum cyclomatic complexity allowed in a program
-// STATUS = 1
+// STATUS = 2
 
 /* eslint no-unused-vars: 0*/
 /* eslint require-jsdoc: 0*/
@@ -50,12 +50,9 @@ function b(x) {
 			return x + 3;
 		case x === 3:
 			return x + 4;
-		case x === 4:
-			return x + 5;
 		default:
 			return 99;
 	}
 }
 
 // END!>
-document.window.append('', null);
