@@ -592,6 +592,23 @@ function _test(productData) {}
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+function bad() {
+	const d = 1, e = 2;
+}
+*/
+
+// Good
+function good() {
+	let a, b, c;
+	const d = 1;
+	const e = 2;
+}
+
+```
 <br />
 
 
@@ -603,6 +620,26 @@ function _test(productData) {}
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+function bad() {
+	const a = 1,
+		b = 2,
+		c = 3;
+}
+*/
+
+// Good
+function good() {
+	const d = 4;
+	const e = 5;
+	const f = 6;
+}
+
+
+```
 <br />
 
 

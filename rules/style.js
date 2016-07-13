@@ -88,7 +88,7 @@ module.exports = {
 			ignoreUrls: true,
 			ignoreComments: false
 		}],
-		// TODO clarify ignoreComments:true
+		// [08.07.2016] enabled
 
 		// specify the maximum depth callbacks can be nested
 		'max-nested-callbacks': [2, 5],
@@ -140,7 +140,7 @@ module.exports = {
 
 		// disallow if as the only statement in an else block
 		'no-lonely-if': 2,
-		// [08.07.2016] enabled TODO clearify
+		// [08.07.2016] enabled
 
 		// disallow mixed spaces and tabs for indentation
 		'no-mixed-spaces-and-tabs': 2,
@@ -210,8 +210,8 @@ module.exports = {
 
 		// require a newline around variable declaration
 		// http://eslint.org/docs/rules/one-var-declaration-per-line
-		'one-var-declaration-per-line': [2, 'always'],
-		// [08.07.2016] enabled always
+		'one-var-declaration-per-line': [2, 'initializations'],
+		// [13.07.2016] enabled initializations
 
 		// require assignment operator shorthand where possible or prohibit it entirely
 		'operator-assignment': 0,
@@ -229,7 +229,6 @@ module.exports = {
 
 		// specify whether double or single quotes should be used
 		'quotes': [2, 'single', { avoidEscape: true }],
-		// TODO tbd
 
 		// do not require jsdoc
 		// http://eslint.org/docs/rules/require-jsdoc
@@ -240,7 +239,7 @@ module.exports = {
 				ClassDeclaration: true
 			}
 		}],
-		// TODO tbd
+		// [08.07.2016] enabled
 
 		// require or disallow use of semicolons instead of ASI
 		'semi': [2, 'always'],
