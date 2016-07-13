@@ -1,9 +1,10 @@
 module.exports = {
 
 	extends: [
+		'../rules/es6-disable',
+		'../rules/node-disable',
 		'../rules/best-practices',
 		'../rules/errors',
-		'../rules/node',
 		'../rules/style',
 		'../rules/variables'
 	].map(require.resolve),

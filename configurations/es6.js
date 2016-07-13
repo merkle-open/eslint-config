@@ -15,9 +15,9 @@ module.exports = {
 		}
 	},
 	extends: [
+		'../rules/node-disable',
 		'../rules/best-practices',
 		'../rules/errors',
-		'../rules/node',
 		'../rules/style',
 		'../rules/variables',
 		'../rules/imports',
