@@ -18,10 +18,10 @@ $ npm install --save-dev @namics/eslint-config
 - `@namics/eslint-config/configurations/es5-browser` - ES5 + browser
 - `@namics/eslint-config/configurations/es5-node` - ES5 + node
 
-###
+### .eslintrc.js
 ```
-{
-	"extends": "@namics/eslint-config/configurations/es6-browser.js"
+module.extends = {
+  "extends": "@namics/eslint-config/configurations/es6-browser.js"
 }
 ```
 
@@ -37,6 +37,7 @@ $ npm install --save-dev @namics/eslint-config
 - [React A11y](https://github.com/namics/eslint-config-namics/blob/master/documentation/react-a11y.md) (ES6)
 
 ## Thanks to
+* [Namics.](https://www.namics.com/en/)
 * [ESLint](https://github.com/eslint/eslint) for ESLint and the documentation [eslint.org](http://eslint.org/)
 * [Walmart](https://github.com/walmartlabs) for sharing their config in [eslint-config-walmart](https://github.com/airbnb/javascript)
 * [AirBnB](https://github.com/airbnb) for sharing their eslint config in [JavaScript Style Guide](https://github.com/walmartlabs/eslint-config-walmart)
