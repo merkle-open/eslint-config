@@ -9,6 +9,25 @@
 
 &#10006; Disabled
 
+```javascript
+
+// Bad
+function bad() {
+	let bar;
+	let baz;
+	bar = 3;
+	baz = 4;
+}
+
+// Good
+function good() {
+	let bar = 1;
+	let baz = 2;
+	bar = 3;
+	baz = 4;
+}
+
+```
 <br />
 
 
@@ -31,6 +50,15 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var x;
+delete x;
+*/
+
+```
 <br />
 
 
@@ -64,6 +92,18 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+function NaN() {}
+
+!function (Infinity) {};
+
+var undefined;
+*/
+
+```
 <br />
 
 
@@ -75,6 +115,23 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var a = 3;
+function b() {
+	var a = 10;
+}
+*/
+
+// Good
+var a = 3;
+function b() {
+	var c = 10;
+}
+
+```
 <br />
 
 
@@ -86,6 +143,13 @@
 
 &#10006; Disabled
 
+```javascript
+
+// Bad
+var foo = undefined;
+let bar = undefined;
+
+```
 <br />
 
 
@@ -97,6 +161,15 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var a = someFunction();
+b = 10;
+*/
+
+```
 <br />
 
 
@@ -108,6 +181,12 @@
 
 &#10006; Disabled
 
+```javascript
+
+// Bad
+var foo = undefined;
+
+```
 <br />
 
 
@@ -119,6 +198,20 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var someUnusedVar = 42;
+var x;
+var y = 10;
+y = 5;
+
+var z = 0;
+z = z + 1;
+*/
+
+```
 <br />
 
 
@@ -130,6 +223,25 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+alert(a);
+var a = 10;
+
+f();
+function f() {}
+*/
+
+// Good
+var a = 10;
+alert(a);
+
+function f() {}
+f();
+
+```
 <br />
 
 

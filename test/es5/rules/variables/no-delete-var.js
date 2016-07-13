@@ -3,6 +3,9 @@
 // STATUS = 2
 
 // <!START
-
+// Bad
+/*
+var x;
+delete x;
+*/
 // END!>
-document.window.append('', null);
