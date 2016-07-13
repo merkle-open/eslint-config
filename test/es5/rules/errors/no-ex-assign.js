@@ -3,6 +3,12 @@
 // STATUS = 2
 
 // <!START
-
+// Bad
+/*
+try {
+	// code
+} catch (e) {
+	e = 10;
+}
+*/
 // END!>
-document.window.append('', null);

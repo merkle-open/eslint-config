@@ -7,8 +7,25 @@
 > require trailing commas in multiline object literals
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var bad = {
+	bar: 'baz',
+	qux: 'quux',
+};
+*/
+
+// Good
+var good = {
+	bar: 'baz',
+	qux: 'quux'
+};
+
+```
 <br />
 
 
@@ -20,6 +37,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var x;
+if (x = 0) {
+	var b = 1;
+}
+*/
+
+```
 <br />
 
 
@@ -31,6 +59,14 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+console.log('hello world');
+*/
+
+```
 <br />
 
 
@@ -42,6 +78,16 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+if (false) {
+	doSomethingUnfinished();
+}
+*/
+
+```
 <br />
 
 
@@ -53,6 +99,19 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var pattern1 = /\x1f/;
+var pattern2 = new RegExp('\x1f');
+*/
+
+// Good
+var pattern1 = /\x20/;
+var pattern2 = new RegExp('\x20');
+
+```
 <br />
 
 
@@ -64,6 +123,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+function isTruthy(x) {
+	debugger;
+	return Boolean(x);
+}
+*/
+
+```
 <br />
 
 
@@ -75,6 +145,16 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+function foo(a, b, a) {
+	console.log('value of the second a:', a);
+}
+*/
+
+```
 <br />
 
 
@@ -86,6 +166,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var foo = {
+	bar: 'baz',
+	bar: 'qux'
+};
+*/
+
+```
 <br />
 
 
@@ -97,6 +188,25 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var a = 1;
+
+switch (a) {
+	case 1:
+		break;
+	case 2:
+		break;
+	case 1:
+		break;
+	default:
+		break;
+}
+*/
+
+```
 <br />
 
 
@@ -108,6 +218,20 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+(/^abc[]/).test('abcdefg');
+'abcdefg'.match(/^abc[]/);
+*/
+
+// Good
+(/^abc/).test('abcdefg');
+'abcdefg'.match(/^abc/);
+
+
+```
 <br />
 
 
@@ -119,6 +243,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var foo = true;
+if (foo) {
+
+}
+*/
+
+```
 <br />
 
 
@@ -130,6 +265,18 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+try {
+	// code
+} catch (e) {
+	e = 10;
+}
+*/
+
+```
 <br />
 
 
@@ -152,6 +299,15 @@
 
 &#10006; Disabled
 
+```javascript
+
+// Bad
+var b = 1;
+var c = 2;
+var a = (b * c);
+var d = (a * b) + c;
+
+```
 <br />
 
 
@@ -163,6 +319,14 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var x = 5;;
+*/
+
+```
 <br />
 
 
@@ -174,6 +338,15 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+function foo() {}
+foo = bar;
+*/
+
+```
 <br />
 
 
@@ -185,6 +358,19 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+if (test) {
+	function doSomethingElse() { }
+}
+*/
+
+// Good
+function doSomething() { }
+
+```
 <br />
 
 
@@ -196,6 +382,16 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+RegExp('[');
+RegExp('.', 'z');
+new RegExp('\\');
+*/
+
+```
 <br />
 
 
@@ -218,6 +414,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+if (!key in object) {
+	// operator precedence makes it equivalent to (!key) in object
+	// and type conversion makes it equivalent to (key ? "false" : "true") in object
+}
+*/
+
+```
 <br />
 
 
@@ -229,6 +436,15 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var math = Math();
+var json = JSON();
+*/
+
+```
 <br />
 
 
@@ -240,6 +456,21 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var hasBarProperty = foo.hasOwnProperty('bar');
+var isPrototypeOfBar = foo.isPrototypeOf(bar);
+var barIsEnumerable = foo.propertyIsEnumerable('bar');
+*/
+
+// Good
+var hasBarProperty = {}.hasOwnProperty.call(foo, 'bar');
+var isPrototypeOfBar = {}.isPrototypeOf.call(foo, bar);
+var barIsEnumerable = {}.propertyIsEnumerable.call(foo, 'bar');
+
+```
 <br />
 
 
@@ -251,6 +482,19 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var re = /foo   bar/;
+var re = new RegExp('foo   bar');
+*/
+
+// Good
+var re = /foo {3}bar/;
+var re = new RegExp('foo {3}bar');
+
+```
 <br />
 
 
@@ -262,6 +506,20 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var items = [, ];
+var colors = ['red',, 'blue'];
+*/
+
+// Good
+var items = [];
+var items = new Array(23);
+var colors = ['red', 'blue'];
+
+```
 <br />
 
 
@@ -273,6 +531,17 @@
 
 &#10006; Disabled
 
+```javascript
+
+// Bad
+let x = function () {}
+`hello`
+
+// Good
+let x = function () {};
+`hello`
+
+```
 <br />
 
 
@@ -284,6 +553,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+function foo() {
+	return true;
+	console.log('done');
+}
+*/
+
+```
 <br />
 
 
@@ -295,6 +575,22 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+let foo = function () {
+	try {
+		return 1;
+	} catch (err) {
+		return 2;
+	} finally {
+		return 3;
+	}
+};
+*/
+
+```
 <br />
 
 
@@ -306,6 +602,21 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+if (foo === NaN) {
+	// ...
+}
+*/
+
+// Good
+if (isNaN(foo)) {
+	// ...
+}
+
+```
 <br />
 
 
@@ -328,6 +639,23 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+typeof foo === 'strnig';
+typeof foo === 'undefimed';
+typeof bar !== 'nunber';
+typeof bar !== 'fucntion';
+*/
+
+// Good
+typeof foo === 'string';
+typeof foo === 'undefined';
+typeof bar !== 'number';
+typeof bar !== 'function';
+
+```
 <br />
 
 

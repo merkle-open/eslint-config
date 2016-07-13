@@ -3,6 +3,14 @@
 // STATUS = 2
 
 // <!START
+// Bad
+/*
+(/^abc[]/).test('abcdefg');
+'abcdefg'.match(/^abc[]/);
+*/
+
+// Good
+(/^abc/).test('abcdefg');
+'abcdefg'.match(/^abc/);
 
 // END!>
-document.window.append('', null);

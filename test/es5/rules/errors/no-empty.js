@@ -3,6 +3,12 @@
 // STATUS = 2
 
 // <!START
+// Bad
+/*
+var foo = true;
+if (foo) {
 
+}
+*/
 // END!>
-document.window.append('', null);
+

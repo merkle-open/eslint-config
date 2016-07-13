@@ -3,6 +3,8 @@
 // STATUS = 2
 
 // <!START
-
+// Bad
+/*
+console.log('hello world');
+*/
 // END!>
-document.window.append('', null);

@@ -1,7 +1,10 @@
+/* global module */
+/* [13.07.2016] approved by skill group core team */
 module.exports = {
 	rules: {
 		// require trailing commas in multiline object literals
-		'comma-dangle': 0,
+		'comma-dangle': [2, 'never'],
+		// [13.07.2016] enabled
 
 		// disallow assignment in conditional expressions
 		'no-cond-assign': [2, 'always'],
