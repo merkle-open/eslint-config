@@ -1,3 +1,5 @@
+/* global module */
+/* [18.07.2016] approved by skill group core team */
 module.exports = {
 	rules: {
 		// enforce return after a callback
