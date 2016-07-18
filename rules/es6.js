@@ -1,11 +1,15 @@
+/* global module */
+/* [18.07.2016] approved by skill group core team */
 module.exports = {
 	rules: {
 		// enforces no braces where they can be omitted
 		// http://eslint.org/docs/rules/arrow-body-style
-		'arrow-body-style': [2, 'as-needed'],
+		'arrow-body-style': 0,
+		// [18.07.2016] disabled
 
 		// require parens in arrow function arguments
-		'arrow-parens': 0,
+		'arrow-parens': [2, 'always'],
+		// [18.07.2016] enabled
 
 		// require space before/after arrow function's arrow
 		// http://eslint.org/docs/rules/arrow-spacing
@@ -96,7 +100,8 @@ module.exports = {
 		'prefer-rest-params': 2,
 
 		// suggest using the spread operator instead of .apply()
-		'prefer-spread': 0,
+		'prefer-spread': 2,
+		// [18.07.2016] enabled
 
 		// suggest using template literals instead of string concatenation
 		// http://eslint.org/docs/rules/prefer-template

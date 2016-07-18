@@ -7,8 +7,19 @@
 > enforces no braces where they can be omitted
 
 
-&#10003; Enabled (error)
+&#10006; Disabled
 
+```javascript
+
+// Good
+const foo = () => 0;
+
+// Bad
+const foo = () => {
+	return 0;
+};
+
+```
 <br />
 
 
@@ -18,8 +29,28 @@
 > require parens in arrow function arguments
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+a => {};
+a => a;
+a => { '\n'; };
+a.then(foo => {});
+a.then(foo => a);
+*/
+
+// Good
+() => {};
+(a) => {};
+(a) => a;
+(a) => { '\n'; };
+a.then((foo) => {});
+
+
+```
 <br />
 
 
@@ -31,6 +62,19 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+()=>{};
+()=> {};
+() =>{};
+*/
+
+// Good
+() => {};
+
+```
 <br />
 
 
@@ -53,6 +97,24 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+function *generator() {
+	yield '44';
+	yield '55';
+}
+*/
+
+// Good
+function* generator() {
+	yield '44';
+	yield '55';
+}
+
+
+```
 <br />
 
 
@@ -64,6 +126,15 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+class A { }
+A = 0;
+*/
+
+```
 <br />
 
 
@@ -75,6 +146,19 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var x = a => 1 ? 2 : 3;
+var x = (a) => 1 ? 2 : 3;
+*/
+
+// Good
+var x = a => { return 1 ? 2 : 3; };
+var x = (a) => { return 1 ? 2 : 3; };
+
+```
 <br />
 
 
@@ -86,6 +170,15 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+const a = 0;
+a = 1;
+*/
+
+```
 <br />
 
 
@@ -97,6 +190,22 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+class Foo {
+	bar() { }
+	bar() { }
+}
+
+class Foo {
+	bar() { }
+	get bar() { }
+}
+*/
+
+```
 <br />
 
 
@@ -108,6 +217,20 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+import { merge } from 'module';
+import something from 'another-module';
+import { find } from 'module';
+*/
+
+// Good
+import { merge, find } from 'module';
+import something from 'another-module';
+
+```
 <br />
 
 
@@ -119,6 +242,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+const foo = new Symbol('foo');
+*/
+
+// Good
+const foo = Symbol('foo');
+
+```
 <br />
 
 
@@ -174,6 +308,18 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+import { foo as foo } from 'bar';
+export { foo as foo };
+export { foo as foo } from 'bar';
+let { foo: foo } = bar;
+let { 'foo': foo } = bar;
+*/
+
+```
 <br />
 
 
@@ -185,6 +331,14 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+var test = 'a';
+*/
+
+```
 <br />
 
 
@@ -196,6 +350,19 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+const foo = {
+	w: function () {},
+	x: function* () {},
+	[y]: function () {},
+	z: z
+};
+*/
+
+```
 <br />
 
 
@@ -207,6 +374,19 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+foo(function (a) { return a; });
+foo(function () { return this.a; }.bind(this));
+*/
+
+// Good
+foo((a) => { return a; });
+foo(() => { return this.a; });
+
+```
 <br />
 
 
@@ -218,6 +398,20 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+let a;
+a = 0;
+
+// `i` is redefined (not reassigned) on each loop step.
+for (let i in [1, 2, 3]) {
+
+}
+*/
+
+```
 <br />
 
 
@@ -240,6 +434,30 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+function foo() {
+	console.log(arguments);
+}
+
+function foo(action) {
+	const args = [].slice.call(arguments, 1);
+	action.apply(null, args);
+}
+*/
+
+// Good
+function foo(...args) {
+	console.log(args);
+}
+
+function foo(action, ...args) {
+	action(...args);
+}
+
+```
 <br />
 
 
@@ -249,8 +467,19 @@
 > suggest using the spread operator instead of .apply()
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+foo.apply(null, args);
+*/
+
+// Good
+foo(...args);
+
+```
 <br />
 
 
@@ -262,6 +491,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+const str = 'Hello, ' + name + '!';
+*/
+
+// Good
+const str = `Hello, ${name}!`;
+
+```
 <br />
 
 
@@ -295,6 +535,18 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+`hello, ${ people.name}!`;
+`hello, ${people.name }!`;
+*/
+
+// Good
+`hello, ${people.name}!`;
+
+```
 <br />
 
 
@@ -306,6 +558,16 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+function* generator() {
+	yield *other();
+}
+*/
+
+```
 <br />
 
 
