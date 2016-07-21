@@ -42,6 +42,21 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+import foo from './foo';
+initWith(foo);
+import bar from './bar';
+*/
+
+// Good
+import foo from './foo';
+import bar from './bar';
+initWith(foo);
+
+```
 <br />
 
 
@@ -119,6 +134,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+import SomeDefaultClass from './mod';
+import foo from './some-other-mod';
+import * as names from './mod';
+import { something } from './mod.js';
+*/
+
+```
 <br />
 
 
@@ -141,6 +167,16 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+export let count = 2;
+let count = 4;
+export { count };
+*/
+
+```
 <br />
 
 

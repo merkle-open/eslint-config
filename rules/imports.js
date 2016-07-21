@@ -1,3 +1,5 @@
+/* global module */
+/* [21.07.2016] approved by skill group core team */
 module.exports = {
 	env: {
 		es6: true
@@ -100,7 +102,7 @@ module.exports = {
 		// Enforce a convention in module import order
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
 		'import/order': [0, {
-			groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+			'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
 			'newlines-between': 'never'
 		}],
 
