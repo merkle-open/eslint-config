@@ -3,6 +3,5 @@
 // STATUS = 0
 
 // <!START
-
+// deprecated
 // END!>
-document.window.append('', null);

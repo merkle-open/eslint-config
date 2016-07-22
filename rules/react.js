@@ -1,3 +1,5 @@
+/* global module */
+/* [22.07.2016] approved by skill group core team */
 module.exports = {
 	// View link below for react rules documentation
 	// https://github.com/yannickcr/eslint-plugin-react#list-of-supported-rules
@@ -8,7 +10,7 @@ module.exports = {
 
 		// Prevent missing displayName in a React component definition
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md
-		'react/display-name': [0, { ignoreTranspilerName: false }],
+		'react/display-name': 2,
 
 		// Forbid certain propTypes (any, array, object)
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md
@@ -28,22 +30,26 @@ module.exports = {
 
 		// Enforce event handler naming conventions in JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
-		'react/jsx-handler-names': [0, {
+		'react/jsx-handler-names': [2, {
 			eventHandlerPrefix: 'handle',
 			eventHandlerPropPrefix: 'on'
 		}],
+		// [21.07.2016] enabled
 
 		// Validate props indentation in JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
 		'react/jsx-indent-props': [2, 'tab'],
+		// [11.07.2016] changed to tabs
 
 		// Validate JSX has key prop when in array or iterator
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
-		'react/jsx-key': 0,
+		'react/jsx-key': 2,
+		// [22.07.2016] enabled
 
 		// Limit maximum of props on a single line in JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
-		'react/jsx-max-props-per-line': [0, { maximum: 1 }],
+		'react/jsx-max-props-per-line': [2, { maximum: 2 }],
+		// [22.07.2016] enabled max 2
 
 		// Prevent usage of .bind() in JSX props
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
@@ -55,7 +61,7 @@ module.exports = {
 
 		// Prevent duplicate props in JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
-		'react/jsx-no-duplicate-props': [0, { ignoreCase: false }],
+		'react/jsx-no-duplicate-props': [2, { ignoreCase: false }],
 
 		// Prevent usage of unwrapped JSX strings
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
@@ -105,7 +111,7 @@ module.exports = {
 
 		// Prevent usage of deprecated methods
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md
-		'react/no-deprecated': [1, { react: '0.15.0' }],
+		'react/no-deprecated': [2, { react: '0.15.0' }],
 
 		// Prevent usage of setState in componentDidMount
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-mount-set-state.md
@@ -117,7 +123,8 @@ module.exports = {
 
 		// Prevent direct mutation of this.state
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
-		'react/no-direct-mutation-state': 0,
+		'react/no-direct-mutation-state': 2,
+		// [22.07.2016] enabled
 
 		// Prevent usage of isMounted
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md
@@ -204,6 +211,7 @@ module.exports = {
 		// enforce JSX indentation
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md
 		'react/jsx-indent': [2, 'tab'],
+		// [11.07.2016] changed to tabs
 
 		// disallow target="_blank" on links
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md

@@ -7,8 +7,20 @@
 > Prevent missing displayName in a React component definition
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+const Hello = React.createClass({
+	render: function () {
+		return (<div>Hello {this.props.name}</div>);
+	}
+});
+*/
+
+```
 <br />
 
 
@@ -31,6 +43,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+const Hello = <Hello personal={true} />;
+*/
+
+// Good
+const Hello = <Hello personal />;
+
+```
 <br />
 
 
@@ -42,6 +65,27 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<Hello
+	firstName="John"
+	lastName="Smith" />;
+
+<Hello
+	firstName="John"
+	lastName="Smith"
+	/>;
+*/
+
+// Good
+<Hello
+	firstName="John"
+	lastName="Smith"
+/>;
+
+```
 <br />
 
 
@@ -53,6 +97,23 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<Hello name={ firstname } />;
+<Hello name={ firstname} />;
+<Hello name={firstname } />;
+*/
+
+// Good
+<Hello name={firstname} />;
+<Hello name={{ firstname: 'John', lastname: 'Doe' }} />;
+<Hello name={
+  firstname
+} />;
+
+```
 <br />
 
 
@@ -64,6 +125,21 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<Hello name = {firstname} />;
+<Hello name ={firstname} />;
+<Hello name= {firstname} />;
+*/
+
+// Good
+<Hello name={firstname} />;
+<Hello name />;
+<Hello {...props} />;
+
+```
 <br />
 
 
@@ -75,6 +151,21 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<Hello personal
+	prop />;
+*/
+
+// Good
+<Hello
+	personal
+	prop
+/>;
+
+```
 <br />
 
 
@@ -84,8 +175,21 @@
 > Enforce event handler naming conventions in JSX
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<MyComponent handleChange={this.handleChange} />;
+<MyComponent onChange={this.componentChanged} />;
+*/
+
+// Good
+<MyComponent onChange={this.handleChange} />;
+<MyComponent onChange={this.props.onFoo} />;
+
+```
 <br />
 
 
@@ -97,6 +201,27 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+// 2 spaces indentation
+<Hello
+  firstName="John"
+/>;
+
+// no indentation
+<Hello
+firstName="John"
+/>;
+*/
+
+// Good
+<Hello
+	firstName="John"
+/>;
+
+```
 <br />
 
 
@@ -108,6 +233,28 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+// 2 spaces indentation
+<App>
+  <Hello />
+</App>;
+
+// no indentation
+<App>
+<Hello />
+</App>;
+*/
+
+// Good
+// 1 tab indentation
+<App>
+	<Hello />
+</App>;
+
+```
 <br />
 
 
@@ -117,8 +264,21 @@
 > Validate JSX has key prop when in array or iterator
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+[<Hello />, <Hello />, <Hello />];
+out.map((x) => <Hello>x</Hello>);
+*/
+
+// Good
+[<Hello key="1" />, <Hello key="2" />, <Hello key="3" />];
+out.map((x, i) => <Hello key={i}>x</Hello>);
+
+```
 <br />
 
 
@@ -128,8 +288,24 @@
 > Limit maximum of props on a single line in JSX
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<Hello firstName="John" lastName="Smith" tel={5555555} />;
+*/
+
+// Good
+<Hello firstName="John" lastName="Smith" />;
+<Hello
+	firstName="John"
+	lastName="Smith"
+	tel={5555555}
+/>;
+
+```
 <br />
 
 
@@ -141,6 +317,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<div onClick={this.handleClick.bind(this)}></div>;
+*/
+
+// Good
+<div onClick={this.handleClick}></div>;
+
+```
 <br />
 
 
@@ -150,8 +337,19 @@
 > Prevent duplicate props in JSX
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<Hello name="John" name="John" />;
+*/
+
+// Good
+<Hello firstname="John" lastname="Doe" />;
+
+```
 <br />
 
 
@@ -163,6 +361,15 @@
 
 &#10006; Disabled
 
+```javascript
+
+// Bad
+const Hello = <div>test</div>;
+
+// Good
+const Hello = <div>{test}</div>;
+
+```
 <br />
 
 
@@ -174,6 +381,12 @@
 
 &#10006; Disabled
 
+```javascript
+
+// Bad
+const Hello = <a target="_blank"></a>;
+
+```
 <br />
 
 
@@ -185,6 +398,18 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<Hello name="John" />;
+*/
+
+// Good
+const Hello2 = require('./Hello');
+<Hello2 name="John" />;
+
+```
 <br />
 
 
@@ -196,6 +421,18 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<Test_component />;
+<TEST_COMPONENT />;
+*/
+
+// Good
+<TestComponent />;
+
+```
 <br />
 
 
@@ -218,6 +455,11 @@
 
 &#10006; Disabled
 
+```javascript
+
+// deprecated
+
+```
 <br />
 
 
@@ -227,8 +469,33 @@
 > Enforce props alphabetical sorting
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<Hello
+	active
+	onClick={this.handleClick}
+	tel={5555555}
+	validate
+	firstName="John"
+	lastName="Smith"
+/>;
+*/
+
+// Good
+<Hello
+	active
+	validate
+	firstName="John"
+	lastName="Smith"
+	tel={5555555}
+	onClick={this.handleClick}
+/>;
+
+```
 <br />
 
 
@@ -240,6 +507,19 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<Hello/>;
+<Hello firstName="John"/>;
+*/
+
+// Good
+<Hello />;
+<Hello firstName="John" />;
+
+```
 <br />
 
 
@@ -251,6 +531,11 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+const React = require('react');
+
+```
 <br />
 
 
@@ -273,6 +558,11 @@
 
 &#10006; Disabled
 
+```javascript
+
+const Hello = (<div dangerouslySetInnerHTML={{ __html: 'Hello World' }}></div>);
+
+```
 <br />
 
 
@@ -282,8 +572,20 @@
 > Prevent usage of deprecated methods
 
 
-&#10003; Enabled (warning)
+&#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+React.render(<MyComponent />, root);
+React.unmountComponentAtNode(root);
+React.findDOMNode(this.refs.foo);
+React.renderToString(<MyComponent />);
+React.renderToStaticMarkup(<MyComponent />);
+*/
+
+```
 <br />
 
 
@@ -295,6 +597,36 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+const Hello = React.createClass({
+	componentDidMount() {
+		this.setState({
+ 			isLoading: true
+		});
+	},
+	render() {
+		return <div>Hello {this.state.name}</div>;
+	}
+});
+*/
+
+// Good
+const Hello = React.createClass({
+	constructor() {
+		// initialState
+		this.state = {
+			isLoading: true
+		};
+	},
+	render() {
+		return <div>Hello {this.state.name}</div>;
+	}
+});
+
+```
 <br />
 
 
@@ -306,6 +638,23 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+const Hello = React.createClass({
+	componentDidUpdate() {
+		this.setState({
+			name: this.props.name.toUpperCase()
+		});
+	},
+	render() {
+		return <div>Hello {this.state.name}</div>;
+	}
+});
+*/
+
+```
 <br />
 
 
@@ -317,6 +666,43 @@
 
 &#10006; Disabled
 
+```javascript
+
+// Bad
+/*
+const Hello = React.createClass({
+	constructor() {
+		this.state = {
+			isOpen: false
+		};
+	},
+	handleClick() {
+		this.state.isOpen = true;
+	},
+	render() {
+		return <div onClick={this.handleClick}>Hello</div>;
+	}
+});
+*/
+
+// Good
+const Hello2 = React.createClass({
+	constructor() {
+		this.state = {
+			isOpen: false
+		};
+	},
+	handleClick() {
+		this.setState({
+			isOpen: true
+		});
+	},
+	render() {
+		return <div onClick={this.handleClick}>Hello</div>;
+	}
+});
+
+```
 <br />
 
 
@@ -328,6 +714,23 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+const Hello = React.createClass({
+	handleClick() {
+		if (this.isMounted()) {
+			// do something
+		}
+	},
+	render() {
+		return <div onClick={this.handleClick}>Hello</div>;
+	}
+});
+*/
+
+```
 <br />
 
 
@@ -339,6 +742,24 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+const Hello = React.createClass({
+	render() {
+		return <div>Hello {this.props.name}</div>;
+	}
+});
+
+const HelloJohn = React.createClass({
+	render() {
+		return <Hello name="John" />;
+	}
+});
+*/
+
+```
 <br />
 
 
@@ -372,6 +793,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+const Hello = <div class="hello">Hello World</div>;
+*/
+
+// Good
+const Hello = <div className="hello">Hello World</div>;
+
+```
 <br />
 
 
@@ -383,6 +815,25 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+const Hello = React.createClass({
+	render: function () {
+		return <div>Hello {this.props.name}</div>;
+	}
+});
+*/
+
+// Good
+class Hello extends React.Component {
+	render() {
+		return <div>Hello {this.props.name}</div>;
+	}
+}
+
+```
 <br />
 
 
@@ -394,6 +845,26 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+class Foo extends React.Component {
+	render() {
+		if (!this.props.foo) {
+			return null;
+		}
+		return <div>{this.props.foo}</div>;
+	}
+}
+*/
+
+// Good
+const Foo = function (props) {
+	return <div>{props.foo}</div>;
+};
+
+```
 <br />
 
 
@@ -405,6 +876,28 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+const Hello = React.createClass({
+	render: function () {
+		return <div>Hello {this.props.name}</div>;
+	}
+});
+*/
+
+// Good
+const Hello = React.createClass({
+	propTypes: {
+		name: React.PropTypes.string.isRequired
+	},
+	render: function () {
+		return <div>Hello {this.props.name}</div>;
+	}
+});
+
+```
 <br />
 
 
@@ -416,6 +909,12 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Good
+const React = require('react');
+
+```
 <br />
 
 
@@ -438,6 +937,25 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+class Hello extends React.Component {
+	render() {
+		<div>Hello</div>;
+	}
+}
+*/
+
+// Good
+class Hello extends React.Component {
+	render() {
+		return <div>Hello</div>;
+	}
+}
+
+```
 <br />
 
 
@@ -449,6 +967,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+const HelloJohn = <Hello name="John"></Hello>;
+*/
+
+// Good
+const HelloJohn = <Hello name="John" />;
+
+```
 <br />
 
 
@@ -460,6 +989,42 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Good
+class Hello extends React.Component {
+
+	// Static
+	static isAllowed() {}
+
+	// Lifecycle
+	componentWillMount() {}
+	componentWillReceiveProps() {}
+	shouldComponentUpdate() {}
+	componentWillUpdate() {}
+	componentDidUpdate() {}
+	componentWillUnmount() {}
+
+	// Handle
+	handleClick() {}
+
+	// get set
+	get test() {}
+	set test(value) {}
+
+	// everything else
+	onClick() {}
+
+	// render*
+	renderButton() {}
+
+	// render
+	render() {
+		return <div>{this.renderButton()}</div>;
+	}
+}
+
+```
 <br />
 
 
@@ -469,8 +1034,19 @@
 > Enforce propTypes declarations alphabetical sorting
 
 
-&#10006; Disabled
+&#10003; Enabled (error)
 
+```javascript
+
+Test.propTypes = {
+	ab: React.PropTypes.object.isRequired,
+	aa: React.PropTypes.object,
+	b: React.PropTypes.object,
+	x: React.PropTypes.object,
+	onClick: React.PropTypes.func
+};
+
+```
 <br />
 
 
