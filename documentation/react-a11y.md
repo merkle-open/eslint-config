@@ -9,6 +9,19 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<div id="address_label">Enter your address</div>;
+<input aria-labeledby="address_label" />;
+*/
+
+// Good
+<div id="address_label">Enter your address</div>;
+<input aria-labelledby="address_label" />;
+
+```
 <br />
 
 
@@ -20,6 +33,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<span aria-hidden="yes">foo</span>;
+*/
+
+// Good
+<span aria-hidden="true">foo</span>;
+
+```
 <br />
 
 
@@ -31,6 +55,21 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<div role="datepicker"></div>;
+<div role="range"></div>;
+<div role=""></div>;
+*/
+
+// Good
+<div role="button"></div>;
+<div role={role}></div>;
+<div></div>;
+
+```
 <br />
 
 
@@ -42,6 +81,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<meta aria-hidden="false" charSet="UTF-8" />;
+*/
+
+// Good
+<meta charSet="UTF-8" />;
+
+```
 <br />
 
 
@@ -53,6 +103,22 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<a href="#" />;
+<a href={"#"} />;
+<a href={`#`} />;
+*/
+
+// Good
+<a href="https://github.com" />;
+<a href="#section" />;
+<a href="foo" />;
+<a href={undefined} />;
+
+```
 <br />
 
 
@@ -64,6 +130,21 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+function Foo(src) {
+	return <img src={src} />;
+}
+*/
+
+// Good
+function Foo({ alt, src }) {
+	return <img alt={alt} src={src} />;
+}
+
+```
 <br />
 
 
@@ -75,6 +156,25 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<img alt="Photo of foo being weird." src="foo" />;
+<img alt="Image of me at a bar!" src="bar" />;
+<img alt="Picture of baz fixing a bug." src="baz" />;
+*/
+
+// Good
+<img alt="Foo eating a sandwich." src="foo" />;
+<img
+	aria-hidden
+	alt="Picture of me taking a photo of an image"
+	src="bar"
+/>;
+<img alt={`Baz taking a ${photo}`} src="baz" />;
+
+```
 <br />
 
 
@@ -86,6 +186,21 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+function Foo(props) {
+	return <label {...props} />;
+}
+*/
+
+// Good
+function Foo({ htmlFor, props }) {
+	return <label htmlFor={htmlFor} {...props} />;
+}
+
+```
 <br />
 
 
@@ -97,6 +212,21 @@
 
 &#10006; Disabled
 
+```javascript
+
+// Bad
+<div onMouseOver={() => {}} />;
+<div onMouseOut={() => {}} />;
+<div onMouseOver={() => {}} />;
+<div onMouseOut={() => {}} />;
+
+// Good
+<div onMouseOver={() => {}} onFocus={() => {}} />;
+<div onMouseOut={() => {}} onBlur={() => {}} />;
+<div onMouseOver={() => {}} onFocus={() => {}} />;
+<div onMouseOut={() => {}} onBlur={() => {}} />;
+
+```
 <br />
 
 
@@ -108,6 +238,17 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<div accessKey="h" />;
+*/
+
+// Good
+<div />;
+
+```
 <br />
 
 
@@ -119,6 +260,25 @@
 
 &#10006; Disabled
 
+```javascript
+
+// Bad
+<select onChange={updateModel} />;
+
+// Good
+(
+	<select onBlur={updateModel}>
+		<option />
+	</select>
+);
+
+(
+	<select>
+		<option onBlur={handleOnBlur} onChange={handleOnChange} />
+	</select>
+);
+
+```
 <br />
 
 
@@ -130,6 +290,19 @@
 
 &#10006; Disabled
 
+```javascript
+
+// Bad
+<span onClick="submitForm();">Submit</span>;
+<a onClick="showNextPage();">Next page</a>;
+
+// Good
+<div aria-hidden onClick={() => {}} />;
+<span onClick="doSomething();" tabIndex="0">Click me!</span>;
+<span onClick="doSomething();" tabIndex="-1">Click me too!</span>;
+<button onClick="doSomething();">Click the button :)</button>;
+
+```
 <br />
 
 
@@ -141,6 +314,32 @@
 
 &#10006; Disabled
 
+```javascript
+
+// Bad
+<div onClick={() => {}} />;
+<div onClick={() => {}} {...props} />;
+<div onClick={() => {}} aria-hidden={false} />;
+<a onClick={() => {}} />;
+
+// Good
+<div onClick={() => {}} role="button" />;
+// Interactive element does not require role.
+<input type="text" onClick={() => {}} />;
+// tabIndex makes this interactive.
+<a tabIndex="0" onClick={() => {}} />;
+// button is interactive.
+<button onClick={() => {}} className="foo" />;
+// This is hidden from screenreader.
+<div
+	onClick={() => {}}
+	role="button"
+	aria-hidden
+/>;
+// This is a higher-level DOM component
+<Input onClick={() => {}} type="hidden" />;
+
+```
 <br />
 
 
@@ -152,6 +351,28 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+<span
+	role="checkbox"
+	aria-labelledby="foo"
+	tabIndex="0"
+>
+</span>;
+*/
+
+// Good
+<span
+	role="checkbox"
+	aria-checked="false"
+	aria-labelledby="foo"
+	tabIndex="0"
+>
+</span>;
+
+```
 <br />
 
 
@@ -163,6 +384,29 @@
 
 &#10003; Enabled (error)
 
+```javascript
+
+// Bad
+/*
+(
+	<ul role="radiogroup" aria-labelledby="foo">
+		<li aria-required tabIndex="-1" role="radio" aria-checked="false">Rainbow Trout</li>
+		<li aria-required tabIndex="-1" role="radio" aria-checked="false">Brook Trout</li>
+		<li aria-required tabIndex="0" role="radio" aria-checked="true">Lake Trout</li>
+	</ul>
+);
+*/
+
+// Good
+(
+	<ul role="radiogroup" aria-required aria-labelledby="foo">
+		<li tabIndex="-1" role="radio" aria-checked="false">Rainbow Trout</li>
+		<li tabIndex="-1" role="radio" aria-checked="false">Brook Trout</li>
+		<li tabIndex="0" role="radio" aria-checked="true">Lake Trout</li>
+	</ul>
+);
+
+```
 <br />
 
 
@@ -174,6 +418,20 @@
 
 &#10006; Disabled
 
+```javascript
+
+// Bad
+<span tabIndex="5">foo</span>;
+<span tabIndex="3">bar</span>;
+<span tabIndex="1">baz</span>;
+<span tabIndex="2">never really sure what goes after baz</span>;
+
+// Good
+<span tabIndex="0">foo</span>;
+<span tabIndex="-1">bar</span>;
+<span tabIndex={0}>baz</span>;
+
+```
 <br />
 
 
