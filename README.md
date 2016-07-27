@@ -20,7 +20,7 @@ $ npm install --save-dev @namics/eslint-config
 
 ### .eslintrc.js
 ```
-module.extends = {
+module.exports = {
   "extends": "@namics/eslint-config/configurations/es6-browser.js"
 }
 ```
