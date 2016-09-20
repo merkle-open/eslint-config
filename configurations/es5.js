@@ -6,12 +6,12 @@ module.exports = {
 		'../rules/best-practices',
 		'../rules/errors',
 		'../rules/style',
-		'../rules/variables'
+		'../rules/variables',
 	].map(require.resolve),
 	env: {},
 	parserOptions: {
 		ecmaVersion: 5,
-		sourceType: 'module'
-	}
+		sourceType: 'module',
+	},
 
 };

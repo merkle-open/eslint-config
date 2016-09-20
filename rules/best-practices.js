@@ -60,8 +60,8 @@ module.exports = {
 			allow: [
 				'arrowFunctions',
 				'functions',
-				'methods'
-			]
+				'methods',
+			],
 		}],
 
 		// disallow empty destructuring patterns
@@ -122,7 +122,7 @@ module.exports = {
 			ignore: [],
 			ignoreArrayIndexes: true,
 			enforceConst: true,
-			detectObjects: false
+			detectObjects: false,
 		}],
 
 		// disallow use of multiple spaces
@@ -210,7 +210,7 @@ module.exports = {
 
 		// disallow usage of configurable warning terms in comments: e.g.
 		'no-warning-comments': [0,
-			{ terms: ['todo', 'fixme'], location: 'start' }
+			{ terms: ['todo', 'fixme'], location: 'start' },
 		],
 
 		// disallow use of the with statement
@@ -228,6 +228,6 @@ module.exports = {
 		'wrap-iife': [2, 'outside'],
 
 		// require or disallow Yoda conditions
-		'yoda': 2
-	}
+		'yoda': 2,
+	},
 };

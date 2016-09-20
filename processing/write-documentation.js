@@ -1,14 +1,15 @@
+/* eslint "complexity": 0 */
 
-var utils = require('./utils'),
-	ig = ['.DS_Store', '.eslintrc'],
-	fileName,
-	data;
+var utils = require('./utils');
+var ig = ['.DS_Store', '.eslintrc'];
+var fileName;
+var data;
 
 /**
  * @method getESLintUrl
- * @param {String} name fileName
- * @param {String} groupName name of group
- * @returns {String} eslint documentation url
+ * @param {string} name - fileName
+ * @param {string} groupName - name of group
+ * @returns {string} eslint documentation url
  */
 function getESLintUrl(name, groupName) {
 
@@ -27,11 +28,11 @@ function getESLintUrl(name, groupName) {
 
 /**
  * @method getStatusIcon
- * @param {String} fileData string read from file
- * @returns {String} statusIcon (unicode character)
+ * @param {string} fileData - string read from file
+ * @returns {string} statusIcon (unicode character)
  */
 function getStatusIcon(fileData) {
-	var exp = /STATUS = (.*)/.exec(fileData);
+	var exp = (/STATUS = (.*)/).exec(fileData);
 
 	if (exp === null || exp.length < 1) {
 		return '';
@@ -47,11 +48,11 @@ function getStatusIcon(fileData) {
 
 /**
  * @method getStatus
- * @param {String} fileData string read from file
- * @returns {String} status
+ * @param {string} fileData - string read from file
+ * @returns {string} status
  */
 function getStatus(fileData) {
-	var exp = /STATUS = (.*)/.exec(fileData);
+	var exp = (/STATUS = (.*)/).exec(fileData);
 
 	if (exp === null || exp.length < 1) {
 		return '';
@@ -67,11 +68,11 @@ function getStatus(fileData) {
 
 /**
  * @method getDescription
- * @param {String} fileData string read from file
- * @returns {String} description
+ * @param {string} fileData string read from file
+ * @returns {string} description
  */
 function getDescription(fileData) {
-	var exp = /DESCRIPTION = (.*)/.exec(fileData);
+	var exp = (/DESCRIPTION = (.*)/).exec(fileData);
 
 	if (exp === null || exp.length < 1) {
 		return '';
@@ -82,8 +83,8 @@ function getDescription(fileData) {
 
 /**
  * @method getTitle
- * @param {String} name fileName
- * @returns {String} title from fileName
+ * @param {string} name fileName
+ * @returns {string} title from fileName
  */
 function getTitle(name) {
 	return utils.capitalize(name.replace('-', ' '));
@@ -92,12 +93,12 @@ function getTitle(name) {
 /**
  * @method addSnippet
  * @param {Array} arr output readme lines array
- * @param {String} fileData string read from file
+ * @param {string} fileData string read from file
  * @returns {void}
  */
 function addSnippet(arr, fileData) {
-	var exp = /<!START([\s\S]*)(END!>)/.exec(fileData),
-		code;
+	var exp = (/<!START([\s\S]*)(END!>)/).exec(fileData);
+	var code;
 
 	if (exp === null || exp.length < 1) {
 		return;
@@ -117,16 +118,16 @@ function addSnippet(arr, fileData) {
 /**
  * @method getESLintUrl
  * @param {Array} arr output readme lines array
- * @param {String} name fileName
- * @param {String} path filepath
- * @param {String} groupName name of group
+ * @param {string} name fileName
+ * @param {string} path filepath
+ * @param {string} groupName name of group
  * @returns {void}
  */
 function addRule(arr, name, path, groupName) {
 
-	var fileData = utils.readFile(path),
-		nameCleaned = name.replace(/\.js$/, ''),
-		title = utils.capitalize(nameCleaned.replace(/-/g, ' '));
+	var fileData = utils.readFile(path);
+	var nameCleaned = name.replace(/\.js$/, '');
+	var title = utils.capitalize(nameCleaned.replace(/-/g, ' '));
 
 	arr.push('### [' + title + '](' + getESLintUrl(nameCleaned, groupName) + ')');
 	arr.push('');
@@ -144,7 +145,7 @@ function addRule(arr, name, path, groupName) {
 
 /**
  * @method writeDocumentationFile
- * @param {String} name fileName
+ * @param {string} name fileName
  * @param {Array} dataArr array with lines of readme
  * @returns {void}
  */

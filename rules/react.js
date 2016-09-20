@@ -32,7 +32,7 @@ module.exports = {
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
 		'react/jsx-handler-names': [2, {
 			eventHandlerPrefix: 'handle',
-			eventHandlerPropPrefix: 'on'
+			eventHandlerPropPrefix: 'on',
 		}],
 		// [21.07.2016] enabled
 
@@ -56,7 +56,7 @@ module.exports = {
 		'react/jsx-no-bind': [2, {
 			ignoreRefs: true,
 			allowArrowFunctions: true,
-			allowBind: false
+			allowBind: false,
 		}],
 
 		// Prevent duplicate props in JSX
@@ -75,7 +75,7 @@ module.exports = {
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
 		'react/jsx-pascal-case': [2, {
 			allowAllCaps: true,
-			ignore: []
+			ignore: [],
 		}],
 
 		// Enforce propTypes declarations alphabetical sorting
@@ -83,7 +83,7 @@ module.exports = {
 		'react/sort-prop-types': [2, {
 			ignoreCase: true,
 			callbacksLast: true,
-			requiredFirst: true
+			requiredFirst: true,
 		}],
 
 		// deprecated in favor of react/jsx-sort-props
@@ -94,7 +94,7 @@ module.exports = {
 		'react/jsx-sort-props': [2, {
 			ignoreCase: true,
 			callbacksLast: true,
-			shorthandFirst: true
+			shorthandFirst: true,
 		}],
 
 		// Prevent React to be incorrectly marked as unused
@@ -188,8 +188,8 @@ module.exports = {
 				'/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
 				'everything-else',
 				'/^render.+$/',
-				'render'
-			]
+				'render',
+			],
 		}],
 
 		// Prevent missing parentheses around multilines JSX
@@ -197,7 +197,7 @@ module.exports = {
 		'react/jsx-wrap-multilines': [2, {
 			declaration: true,
 			assignment: true,
-			return: true
+			return: true,
 		}],
 
 		// Require that the first prop in a JSX element be on a new line when the element is multiline
@@ -215,6 +215,6 @@ module.exports = {
 
 		// disallow target="_blank" on links
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
-		'react/jsx-no-target-blank': 0
-	}
+		'react/jsx-no-target-blank': 0,
+	},
 };

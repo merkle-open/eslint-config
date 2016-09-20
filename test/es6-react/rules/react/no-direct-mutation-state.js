@@ -40,16 +40,16 @@ const Hello = React.createClass({
 const Hello2 = React.createClass({
 	constructor() {
 		this.state = {
-			isOpen: false
+			isOpen: false,
 		};
 	},
 	handleClick() {
 		this.setState({
-			isOpen: true
+			isOpen: true,
 		});
 	},
 	render() {
 		return <div onClick={this.handleClick}>Hello</div>;
-	}
+	},
 });
 // END!>

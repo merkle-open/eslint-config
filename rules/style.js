@@ -39,8 +39,9 @@ module.exports = {
 
 		// Blacklist certain identifiers to prevent them being used
 		// http://eslint.org/docs/rules/id-blacklist
-		'id-blacklist': [2, 'data', 'callback'],
+		'id-blacklist': [2, 'callback'],
 		// [08.07.2016] enabled
+		// [20.09.2016] removed data because needed in jquery ajax options
 
 		// this option enforces minimum and maximum identifier lengths
 		// (variable names, property names etc.)
@@ -68,8 +69,8 @@ module.exports = {
 			overrides: {
 				return: { after: true },
 				throw: { after: true },
-				case: { after: true }
-			}
+				case: { after: true },
+			},
 		}],
 
 		// disallow mixed 'LF' and 'CRLF' as linebreaks
@@ -86,7 +87,7 @@ module.exports = {
 		// http://eslint.org/docs/rules/max-len
 		'max-len': [2, 120, 2, {
 			ignoreUrls: true,
-			ignoreComments: false
+			ignoreComments: false,
 		}],
 		// [08.07.2016] enabled
 
@@ -167,7 +168,7 @@ module.exports = {
 			'DebuggerStatement',
 			'ForInStatement',
 			'LabeledStatement',
-			'WithStatement'
+			'WithStatement',
 		],
 
 		// disallow space between function identifier and application
@@ -197,14 +198,14 @@ module.exports = {
 		// enforce 'same line' or 'multiple line' on object properties.
 		// http://eslint.org/docs/rules/object-property-newline
 		'object-property-newline': [0, {
-			allowMultiplePropertiesPerLine: true
+			allowMultiplePropertiesPerLine: true,
 		}],
 
 		// allow just one var statement per function
 		'one-var': [2, {
 			'var': 'never',
 			'let': 'never',
-			'const': 'never'
+			'const': 'never',
 		}],
 		// [08.07.2016] enabled never
 
@@ -236,8 +237,8 @@ module.exports = {
 			require: {
 				FunctionDeclaration: true,
 				MethodDefinition: true,
-				ClassDeclaration: true
-			}
+				ClassDeclaration: true,
+			},
 		}],
 		// [08.07.2016] enabled
 
@@ -270,7 +271,7 @@ module.exports = {
 		'spaced-comment': [2, 'always', {
 			exceptions: ['-', '+'],
 			// space here to support sprockets directives
-			markers: ['=', '!']
+			markers: ['=', '!'],
 		}],
 
 		// require or disallow the Unicode Byte Order Mark
@@ -278,7 +279,7 @@ module.exports = {
 		'unicode-bom': [2, 'never'],
 
 		// require regex literals to be wrapped in parentheses
-		'wrap-regex': 2
+		'wrap-regex': 2,
 		// [11.07.2016] enabled
-	}
+	},
 };

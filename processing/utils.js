@@ -1,4 +1,5 @@
 'use strict';
+/* eslint "no-console": 0 */
 
 var fs = require('fs');
 
@@ -7,8 +8,8 @@ module.exports = {
 	/**
 	 *
 	 * @method getStats
-	 * @param {string} dirFileName
-	 * @returns {object} getStats
+	 * @param {string} dirFileName - the directory name
+	 * @returns {Object} getStats
 	 * @public
 	 */
 	getStats: function (dirFileName) {
@@ -18,8 +19,8 @@ module.exports = {
 	/**
 	 *
 	 * @method isDir
-	 * @param {string} dirName
-	 * @returns {boolean} isDir
+	 * @param {string} dirName - the directory name
+	 * @returns {boolean} isDir - is directory
 	 * @public
 	 */
 	existDir: function (dirName) {
@@ -28,7 +29,9 @@ module.exports = {
 
 		try {
 			isDir = this.getStats(dirName).isDirectory();
-		} catch (err) {}
+		} catch (err) {
+			isDir = false;
+		}
 
 		return isDir;
 	},
@@ -36,8 +39,8 @@ module.exports = {
 	/**
 	 *
 	 * @method existFile
-	 * @param {string} path
-	 * @returns {boolean} isFile
+	 * @param {string} path - the path
+	 * @returns {boolean} isFile - is given path a file or not
 	 * @public
 	 */
 	existFile: function (path) {
@@ -46,7 +49,9 @@ module.exports = {
 
 		try {
 			isFile = this.getStats(path).isFile();
-		} catch (err) {}
+		} catch (err) {
+			isFile = false;
+		}
 
 		return isFile;
 	},
@@ -54,8 +59,9 @@ module.exports = {
 	/**
 	 *
 	 * @method writeFile
-	 * @param {string} path
-	 * @param {object} data
+	 * @param {string} path - the path
+	 * @param {Object} data - the data object
+	 * @returns {void}
 	 * @public
 	 */
 	writeFile: function (path, data) {
@@ -65,8 +71,8 @@ module.exports = {
 	/**
 	 *
 	 * @method readFile
-	 * @param {string} path
-	 * @returns {string}
+	 * @param {string} path - the path
+	 * @returns {string} returns the file data
 	 * @public
 	 */
 	readFile: function (path) {
@@ -76,13 +82,14 @@ module.exports = {
 	/**
 	 *
 	 * @method writeFile
-	 * @param {string} dir
-	 * @param {Array|undefined} ignoreFiles
+	 * @param {string} dir - the directory path
+	 * @param {Array|undefined} ignoreFiles - the files which should be ignored
+	 * @returns {Array} the result set
 	 * @public
 	 */
 	readDir: function (dir, ignoreFiles) {
-		var results = [],
-			list = [];
+		var results = [];
+		var list = [];
 
 		ignoreFiles = ignoreFiles || [];
 
@@ -92,11 +99,11 @@ module.exports = {
 			console.error('Folder "' + err.path + '" not found!');
 		}
 
-		list.forEach(function(file) {
+		list.forEach(function (file) {
 			if (ignoreFiles.indexOf(file) < 0) {
 				results.push({
 					path: dir + '/' + file,
-					file: file
+					file: file,
 				});
 			}
 		});
@@ -107,14 +114,12 @@ module.exports = {
 	 * Capitalizes the first letter of the given string.
 	 *
 	 * @method capitalize
-	 * @param {String} str
-	 *      The original string
-	 * @return {String}
-	 *      The capitalized string
+	 * @param {string} str - The original string
+	 * @returns {string} The capitalized string
 	 */
-	capitalize: function(str) {
+	capitalize: function (str) {
 		// Capitalize the first letter
 		return str.substr(0, 1).toUpperCase().concat(str.substr(1));
-	}
+	},
 
 };

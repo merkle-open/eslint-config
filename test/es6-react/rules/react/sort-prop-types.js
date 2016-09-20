@@ -24,7 +24,7 @@ Test.propTypes = {
 	aa: React.PropTypes.object,
 	b: React.PropTypes.object,
 	x: React.PropTypes.object,
-	onClick: React.PropTypes.func
+	onClick: React.PropTypes.func,
 };
 
 Test2.propTypes = {
@@ -33,6 +33,6 @@ Test2.propTypes = {
 	aa: React.PropTypes.object,
 	b: React.PropTypes.object,
 	x: React.PropTypes.object,
-	onClick: React.PropTypes.func
+	onClick: React.PropTypes.func,
 };
 // END!>

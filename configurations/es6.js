@@ -1,18 +1,18 @@
 module.exports = {
 
 	env: {
-		es6: true
+		es6: true,
 	},
 	plugins: [
-		'import'
+		'import',
 	],
 
 	settings: {
 		'import/resolver': {
 			node: {
-				extensions: ['.js', '.json']
-			}
-		}
+				extensions: ['.js', '.json'],
+			},
+		},
 	},
 	extends: [
 		'../rules/node-disable',
@@ -21,7 +21,7 @@ module.exports = {
 		'../rules/style',
 		'../rules/variables',
 		'../rules/imports',
-		'../rules/es6'
+		'../rules/es6',
 	].map(require.resolve),
 
 	parserOptions: {
@@ -29,8 +29,8 @@ module.exports = {
 		sourceType: 'module',
 		ecmaFeatures: {
 			generators: false,
-			objectLiteralDuplicateProperties: false
-		}
-	}
+			objectLiteralDuplicateProperties: false,
+		},
+	},
 
 };

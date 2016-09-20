@@ -39,11 +39,11 @@ const Hello = React.createClass({
 	constructor() {
 		// initialState
 		this.state = {
-			isLoading: true
+			isLoading: true,
 		};
 	},
 	render() {
 		return <div>Hello {this.state.name}</div>;
-	}
+	},
 });
 // END!>

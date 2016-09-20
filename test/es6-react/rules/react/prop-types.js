@@ -31,10 +31,10 @@ const Hello = React.createClass({
 // Good
 const Hello = React.createClass({
 	propTypes: {
-		name: React.PropTypes.string.isRequired
+		name: React.PropTypes.string.isRequired,
 	},
 	render: function () {
 		return <div>Hello {this.props.name}</div>;
-	}
+	},
 });
 // END!>

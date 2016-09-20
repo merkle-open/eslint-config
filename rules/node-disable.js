@@ -29,6 +29,6 @@ module.exports = {
 		'no-restricted-modules': 0,
 
 		// disallow use of synchronous methods (off by default)
-		'no-sync': 0
-	}
+		'no-sync': 0,
+	},
 };

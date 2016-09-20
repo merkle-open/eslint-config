@@ -2,22 +2,22 @@
 /* [21.07.2016] approved by skill group core team */
 module.exports = {
 	env: {
-		es6: true
+		es6: true,
 	},
 	parserOptions: {
 		ecmaVersion: 6,
-		sourceType: 'module'
+		sourceType: 'module',
 	},
 	plugins: [
-		'import'
+		'import',
 	],
 
 	settings: {
 		'import/resolver': {
 			node: {
-				extensions: ['.js', '.json']
-			}
-		}
+				extensions: ['.js', '.json'],
+			},
+		},
 	},
 
 	rules: {
@@ -60,7 +60,7 @@ module.exports = {
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
 		'import/no-extraneous-dependencies': [0, {
 			devDependencies: false,
-			optionalDependencies: false
+			optionalDependencies: false,
 		}],
 
 		// Forbid mutable exports
@@ -103,7 +103,7 @@ module.exports = {
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
 		'import/order': [0, {
 			'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-			'newlines-between': 'never'
+			'newlines-between': 'never',
 		}],
 
 		// Require a newline after the last import/require in a group
@@ -112,6 +112,6 @@ module.exports = {
 
 		// Require modules with a single export to use a default export
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md
-		'import/prefer-default-export': 0
-	}
+		'import/prefer-default-export': 0,
+	},
 };

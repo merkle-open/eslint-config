@@ -29,7 +29,7 @@ example = {
 		}
 
 		document.window.append(build.toString(), null);
-	}
+	},
 };
 
 // END!>

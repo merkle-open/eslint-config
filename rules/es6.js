@@ -29,7 +29,7 @@ module.exports = {
 		// disallow arrow functions where they could be confused with comparisons
 		// http://eslint.org/docs/rules/no-confusing-arrow
 		'no-confusing-arrow': [2, {
-			allowParens: true
+			allowParens: true,
 		}],
 
 		// disallow modifying variables that are declared using const
@@ -67,7 +67,7 @@ module.exports = {
 		'no-useless-rename': [2, {
 			ignoreDestructuring: false,
 			ignoreImport: false,
-			ignoreExport: false
+			ignoreExport: false,
 		}],
 
 		// require let or const instead of var
@@ -77,19 +77,19 @@ module.exports = {
 		// http://eslint.org/docs/rules/object-shorthand
 		'object-shorthand': [2, 'always', {
 			ignoreConstructors: false,
-			avoidQuotes: true
+			avoidQuotes: true,
 		}],
 
 		// suggest using arrow functions as callbacks
 		'prefer-arrow-callback': [2, {
 			allowNamedFunctions: false,
-			allowUnboundThis: true
+			allowUnboundThis: true,
 		}],
 
 		// suggest using of const declaration for variables that are never modified after declared
 		'prefer-const': [2, {
 			destructuring: 'any',
-			ignoreReadBeforeAssign: true
+			ignoreReadBeforeAssign: true,
 		}],
 
 		// suggest using Reflect methods where applicable
@@ -120,6 +120,6 @@ module.exports = {
 
 		// enforce spacing around the * in yield* expressions
 		// http://eslint.org/docs/rules/yield-star-spacing
-		'yield-star-spacing': [2, 'after']
-	}
+		'yield-star-spacing': [2, 'after'],
+	},
 };

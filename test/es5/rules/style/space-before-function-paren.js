@@ -47,6 +47,6 @@ class Foo {
 var foo = {
 	bar() {
 		// ...
-	}
+	},
 };
 // END!>

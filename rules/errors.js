@@ -3,8 +3,9 @@
 module.exports = {
 	rules: {
 		// require trailing commas in multiline object literals
-		'comma-dangle': [2, 'never'],
+		'comma-dangle': [2, 'always-multiline'],
 		// [13.07.2016] enabled
+		// [20.09.2016] always-multiline -> https://github.com/namics/eslint-config-namics/issues/1
 
 		// disallow assignment in conditional expressions
 		'no-cond-assign': [2, 'always'],
@@ -47,7 +48,7 @@ module.exports = {
 		'no-extra-parens': [0, 'all', {
 			conditionalAssign: true,
 			nestedBinaryExpressions: false,
-			returnAssign: false
+			returnAssign: false,
 		}],
 
 		// disallow unnecessary semicolons
@@ -103,7 +104,7 @@ module.exports = {
 				params: 'param',
 				class: 'constructor',
 				return: 'returns',
-				virtual: 'abstract'
+				virtual: 'abstract',
 			},
 			preferType: {
 				Boolean: 'boolean',
@@ -111,13 +112,13 @@ module.exports = {
 				object: 'Object',
 				String: 'string',
 				array: 'Array',
-				xml: 'XML'
+				xml: 'XML',
 			},
 			requireReturnDescription: true,
-			requireParamDescription: true
+			requireParamDescription: true,
 		}],
 
 		// ensure that the results of typeof are compared against a valid string
-		'valid-typeof': 2
-	}
+		'valid-typeof': 2,
+	},
 };
