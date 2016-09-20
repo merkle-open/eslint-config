@@ -12,6 +12,7 @@
 /* eslint no-shadow: 0*/
 /* eslint no-redeclare: 0*/
 /* eslint no-unused-expressions: 0*/
+/* eslint react/self-closing-comp: 0*/
 /* eslint react/react-in-jsx-scope: 0*/
 /* eslint react/prefer-stateless-function: 0*/
 /* eslint react/prefer-es6-class: 0*/

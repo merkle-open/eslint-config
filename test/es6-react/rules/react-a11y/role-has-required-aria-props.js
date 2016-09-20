@@ -19,6 +19,7 @@
 /* eslint react/jsx-sort-props: 0*/
 /* eslint react/jsx-no-undef: 0*/
 /* eslint object-shorthand: 0*/
+/* eslint react/self-closing-comp: 0*/
 // <!START
 // Bad
 /*

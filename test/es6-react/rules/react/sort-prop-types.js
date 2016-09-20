@@ -26,4 +26,13 @@ Test.propTypes = {
 	x: React.PropTypes.object,
 	onClick: React.PropTypes.func
 };
+
+Test2.propTypes = {
+	ab: React.PropTypes.object.isRequired,
+	onHover: React.PropTypes.func.isRequired,
+	aa: React.PropTypes.object,
+	b: React.PropTypes.object,
+	x: React.PropTypes.object,
+	onClick: React.PropTypes.func
+};
 // END!>

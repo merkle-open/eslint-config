@@ -18,6 +18,8 @@
 /* eslint react/jsx-no-undef: 0*/
 /* eslint object-shorthand: 0*/
 /* eslint no-unused-expressions: 0*/
+/* eslint react/self-closing-comp: 0*/
+
 // <!START
 const Hello = (<div dangerouslySetInnerHTML={{ __html: 'Hello World' }}></div>);
 // END!>
