@@ -15,14 +15,14 @@
 /*
 var bad = {
 	bar: 'baz',
-	qux: 'quux',
+	qux: 'quux'
 };
 */
 
 // Good
 var good = {
 	bar: 'baz',
-	qux: 'quux'
+	qux: 'quux',
 };
 
 ```

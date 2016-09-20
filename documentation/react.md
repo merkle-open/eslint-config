@@ -602,12 +602,12 @@ const Hello = React.createClass({
 	constructor() {
 		// initialState
 		this.state = {
-			isLoading: true
+			isLoading: true,
 		};
 	},
 	render() {
 		return <div>Hello {this.state.name}</div>;
-	}
+	},
 });
 
 ```
@@ -673,17 +673,17 @@ const Hello = React.createClass({
 const Hello2 = React.createClass({
 	constructor() {
 		this.state = {
-			isOpen: false
+			isOpen: false,
 		};
 	},
 	handleClick() {
 		this.setState({
-			isOpen: true
+			isOpen: true,
 		});
 	},
 	render() {
 		return <div onClick={this.handleClick}>Hello</div>;
-	}
+	},
 });
 
 ```
@@ -874,11 +874,11 @@ const Hello = React.createClass({
 // Good
 const Hello = React.createClass({
 	propTypes: {
-		name: React.PropTypes.string.isRequired
+		name: React.PropTypes.string.isRequired,
 	},
 	render: function () {
 		return <div>Hello {this.props.name}</div>;
-	}
+	},
 });
 
 ```
@@ -1027,7 +1027,7 @@ Test.propTypes = {
 	aa: React.PropTypes.object,
 	b: React.PropTypes.object,
 	x: React.PropTypes.object,
-	onClick: React.PropTypes.func
+	onClick: React.PropTypes.func,
 };
 
 Test2.propTypes = {
@@ -1036,7 +1036,7 @@ Test2.propTypes = {
 	aa: React.PropTypes.object,
 	b: React.PropTypes.object,
 	x: React.PropTypes.object,
-	onClick: React.PropTypes.func
+	onClick: React.PropTypes.func,
 };
 
 ```

@@ -17,7 +17,7 @@ var example;
 example = {
 	set a(value) {
 		this.val = value;
-	}
+	},
 };
 
 
@@ -28,7 +28,7 @@ example = {
 	},
 	get a() {
 		return this.val;
-	}
+	},
 };
 
 ```
@@ -105,7 +105,7 @@ example = {
 		}
 
 		document.window.append(build.toString(), null);
-	}
+	},
 };
 
 
