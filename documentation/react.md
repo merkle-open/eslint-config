@@ -448,22 +448,6 @@ const Hello2 = require('./Hello');
 
 
 
-### [Jsx sort prop types](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-prop-types.md)
-
-> deprecated in favor of react/jsx-sort-props
-
-
-&#10006; Disabled
-
-```javascript
-
-// deprecated
-
-```
-<br />
-
-
-
 ### [Jsx sort props](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md)
 
 > Enforce props alphabetical sorting
@@ -1040,6 +1024,15 @@ class Hello extends React.Component {
 
 Test.propTypes = {
 	ab: React.PropTypes.object.isRequired,
+	aa: React.PropTypes.object,
+	b: React.PropTypes.object,
+	x: React.PropTypes.object,
+	onClick: React.PropTypes.func
+};
+
+Test2.propTypes = {
+	ab: React.PropTypes.object.isRequired,
+	onHover: React.PropTypes.func.isRequired,
 	aa: React.PropTypes.object,
 	b: React.PropTypes.object,
 	x: React.PropTypes.object,
