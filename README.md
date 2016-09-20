@@ -26,15 +26,15 @@ module.exports = {
 ```
 
 ## Documentation
-- [Best practices](https://github.com/namics/eslint-config-namics/blob/master/documentation/best-practices.md) (ES5 + ES6)
-- [Style](https://github.com/namics/eslint-config-namics/blob/master/documentation/style.md) (ES5 + ES6)
-- [Variables](https://github.com/namics/eslint-config-namics/blob/master/documentation/variables.md) (ES5 + ES6)
-- [Errors](https://github.com/namics/eslint-config-namics/blob/master/documentation/errors.md) (ES5 + ES6)
-- [Node](https://github.com/namics/eslint-config-namics/blob/master/documentation/node.md) (ES5 + ES6)
-- [ES6](https://github.com/namics/eslint-config-namics/blob/master/documentation/es6.md) (ES6)
-- [Imports](https://github.com/namics/eslint-config-namics/blob/master/documentation/imports.md) (ES6)
-- [React](https://github.com/namics/eslint-config-namics/blob/master/documentation/react.md) (ES6)
-- [React A11y](https://github.com/namics/eslint-config-namics/blob/master/documentation/react-a11y.md) (ES6)
+- [Best practices](./documentation/best-practices.md) (ES5 + ES6)
+- [Style](./documentation/style.md) (ES5 + ES6)
+- [Variables](./documentation/variables.md) (ES5 + ES6)
+- [Errors](./documentation/errors.md) (ES5 + ES6)
+- [Node](./documentation/node.md) (ES5 + ES6)
+- [ES6](./documentation/es6.md) (ES6)
+- [Imports](./documentation/imports.md) (ES6)
+- [React](./documentation/react.md) (ES6)
+- [React A11y](./documentation/react-a11y.md) (ES6)
 
 ## Thanks to
 * [Namics.](https://www.namics.com/en/)
@@ -44,9 +44,8 @@ module.exports = {
 
 
 ## License
-[MIT License](https://github.com/namics/eslint-config-namics/blob/master/LICENSE)
+[MIT License](./LICENSE)
 
 
 ## Changelog
-
-Please see the [CHANGELOG.md](https://github.com/namics/eslint-config-namics/blob/master/CHANGELOG.md)
+Please see the [Releases](https://github.com/namics/eslint-config-namics/releases)
