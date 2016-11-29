@@ -16,6 +16,7 @@
 /* eslint react/jsx-sort-props: 0*/
 /* eslint react/jsx-no-undef: 0*/
 /* eslint object-shorthand: 0*/
+/* eslint react/jsx-indent: 0*/
 // DESCRIPTION = Enforce tabIndex value is not greater than zero.
 // STATUS = 0
 

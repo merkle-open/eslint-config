@@ -1,6 +1,6 @@
 {
 	"name": "@namics/eslint-config",
-	"version": "2.0.0",
+	"version": "2.1.0",
 	"description": "Default configurations for eslint",
 	"author": "Simon Mollweide <simon.mollweide@namics.com>",
 	"license": "MIT",
@@ -17,8 +17,9 @@
 	},
 	"main": "configurations/es6-browser.js",
 	"scripts": {
-		"lint": "eslint ./test",
-		"test": "eslint ./test"
+		"lint": "npm run lint:js",
+		"lint:js": "node_modules/.bin/eslint **/*.jsx **/*.js",
+		"test": "npm run lint"
 	},
 	"keywords": [
 		"code checker",
@@ -33,11 +34,13 @@
 		"react",
 		"jsx"
 	],
+	"peerDependencies": {
+		"eslint": "^3.0.0",
+		"eslint-plugin-import": "^2.0.0"
+	},
 	"dependencies": {
-		"eslint": "^3.5.0",
-		"eslint-find-rules": "^1.13.2",
-		"eslint-plugin-import": "^1.15.0",
-		"eslint-plugin-jsx-a11y": "^2.2.2",
-		"eslint-plugin-react": "^6.3.0"
+		"eslint-find-rules": "^1.14.3",
+		"eslint-plugin-jsx-a11y": "^3.0.1",
+		"eslint-plugin-react": "^6.7.1"
 	}
 }
