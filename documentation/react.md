@@ -111,7 +111,8 @@ const Hello = <Hello personal />;
 <Hello name={{ firstname: 'John', lastname: 'Doe' }} />;
 <Hello name={
   firstname
-} />;
+}
+/>;
 
 ```
 <br />
