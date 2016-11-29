@@ -18,6 +18,7 @@
 /* eslint react/jsx-no-undef: 0*/
 /* eslint object-shorthand: 0*/
 /* eslint no-unused-expressions: 0*/
+/* eslint react/jsx-indent: 0*/
 // <!START
 // Bad
 /*

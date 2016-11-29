@@ -18,6 +18,7 @@
 /* eslint react/prop-types: 0*/
 /* eslint react/jsx-sort-props: 0*/
 /* eslint object-shorthand: 0*/
+/* eslint react/jsx-indent: 0*/
 // <!START
 // Bad
 <div onMouseOver={() => {}} />;

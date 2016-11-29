@@ -16,6 +16,7 @@
 /* eslint react/prefer-stateless-function: 0*/
 /* eslint react/prefer-es6-class: 0*/
 /* eslint react/prop-types: 0*/
+/* eslint react/jsx-indent: 0*/
 /* eslint object-shorthand: 0*/
 // <!START
 // Bad
