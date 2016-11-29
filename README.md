@@ -16,8 +16,8 @@ $ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
 - `@namics/eslint-config/configurations/es6-browser` - ES6 + browser
 - `@namics/eslint-config/configurations/es6-react` - ES6 + react
 - `@namics/eslint-config/configurations/es6-node` - ES6 + node
-- `@namics/eslint-config/configurations/es5-browser` - ES5 + browser
-- `@namics/eslint-config/configurations/es5-node` - ES5 + node
+- `@namics/eslint-config/configurations/es5-browser` - ES5 + browser (deprecated)
+- `@namics/eslint-config/configurations/es5-node` - ES5 + node (deprecated)
 
 ### .eslintrc.js (add globals here if needed)
 ```
@@ -70,6 +70,8 @@ then run `npm run lint`
 * [Walmart](https://github.com/walmartlabs) for sharing their config in [eslint-config-walmart](https://github.com/walmartlabs/eslint-config-walmart)
 * [AirBnB](https://github.com/airbnb) for sharing their eslint config in [JavaScript Style Guide](https://github.com/airbnb/javascript)
 
+## Roadmap
+- Support for ES2016 (ES7)
 
 ## License
 [MIT License](./LICENSE)
