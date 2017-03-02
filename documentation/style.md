@@ -706,6 +706,24 @@ function good() {
 
 &#10003; Enabled (error)
 
+```javascript
+
+// BAD
+/*
+function test() {
+	return 'test';
+}
+*/
+
+// GOOD
+/**
+ * @returns {string} - something
+ */
+function test() {
+	return 'test';
+}
+
+```
 <br />
 
 

@@ -238,6 +238,7 @@ module.exports = {
 				FunctionDeclaration: true,
 				MethodDefinition: true,
 				ClassDeclaration: true,
+				ArrowFunctionExpression: false,
 			},
 		}],
 		// [08.07.2016] enabled

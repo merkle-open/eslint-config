@@ -506,6 +506,48 @@ const str = `Hello, ${name}!`;
 
 
 
+### [Require jsdoc](http://eslint.org/docs/rules/require-jsdoc)
+
+> do not require jsdoc
+
+
+&#10003; Enabled (error)
+
+```javascript
+
+// BAD
+/*
+class Test {
+
+	constructor() {
+		this.test = '12';
+	}
+}
+*/
+
+// GOOD
+/**
+ * @constructor Test
+ */
+class Test {
+
+	/**
+	 * @returns {void}
+	 */
+	constructor() {
+		this.test = '12';
+	}
+}
+
+// OKAY
+const testArrow = () => 'testArrow';
+
+
+```
+<br />
+
+
+
 ### [Require yield](http://eslint.org/docs/rules/require-yield)
 
 > disallow generator functions that do not have yield
