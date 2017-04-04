@@ -11,7 +11,6 @@
 $ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
 ```
 
-
 ## Usage
 - `@namics/eslint-config/configurations/es6-browser` - ES6 + browser
 - `@namics/eslint-config/configurations/es6-react` - ES6 + react
@@ -28,12 +27,13 @@ module.exports = {
 ```
 
 ### with flow
+Flowtype rules will be accepted if the flow annotation was defined in first line of each file.
 ```
 module.exports = {
   "extends": [
     "@namics/eslint-config/configurations/flow.js"
     "@namics/eslint-config/configurations/es6-react.js"
-  ]
+  ],
 }
 ```
 

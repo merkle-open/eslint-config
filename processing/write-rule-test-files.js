@@ -1,5 +1,12 @@
 /* eslint "no-console": 0 */
 
+/*
+
+	USAGE:
+	node processing/write-rule-test-files.js rules/flow.js test/flow/rules/
+
+*/
+
 var utils = require('./utils');
 var argv = process.argv;
 var filePath;
@@ -20,7 +27,9 @@ function writeTestFiles() {
 	destPath = argv[3];
 	data = utils.readFile(filePath);
 
+
 	data.split('\n\n').map(function (rule) {
+
 
 		var ruleSpl = rule.split('\n');
 		var desc;
@@ -40,10 +49,17 @@ function writeTestFiles() {
 			.replace(/\[([^, {]*).*/g, '$1')
 			.replace(/'/g, '');
 
+		if (nameStatus.search(/^http/) >= 0) {
+			nameStatus = ruleSpl[2]
+				.replace('//', '')
+				.trim()
+				.replace(/\[([^, {]*).*/g, '$1')
+				.replace(/'/g, '');
+		}
+
 		nameStatusSpl = nameStatus.split(':');
 
 		destFileName = destPath + nameStatusSpl[0].replace(/^.*\//, '') + '.js';
-
 		if (utils.existFile(destFileName)) {
 			return true;
 		}
