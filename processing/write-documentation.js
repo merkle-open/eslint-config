@@ -1,5 +1,12 @@
 /* eslint "complexity": 0 */
 
+/*
+
+	USAGE
+	run `node processing/write-documentation.js`
+
+*/
+
 var utils = require('./utils');
 var ig = ['.DS_Store', '.eslintrc'];
 var fileName;
