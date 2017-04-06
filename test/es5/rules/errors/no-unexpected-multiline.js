@@ -16,11 +16,10 @@
 /* eslint quotes: 0*/
 // <!START
 // Bad
-let x = function () {}
+let a = function () {}
 `hello`
 
 // Good
-let x = function () {};
+let b = function () {};
 `hello`
 // END!>
-
