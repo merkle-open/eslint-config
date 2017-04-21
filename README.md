@@ -11,11 +11,11 @@
 $ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
 ```
 
-
 ## Usage
 - `@namics/eslint-config/configurations/es6-browser` - ES6 + browser
 - `@namics/eslint-config/configurations/es6-react` - ES6 + react
 - `@namics/eslint-config/configurations/es6-node` - ES6 + node
+- `@namics/eslint-config/configurations/flow` - flow
 - `@namics/eslint-config/configurations/es5-browser` - ES5 + browser (deprecated)
 - `@namics/eslint-config/configurations/es5-node` - ES5 + node (deprecated)
 
@@ -23,6 +23,17 @@ $ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
 ```
 module.exports = {
   "extends": "@namics/eslint-config/configurations/es6-browser.js"
+}
+```
+
+### with flow
+Flowtype rules will be accepted if the flow annotation was defined in first line of each file.
+```
+module.exports = {
+  "extends": [
+    "@namics/eslint-config/configurations/flow.js"
+    "@namics/eslint-config/configurations/es6-react.js"
+  ],
 }
 ```
 
@@ -36,7 +47,7 @@ module.exports = {
 ```
 "scripts": {
   "lint": "npm run lint:js",
-  "lint:js": "node_modules/.bin/eslint **/*.jsx **/*.js"
+  "lint:js": "node_modules/.bin/eslint src/**/*.jsx src/**/*.js"
 },
 ```
 then run `npm run lint`
@@ -63,12 +74,14 @@ then run `npm run lint`
 - [Imports](./documentation/imports.md) (ES6)
 - [React](./documentation/react.md) (ES6)
 - [React A11y](./documentation/react-a11y.md) (ES6)
+- [Flow](./documentation/flow.md) (ES6)
 
 ## Thanks to
 * [Namics.](https://www.namics.com/en/)
 * [ESLint](https://github.com/eslint/eslint) for ESLint and the documentation [eslint.org](http://eslint.org/)
 * [Walmart](https://github.com/walmartlabs) for sharing their config in [eslint-config-walmart](https://github.com/walmartlabs/eslint-config-walmart)
 * [AirBnB](https://github.com/airbnb) for sharing their eslint config in [JavaScript Style Guide](https://github.com/airbnb/javascript)
+* [Gajus Kuizinas](https://github.com/gajus) for eslint-plugin-flowtype [eslint-plugin-flowtype](https://github.com/gajus/eslint-plugin-flowtype)
 
 ## Roadmap
 - Support for ES2016 (ES7)

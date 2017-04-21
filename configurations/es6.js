@@ -15,13 +15,13 @@ module.exports = {
 		},
 	},
 	extends: [
-		'../rules/node-disable',
-		'../rules/best-practices',
-		'../rules/errors',
-		'../rules/style',
-		'../rules/variables',
-		'../rules/imports',
-		'../rules/es6',
+		'../rules/node-disable.js',
+		'../rules/best-practices.js',
+		'../rules/errors.js',
+		'../rules/style.js',
+		'../rules/variables.js',
+		'../rules/imports.js',
+		'../rules/es6.js',
 	].map(require.resolve),
 
 	parserOptions: {

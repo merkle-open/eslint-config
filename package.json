@@ -18,7 +18,7 @@
 	"main": "configurations/es6-browser.js",
 	"scripts": {
 		"lint": "npm run lint:js",
-		"lint:js": "node_modules/.bin/eslint test/**/*.jsx test/**/*.js",
+		"lint:js": "node_modules/.bin/eslint .",
 		"test": "npm run lint"
 	},
 	"keywords": [
@@ -39,8 +39,11 @@
 		"eslint-plugin-import": "^2.0.0"
 	},
 	"dependencies": {
+		"babel-eslint": "^7.2.1",
 		"eslint-find-rules": "^1.14.3",
+		"eslint-plugin-flowtype": "^2.30.4",
 		"eslint-plugin-jsx-a11y": "^4.0.0",
-		"eslint-plugin-react": "^6.10.0"
+		"eslint-plugin-react": "^6.10.0",
+		"flow-bin": "^0.40.0"
 	}
 }

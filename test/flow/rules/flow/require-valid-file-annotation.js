@@ -1,7 +1,8 @@
+// @flow
+// DESCRIPTION = this rule validates Flow file annotations.
+// STATUS = 2
 
-// DESCRIPTION = Prevent usage of unwrapped JSX strings
-// STATUS = 0
-
+/* eslint max-len: 0*/
 /* eslint require-jsdoc: 0*/
 /* eslint no-use-before-define: 0*/
 /* eslint no-undef: 0*/
@@ -15,13 +16,9 @@
 /* eslint react/prefer-stateless-function: 0*/
 /* eslint react/prefer-es6-class: 0*/
 /* eslint react/prop-types: 0*/
-/* eslint react/jsx-no-undef: 0*/
 /* eslint object-shorthand: 0*/
-/* eslint no-unused-expressions: 0*/
 // <!START
-// Bad
-const A = <div>test</div>;
-
-// Good
-const B = <div>{test}</div>;
+// @flow
+// or
+/* @flow */
 // END!>
