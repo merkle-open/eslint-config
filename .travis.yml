@@ -5,5 +5,4 @@ script:
   - npm test
 node_js:
   - "6"
-  - "5"
   - "4"

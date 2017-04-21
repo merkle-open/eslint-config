@@ -5,8 +5,8 @@ module.exports = {
 	],
 	'extends': [
 		'./es6.js',
-		'../rules/react',
-		'../rules/react-a11y',
+		'../rules/react.js',
+		'../rules/react-a11y.js',
 	].map(require.resolve),
 	'env': {
 		'browser': true,

@@ -1,7 +1,8 @@
+// @flow
+// DESCRIPTION = disallows use of primitive constructors as types, such as `Boolean`, `Number` and `String`. [See more](https://flowtype.org/docs/builtins.html).
+// STATUS = 2
 
-// DESCRIPTION = Prevent usage of unwrapped JSX strings
-// STATUS = 0
-
+/* eslint max-len: 0*/
 /* eslint require-jsdoc: 0*/
 /* eslint no-use-before-define: 0*/
 /* eslint no-undef: 0*/
@@ -15,13 +16,17 @@
 /* eslint react/prefer-stateless-function: 0*/
 /* eslint react/prefer-es6-class: 0*/
 /* eslint react/prop-types: 0*/
-/* eslint react/jsx-no-undef: 0*/
 /* eslint object-shorthand: 0*/
-/* eslint no-unused-expressions: 0*/
 // <!START
-// Bad
-const A = <div>test</div>;
+// BAD
+/*
+type NumberType = Number;
+type StringType = String;
+type BooleanType = Boolean;
+*/
 
-// Good
-const B = <div>{test}</div>;
+// GOOD
+type NumberType = number;
+type StringType = string;
+type BooleanType = boolean;
 // END!>
