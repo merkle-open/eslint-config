@@ -23,7 +23,7 @@ $ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
 ```
 module.exports = {
   "extends": "@namics/eslint-config/configurations/es6-browser.js"
-}
+};
 ```
 
 ### with flow
@@ -31,10 +31,10 @@ Flowtype rules will be accepted if the flow annotation was defined in first line
 ```
 module.exports = {
   "extends": [
+    "@namics/eslint-config/configurations/es6-react.js",
     "@namics/eslint-config/configurations/flow.js"
-    "@namics/eslint-config/configurations/es6-react.js"
-  ],
-}
+  ]
+};
 ```
 
 ### .eslintignore
@@ -47,7 +47,7 @@ module.exports = {
 ```
 "scripts": {
   "lint": "npm run lint:js",
-  "lint:js": "node_modules/.bin/eslint src/**/*.jsx src/**/*.js"
+  "lint:js": "node_modules/.bin/eslint ."
 },
 ```
 then run `npm run lint`
