@@ -39,11 +39,12 @@
 		"eslint-plugin-import": "^2.0.0"
 	},
 	"dependencies": {
-		"babel-eslint": "^7.2.1",
-		"eslint-find-rules": "^1.14.3",
-		"eslint-plugin-flowtype": "^2.30.4",
-		"eslint-plugin-jsx-a11y": "^4.0.0",
-		"eslint-plugin-react": "^6.10.0",
-		"flow-bin": "^0.40.0"
+		"babel-eslint": "7.2.3",
+		"eslint": "3.19.0",
+		"eslint-find-rules": "1.14.3",
+		"eslint-plugin-flowtype": "2.34.0",
+		"eslint-plugin-jsx-a11y": "5.0.3",
+		"eslint-plugin-react": "7.0.1",
+		"flow-bin": "0.47.0"
 	}
 }
