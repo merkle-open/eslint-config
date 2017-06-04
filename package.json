@@ -1,6 +1,6 @@
 {
 	"name": "@namics/eslint-config",
-	"version": "2.3.0",
+	"version": "3.0.0",
 	"description": "Default configurations for eslint",
 	"author": "Simon Mollweide <simon.mollweide@namics.com>",
 	"license": "MIT",
