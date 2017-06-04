@@ -123,7 +123,7 @@
 
 
 
-### [Img has alt](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-has-alt.md)
+### [Img has alt](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-text.md)
 
 > Require <img> to have a non-empty `alt` prop, or role="presentation"
 
@@ -433,5 +433,3 @@ function Foo({ htmlFor, props }) {
 
 ```
 <br />
-
-

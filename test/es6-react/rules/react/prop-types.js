@@ -18,6 +18,7 @@
 /* eslint react/no-multi-comp: 0*/
 /* eslint object-shorthand: 0*/
 /* eslint no-unused-expressions: 0*/
+/* eslint react/display-name: 0*/
 // <!START
 // Bad
 /*
