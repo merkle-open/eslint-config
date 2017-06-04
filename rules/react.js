@@ -175,8 +175,12 @@ module.exports = {
 		'react/self-closing-comp': 2,
 
 		// Enforce spaces before the closing bracket of self-closing JSX elements
-		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md
-		'react/jsx-space-before-closing': [2, 'always'],
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
+		'react/jsx-tag-spacing': [2, {
+			'closingSlash': 'never',
+			'beforeSelfClosing': 'always',
+			'afterOpening': 'never',
+		}],
 
 		// Enforce component methods order
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
@@ -213,7 +217,7 @@ module.exports = {
 		'react/jsx-indent': [2, 'tab'],
 		// [11.07.2016] changed to tabs
 
-		// disallow target="_blank" on links
+		// disallow target="_blank' on links
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
 		'react/jsx-no-target-blank': 0,
 	},

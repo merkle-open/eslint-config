@@ -485,9 +485,9 @@ const Hello2 = require('./Hello');
 
 
 
-### [Jsx space before closing](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-space-before-closing.md)
+### [Jsx tag spacing](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md)
 
-> Enforce spaces before the closing bracket of self-closing JSX elements
+> Enforce or forbid spaces after the opening bracket, before the closing bracket of self-closing elements, and between the angle bracket and slash of JSX closing or self-closing elements.
 
 
 &#10003; Enabled (error)
@@ -1053,5 +1053,3 @@ Test2.propTypes = {
 &#10003; Enabled (error)
 
 <br />
-
-
