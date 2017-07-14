@@ -19,7 +19,7 @@ module.exports = {
 
 		// disallow href "#"
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/href-no-hash.md
-		'jsx-a11y/href-no-hash': 2,
+		'jsx-a11y/href-no-hash': 0,
 
 		// Require <img> to have a non-empty `alt` prop, or role="presentation"
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-has-alt.md
@@ -31,7 +31,7 @@ module.exports = {
 
 		// require that JSX labels use "htmlFor"
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/label-has-for.md
-		'jsx-a11y/label-has-for': 2,
+		'jsx-a11y/label-has-for': 0,
 
 		// require that mouseover/out come with focus/blur, for keyboard-only users
 		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/mouse-events-have-key-events.md

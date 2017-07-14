@@ -19,13 +19,10 @@ module.exports = {
 		'ecmaVersion': 6,
 		'sourceType': 'module',
 		'ecmaFeatures': {
-			'generators': false,
+			'generators': true,
 			'objectLiteralDuplicateProperties': false,
 			'jsx': true,
 		},
-	},
-	'ecmaFeatures': {
-		'jsx': true,
 	},
 	'settings': {
 		'import/resolver': {

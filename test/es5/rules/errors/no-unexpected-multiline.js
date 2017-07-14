@@ -14,6 +14,7 @@
 /* eslint no-unused-expressions: 0*/
 /* eslint semi: 0*/
 /* eslint quotes: 0*/
+/* eslint indent: 0*/
 // <!START
 // Bad
 let a = function () {}

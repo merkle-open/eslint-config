@@ -6,6 +6,7 @@
 /* eslint no-labels: 0*/
 /* eslint no-extra-label: 0*/
 /* eslint no-restricted-syntax: 0*/
+/* eslint indent: 0*/
 // <!START
 // Bad
 /*

@@ -101,16 +101,14 @@
 > disallow href "#"
 
 
-&#10003; Enabled (error)
+&#10003; Disabled
 
 ```javascript
 
 // Bad
-/*
 <a href="#" />;
 <a href={"#"} />;
 <a href={`#`} />;
-*/
 
 // Good
 <a href="https://github.com" />;
@@ -184,16 +182,14 @@ function Foo({ alt, src }) {
 > require that JSX labels use "htmlFor"
 
 
-&#10003; Enabled (error)
+&#10003; Disabled
 
 ```javascript
 
 // Bad
-/*
 function Foo(props) {
 	return <label {...props} />;
 }
-*/
 
 // Good
 function Foo({ htmlFor, props }) {
