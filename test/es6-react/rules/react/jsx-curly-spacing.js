@@ -32,8 +32,7 @@
 <Hello name={firstname} />;
 <Hello name={{ firstname: 'John', lastname: 'Doe' }} />;
 <Hello name={
-  firstname
+	firstname
 }
 />;
 // END!>
-
