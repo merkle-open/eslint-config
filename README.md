@@ -8,7 +8,7 @@
 
 ## Installation
 ```bash
-$ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
+$ npm install --save-dev @namics/eslint-config
 ```
 
 ## Usage
@@ -26,16 +26,8 @@ module.exports = {
 };
 ```
 
-### with flow
-Flowtype rules will be accepted if the flow annotation was defined in first line of each file.
-```
-module.exports = {
-  "extends": [
-    "@namics/eslint-config/configurations/es6-react.js",
-    "@namics/eslint-config/configurations/flow.js"
-  ]
-};
-```
+####
+- [configuration with flowtype](./documentation/with-flow.md)
 
 ### .eslintignore
 ```
@@ -82,9 +74,6 @@ then run `npm run lint`
 * [Walmart](https://github.com/walmartlabs) for sharing their config in [eslint-config-walmart](https://github.com/walmartlabs/eslint-config-walmart)
 * [AirBnB](https://github.com/airbnb) for sharing their eslint config in [JavaScript Style Guide](https://github.com/airbnb/javascript)
 * [Gajus Kuizinas](https://github.com/gajus) for eslint-plugin-flowtype [eslint-plugin-flowtype](https://github.com/gajus/eslint-plugin-flowtype)
-
-## Roadmap
-- Support for ES2016 (ES7)
 
 ## License
 [MIT License](./LICENSE)
