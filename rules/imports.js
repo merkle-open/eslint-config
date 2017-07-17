@@ -50,7 +50,7 @@ module.exports = {
 
 		// warn on accessing default export property names that are also named exports
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md
-		'import/no-named-as-default-member': 0,
+		'import/no-named-as-default-member': 2,
 
 		// disallow use of jsdoc-marked-deprecated imports
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md

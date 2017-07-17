@@ -7,7 +7,7 @@ module.exports = {
 	],
 	'extends': [
 		'../rules/flow.js',
-	],
+	].map(require.resolve),
 	'settings': {
 		'flowtype': {
 			'onlyFilesWithFlowAnnotation': true,
