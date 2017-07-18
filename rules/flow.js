@@ -7,6 +7,18 @@ module.exports = {
 		// Overwrite require-jsdoc rule
 		'require-jsdoc': 0,
 
+		// disallow importing from the same path more than once
+		// http://eslint.org/docs/rules/no-duplicate-imports
+		'no-duplicate-imports': 0,
+
+		// disallow duplicate imports
+		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
+		'import/no-duplicates': 0,
+
+		// Prevent missing props validation in a React component definition
+		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md
+		'react/prop-types': 0,
+
 		// enforces a particular style for boolean type annotations. This rule takes one argument.
 		// https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-boolean-style
 		'flowtype/boolean-style': [2, 'boolean'],
