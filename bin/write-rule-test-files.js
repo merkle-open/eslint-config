@@ -3,7 +3,7 @@
 /*
 
 	USAGE:
-	node processing/write-rule-test-files.js rules/flow.js test/flow/rules/
+	node bin/write-rule-test-files.js rules/flow.js test/flow/rules/
 
 */
 

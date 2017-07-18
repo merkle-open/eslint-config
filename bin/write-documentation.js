@@ -3,7 +3,7 @@
 /*
 
 	USAGE
-	run `node processing/write-documentation.js`
+	run `node bin/write-documentation.js`
 
 */
 
