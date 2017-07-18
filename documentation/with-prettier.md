@@ -1,7 +1,6 @@
-### with prettier
+## with prettier
 
-If you using prettier you should disable all eslint styling rules
-
+### ES6 + Prettier
 ```
 module.exports = {
   "extends": [
@@ -11,13 +10,24 @@ module.exports = {
 };
 ```
 
+### ES6 + React + Prettier
+```
+module.exports = {
+  "extends": [
+    "@namics/eslint-config/configurations/es6-react.js",
+    "@namics/eslint-config/configurations/es6-react-disable-styles.js"
+  ]
+};
+```
+
+### ES6 + React + Flow + Prettier
 ```
 module.exports = {
   "extends": [
     "@namics/eslint-config/configurations/es6-react.js",
     "@namics/eslint-config/configurations/es6-react-disable-styles.js",
     "@namics/eslint-config/configurations/flow.js",
-    "@namics/eslint-config/configurations/flow.js-disable-styles"
+    "@namics/eslint-config/configurations/flow-disable-styles.js"
   ]
 };
 ```
