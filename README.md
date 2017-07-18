@@ -28,6 +28,7 @@ module.exports = {
 
 ####
 - [configuration with flowtype](./documentation/with-flow.md)
+- [configuration with prettier](./documentation/with-prettier.md)
 
 ### .eslintignore
 ```

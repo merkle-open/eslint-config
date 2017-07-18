@@ -22,7 +22,7 @@ module.exports = {
 		'jsx-a11y/href-no-hash': 0,
 
 		// Require <img> to have a non-empty `alt` prop, or role="presentation"
-		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-has-alt.md
+		// https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-text.md
 		'jsx-a11y/alt-text': 2,
 
 		// Prevent img alt text from containing redundant words like "image", "picture", or "photo"
