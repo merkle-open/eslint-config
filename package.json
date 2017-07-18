@@ -21,7 +21,9 @@
         "lint": "npm run lint:js",
         "lint:js": "node_modules/.bin/eslint .",
         "test": "npm run lint",
-        "prettier": "node_modules/.bin/prettier --write \"test/es5-disable-styles/**/*.js\""
+        "prettier": "yarn prettier:es5 && yarn prettier:es5node",
+        "prettier:es5": "node_modules/.bin/prettier --write \"test/es5-disable-styles/**/*.js\"",
+        "prettier:es5node": "node_modules/.bin/prettier --write \"test/es5-node-disable-styles/**/*.js\""
     },
     "keywords": [
         "code checker",
