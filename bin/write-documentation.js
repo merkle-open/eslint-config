@@ -169,6 +169,10 @@ utils.readDir('./test', ig).map(function (fileObj1) {
 		if (!utils.existDir(fileObj2.path)) {
 			return true;
 		}
+		// ignore disable-styles
+		if (fileObj2.path.indexOf('-disable-styles') >= 0) {
+			return true;
+		}
 		utils.readDir(fileObj2.path, ig).map(function (fileObj3) {
 			if (!utils.existDir(fileObj3.path)) {
 				return true;

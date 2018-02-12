@@ -534,11 +534,11 @@ var colors = ['red', 'blue'];
 ```javascript
 
 // Bad
-let x = function () {}
+let a = function () {}
 `hello`
 
 // Good
-let x = function () {};
+let b = function () {};
 `hello`
 
 ```

@@ -110,7 +110,7 @@ const Hello = <Hello personal />;
 <Hello name={firstname} />;
 <Hello name={{ firstname: 'John', lastname: 'Doe' }} />;
 <Hello name={
-  firstname
+	firstname
 }
 />;
 
@@ -365,10 +365,10 @@ out.map((x, i) => <Hello key={i}>x</Hello>);
 ```javascript
 
 // Bad
-const Hello = <div>test</div>;
+const A = <div>test</div>;
 
 // Good
-const Hello = <div>{test}</div>;
+const B = <div>{test}</div>;
 
 ```
 <br />
@@ -487,7 +487,7 @@ const Hello2 = require('./Hello');
 
 ### [Jsx tag spacing](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md)
 
-> Enforce or forbid spaces after the opening bracket, before the closing bracket of self-closing elements, and between the angle bracket and slash of JSX closing or self-closing elements.
+> Enforce spaces before the closing bracket of self-closing JSX elements
 
 
 &#10003; Enabled (error)
@@ -1053,3 +1053,5 @@ Test2.propTypes = {
 &#10003; Enabled (error)
 
 <br />
+
+

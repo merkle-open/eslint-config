@@ -28,7 +28,19 @@
         "prettier:es6react": "node_modules/.bin/prettier --write \"test/es6-react-disable-styles/**/*.js\"",
         "prettier:flow": "node_modules/.bin/prettier --write \"test/flow-disable-styles/**/*.js\""
     },
-    "keywords": ["code checker", "code linter", "code standards", "code style", "eslint-config", "eslint", "eslintconfig", "lint", "es2015", "react", "jsx"],
+    "keywords": [
+        "code checker",
+        "code linter",
+        "code standards",
+        "code style",
+        "eslint-config",
+        "eslint",
+        "eslintconfig",
+        "lint",
+        "es2015",
+        "react",
+        "jsx"
+    ],
     "devDependencies": {
         "prettier": "1.10.2"
     },

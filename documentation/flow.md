@@ -159,8 +159,8 @@ type Foo2Type = {
 // GOOD
 type FooType = { a: string, b: string };
 type Foo2Type = {
-    a: string,
-    b: string,
+	a: string,
+	b: string,
 };
 
 ```

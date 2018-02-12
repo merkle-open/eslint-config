@@ -2,6 +2,32 @@
 ## React a11y
 
 
+### [Alt tag](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-tag.md)
+
+> Require <img> to have a non-empty `alt` prop, or role="presentation"
+
+
+&#10003; Enabled (error)
+
+```javascript
+
+// Bad
+/*
+function Foo(src) {
+	return <img src={src} />;
+}
+*/
+
+// Good
+function Foo({ alt, src }) {
+	return <img alt={alt} src={src} />;
+}
+
+```
+<br />
+
+
+
 ### [Aria props](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-props.md)
 
 > Enforce all aria-* props are valid.
@@ -101,7 +127,7 @@
 > disallow href "#"
 
 
-&#10003; Disabled
+&#10006; Disabled
 
 ```javascript
 
@@ -115,32 +141,6 @@
 <a href="#section" />;
 <a href="foo" />;
 <a href={undefined} />;
-
-```
-<br />
-
-
-
-### [Img has alt](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-text.md)
-
-> Require <img> to have a non-empty `alt` prop, or role="presentation"
-
-
-&#10003; Enabled (error)
-
-```javascript
-
-// Bad
-/*
-function Foo(src) {
-	return <img src={src} />;
-}
-*/
-
-// Good
-function Foo({ alt, src }) {
-	return <img alt={alt} src={src} />;
-}
 
 ```
 <br />
@@ -182,14 +182,16 @@ function Foo({ alt, src }) {
 > require that JSX labels use "htmlFor"
 
 
-&#10003; Disabled
+&#10006; Disabled
 
 ```javascript
 
 // Bad
+/*
 function Foo(props) {
 	return <label {...props} />;
 }
+*/
 
 // Good
 function Foo({ htmlFor, props }) {
@@ -429,3 +431,5 @@ function Foo({ htmlFor, props }) {
 
 ```
 <br />
+
+
