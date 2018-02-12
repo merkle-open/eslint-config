@@ -1,6 +1,6 @@
 {
     "name": "@namics/eslint-config",
-    "version": "4.1.0",
+    "version": "4.2.0",
     "description": "Default configurations for eslint",
     "author": "Simon Mollweide <simon.mollweide@namics.com>",
     "license": "MIT",
@@ -28,30 +28,22 @@
         "prettier:es6react": "node_modules/.bin/prettier --write \"test/es6-react-disable-styles/**/*.js\"",
         "prettier:flow": "node_modules/.bin/prettier --write \"test/flow-disable-styles/**/*.js\""
     },
-    "keywords": [
-        "code checker",
-        "code linter",
-        "code standards",
-        "code style",
-        "eslint-config",
-        "eslint",
-        "eslintconfig",
-        "lint",
-        "es2015",
-        "react",
-        "jsx"
-    ],
-	"devDependencies": {
-        "prettier": "^1.5.3"
-	},
+    "keywords": ["code checker", "code linter", "code standards", "code style", "eslint-config", "eslint", "eslintconfig", "lint", "es2015", "react", "jsx"],
+    "devDependencies": {
+        "prettier": "1.10.2"
+    },
+    "peerDependencies": {
+        "eslint": ">=4.x.x",
+        "eslint-plugin-import": ">=2.x.x"
+    },
     "dependencies": {
-        "babel-eslint": "7.2.3",
-        "eslint": "4.2.0",
+        "babel-eslint": "8.2.1",
+        "eslint": "4.17.0",
         "eslint-find-rules": "3.1.1",
-        "eslint-plugin-flowtype": "2.35.0",
-        "eslint-plugin-import": "2.7.0",
-        "eslint-plugin-jsx-a11y": "6.0.2",
-        "eslint-plugin-react": "7.1.0",
-        "flow-bin": "0.50.0"
+        "eslint-plugin-flowtype": "2.43.0",
+        "eslint-plugin-import": "2.8.0",
+        "eslint-plugin-jsx-a11y": "6.0.3",
+        "eslint-plugin-react": "7.6.1",
+        "flow-bin": "0.65.0"
     }
 }

@@ -27,6 +27,6 @@
 
 // Good
 <img alt="Foo eating a sandwich." src="foo" />;
-<img aria-hidden alt="Picture of me taking a photo of an image" src="bar" />;
+<img alt="Picture of me taking a photo of an image" aria-hidden src="bar" />;
 <img alt={`Baz taking a ${photo}`} src="baz" />;
 // END!>

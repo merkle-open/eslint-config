@@ -8,7 +8,7 @@
 
 ## Installation
 ```bash
-$ npm install --save-dev eslint @namics/eslint-config
+$ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
 ```
 
 ## Usage

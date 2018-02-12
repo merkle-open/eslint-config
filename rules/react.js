@@ -92,10 +92,12 @@ module.exports = {
 		// Enforce props alphabetical sorting
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
 		'react/jsx-sort-props': [2, {
+			noSortAlphabetically: true,
 			reservedFirst: true,
 			ignoreCase: true,
 			callbacksLast: true,
 			shorthandFirst: true,
+			shorthandLast: false,
 		}],
 
 		// Prevent React to be incorrectly marked as unused
