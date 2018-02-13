@@ -21,11 +21,12 @@
         "lint": "npm run lint:js",
         "lint:js": "node_modules/.bin/eslint .",
         "test": "npm run lint",
-        "prettier": "npm run prettier:es5 && npm run prettier:es5node && npm run prettier:es6 && npm run prettier:es6react && npm run prettier:flow",
+        "prettier": "npm run prettier:es5 && npm run prettier:es5node && npm run prettier:es6 && npm run prettier:es6react && npm run prettier:es8 && npm run prettier:flow",
         "prettier:es5": "node_modules/.bin/prettier --write \"test/es5-disable-styles/**/*.js\"",
         "prettier:es5node": "node_modules/.bin/prettier --write \"test/es5-node-disable-styles/**/*.js\"",
         "prettier:es6": "node_modules/.bin/prettier --write \"test/es6-disable-styles/**/*.js\"",
         "prettier:es6react": "node_modules/.bin/prettier --write \"test/es6-react-disable-styles/**/*.js\"",
+        "prettier:es8": "node_modules/.bin/prettier --write \"test/es8-disable-styles/**/*.js\"",
         "prettier:flow": "node_modules/.bin/prettier --write \"test/flow-disable-styles/**/*.js\""
     },
     "keywords": [

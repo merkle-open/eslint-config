@@ -1,31 +1,31 @@
 ## with prettier
 
-### ES7 (ES2016) + Prettier
+### ES8 (ES2017) + Prettier
 ```
 module.exports = {
   "extends": [
-    "@namics/eslint-config/configurations/es7-browser.js",
-    "@namics/eslint-config/configurations/es7-browser-disable-styles.js"
+    "@namics/eslint-config/configurations/es8-browser.js",
+    "@namics/eslint-config/configurations/es8-browser-disable-styles.js"
   ]
 };
 ```
 
-### ES7 (ES2016) + React + Prettier
+### ES8 (ES2017) + React + Prettier
 ```
 module.exports = {
   "extends": [
-    "@namics/eslint-config/configurations/es7-react.js",
-    "@namics/eslint-config/configurations/es7-react-disable-styles.js"
+    "@namics/eslint-config/configurations/es8-react.js",
+    "@namics/eslint-config/configurations/es8-react-disable-styles.js"
   ]
 };
 ```
 
-### ES7 (ES2016) + React + Flow + Prettier
+### ES8 (ES2017) + React + Flow + Prettier
 ```
 module.exports = {
   "extends": [
-    "@namics/eslint-config/configurations/es7-react.js",
-    "@namics/eslint-config/configurations/es7-react-disable-styles.js",
+    "@namics/eslint-config/configurations/es8-react.js",
+    "@namics/eslint-config/configurations/es8-react-disable-styles.js",
     "@namics/eslint-config/configurations/flow.js",
     "@namics/eslint-config/configurations/flow-disable-styles.js"
   ]

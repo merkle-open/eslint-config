@@ -7,7 +7,7 @@
 > enforce return after a callback
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -18,7 +18,7 @@
 > require all requires be top-level
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -29,7 +29,7 @@
 > enforces error handling in callbacks (node environment)
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -40,7 +40,7 @@
 > disallow mixing regular variable and require declarations
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -51,7 +51,7 @@
 > disallow use of new operator with the require function
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -62,7 +62,7 @@
 > disallow string concatenation with __dirname and __filename
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -73,7 +73,7 @@
 > disallow use of process.env
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -84,7 +84,7 @@
 > disallow process.exit()
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -95,7 +95,7 @@
 > restrict usage of specified node modules
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -106,7 +106,7 @@
 > disallow use of synchronous methods (off by default)
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 

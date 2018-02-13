@@ -7,7 +7,7 @@
 > enforces no braces where they can be omitted
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -29,7 +29,7 @@ const b = () => {
 > require parens in arrow function arguments
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -60,7 +60,7 @@ a.then((foo) => {});
 > require space before/after arrow function's arrow
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -84,7 +84,7 @@ a.then((foo) => {});
 > verify super() callings in constructors
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -95,7 +95,7 @@ a.then((foo) => {});
 > enforce the spacing around the * in generator functions
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -124,7 +124,7 @@ function* generator() {
 > disallow modifying variables of class declarations
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -144,7 +144,7 @@ A = 0;
 > disallow arrow functions where they could be confused with comparisons
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -168,7 +168,7 @@ var x = (a) => { return 1 ? 2 : 3; };
 > disallow modifying variables that are declared using const
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -188,7 +188,7 @@ a = 1;
 > disallow duplicate class members
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -215,7 +215,7 @@ class Foo {
 > disallow importing from the same path more than once
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -240,7 +240,7 @@ import something from 'another-module';
 > disallow symbol constructor
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -262,7 +262,7 @@ const foo = Symbol('foo');
 > disallow specific imports
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -273,7 +273,7 @@ const foo = Symbol('foo');
 > disallow to use this/super before super() calling in constructors.
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -284,7 +284,7 @@ const foo = Symbol('foo');
 > disallow useless computed property keys
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -295,7 +295,7 @@ const foo = Symbol('foo');
 > disallow unnecessary constructor
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -306,7 +306,7 @@ const foo = Symbol('foo');
 > disallow renaming import, export, and destructured assignments to the same name
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -329,7 +329,7 @@ let { 'foo': foo } = bar;
 > require let or const instead of var
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -348,7 +348,7 @@ var test = 'a';
 > require method and property shorthand syntax for object literals
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -372,7 +372,7 @@ const foo = {
 > suggest using arrow functions as callbacks
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -396,7 +396,7 @@ foo(() => { return this.a; });
 > suggest using of const declaration for variables that are never modified after declared
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -421,7 +421,7 @@ for (let i in [1, 2, 3]) {
 > suggest using Reflect methods where applicable
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -432,7 +432,7 @@ for (let i in [1, 2, 3]) {
 > use rest parameters instead of arguments
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -467,7 +467,7 @@ function foo(action, ...args) {
 > suggest using the spread operator instead of .apply()
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -489,7 +489,7 @@ foo(...args);
 > suggest using template literals instead of string concatenation
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -511,7 +511,7 @@ const str = `Hello, ${name}!`;
 > do not require jsdoc
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -553,7 +553,7 @@ const testArrow = () => 'testArrow';
 > disallow generator functions that do not have yield
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -564,7 +564,7 @@ const testArrow = () => 'testArrow';
 > import sorting
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -575,7 +575,7 @@ const testArrow = () => 'testArrow';
 > enforce usage of spacing in template strings
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -598,7 +598,7 @@ const testArrow = () => 'testArrow';
 > enforce spacing around the * in yield* expressions
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 

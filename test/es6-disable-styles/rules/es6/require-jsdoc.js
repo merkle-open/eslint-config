@@ -20,8 +20,8 @@ class Test {
  */
 class Test {
   /**
-	 * @returns {void}
-	 */
+   * @returns {void}
+   */
   constructor() {
     this.test = "12";
   }

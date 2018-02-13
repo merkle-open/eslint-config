@@ -46,9 +46,9 @@ function getStatusIcon(fileData) {
 	}
 
 	switch (parseInt(exp[1].trim(), 10)) {
-		case 0: return '&#10006;';
+		case 0: return ':x:';
 		case 1:
-		case 2: return '&#10003;';
+		case 2: return ':white_check_mark:';
 		default: return '';
 	}
 }

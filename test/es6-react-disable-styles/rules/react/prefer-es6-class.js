@@ -30,11 +30,7 @@ const Hello = React.createClass({
 // Good
 class Hello extends React.Component {
   render() {
-    return (
-      <div>
-        Hello {this.props.name}
-      </div>
-    );
+    return <div>Hello {this.props.name}</div>;
   }
 }
 // END!>

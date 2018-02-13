@@ -7,7 +7,7 @@
 > require trailing commas in multiline object literals
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -35,7 +35,7 @@ var good = {
 > disallow assignment in conditional expressions
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -57,7 +57,7 @@ if (x = 0) {
 > disallow use of console
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -76,7 +76,7 @@ console.log('hello world');
 > disallow use of constant expressions in conditions
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -97,7 +97,7 @@ if (false) {
 > disallow control characters in regular expressions
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -121,7 +121,7 @@ var pattern2 = new RegExp('\x20');
 > disallow use of debugger
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -143,7 +143,7 @@ function isTruthy(x) {
 > disallow duplicate arguments in functions
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -164,7 +164,7 @@ function foo(a, b, a) {
 > disallow duplicate keys when creating object literals
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -186,7 +186,7 @@ var foo = {
 > disallow a duplicate case label.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -216,7 +216,7 @@ switch (a) {
 > disallow the use of empty character classes in regular expressions
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -241,7 +241,7 @@ switch (a) {
 > disallow empty statements
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -263,7 +263,7 @@ if (foo) {
 > disallow assigning to the exception in a catch block
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -286,7 +286,7 @@ try {
 > disallow double-negation boolean casts in a boolean context
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -297,7 +297,7 @@ try {
 > disallow unnecessary parentheses
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -317,7 +317,7 @@ var d = (a * b) + c;
 > disallow unnecessary semicolons
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -336,7 +336,7 @@ var x = 5;;
 > disallow overwriting functions written as function declarations
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -356,7 +356,7 @@ foo = bar;
 > disallow function or variable declarations in nested blocks
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -380,7 +380,7 @@ function doSomething() { }
 > disallow invalid regular expression strings in the RegExp constructor
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -401,7 +401,7 @@ new RegExp('\\');
 > disallow irregular whitespace outside of strings and comments
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -412,7 +412,7 @@ new RegExp('\\');
 > disallow negation of the left operand of an in expression
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -434,7 +434,7 @@ if (!key in object) {
 > disallow the use of object properties of the global object (Math and JSON) as functions
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -454,7 +454,7 @@ var json = JSON();
 > disallow use of Object.prototypes builtins directly
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -480,7 +480,7 @@ var barIsEnumerable = {}.propertyIsEnumerable.call(foo, 'bar');
 > disallow multiple spaces in a regular expression literal
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -504,7 +504,7 @@ var re = new RegExp('foo {3}bar');
 > disallow sparse arrays
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -529,7 +529,7 @@ var colors = ['red', 'blue'];
 > Avoid code that looks like two expressions but is actually one
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -551,7 +551,7 @@ let b = function () {};
 > disallow unreachable statements after a return, throw, continue, or break statement
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -573,7 +573,7 @@ function foo() {
 > disallow return/throw/break/continue inside finally blocks
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -600,7 +600,7 @@ let foo = function () {
 > disallow comparisons with the value NaN
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -626,7 +626,7 @@ if (isNaN(foo)) {
 > ensure JSDoc comments are valid
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -637,7 +637,7 @@ if (isNaN(foo)) {
 > ensure that the results of typeof are compared against a valid string
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 

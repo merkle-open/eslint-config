@@ -7,7 +7,7 @@
 > enforce or disallow variable initializations at definition
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -37,7 +37,7 @@ function good() {
 > disallow the catch clause parameter name being the same as a variable in the outer scope
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -48,7 +48,7 @@ function good() {
 > disallow deletion of variables
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -68,7 +68,7 @@ delete x;
 > disallow labels that share a name with a variable
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -79,7 +79,7 @@ delete x;
 > disallow specific globals
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -90,7 +90,7 @@ delete x;
 > disallow shadowing of names such as arguments
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -113,7 +113,7 @@ var undefined;
 > disallow declaration of variables already declared in the outer scope
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -141,7 +141,7 @@ function b() {
 > disallow use of undefined when initializing variables
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -159,7 +159,7 @@ let bar = undefined;
 > disallow use of undeclared variables unless mentioned in a /*global */ block
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -179,7 +179,7 @@ b = 10;
 > disallow use of undefined variable
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -196,7 +196,7 @@ var foo = undefined;
 > disallow declaration of variables that are not used in the code
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -221,7 +221,7 @@ z = z + 1;
 > disallow use of variables before they are defined
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 

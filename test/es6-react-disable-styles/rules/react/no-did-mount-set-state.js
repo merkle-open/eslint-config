@@ -39,19 +39,15 @@ class Hello extends Component {
 
 // Good
 class Hello extends Component {
-	constructor() {
-      // initialState
-      this.state = {
-        isLoading: true
-      };
-    }
+  constructor() {
+    // initialState
+    this.state = {
+      isLoading: true
+    };
+  }
 
-	render() {
-      return (
-        <div>
-          Hello {this.state.name}
-        </div>
-      );
-    }
+  render() {
+    return <div>Hello {this.state.name}</div>;
+  }
 }
 // END!>

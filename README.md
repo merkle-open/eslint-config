@@ -11,15 +11,20 @@
 $ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
 ```
 
+## Usage ES8 (ES2017)
+- `@namics/eslint-config/configurations/es8-browser` - ES8 + browser
+- `@namics/eslint-config/configurations/es8-react` - ES8 + react
+- `@namics/eslint-config/configurations/es8-node` - ES8 + node
+
 ## Usage ES7 (ES2016)
-- `@namics/eslint-config/configurations/es7-browser` - ES7 + browser
-- `@namics/eslint-config/configurations/es7-react` - ES7 + react
+- `@namics/eslint-config/configurations/es7-browser` - ES7 + browser (deprecated)
+- `@namics/eslint-config/configurations/es7-react` - ES7 + react (deprecated)
 - `@namics/eslint-config/configurations/es7-node` - ES7 + node
 
 ## Usage ES6 (ES2015) - deprecated
 - `@namics/eslint-config/configurations/es6-browser` - ES6 + browser (deprecated)
 - `@namics/eslint-config/configurations/es6-react` - ES6 + react (deprecated)
-- `@namics/eslint-config/configurations/es6-node` - ES6 + node
+- `@namics/eslint-config/configurations/es6-node` - ES6 + node (deprecated)
 
 ## Usage with Flow
 - [configuration with flowtype](./documentation/with-flow.md)
@@ -31,7 +36,7 @@ $ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
 ### .eslintrc.js (add globals here if needed)
 ```
 module.exports = {
-  "extends": "@namics/eslint-config/configurations/es6-browser.js"
+  "extends": "@namics/eslint-config/configurations/es8-browser.js"
 };
 ```
 
@@ -51,28 +56,29 @@ module.exports = {
 then run `npm run lint`
 
 ### Example usage in project tree
-- .eslintrc.js (es7-react)
+- .eslintrc.js (es8-react)
 - .eslintignore
 - src
     - app.jsx
 - test
-    - .eslintrc.js (es7-node)
+    - .eslintrc.js (es8-node)
     - index.js
 - scripts
     - .eslintrc.js (es6-node)
     - index.js
 
 ## Documentation
-- [Best practices](./documentation/best-practices.md) (ES5/6/7)
-- [Style](./documentation/style.md) (ES5/6/7)
-- [Variables](./documentation/variables.md) (ES5/6/7)
-- [Errors](./documentation/errors.md) (ES5/6/7)
-- [Node](./documentation/node.md) (ES5/6/7)
-- [ES6](./documentation/es6.md) (ES6/7)
-- [Imports](./documentation/imports.md) (ES6/7)
-- [React](./documentation/react.md) (ES6/7)
-- [React A11y](./documentation/react-a11y.md) (ES6/7)
-- [Flow](./documentation/flow.md) (ES6/7)
+- [Best practices](./documentation/best-practices.md) (ES5/6/7/8)
+- [Style](./documentation/style.md) (ES5/6/7/8)
+- [Variables](./documentation/variables.md) (ES5/6/7/8)
+- [Errors](./documentation/errors.md) (ES5/6/7/8)
+- [Node](./documentation/node.md) (ES5/6/7/8)
+- [ES6](./documentation/es6.md) (ES6/7/8)
+- [ES8](./documentation/es8.md) (ES6/7/8)
+- [Imports](./documentation/imports.md) (ES6/7/8)
+- [React](./documentation/react.md) (ES6/7/8)
+- [React A11y](./documentation/react-a11y.md) (ES6/7/8)
+- [Flow](./documentation/flow.md) (ES6/7/8)
 
 ## Thanks to
 * [Namics.](https://www.namics.com/en/)

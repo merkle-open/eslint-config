@@ -22,9 +22,5 @@
 const A = <div>test</div>;
 
 // Good
-const B = (
-  <div>
-    {test}
-  </div>
-);
+const B = <div>{test}</div>;
 // END!>
