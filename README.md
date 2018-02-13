@@ -74,7 +74,7 @@ then run `npm run lint`
 - [Errors](./documentation/errors.md) (ES5/6/7/8)
 - [Node](./documentation/node.md) (ES5/6/7/8)
 - [ES6](./documentation/es6.md) (ES6/7/8)
-- [ES8](./documentation/es8.md) (ES6/7/8)
+- [ES8](./documentation/es8.md) (ES8)
 - [Imports](./documentation/imports.md) (ES6/7/8)
 - [React](./documentation/react.md) (ES6/7/8)
 - [React A11y](./documentation/react-a11y.md) (ES6/7/8)
