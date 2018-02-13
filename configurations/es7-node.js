@@ -1,7 +1,7 @@
 module.exports = {
 
 	extends: [
-		'./es6.js',
+		'./es7.js',
 		'../rules/node.js',
 	].map(require.resolve),
 	env: {

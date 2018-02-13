@@ -20,16 +20,16 @@
 // <!START
 // Bad
 /*
-const Hello = React.createClass({
+class Hello extends Component {
 	render() {
 		return <div>Hello {this.props.name}</div>;
 	}
-});
+}
 
-const HelloJohn = React.createClass({
+class HelloJohn extends Component {
 	render() {
 		return <Hello name="John" />;
 	}
-});
+}
 */
 // END!>

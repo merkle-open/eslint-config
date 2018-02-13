@@ -20,15 +20,15 @@
 // <!START
 // Bad
 /*
-const Hello = React.createClass({
+class Hello extends Component {
 	componentDidUpdate() {
 		this.setState({
 			name: this.props.name.toUpperCase()
 		});
-	},
+	}
 	render() {
 		return <div>Hello {this.state.name}</div>;
 	}
-});
+}
 */
 // END!>

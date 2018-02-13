@@ -4,7 +4,7 @@ module.exports = {
 		'react',
 	],
 	'extends': [
-		'./es6.js',
+		'./es7.js',
 		'../rules/react.js',
 		'../rules/react-a11y.js',
 	].map(require.resolve),
@@ -12,15 +12,17 @@ module.exports = {
 		'browser': true,
 		'node': false,
 		'amd': false,
-		'mocha': false,
-		'jasmine': false,
+		'mocha': true,
+		'jasmine': true,
+		'jest': true,
+		'jquery': true,
+		'serviceworker': true,
+		'worker': true,
 	},
 	'parserOptions': {
-		'ecmaVersion': 6,
+		'ecmaVersion': 7,
 		'sourceType': 'module',
 		'ecmaFeatures': {
-			'generators': true,
-			'objectLiteralDuplicateProperties': false,
 			'jsx': true,
 		},
 	},
@@ -29,10 +31,6 @@ module.exports = {
 			'node': {
 				'extensions': ['.js', '.jsx', '.json'],
 			},
-		},
-		'react': {
-			'pragma': 'React',
-			'version': '16',
 		},
 	},
 

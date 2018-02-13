@@ -20,7 +20,7 @@
 // <!START
 // Bad
 /*
-const Hello = React.createClass({
+class Hello extends Component {
 	handleClick() {
 		if (this.isMounted()) {
 			// do something
@@ -29,6 +29,6 @@ const Hello = React.createClass({
 	render() {
 		return <div onClick={this.handleClick}>Hello</div>;
 	}
-});
+}
 */
 // END!>

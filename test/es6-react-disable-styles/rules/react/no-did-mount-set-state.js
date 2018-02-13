@@ -21,32 +21,37 @@
 // <!START
 // Bad
 /*
-const Hello = React.createClass({
+class Hello extends Component {
 	componentDidMount() {
 		this.setState({
- 			isLoading: true
+			isLoading: true
 		});
 	},
 	render() {
-		return <div>Hello {this.state.name}</div>;
+		return (
+			<div>
+				Hello {this.state.name}
+		</div>
+		);
 	}
-});
+}
 */
 
 // Good
-const Hello = React.createClass({
-  constructor() {
-    // initialState
-    this.state = {
-      isLoading: true
-    };
-  },
-  render() {
-    return (
-      <div>
-        Hello {this.state.name}
-      </div>
-    );
-  }
-});
+class Hello extends Component {
+	constructor() {
+      // initialState
+      this.state = {
+        isLoading: true
+      };
+    }
+
+	render() {
+      return (
+        <div>
+          Hello {this.state.name}
+        </div>
+      );
+    }
+}
 // END!>

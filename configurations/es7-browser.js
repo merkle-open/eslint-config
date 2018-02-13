@@ -1,12 +1,11 @@
 module.exports = {
 
 	extends: [
-		'./es6.js',
-		'../rules/node.js',
+		'./es7.js',
 	].map(require.resolve),
 	env: {
-		browser: false,
-		node: true,
+		browser: true,
+		node: false,
 		amd: false,
 		mocha: true,
 		jasmine: true,
@@ -15,5 +14,4 @@ module.exports = {
 		serviceworker: true,
 		worker: true,
 	},
-
 };

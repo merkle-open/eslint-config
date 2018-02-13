@@ -22,20 +22,20 @@
 // <!START
 // Bad
 /*
-const Hello = React.createClass({
-	render: function () {
+class Hello extends Component {
+	render() {
 		return <div>Hello {this.props.name}</div>;
 	}
 });
 */
 
 // Good
-const Hello = React.createClass({
-	propTypes: {
-		name: React.PropTypes.string.isRequired,
-	},
-	render: function () {
+class Hello extends Component {
+	render() {
 		return <div>Hello {this.props.name}</div>;
-	},
-});
+	}
+}
+Hello.propTypes = {
+	name: PropTypes.string.isRequired,
+};
 // END!>

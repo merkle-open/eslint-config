@@ -21,35 +21,35 @@
 // <!START
 // Bad
 /*
-const Hello = React.createClass({
+class Hello extends Component {
 	constructor() {
 		this.state = {
 			isOpen: false
 		};
-	},
+	}
 	handleClick() {
 		this.state.isOpen = true;
-	},
+	}
 	render() {
 		return <div onClick={this.handleClick}>Hello</div>;
 	}
-});
+}
 */
 
 // Good
-const Hello2 = React.createClass({
+class Hello extends Component {
 	constructor() {
 		this.state = {
 			isOpen: false,
 		};
-	},
+	}
 	handleClick() {
 		this.setState({
 			isOpen: true,
 		});
-	},
+	}
 	render() {
 		return <div onClick={this.handleClick}>Hello</div>;
-	},
-});
+	}
+}
 // END!>
