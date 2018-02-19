@@ -36,7 +36,7 @@ $ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
 ### .eslintrc.js (add globals here if needed)
 ```
 module.exports = {
-  "extends": "@namics/eslint-config/configurations/es8-browser.js"
+  "extends": require.resolve("@namics/eslint-config/configurations/es8-browser.js");
 };
 ```
 
