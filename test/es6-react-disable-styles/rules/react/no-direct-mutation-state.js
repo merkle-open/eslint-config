@@ -1,5 +1,5 @@
 // DESCRIPTION = Prevent direct mutation of this.state
-// STATUS = 0
+// STATUS = 2
 
 /* eslint require-jsdoc: 0*/
 /* eslint no-use-before-define: 0*/
@@ -20,35 +20,37 @@
 // <!START
 // Bad
 /*
-const Hello = React.createClass({
-	constructor() {
-		this.state = {
-			isOpen: false
-		};
-	},
-	handleClick() {
-		this.state.isOpen = true;
-	},
-	render() {
-		return <div onClick={this.handleClick}>Hello</div>;
-	}
-});
-*/
-
-// Good
-const Hello2 = React.createClass({
+class Hello extends Component {
   constructor() {
     this.state = {
       isOpen: false
     };
-  },
+    this.handleClick = this.handleClick.bind(this);
+  }
+  handleClick() {
+    this.state.isOpen = true;
+  }
+  render() {
+    return <div onClick={this.handleClick}>Hello</div>;
+  }
+}
+*/
+
+// Good
+class Hello extends Component {
+  constructor() {
+    this.state = {
+      isOpen: false
+    };
+    this.handleClick = this.handleClick.bind(this);
+  }
   handleClick() {
     this.setState({
       isOpen: true
     });
-  },
+  }
   render() {
     return <div onClick={this.handleClick}>Hello</div>;
   }
-});
+}
 // END!>

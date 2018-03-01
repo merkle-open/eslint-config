@@ -7,8 +7,12 @@ module.exports = {
 		browser: true,
 		node: false,
 		amd: false,
-		mocha: false,
-		jasmine: false,
+		mocha: true,
+		jasmine: true,
+		jest: true,
+		jquery: true,
+		serviceworker: true,
+		worker: true,
 	},
 
 };

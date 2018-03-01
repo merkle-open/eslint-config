@@ -2,12 +2,38 @@
 ## React a11y
 
 
+### [Alt tag](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-tag.md)
+
+> Require <img> to have a non-empty `alt` prop, or role="presentation"
+
+
+:white_check_mark: Enabled (error)
+
+```javascript
+
+// Bad
+/*
+function Foo(src) {
+	return <img src={src} />;
+}
+*/
+
+// Good
+function Foo({ alt, src }) {
+	return <img alt={alt} src={src} />;
+}
+
+```
+<br />
+
+
+
 ### [Aria props](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-props.md)
 
 > Enforce all aria-* props are valid.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -31,7 +57,7 @@
 > Enforce ARIA state and property values are valid.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -53,7 +79,7 @@
 > Require ARIA roles to be valid and non-abstract
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -79,7 +105,7 @@
 > Enforce that elements that do not support ARIA roles, states, and properties do not have those attributes.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -101,7 +127,7 @@
 > disallow href "#"
 
 
-&#10003; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -121,38 +147,12 @@
 
 
 
-### [Img has alt](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/alt-text.md)
-
-> Require <img> to have a non-empty `alt` prop, or role="presentation"
-
-
-&#10003; Enabled (error)
-
-```javascript
-
-// Bad
-/*
-function Foo(src) {
-	return <img src={src} />;
-}
-*/
-
-// Good
-function Foo({ alt, src }) {
-	return <img alt={alt} src={src} />;
-}
-
-```
-<br />
-
-
-
 ### [Img redundant alt](https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/img-redundant-alt.md)
 
 > Prevent img alt text from containing redundant words like "image", "picture", or "photo"
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -182,14 +182,16 @@ function Foo({ alt, src }) {
 > require that JSX labels use "htmlFor"
 
 
-&#10003; Disabled
+:x: Disabled
 
 ```javascript
 
 // Bad
+/*
 function Foo(props) {
 	return <label {...props} />;
 }
+*/
 
 // Good
 function Foo({ htmlFor, props }) {
@@ -206,7 +208,7 @@ function Foo({ htmlFor, props }) {
 > require that mouseover/out come with focus/blur, for keyboard-only users
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -232,7 +234,7 @@ function Foo({ htmlFor, props }) {
 > Prevent use of `accessKey`
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -254,7 +256,7 @@ function Foo({ htmlFor, props }) {
 > require onBlur instead of onChange
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -284,7 +286,7 @@ function Foo({ htmlFor, props }) {
 > Enforce that elements with onClick handlers must be focusable.
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -308,7 +310,7 @@ function Foo({ htmlFor, props }) {
 > require things with onClick to have an aria role
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -345,7 +347,7 @@ function Foo({ htmlFor, props }) {
 > Enforce that elements with ARIA roles must have all required attributes for that role.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -378,7 +380,7 @@ function Foo({ htmlFor, props }) {
 > Enforce that elements with explicit or implicit roles defined contain only aria-* properties supported by that role.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -412,7 +414,7 @@ function Foo({ htmlFor, props }) {
 > Enforce tabIndex value is not greater than zero.
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -429,3 +431,5 @@ function Foo({ htmlFor, props }) {
 
 ```
 <br />
+
+

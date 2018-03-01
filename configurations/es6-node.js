@@ -8,8 +8,12 @@ module.exports = {
 		browser: false,
 		node: true,
 		amd: false,
-		mocha: false,
-		jasmine: false,
+		mocha: true,
+		jasmine: true,
+		jest: true,
+		jquery: true,
+		serviceworker: true,
+		worker: true,
 	},
 
 };

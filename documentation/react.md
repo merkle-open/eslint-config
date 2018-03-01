@@ -7,7 +7,7 @@
 > Prevent missing displayName in a React component definition
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -30,7 +30,7 @@ const Hello = React.createClass({
 > Forbid certain propTypes (any, array, object)
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -41,7 +41,7 @@ const Hello = React.createClass({
 > Enforce boolean attributes notation in JSX
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -63,7 +63,7 @@ const Hello = <Hello personal />;
 > Validate closing bracket location in JSX
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -95,7 +95,7 @@ const Hello = <Hello personal />;
 > Enforce or disallow spaces inside of curly braces in JSX attributes
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -110,7 +110,7 @@ const Hello = <Hello personal />;
 <Hello name={firstname} />;
 <Hello name={{ firstname: 'John', lastname: 'Doe' }} />;
 <Hello name={
-  firstname
+	firstname
 }
 />;
 
@@ -124,7 +124,7 @@ const Hello = <Hello personal />;
 > enforce spacing around jsx equals signs
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -150,7 +150,7 @@ const Hello = <Hello personal />;
 > Require that the first prop in a JSX element be on a new line when the element is multiline
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -176,7 +176,7 @@ const Hello = <Hello personal />;
 > Enforce event handler naming conventions in JSX
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -200,7 +200,7 @@ const Hello = <Hello personal />;
 > Validate props indentation in JSX
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -232,7 +232,7 @@ firstName="John"
 > enforce JSX indentation
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -265,7 +265,7 @@ firstName="John"
 > Validate JSX has key prop when in array or iterator
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -289,7 +289,7 @@ out.map((x, i) => <Hello key={i}>x</Hello>);
 > Limit maximum of props on a single line in JSX
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -316,7 +316,7 @@ out.map((x, i) => <Hello key={i}>x</Hello>);
 > Prevent usage of .bind() in JSX props
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -338,7 +338,7 @@ out.map((x, i) => <Hello key={i}>x</Hello>);
 > Prevent duplicate props in JSX
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -360,15 +360,15 @@ out.map((x, i) => <Hello key={i}>x</Hello>);
 > Prevent usage of unwrapped JSX strings
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
 // Bad
-const Hello = <div>test</div>;
+const A = <div>test</div>;
 
 // Good
-const Hello = <div>{test}</div>;
+const B = <div>{test}</div>;
 
 ```
 <br />
@@ -380,7 +380,7 @@ const Hello = <div>{test}</div>;
 > disallow target="_blank" on links
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -397,7 +397,7 @@ const Hello = <a target="_blank"></a>;
 > Disallow undeclared variables in JSX
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -420,7 +420,7 @@ const Hello2 = require('./Hello');
 > Enforce PascalCase for user-defined JSX components
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -443,7 +443,7 @@ const Hello2 = require('./Hello');
 > specify whether double or single quotes should be used in JSX attributes
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -454,7 +454,7 @@ const Hello2 = require('./Hello');
 > Enforce props alphabetical sorting
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -487,10 +487,10 @@ const Hello2 = require('./Hello');
 
 ### [Jsx tag spacing](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md)
 
-> Enforce or forbid spaces after the opening bracket, before the closing bracket of self-closing elements, and between the angle bracket and slash of JSX closing or self-closing elements.
+> Enforce spaces before the closing bracket of self-closing JSX elements
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -514,7 +514,7 @@ const Hello2 = require('./Hello');
 > Prevent React to be incorrectly marked as unused
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -530,7 +530,7 @@ const React = require('react');
 > Prevent variables used in JSX to be incorrectly marked as unused
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -541,7 +541,7 @@ const React = require('react');
 > Prevent usage of dangerous JSX properties
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -557,7 +557,7 @@ const Hello = (<div dangerouslySetInnerHTML={{ __html: 'Hello World' }}></div>);
 > Prevent usage of deprecated methods
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -580,36 +580,36 @@ React.renderToStaticMarkup(<MyComponent />);
 > Prevent usage of setState in componentDidMount
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
 // Bad
 /*
-const Hello = React.createClass({
+class Hello extends Component {
 	componentDidMount() {
 		this.setState({
  			isLoading: true
 		});
-	},
+	}
 	render() {
 		return <div>Hello {this.state.name}</div>;
 	}
-});
+}
 */
 
 // Good
-const Hello = React.createClass({
+class Hello extends Component {
 	constructor() {
 		// initialState
 		this.state = {
 			isLoading: true,
 		};
-	},
+	}
 	render() {
 		return <div>Hello {this.state.name}</div>;
-	},
-});
+	}
+}
 
 ```
 <br />
@@ -621,7 +621,7 @@ const Hello = React.createClass({
 > Prevent usage of setState in componentDidUpdate
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -649,43 +649,43 @@ const Hello = React.createClass({
 > Prevent direct mutation of this.state
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
 // Bad
 /*
-const Hello = React.createClass({
+class Hello extends Component {
 	constructor() {
 		this.state = {
 			isOpen: false
 		};
-	},
+	}
 	handleClick() {
 		this.state.isOpen = true;
-	},
+	}
 	render() {
 		return <div onClick={this.handleClick}>Hello</div>;
 	}
-});
+}
 */
 
 // Good
-const Hello2 = React.createClass({
+class Hello extends Component {
 	constructor() {
 		this.state = {
 			isOpen: false,
 		};
-	},
+	}
 	handleClick() {
 		this.setState({
 			isOpen: true,
 		});
-	},
+	}
 	render() {
 		return <div onClick={this.handleClick}>Hello</div>;
-	},
-});
+	}
+}
 
 ```
 <br />
@@ -697,7 +697,7 @@ const Hello2 = React.createClass({
 > Prevent usage of isMounted
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -725,7 +725,7 @@ const Hello = React.createClass({
 > Prevent multiple component definition per file
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -754,7 +754,7 @@ const HelloJohn = React.createClass({
 > Prevent usage of setState
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -765,7 +765,7 @@ const HelloJohn = React.createClass({
 > Prevent using string references
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -776,7 +776,7 @@ const HelloJohn = React.createClass({
 > Prevent usage of unknown DOM property
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -798,7 +798,7 @@ const Hello = <div className="hello">Hello World</div>;
 > Require ES6 class declarations over React.createClass
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -828,7 +828,7 @@ class Hello extends React.Component {
 > Require stateless functions when not using lifecycle methods, setState or ref
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -859,28 +859,28 @@ const Foo = function (props) {
 > Prevent missing props validation in a React component definition
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
 // Bad
 /*
-const Hello = React.createClass({
-	render: function () {
+class Hello extends Component {
+	render() {
 		return <div>Hello {this.props.name}</div>;
 	}
 });
 */
 
 // Good
-const Hello = React.createClass({
-	propTypes: {
-		name: React.PropTypes.string.isRequired,
-	},
-	render: function () {
+class Hello extends Component {
+	render() {
 		return <div>Hello {this.props.name}</div>;
-	},
-});
+	}
+}
+Hello.propTypes = {
+	name: PropTypes.string.isRequired,
+};
 
 ```
 <br />
@@ -892,7 +892,7 @@ const Hello = React.createClass({
 > Prevent missing React when using JSX
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -909,7 +909,7 @@ const React = require('react');
 > Restrict file extensions that may be required
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -920,7 +920,7 @@ const React = require('react');
 > Require render() methods to return something
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -950,7 +950,7 @@ class Hello extends React.Component {
 > Prevent extra closing tags for components without children
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -972,7 +972,7 @@ const HelloJohn = <Hello name="John" />;
 > Enforce component methods order
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1019,25 +1019,25 @@ class Hello extends React.Component {
 > Enforce propTypes declarations alphabetical sorting
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
 Test.propTypes = {
-	ab: React.PropTypes.object.isRequired,
-	aa: React.PropTypes.object,
-	b: React.PropTypes.object,
-	x: React.PropTypes.object,
-	onClick: React.PropTypes.func,
+	ab: PropTypes.object.isRequired,
+	aa: PropTypes.object,
+	b: PropTypes.object,
+	x: PropTypes.object,
+	onClick: PropTypes.func,
 };
 
 Test2.propTypes = {
-	ab: React.PropTypes.object.isRequired,
-	onHover: React.PropTypes.func.isRequired,
-	aa: React.PropTypes.object,
-	b: React.PropTypes.object,
-	x: React.PropTypes.object,
-	onClick: React.PropTypes.func,
+	ab: PropTypes.object.isRequired,
+	onHover: PropTypes.func.isRequired,
+	aa: PropTypes.object,
+	b: PropTypes.object,
+	x: PropTypes.object,
+	onClick: PropTypes.func,
 };
 
 ```
@@ -1050,6 +1050,8 @@ Test2.propTypes = {
 > Prevent missing parentheses around multilines JSX
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
+
+

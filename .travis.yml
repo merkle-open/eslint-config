@@ -4,5 +4,5 @@ before_script:
 script:
   - npm test
 node_js:
+  - "8"
   - "6"
-  - "4"

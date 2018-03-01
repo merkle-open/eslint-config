@@ -1,6 +1,6 @@
 // @flow
 // DESCRIPTION = requires that functions have return type annotation.
-// STATUS = 2
+// STATUS = 0
 
 /* eslint max-len: 0*/
 /* eslint require-jsdoc: 0*/
@@ -23,5 +23,7 @@
 const a = (foo: string) => { return 'foo'; };
 */
 // GOOD
-const b = (foo: string): string => { return 'foo'; };
+const b = (foo: string): string => {
+	return 'foo';
+};
 // END!>

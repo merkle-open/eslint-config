@@ -3,7 +3,6 @@
 /* not yet approved by skill group core team */
 module.exports = {
 	rules: {
-
 		// Overwrite require-jsdoc rule
 		'require-jsdoc': 0,
 
@@ -55,11 +54,7 @@ module.exports = {
 
 		// requires that functions have return type annotation.
 		// https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-require-return-type
-		'flowtype/require-return-type': [2, 'always',
-			{
-				'annotateUndefined': 'never',
-			},
-		],
+		'flowtype/require-return-type': 0,
 
 		// this rule validates Flow file annotations.
 		// https://github.com/gajus/eslint-plugin-flowtype#eslint-plugin-flowtype-rules-require-valid-file-annotation

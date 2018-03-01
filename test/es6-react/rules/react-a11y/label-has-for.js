@@ -1,6 +1,6 @@
 
 // DESCRIPTION = require that JSX labels use "htmlFor"
-// STATUS = 2
+// STATUS = 0
 
 /* eslint require-jsdoc: 0*/
 /* eslint no-use-before-define: 0*/

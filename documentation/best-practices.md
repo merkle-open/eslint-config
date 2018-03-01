@@ -7,7 +7,7 @@
 > enforces getter/setter pairs in objects
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -41,7 +41,7 @@ example = {
 > enforces return statements in callbacks of array's methods
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -78,7 +78,7 @@ var bar = [1, 2].filter(function (x) {
 > treat var statements as if they were block scoped
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -119,7 +119,7 @@ example = {
 > specify the maximum cyclomatic complexity allowed in a program
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -182,7 +182,7 @@ function b(x) {
 > require return statements to either always or never specify values
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -214,7 +214,7 @@ function doSomething(condition) {
 > specify curly brace conventions for all control statements
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -238,7 +238,7 @@ if (foo) {
 > require default case in switch statements
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -279,7 +279,7 @@ switch (foo) {
 > enforces consistent newlines before or after dots
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -301,7 +301,7 @@ var a = universe.
 > encourages use of dot notation whenever possible
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -324,7 +324,7 @@ var x = foo[bar];
 > require the use of === and !==
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -349,7 +349,7 @@ if (x === 42) {
 > make sure for-in loops have an if statement
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -376,7 +376,7 @@ for (key in foo) {
 > disallow the use of alert, confirm, and prompt
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -395,7 +395,7 @@ alert('hallo');
 > disallow use of arguments.caller or arguments.callee
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -429,7 +429,7 @@ function foo(n) {
 > disallow lexical declarations in case/default clauses
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -478,7 +478,7 @@ switch (foo) {
 > disallow division operators explicitly at beginning of regular expression
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -501,7 +501,7 @@ function bar2() {
 > disallow else after a return in an if
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -535,7 +535,7 @@ function foo() {
 > disallow empty functions, except for standalone funcs/arrows
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -559,7 +559,7 @@ function foo2() {
 > disallow empty destructuring patterns
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -584,7 +584,7 @@ var { a = {} } = foo;
 > disallow comparisons to null without a type-checking operator
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -609,7 +609,7 @@ if (foo === null) {
 > disallow use of eval()
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -630,7 +630,7 @@ var obj = { x: 'foo' },
 > disallow adding to native types
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -649,7 +649,7 @@ Object.prototype.extra = 55;
 > disallow unnecessary function binding
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -679,7 +679,7 @@ console.log(boundGetName2());
 > disallow Unnecessary Labels
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -707,7 +707,7 @@ B: switch (a) {
 > disallow fallthrough of case statements
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -741,7 +741,7 @@ switch (foo) {
 > disallow the use of leading or trailing decimal points in numeric literals
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -767,7 +767,7 @@ var num3 = -0.7;
 > disallow the type conversions with shorter notations
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -799,7 +799,7 @@ foo = String(foo);
 > disallow var and named functions in global scope
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -827,7 +827,7 @@ window.bar = function () {};
 > disallow use of eval()-like methods
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -849,7 +849,7 @@ setTimeout(doSomething, 100);
 > disallow this keywords outside of classes or class-like objects
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -868,7 +868,7 @@ foo(function () {
 > disallow usage of __iterator__ property
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -889,7 +889,7 @@ Foo.prototype.__iterator__ = function () {
 > disallow use of labels for anything other then loops and switches
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -912,7 +912,7 @@ label:
 > disallow unnecessary nested blocks
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -933,7 +933,7 @@ label:
 > disallow creation of functions within loops
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -956,7 +956,7 @@ for (var i = 0; i < 10; i++) {
 > disallow magic numbers
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -974,7 +974,7 @@ var now = Date.now(),
 > disallow use of multiple spaces
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -993,7 +993,7 @@ if (foo  === 'bar') {}
 > disallow use of multiline strings
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1013,7 +1013,7 @@ var x = 'Line 1 \
 > disallow reassignments of native objects
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1032,7 +1032,7 @@ String = new Object();
 > disallow use of new operator for Function object
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1051,7 +1051,7 @@ var x = new Function('a', 'b', 'return a + b');
 > disallows creating new instances of String, Number, and Boolean
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1077,7 +1077,7 @@ var booleanObject = Boolean(false);
 > disallow use of new operator when not part of the assignment or comparison
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1100,7 +1100,7 @@ var person = new Person();
 > disallow use of octal escape sequences in string literals, such as var foo = 'Copyright \251';
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1119,7 +1119,7 @@ var foo = 'Copyright \251';
 > disallow use of (old style) octal literals
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1138,7 +1138,7 @@ var num = 07;
 > disallow reassignment of function parameters + disallow parameter object manipulation
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -1157,7 +1157,7 @@ function foo(bar) {
 > disallow usage of __proto__ property
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1176,7 +1176,7 @@ var a = obj.__proto__;
 > disallow declaring the same variable more then once
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1196,7 +1196,7 @@ var a = 10;
 > disallow use of assignment in return statement
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1217,7 +1217,7 @@ function doSomething() {
 > disallow use of `javascript:` urls.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1236,7 +1236,7 @@ location.href = 'javascript:void(0)';
 > disallow self assignment
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1255,7 +1255,7 @@ foo = foo;
 > disallow comparisons where both sides are exactly the same
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1277,7 +1277,7 @@ if (x === x) {
 > disallow use of comma operator
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1302,7 +1302,7 @@ a = (b += 5, a + b);
 > restrict what can be thrown as an exception
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1324,7 +1324,7 @@ throw new Error('error');
 > disallow unmodified conditions of loops
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -1352,7 +1352,7 @@ while (node) {
 > disallow usage of expressions in statement position
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1371,7 +1371,7 @@ a && b();
 > disallow unused labels
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1405,7 +1405,7 @@ OUTER_LOOP:
 > disallow unnecessary .call() and .apply()
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -1425,7 +1425,7 @@ foo(1, 2, 3);
 > disallow useless string concatenation
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1447,7 +1447,7 @@ var foo = 'ab';
 > disallow unnecessary string escaping
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1471,7 +1471,7 @@ let bar = /:/;
 > disallow use of void operator
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1496,7 +1496,7 @@ function test() {
 > disallow usage of configurable warning terms in comments: e.g.
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -1513,7 +1513,7 @@ function test() {
 > disallow use of the with statement
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1537,7 +1537,7 @@ const r = ({ x, y }) => Math.sqrt(x * x + y * y);
 > require use of the second argument for parseInt()
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1560,7 +1560,7 @@ var num = parseInt('71', 10);
 > requires to declare all vars on top of their containing scope
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -1604,7 +1604,7 @@ function test() {
 > require immediate function invocation to be wrapped in parentheses
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1626,7 +1626,7 @@ var x = function () { return { y: 1 }; };
 > require or disallow Yoda conditions
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 

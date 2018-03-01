@@ -7,7 +7,7 @@
 > enforces a particular style for boolean type annotations. This rule takes one argument.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -30,7 +30,7 @@ type CeType = Boolean;
 > marks Flow type identifiers as defined. Used to suppress [`no-undef`](https://github.com/gajus/eslint-plugin-flowtypedocs/rules/no-undef) reporting of type identifiers.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -52,7 +52,7 @@ const b: BeType = '';
 > enforces consistent use of trailing commas in Object and Tuple annotations.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -77,7 +77,7 @@ type BeType = {
 > enforces consistent spacing within generic type annotation parameters.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -98,7 +98,7 @@ type BeType = Promise<string>;
 > disallows use of primitive constructors as types, such as `Boolean`, `Number` and `String`. [See more](https://flowtype.org/docs/builtins.html).
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -124,7 +124,7 @@ type BooleanType = boolean;
 > Warns against weak type annotations *any*, *Object* and *Function*. These types can cause flow to silently skip over portions of your code, which would have otherwise caused type errors.
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -144,7 +144,7 @@ function foo(thing: string): boolean { return true; }
 > enforces consistent separators between properties in Flow object types.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -159,8 +159,8 @@ type Foo2Type = {
 // GOOD
 type FooType = { a: string, b: string };
 type Foo2Type = {
-    a: string,
-    b: string,
+	a: string,
+	b: string,
 };
 
 ```
@@ -173,7 +173,7 @@ type Foo2Type = {
 > Overwrite require-jsdoc rule
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -190,7 +190,7 @@ function foo(thing: string): any { return true; }
 > requires that all function parameters have type annotations.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -211,7 +211,7 @@ function x(foo: string) {}
 > requires that functions have return type annotation.
 
 
-&#10003; Enabled (error)
+:x: Disabled
 
 ```javascript
 
@@ -220,7 +220,9 @@ function x(foo: string) {}
 const a = (foo: string) => { return 'foo'; };
 */
 // GOOD
-const b = (foo: string): string => { return 'foo'; };
+const b = (foo: string): string => {
+	return 'foo';
+};
 
 ```
 <br />
@@ -232,7 +234,7 @@ const b = (foo: string): string => { return 'foo'; };
 > this rule validates Flow file annotations.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -250,7 +252,7 @@ const b = (foo: string): string => { return 'foo'; };
 > enforces consistent use of semicolons after type aliases.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -271,7 +273,7 @@ type FooType = {};
 > enforces consistent spacing after the type annotation colon.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -294,7 +296,7 @@ const d = (foo: string) => {};
 > Enforces consistent spacing before the opening < of generic type annotation parameters.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -315,7 +317,7 @@ type XeType = Promise<string>;
 > Enforces consistent spacing before the type annotation colon.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -336,7 +338,7 @@ const b = (foo: string) => {};
 > Enforces a consistent naming pattern for type aliases.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -357,7 +359,7 @@ type FooType = {};
 > Enforces consistent spacing around union and intersection type separators (| and &).
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -378,7 +380,7 @@ type XeType = string | number;
 > Marks Flow type alias declarations as used. Used to suppress no-unused-vars errors that are triggered by type aliases.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 

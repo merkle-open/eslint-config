@@ -47,11 +47,7 @@ class Hello extends React.Component {
 
   // render
   render() {
-    return (
-      <div>
-        {this.renderButton()}
-      </div>
-    );
+    return <div>{this.renderButton()}</div>;
   }
 }
 // END!>

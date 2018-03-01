@@ -94,6 +94,10 @@ module.exports = {
 		// enforce padding within blocks
 		'padded-blocks': 0,
 
+		// require quotes around object literal property names
+		// http://eslint.org/docs/rules/quote-props.html
+		'quote-props': 0,
+
 		// specify whether double or single quotes should be used
 		'quotes': 0,
 

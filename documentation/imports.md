@@ -7,7 +7,7 @@
 > ensure default import coupled with default export
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -18,7 +18,7 @@
 > disallow invalid exports, e.g. multiple defaults
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -29,7 +29,7 @@
 > Ensure consistent use of file extension within the import path
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -40,7 +40,7 @@
 > disallow non-import statements appearing before import statements
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -66,7 +66,7 @@ initWith(foo);
 > ensure named imports coupled with named exports
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -77,7 +77,7 @@ initWith(foo);
 > enforces names exist at the time they are dereferenced, when imported as a full namespace
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -88,7 +88,7 @@ initWith(foo);
 > Require a newline after the last import/require in a group
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -99,7 +99,7 @@ initWith(foo);
 > disallow AMD require/define
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -110,7 +110,7 @@ initWith(foo);
 > disallow require()
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -121,7 +121,7 @@ initWith(foo);
 > disallow use of jsdoc-marked-deprecated imports
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -132,7 +132,7 @@ initWith(foo);
 > disallow duplicate imports
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -154,7 +154,7 @@ import { something } from './mod.js';
 > Forbid the use of extraneous packages
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -165,7 +165,7 @@ import { something } from './mod.js';
 > Forbid mutable exports
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -186,7 +186,7 @@ export { count };
 > warn on accessing default export property names that are also named exports
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -197,7 +197,7 @@ export { count };
 > do not allow a default import name to match a named export
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -208,7 +208,7 @@ export { count };
 > disallow namespace imports
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -219,7 +219,7 @@ export { count };
 > No Node.js builtin modules
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -230,7 +230,7 @@ export { count };
 > ensure imports point to files/modules that can be resolved
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -241,7 +241,7 @@ export { count };
 > Enforce a convention in module import order
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -252,7 +252,7 @@ export { count };
 > Require modules with a single export to use a default export
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 

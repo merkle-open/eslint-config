@@ -7,7 +7,7 @@
 > enforce spacing inside array brackets
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -18,7 +18,7 @@
 > enforce spacing inside single-line blocks
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -29,7 +29,7 @@
 > enforce one true brace style
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -40,7 +40,7 @@
 > require camel case names
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -51,7 +51,7 @@
 > enforce spacing before and after comma
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -62,7 +62,7 @@
 > enforce one true comma style
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -73,7 +73,7 @@
 > disallow padding inside computed properties
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -84,7 +84,7 @@
 > enforces consistent naming when capturing the current execution context
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -106,7 +106,7 @@ const _this = this;
 > enforce newline at the end of file, with no multiple empty lines
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -117,7 +117,7 @@ const _this = this;
 > require function expressions to have a name
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -128,7 +128,7 @@ const _this = this;
 > enforces use of function declarations or expressions
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -139,7 +139,7 @@ const _this = this;
 > Blacklist certain identifiers to prevent them being used
 
 
-&#10006; Disabled
+:x: Disabled
 
 ```javascript
 
@@ -161,7 +161,7 @@ function _test(productData) {}
 > this option enforces minimum and maximum identifier lengths (variable names, property names etc.)
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -172,7 +172,7 @@ function _test(productData) {}
 > require identifiers to match the provided regular expression
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -183,7 +183,7 @@ function _test(productData) {}
 > this option sets a specific tab width for your code
 
 
-&#10003; Enabled (warning)
+:white_check_mark: Enabled (warning)
 
 <br />
 
@@ -194,7 +194,7 @@ function _test(productData) {}
 > specify whether double or single quotes should be used in JSX attributes
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -205,7 +205,7 @@ function _test(productData) {}
 > enforces spacing between keys and values in object literal properties
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -216,7 +216,7 @@ function _test(productData) {}
 > require a space before & after certain keywords
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -227,7 +227,7 @@ function _test(productData) {}
 > disallow mixed 'LF' and 'CRLF' as linebreaks
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -238,7 +238,7 @@ function _test(productData) {}
 > enforces empty lines around comments
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -249,7 +249,7 @@ function _test(productData) {}
 > specify the maximum depth that blocks can be nested
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -260,7 +260,7 @@ function _test(productData) {}
 > specify the maximum length of a line in your program
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -271,7 +271,7 @@ function _test(productData) {}
 > specify the maximum depth callbacks can be nested
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -282,7 +282,7 @@ function _test(productData) {}
 > limits the number of parameters that can be used in the function declaration.
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -293,7 +293,7 @@ function _test(productData) {}
 > restrict the number of statements per line
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -304,7 +304,7 @@ function _test(productData) {}
 > specify the maximum number of statement allowed in a function
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -315,7 +315,7 @@ function _test(productData) {}
 > require a capital letter for constructors
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -326,7 +326,7 @@ function _test(productData) {}
 > disallow the omission of parentheses when invoking a constructor with no arguments
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -337,7 +337,7 @@ function _test(productData) {}
 > allow/disallow an empty newline after var statement
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -348,7 +348,7 @@ function _test(productData) {}
 > require an empty line before return statements
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -359,7 +359,7 @@ function _test(productData) {}
 > enforces new line after each method call in the chain to make it more readable and easy to maintain
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -370,7 +370,7 @@ function _test(productData) {}
 > disallow use of the Array constructor
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -381,7 +381,7 @@ function _test(productData) {}
 > disallow use of bitwise operators
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -392,7 +392,7 @@ function _test(productData) {}
 > disallow use of the continue statement
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -403,7 +403,7 @@ function _test(productData) {}
 > disallow comments inline after code
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -414,7 +414,7 @@ function _test(productData) {}
 > disallow if as the only statement in an else block
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -425,7 +425,7 @@ function _test(productData) {}
 > disallow mixed spaces and tabs for indentation
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -436,7 +436,7 @@ function _test(productData) {}
 > disallow multiple empty lines and only one newline at the end
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -447,7 +447,7 @@ function _test(productData) {}
 > disallow negated conditions
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -458,7 +458,7 @@ function _test(productData) {}
 > disallow nested ternary expressions
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -469,7 +469,7 @@ function _test(productData) {}
 > disallow use of the Object constructor
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -480,7 +480,7 @@ function _test(productData) {}
 > disallow use of unary operators, ++ and --
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -502,7 +502,7 @@ function _test(productData) {}
 > disallow space between function identifier and application
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -513,7 +513,7 @@ function _test(productData) {}
 > disallow the use of ternary operators
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -524,7 +524,7 @@ function _test(productData) {}
 > disallow trailing whitespace at the end of lines
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -535,7 +535,7 @@ function _test(productData) {}
 > allow dangling underscores in identifiers
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -546,7 +546,7 @@ function _test(productData) {}
 > disallow the use of Boolean literals in conditional expressions also, prefer `a || b` over `a ? a : b`
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -557,7 +557,7 @@ function _test(productData) {}
 > disallow whitespace before properties
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -568,7 +568,7 @@ function _test(productData) {}
 > require padding inside curly braces
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -579,7 +579,7 @@ function _test(productData) {}
 > enforce "same line" or "multiple line" on object properties.
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -590,7 +590,7 @@ function _test(productData) {}
 > require a newline around variable declaration
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -618,7 +618,7 @@ function good() {
 > allow just one var statement per function
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -649,7 +649,7 @@ function good() {
 > require assignment operator shorthand where possible or prohibit it entirely
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -660,7 +660,7 @@ function good() {
 > enforce operators to be placed before or after line breaks
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -671,7 +671,7 @@ function good() {
 > enforce padding within blocks
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -682,7 +682,7 @@ function good() {
 > require quotes around object literal property names
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -693,7 +693,7 @@ function good() {
 > specify whether double or single quotes should be used
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -704,7 +704,7 @@ function good() {
 > do not require jsdoc
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -733,7 +733,7 @@ function test() {
 > enforce spacing before and after semicolons
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -744,7 +744,7 @@ function test() {
 > require or disallow use of semicolons instead of ASI
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -755,7 +755,7 @@ function test() {
 > sort variables within the same declaration block
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -766,7 +766,7 @@ function test() {
 > require or disallow space before blocks
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -816,7 +816,7 @@ class Foo {
 > require or disallow space before function opening parenthesis
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -874,7 +874,7 @@ var foo = {
 > require or disallow spaces inside parentheses
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -898,7 +898,7 @@ var x = (1 + 2) * 3;
 > require spaces around operators
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -918,7 +918,7 @@ var sum = 1 + 2;
 > Require or disallow spaces before/after unary operators
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -929,7 +929,7 @@ var sum = 1 + 2;
 > require or disallow a space immediately following the // or /* in a comment
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 <br />
 
@@ -940,7 +940,7 @@ var sum = 1 + 2;
 > require or disallow the Unicode Byte Order Mark
 
 
-&#10006; Disabled
+:x: Disabled
 
 <br />
 
@@ -951,7 +951,7 @@ var sum = 1 + 2;
 > require regex literals to be wrapped in parentheses
 
 
-&#10003; Enabled (error)
+:white_check_mark: Enabled (error)
 
 ```javascript
 

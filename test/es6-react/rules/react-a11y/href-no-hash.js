@@ -1,8 +1,9 @@
 
 // DESCRIPTION = disallow href "#"
-// STATUS = 2
+// STATUS = 0
 
 /* eslint require-jsdoc: 0*/
+/* eslint quotes: 0*/
 /* eslint no-use-before-define: 0*/
 /* eslint no-undef: 0*/
 /* eslint no-unused-vars: 0*/
@@ -21,8 +22,8 @@
 // <!START
 // Bad
 <a href="#" />;
-<a href={'#'} />;
-<a href={'#'} />;
+<a href={"#"} />;
+<a href={`#`} />;
 
 // Good
 <a href="https://github.com" />;

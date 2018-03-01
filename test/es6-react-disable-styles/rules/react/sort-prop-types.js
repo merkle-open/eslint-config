@@ -19,19 +19,19 @@
 /* eslint no-unused-expressions: 0*/
 // <!START
 Test.propTypes = {
-  ab: React.PropTypes.object.isRequired,
-  aa: React.PropTypes.object,
-  b: React.PropTypes.object,
-  x: React.PropTypes.object,
-  onClick: React.PropTypes.func
+  ab: PropTypes.object.isRequired,
+  aa: PropTypes.object,
+  b: PropTypes.object,
+  x: PropTypes.object,
+  onClick: PropTypes.func
 };
 
 Test2.propTypes = {
-  ab: React.PropTypes.object.isRequired,
-  onHover: React.PropTypes.func.isRequired,
-  aa: React.PropTypes.object,
-  b: React.PropTypes.object,
-  x: React.PropTypes.object,
-  onClick: React.PropTypes.func
+  ab: PropTypes.object.isRequired,
+  onHover: PropTypes.func.isRequired,
+  aa: PropTypes.object,
+  b: PropTypes.object,
+  x: PropTypes.object,
+  onClick: PropTypes.func
 };
 // END!>
