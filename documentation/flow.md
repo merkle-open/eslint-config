@@ -211,7 +211,7 @@ function x(foo: string) {}
 > requires that functions have return type annotation.
 
 
-:white_check_mark: Enabled (error)
+:x: Disabled
 
 ```javascript
 
@@ -220,7 +220,9 @@ function x(foo: string) {}
 const a = (foo: string) => { return 'foo'; };
 */
 // GOOD
-const b = (foo: string): string => { return 'foo'; };
+const b = (foo: string): string => {
+	return 'foo';
+};
 
 ```
 <br />
