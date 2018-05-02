@@ -5,6 +5,7 @@ environment:
   matrix:
     - nodejs_version: 6
     - nodejs_version: 8
+    - nodejs_version: 10
 
 version: "{build}"
 build: off
@@ -14,8 +15,6 @@ matrix:
 
 install:
   - ps: Install-Product node $env:nodejs_version
-  - npm --version
-  - npm -g install npm@3
   - set PATH=%APPDATA%\npm;%PATH%
   - npm install eslint eslint-plugin-import
   - npm install --ignore-scripts --force
