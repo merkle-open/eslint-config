@@ -1,6 +1,6 @@
 {
     "name": "@namics/eslint-config",
-    "version": "5.0.0",
+    "version": "5.0.1",
     "description": "Default configurations for eslint",
     "author": "Simon Mollweide <simon.mollweide@namics.com>",
     "license": "MIT",
@@ -44,20 +44,20 @@
         "jsx"
     ],
     "devDependencies": {
-        "prettier": "1.11.1"
+        "prettier": "1.12.1"
     },
     "peerDependencies": {
         "eslint": ">=4.x.x",
         "eslint-plugin-import": ">=2.x.x"
     },
     "dependencies": {
-        "babel-eslint": "8.2.2",
-        "eslint": "4.18.1",
-        "eslint-find-rules": "3.2.1",
-        "eslint-plugin-flowtype": "2.46.1",
-        "eslint-plugin-import": "2.9.0",
+        "babel-eslint": "8.2.3",
+        "eslint": "4.19.1",
+        "eslint-find-rules": "3.2.3",
+        "eslint-plugin-flowtype": "2.46.3",
+        "eslint-plugin-import": "2.11.0",
         "eslint-plugin-jsx-a11y": "6.0.3",
         "eslint-plugin-react": "7.7.0",
-        "flow-bin": "0.66.0"
+        "flow-bin": "0.71.0"
     }
 }
