@@ -6,7 +6,7 @@
     "license": "MIT",
     "private": false,
     "engines": {
-        "node": ">=4 <9",
+        "node": ">=4",
         "npm": ">=3 <6"
     },
     "repository": {
