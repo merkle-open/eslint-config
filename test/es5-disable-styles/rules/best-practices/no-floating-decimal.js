@@ -14,7 +14,7 @@ var num3 = -.7;
 */
 
 // Good
-var num1 = 0.5;
-var num2 = 2.0;
-var num3 = -0.7;
+var num1 = 0.5
+var num2 = 2.0
+var num3 = -0.7
 // END!>

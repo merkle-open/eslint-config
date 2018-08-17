@@ -23,5 +23,5 @@
 type XeType = Promise <string>;
 */
 // GOOD
-type XeType = Promise<string>;
+type XeType = Promise<string>
 // END!>

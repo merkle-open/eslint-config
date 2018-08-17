@@ -19,7 +19,7 @@
 /* eslint object-shorthand: 0*/
 // <!START
 // GOOD
-type AeType = boolean;
+type AeType = boolean
 
 // BAD
 /*

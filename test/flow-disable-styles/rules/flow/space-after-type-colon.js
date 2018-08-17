@@ -25,5 +25,5 @@ const b = (foo :string) => {};
 const c = (foo : string) => {};
 */
 // GOOD
-const d = (foo: string) => {};
+const d = (foo: string) => {}
 // END!>

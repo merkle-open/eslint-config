@@ -18,14 +18,14 @@
 /* eslint object-shorthand: 0*/
 // <!START
 // Bad
-<select onChange={updateModel} />;
+;<select onChange={updateModel} />
 
 // Good
-<select onBlur={updateModel}>
+;<select onBlur={updateModel}>
   <option />
-</select>;
+</select>
 
-<select>
+;<select>
   <option onBlur={handleOnBlur} onChange={handleOnChange} />
-</select>;
+</select>
 // END!>

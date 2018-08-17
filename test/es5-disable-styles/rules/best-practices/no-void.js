@@ -13,6 +13,6 @@ function test() {
 */
 // Good
 function test() {
-  return;
+  return
 }
 // END!>

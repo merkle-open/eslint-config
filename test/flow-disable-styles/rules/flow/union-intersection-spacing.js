@@ -23,5 +23,5 @@
 type XeType = string| number;
 */
 // GOOD
-type XeType = string | number;
+type XeType = string | number
 // END!>

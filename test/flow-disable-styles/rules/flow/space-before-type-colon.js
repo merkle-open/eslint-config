@@ -23,5 +23,5 @@
 const a = (foo : string) => {};
 */
 // GOOD
-const b = (foo: string) => {};
+const b = (foo: string) => {}
 // END!>

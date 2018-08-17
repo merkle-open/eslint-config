@@ -21,5 +21,5 @@
 
 // <!START
 // Bad
-const Hello = <a target="_blank" />;
+const Hello = <a target="_blank" />
 // END!>

@@ -12,6 +12,6 @@ var x = ( 1 + 2 ) * 3;
 */
 
 // Good
-foo("bar");
-var x = (1 + 2) * 3;
+foo("bar")
+var x = (1 + 2) * 3
 // END!>

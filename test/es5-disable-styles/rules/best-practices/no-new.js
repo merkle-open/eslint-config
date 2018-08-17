@@ -11,6 +11,6 @@ new Person();
 */
 
 // Good
-var person = new Person();
+var person = new Person()
 
 // END!>

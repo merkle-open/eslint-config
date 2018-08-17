@@ -12,7 +12,7 @@ var x = foo['bar'];
 */
 
 // Good
-var x = foo.bar;
-var x = foo[bar];
+var x = foo.bar
+var x = foo[bar]
 // END!>
-document.window.append("", null);
+document.window.append("", null)

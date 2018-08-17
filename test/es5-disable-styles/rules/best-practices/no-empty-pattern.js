@@ -12,8 +12,10 @@ var { a: {} } = foo;
 */
 
 // creates variable b
-var { a: { b } } = foo;
+var {
+  a: {b}
+} = foo
 
 // creates variable a
-var { a = {} } = foo;
+var {a = {}} = foo
 // END!>

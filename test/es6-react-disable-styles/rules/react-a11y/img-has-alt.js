@@ -25,7 +25,7 @@ function Foo(src) {
 */
 
 // Good
-function Foo({ alt, src }) {
-  return <img alt={alt} src={src} />;
+function Foo({alt, src}) {
+  return <img alt={alt} src={src} />
 }
 // END!>

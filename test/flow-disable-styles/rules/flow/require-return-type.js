@@ -24,6 +24,6 @@ const a = (foo: string) => { return 'foo'; };
 */
 // GOOD
 const b = (foo: string): string => {
-  return "foo";
-};
+  return "foo"
+}
 // END!>

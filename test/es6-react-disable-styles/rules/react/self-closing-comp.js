@@ -25,5 +25,5 @@ const HelloJohn = <Hello name="John"></Hello>;
 */
 
 // Good
-const HelloJohn = <Hello name="John" />;
+const HelloJohn = <Hello name="John" />
 // END!>

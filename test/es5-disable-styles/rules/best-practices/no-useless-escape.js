@@ -13,6 +13,6 @@ let bar = /\:/;
 */
 
 // Good
-let foo = "hola";
-let bar = /:/;
+let foo = "hola"
+let bar = /:/
 // END!>

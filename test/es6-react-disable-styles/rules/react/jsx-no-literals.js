@@ -19,8 +19,8 @@
 /* eslint no-unused-expressions: 0*/
 // <!START
 // Bad
-const A = <div>test</div>;
+const A = <div>test</div>
 
 // Good
-const B = <div>{test}</div>;
+const B = <div>{test}</div>
 // END!>

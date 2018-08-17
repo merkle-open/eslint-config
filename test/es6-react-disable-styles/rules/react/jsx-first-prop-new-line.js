@@ -27,5 +27,5 @@
 */
 
 // Good
-<Hello personal prop />;
+;<Hello personal prop />
 // END!>

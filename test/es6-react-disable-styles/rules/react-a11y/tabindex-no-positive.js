@@ -21,13 +21,13 @@
 
 // <!START
 // Bad
-<span tabIndex="5">foo</span>;
-<span tabIndex="3">bar</span>;
-<span tabIndex="1">baz</span>;
-<span tabIndex="2">never really sure what goes after baz</span>;
+;<span tabIndex="5">foo</span>
+;<span tabIndex="3">bar</span>
+;<span tabIndex="1">baz</span>
+;<span tabIndex="2">never really sure what goes after baz</span>
 
 // Good
-<span tabIndex="0">foo</span>;
-<span tabIndex="-1">bar</span>;
-<span tabIndex={0}>baz</span>;
+;<span tabIndex="0">foo</span>
+;<span tabIndex="-1">bar</span>
+;<span tabIndex={0}>baz</span>
 // END!>

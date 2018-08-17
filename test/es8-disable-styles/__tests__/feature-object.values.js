@@ -6,6 +6,6 @@ const obj = {
   hello: "love",
   js: "ES8",
   secrets: 42
-};
-const result = Object.values(obj);
+}
+const result = Object.values(obj)
 // ["I", "love", "ES8", 42]

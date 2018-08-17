@@ -26,6 +26,6 @@
 */
 
 // Good
-<Hello />;
-<Hello firstName="John" />;
+;<Hello />
+;<Hello firstName="John" />
 // END!>

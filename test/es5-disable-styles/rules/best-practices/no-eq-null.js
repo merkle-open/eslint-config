@@ -12,6 +12,6 @@ if (foo == null) {
 */
 // Good
 if (foo === null) {
-  bar();
+  bar()
 }
 // END!>

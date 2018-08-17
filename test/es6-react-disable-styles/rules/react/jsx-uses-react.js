@@ -19,5 +19,5 @@
 /* eslint no-unused-expressions: 0*/
 /* eslint import/no-unresolved: 0*/
 // <!START
-const React = require("react");
+const React = require("react")
 // END!>

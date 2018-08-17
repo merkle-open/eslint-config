@@ -9,5 +9,5 @@ throw 'error';
 */
 
 // Good
-throw new Error("error");
+throw new Error("error")
 // END!>

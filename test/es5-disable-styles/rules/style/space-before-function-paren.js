@@ -35,7 +35,7 @@ function foo() {
 
 var bar = function() {
   // ...
-};
+}
 
 class Foo {
   constructor() {
@@ -47,5 +47,5 @@ var foo = {
   bar() {
     // ...
   }
-};
+}
 // END!>

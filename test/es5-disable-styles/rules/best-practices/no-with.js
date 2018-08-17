@@ -11,5 +11,5 @@ with (point) {
 */
 
 // Good
-const r = ({ x, y }) => Math.sqrt(x * x + y * y);
+const r = ({x, y}) => Math.sqrt(x * x + y * y)
 // END!>

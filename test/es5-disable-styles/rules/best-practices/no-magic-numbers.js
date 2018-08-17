@@ -6,5 +6,5 @@
 // <!START
 // Bad
 var now = Date.now(),
-  inOneHour = now + 60 * 60 * 1000;
+  inOneHour = now + 60 * 60 * 1000
 // END!>

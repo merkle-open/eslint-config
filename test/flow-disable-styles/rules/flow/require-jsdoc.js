@@ -20,6 +20,6 @@
 // <!START
 // jsdoc is not required if you are using flow
 function foo(thing: string): any {
-  return true;
+  return true
 }
 // END!>

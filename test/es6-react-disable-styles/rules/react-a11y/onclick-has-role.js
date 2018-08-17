@@ -21,21 +21,21 @@
 /* eslint react/jsx-indent: 0*/
 // <!START
 // Bad
-<div onClick={() => {}} />;
-<div onClick={() => {}} {...props} />;
-<div onClick={() => {}} aria-hidden={false} />;
-<a onClick={() => {}} />;
+;<div onClick={() => {}} />
+;<div onClick={() => {}} {...props} />
+;<div onClick={() => {}} aria-hidden={false} />
+;<a onClick={() => {}} />
 
 // Good
-<div onClick={() => {}} role="button" />;
+;<div onClick={() => {}} role="button" />
 // Interactive element does not require role.
-<input type="text" onClick={() => {}} />;
+;<input type="text" onClick={() => {}} />
 // tabIndex makes this interactive.
-<a tabIndex="0" onClick={() => {}} />;
+;<a tabIndex="0" onClick={() => {}} />
 // button is interactive.
-<button onClick={() => {}} className="foo" />;
+;<button onClick={() => {}} className="foo" />
 // This is hidden from screenreader.
-<div onClick={() => {}} role="button" aria-hidden />;
+;<div onClick={() => {}} role="button" aria-hidden />
 // This is a higher-level DOM component
-<Input onClick={() => {}} type="hidden" />;
+;<Input onClick={() => {}} type="hidden" />
 // END!>

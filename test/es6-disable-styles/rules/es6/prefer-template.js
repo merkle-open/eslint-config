@@ -17,5 +17,5 @@ const str = 'Hello, ' + name + '!';
 */
 
 // Good
-const str = `Hello, ${name}!`;
+const str = `Hello, ${name}!`
 // END!>

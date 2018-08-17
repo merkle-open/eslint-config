@@ -7,16 +7,16 @@
 /* eslint no-redeclare: 0*/
 // <!START
 // Bad
-var node;
+var node
 while (node) {
-  doSomething(node);
+  doSomething(node)
 }
-node = other;
+node = other
 
 // Good
-var node = 1;
+var node = 1
 while (node) {
-  doSomething(node);
-  node = 2;
+  doSomething(node)
+  node = 2
 }
 // END!>

@@ -8,6 +8,6 @@
 const self = this;
 */
 // Good
-const _this = this;
+const _this = this
 
 // END!>

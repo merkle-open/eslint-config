@@ -24,5 +24,5 @@ const Hello = <div class="hello">Hello World</div>;
 */
 
 // Good
-const Hello = <div className="hello">Hello World</div>;
+const Hello = <div className="hello">Hello World</div>
 // END!>

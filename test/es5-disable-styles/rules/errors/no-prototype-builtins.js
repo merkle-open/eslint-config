@@ -19,7 +19,7 @@ var barIsEnumerable = foo.propertyIsEnumerable('bar');
 */
 
 // Good
-var hasBarProperty = {}.hasOwnProperty.call(foo, "bar");
-var isPrototypeOfBar = {}.isPrototypeOf.call(foo, bar);
-var barIsEnumerable = {}.propertyIsEnumerable.call(foo, "bar");
+var hasBarProperty = {}.hasOwnProperty.call(foo, "bar")
+var isPrototypeOfBar = {}.isPrototypeOf.call(foo, bar)
+var barIsEnumerable = {}.propertyIsEnumerable.call(foo, "bar")
 // END!>

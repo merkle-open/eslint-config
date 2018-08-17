@@ -23,5 +23,5 @@
 type AeType = Promise< string>;
 */
 // GOOD
-type BeType = Promise<string>;
+type BeType = Promise<string>
 // END!>

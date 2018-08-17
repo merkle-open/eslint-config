@@ -23,5 +23,5 @@
 type foo = {};
 */
 // GOOD
-type FooType = {};
+type FooType = {}
 // END!>

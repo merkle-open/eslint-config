@@ -31,10 +31,5 @@
 */
 
 // Good
-<span
-  role="checkbox"
-  aria-checked="false"
-  aria-labelledby="foo"
-  tabIndex="0"
-/>;
+;<span role="checkbox" aria-checked="false" aria-labelledby="foo" tabIndex="0" />
 // END!>

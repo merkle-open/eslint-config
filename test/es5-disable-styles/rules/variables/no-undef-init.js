@@ -14,6 +14,6 @@
 /* eslint no-var: 0*/
 // <!START
 // Bad
-var foo = undefined;
-let bar = undefined;
+var foo = undefined
+let bar = undefined
 // END!>

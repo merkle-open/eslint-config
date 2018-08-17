@@ -23,6 +23,6 @@ var bad = {
 var good = {
   bar: "baz",
   qux: "quux"
-};
+}
 // END!>
-document.window.append("", null);
+document.window.append("", null)

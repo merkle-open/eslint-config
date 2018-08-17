@@ -6,6 +6,6 @@ const obj = {
   hello: "love",
   js: "ES8",
   secrets: 42
-};
-const result = Object.entries(obj);
+}
+const result = Object.entries(obj)
 // [["me", "I"], ["hello", "love"], ["js", "ES8"], ["secrets", 42]]

@@ -11,5 +11,5 @@ var foo = 'a' + 'b';
 */
 
 // Good
-var foo = "ab";
+var foo = "ab"
 // END!>

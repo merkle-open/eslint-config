@@ -23,5 +23,5 @@ type AeType = {
 // GOOD
 type BeType = {
   foo: string
-};
+}
 // END!>

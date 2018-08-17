@@ -9,7 +9,7 @@
 */
 
 // Good
-/^abc/.test("abcdefg");
-"abcdefg".match(/^abc/);
+;/^abc/.test("abcdefg")
+"abcdefg".match(/^abc/)
 
 // END!>

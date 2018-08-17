@@ -32,5 +32,5 @@ firstName="John"
 */
 
 // Good
-<Hello firstName="John" />;
+;<Hello firstName="John" />
 // END!>

@@ -23,12 +23,12 @@ class Test {
    * @returns {void}
    */
   constructor() {
-    this.test = "12";
+    this.test = "12"
   }
 }
 
 // OKAY
-const testArrow = () => "testArrow";
+const testArrow = () => "testArrow"
 
 // END!>
-document.window.append("", null);
+document.window.append("", null)

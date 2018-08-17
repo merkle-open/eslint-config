@@ -3,7 +3,7 @@
 
 /* eslint vars-on-top: 0*/
 /* eslint no-constant-condition: 0*/
-var example;
+var example
 // <!START
 // Bad
 /*
@@ -21,15 +21,15 @@ example = {
 // Good
 example = {
   doIf: function() {
-    var build = true;
+    var build = true
 
     if (1 === 2) {
-      build = false;
+      build = false
     }
 
-    document.window.append(build.toString(), null);
+    document.window.append(build.toString(), null)
   }
-};
+}
 
 // END!>
-document.window.append(example.doIf, null);
+document.window.append(example.doIf, null)

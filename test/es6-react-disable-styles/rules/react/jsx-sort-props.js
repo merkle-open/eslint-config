@@ -31,12 +31,5 @@
 */
 
 // Good
-<Hello
-  active
-  validate
-  firstName="John"
-  lastName="Smith"
-  tel={5555555}
-  onClick={this.handleClick}
-/>;
+;<Hello active validate firstName="John" lastName="Smith" tel={5555555} onClick={this.handleClick} />
 // END!>

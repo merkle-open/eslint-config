@@ -19,7 +19,7 @@ var colors = ['red',, 'blue'];
 */
 
 // Good
-var items = [];
-var items = new Array(23);
-var colors = ["red", "blue"];
+var items = []
+var items = new Array(23)
+var colors = ["red", "blue"]
 // END!>

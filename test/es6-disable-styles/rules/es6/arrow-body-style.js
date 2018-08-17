@@ -12,10 +12,10 @@
 /* eslint no-redeclare: 0*/
 // <!START
 // Good
-const a = () => 0;
+const a = () => 0
 
 // Bad
 const b = () => {
-  return 0;
-};
+  return 0
+}
 // END!>

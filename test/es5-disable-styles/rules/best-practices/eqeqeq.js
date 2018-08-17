@@ -14,4 +14,4 @@ if (x == 42) {
 if (x === 42) {
 }
 // END!>
-document.window.append("", null);
+document.window.append("", null)

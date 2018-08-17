@@ -24,5 +24,5 @@
 */
 
 // Good
-<Hello firstname="John" lastname="Doe" />;
+;<Hello firstname="John" lastname="Doe" />
 // END!>

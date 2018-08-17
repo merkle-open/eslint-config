@@ -23,5 +23,5 @@
 */
 
 // Good
-<span aria-hidden="true">foo</span>;
+;<span aria-hidden="true">foo</span>
 // END!>

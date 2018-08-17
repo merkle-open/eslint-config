@@ -17,5 +17,5 @@ foo.apply(null, args);
 */
 
 // Good
-foo(...args);
+foo(...args)
 // END!>

@@ -19,13 +19,13 @@
 /* eslint react/jsx-indent: 0*/
 // <!START
 // Bad
-<a href="#" />;
-<a href={"#"} />;
-<a href={"#"} />;
+;<a href="#" />
+;<a href={"#"} />
+;<a href={"#"} />
 
 // Good
-<a href="https://github.com" />;
-<a href="#section" />;
-<a href="foo" />;
-<a href={undefined} />;
+;<a href="https://github.com" />
+;<a href="#section" />
+;<a href="foo" />
+;<a href={undefined} />
 // END!>

@@ -24,7 +24,7 @@ Test.propTypes = {
   b: PropTypes.object,
   x: PropTypes.object,
   onClick: PropTypes.func
-};
+}
 
 Test2.propTypes = {
   ab: PropTypes.object.isRequired,
@@ -33,5 +33,5 @@ Test2.propTypes = {
   b: PropTypes.object,
   x: PropTypes.object,
   onClick: PropTypes.func
-};
+}
 // END!>

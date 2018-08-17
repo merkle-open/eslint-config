@@ -25,6 +25,6 @@
 */
 
 // Good
-<div id="address_label">Enter your address</div>;
-<input aria-labelledby="address_label" />;
+;<div id="address_label">Enter your address</div>
+;<input aria-labelledby="address_label" />
 // END!>

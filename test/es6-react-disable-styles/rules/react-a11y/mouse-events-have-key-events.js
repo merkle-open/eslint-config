@@ -20,14 +20,14 @@
 /* eslint react/jsx-indent: 0*/
 // <!START
 // Bad
-<div onMouseOver={() => {}} />;
-<div onMouseOut={() => {}} />;
-<div onMouseOver={() => {}} />;
-<div onMouseOut={() => {}} />;
+;<div onMouseOver={() => {}} />
+;<div onMouseOut={() => {}} />
+;<div onMouseOver={() => {}} />
+;<div onMouseOut={() => {}} />
 
 // Good
-<div onMouseOver={() => {}} onFocus={() => {}} />;
-<div onMouseOut={() => {}} onBlur={() => {}} />;
-<div onMouseOver={() => {}} onFocus={() => {}} />;
-<div onMouseOut={() => {}} onBlur={() => {}} />;
+;<div onMouseOver={() => {}} onFocus={() => {}} />
+;<div onMouseOut={() => {}} onBlur={() => {}} />
+;<div onMouseOver={() => {}} onFocus={() => {}} />
+;<div onMouseOut={() => {}} onBlur={() => {}} />
 // END!>

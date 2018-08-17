@@ -23,6 +23,6 @@
 const a: AeType = '';
 */
 // GOOD
-type BeType = string;
-const b: BeType = "";
+type BeType = string
+const b: BeType = ""
 // END!>

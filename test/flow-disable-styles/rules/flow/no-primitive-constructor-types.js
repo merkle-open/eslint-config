@@ -26,7 +26,7 @@ type BooleanType = Boolean;
 */
 
 // GOOD
-type NumberType = number;
-type StringType = string;
-type BooleanType = boolean;
+type NumberType = number
+type StringType = string
+type BooleanType = boolean
 // END!>

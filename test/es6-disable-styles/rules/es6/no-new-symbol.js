@@ -17,5 +17,5 @@ const foo = new Symbol('foo');
 */
 
 // Good
-const foo = Symbol("foo");
+const foo = Symbol("foo")
 // END!>

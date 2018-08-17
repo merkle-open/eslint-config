@@ -21,8 +21,8 @@ function b() {
 */
 
 // Good
-var a = 3;
+var a = 3
 function b() {
-  var c = 10;
+  var c = 10
 }
 // END!>

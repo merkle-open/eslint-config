@@ -20,11 +20,11 @@
 // <!START
 // BAD
 function foo(thing: string): any {
-  return true;
+  return true
 }
 
 // GOOD
 function foo(thing: string): boolean {
-  return true;
+  return true
 }
 // END!>

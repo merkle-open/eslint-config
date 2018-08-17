@@ -32,13 +32,13 @@ class Foo{
 
 // Good
 if (a) {
-  b();
+  b()
 }
 
 function a() {}
 
 for (;;) {
-  b();
+  b()
 }
 
 try {
