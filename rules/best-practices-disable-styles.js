@@ -20,5 +20,9 @@ module.exports = {
 
 		// disallow use of multiline strings
 		'no-multi-str': 0,
+
+		// require immediate function invocation to be wrapped in parentheses
+		// http://eslint.org/docs/rules/wrap-iife.html
+		'wrap-iife': 0,
 	},
 };
