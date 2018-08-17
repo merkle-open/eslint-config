@@ -26,9 +26,6 @@ $ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
 - `@namics/eslint-config/configurations/es6-react` - ES6 + react (deprecated)
 - `@namics/eslint-config/configurations/es6-node` - ES6 + node (deprecated)
 
-## Usage with Flow
-- [configuration with flowtype](./documentation/with-flow.md)
-
 ## Usage with Prettier
 - [configuration with prettier](./documentation/with-prettier.md)
 
@@ -78,14 +75,12 @@ then run `npm run lint`
 - [Imports](./documentation/imports.md) (ES6/7/8)
 - [React](./documentation/react.md) (ES6/7/8)
 - [React A11y](./documentation/react-a11y.md) (ES6/7/8)
-- [Flow](./documentation/flow.md) (ES6/7/8)
 
 ## Thanks to
 * [Namics.](https://www.namics.com/en/)
 * [ESLint](https://github.com/eslint/eslint) for ESLint and the documentation [eslint.org](http://eslint.org/)
 * [Walmart](https://github.com/walmartlabs) for sharing their config in [eslint-config-walmart](https://github.com/walmartlabs/eslint-config-walmart)
 * [AirBnB](https://github.com/airbnb) for sharing their eslint config in [JavaScript Style Guide](https://github.com/airbnb/javascript)
-* [Gajus Kuizinas](https://github.com/gajus) for eslint-plugin-flowtype [eslint-plugin-flowtype](https://github.com/gajus/eslint-plugin-flowtype)
 
 ## License
 [MIT License](./LICENSE)

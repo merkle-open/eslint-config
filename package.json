@@ -27,8 +27,7 @@
     "prettier:es5node": "prettier --write \"test/es5-node-disable-styles/**/*.js\"",
     "prettier:es6": "prettier --write \"test/es6-disable-styles/**/*.js\"",
     "prettier:es6react": "prettier --write \"test/es6-react-disable-styles/**/*.js\"",
-    "prettier:es8": "prettier --write \"test/es8-disable-styles/**/*.js\"",
-    "prettier:flow": "prettier --write \"test/flow-disable-styles/**/*.js\""
+    "prettier:es8": "prettier --write \"test/es8-disable-styles/**/*.js\""
   },
   "keywords": [
     "code checker",
@@ -55,10 +54,8 @@
     "babel-eslint": "8.2.6",
     "eslint": "5.3.0",
     "eslint-find-rules": "3.3.1",
-    "eslint-plugin-flowtype": "2.50.0",
     "eslint-plugin-import": "2.14.0",
     "eslint-plugin-jsx-a11y": "6.1.1",
-    "eslint-plugin-react": "7.11.1",
-    "flow-bin": "0.79.0"
+    "eslint-plugin-react": "7.11.1"
   }
 }
