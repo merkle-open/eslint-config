@@ -1,64 +1,64 @@
 {
-    "name": "@namics/eslint-config",
-    "version": "6.0.0",
-    "description": "Default configurations for eslint",
-    "author": "Simon Mollweide <simon.mollweide@namics.com>",
-    "license": "MIT",
-    "private": false,
-    "engines": {
-        "node": ">=4",
-        "npm": ">=3 <6"
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/namics/eslint-config-namics.git"
-    },
-    "bugs": {
-        "url": "https://github.com/namics/eslint-config-namics/issues"
-    },
-    "main": "configurations/es6-browser.js",
-    "scripts": {
-        "lint": "npm run lint:js",
-        "lint:js": "eslint .",
-        "test": "npm run lint",
-        "create-docs": "node bin/write-documentation",
-        "prettier": "npm-run-all prettier:*",
-        "prettier:es5": "prettier --write \"test/es5-disable-styles/**/*.js\"",
-        "prettier:es5node": "prettier --write \"test/es5-node-disable-styles/**/*.js\"",
-        "prettier:es6": "prettier --write \"test/es6-disable-styles/**/*.js\"",
-        "prettier:es6react": "prettier --write \"test/es6-react-disable-styles/**/*.js\"",
-        "prettier:es8": "prettier --write \"test/es8-disable-styles/**/*.js\"",
-        "prettier:flow": "prettier --write \"test/flow-disable-styles/**/*.js\""
-    },
-    "keywords": [
-        "code checker",
-        "code linter",
-        "code standards",
-        "code style",
-        "eslint-config",
-        "eslint",
-        "eslintconfig",
-        "lint",
-        "es2015",
-        "react",
-        "jsx"
-    ],
-    "devDependencies": {
-        "npm-run-all": "4.1.3",
-        "prettier": "1.14.2"
-    },
-    "peerDependencies": {
-        "eslint": ">=5.x.x",
-        "eslint-plugin-import": ">=3.x.x"
-    },
-    "dependencies": {
-        "babel-eslint": "8.2.6",
-        "eslint": "5.3.0",
-        "eslint-find-rules": "3.3.1",
-        "eslint-plugin-flowtype": "2.50.0",
-        "eslint-plugin-import": "2.14.0",
-        "eslint-plugin-jsx-a11y": "6.1.1",
-        "eslint-plugin-react": "7.11.1",
-        "flow-bin": "0.79.0"
-    }
+  "name": "@namics/eslint-config",
+  "version": "6.0.0",
+  "description": "Default configurations for eslint",
+  "author": "Simon Mollweide <simon.mollweide@namics.com>",
+  "license": "MIT",
+  "private": false,
+  "engines": {
+    "node": "^6.14.0 || ^8.10.0 || >=9.10.0",
+    "npm": ">=3 <6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/namics/eslint-config-namics.git"
+  },
+  "bugs": {
+    "url": "https://github.com/namics/eslint-config-namics/issues"
+  },
+  "main": "configurations/es6-browser.js",
+  "scripts": {
+    "lint": "npm run lint:js",
+    "lint:js": "eslint .",
+    "test": "npm run lint",
+    "create-docs": "node bin/write-documentation",
+    "prettier": "npm-run-all prettier:*",
+    "prettier:es5": "prettier --write \"test/es5-disable-styles/**/*.js\"",
+    "prettier:es5node": "prettier --write \"test/es5-node-disable-styles/**/*.js\"",
+    "prettier:es6": "prettier --write \"test/es6-disable-styles/**/*.js\"",
+    "prettier:es6react": "prettier --write \"test/es6-react-disable-styles/**/*.js\"",
+    "prettier:es8": "prettier --write \"test/es8-disable-styles/**/*.js\"",
+    "prettier:flow": "prettier --write \"test/flow-disable-styles/**/*.js\""
+  },
+  "keywords": [
+    "code checker",
+    "code linter",
+    "code standards",
+    "code style",
+    "eslint-config",
+    "eslint",
+    "eslintconfig",
+    "lint",
+    "es2015",
+    "react",
+    "jsx"
+  ],
+  "devDependencies": {
+    "npm-run-all": "4.1.3",
+    "prettier": "1.14.2"
+  },
+  "peerDependencies": {
+    "eslint": ">=5.x.x",
+    "eslint-plugin-import": ">=2.x.x"
+  },
+  "dependencies": {
+    "babel-eslint": "8.2.6",
+    "eslint": "5.3.0",
+    "eslint-find-rules": "3.3.1",
+    "eslint-plugin-flowtype": "2.50.0",
+    "eslint-plugin-import": "2.14.0",
+    "eslint-plugin-jsx-a11y": "6.1.1",
+    "eslint-plugin-react": "7.11.1",
+    "flow-bin": "0.79.0"
+  }
 }
