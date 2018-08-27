@@ -7,6 +7,7 @@
 /* eslint no-redeclare: 0*/
 // <!START
 // Bad
+/*
 function doSomething(condition) {
   if (condition) {
     return true
@@ -14,6 +15,7 @@ function doSomething(condition) {
     return
   }
 }
+*/
 
 // Good
 function doSomething(condition) {

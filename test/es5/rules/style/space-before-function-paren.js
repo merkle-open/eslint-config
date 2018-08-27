@@ -22,7 +22,7 @@ class Foo {
 	}
 }
 
-var foo = {
+var baz = {
 	bar () {
 		// ...
 	}
@@ -44,7 +44,7 @@ class Foo {
 	}
 }
 
-var foo = {
+var baz = {
 	bar() {
 		// ...
 	},

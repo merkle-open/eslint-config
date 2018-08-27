@@ -18,7 +18,7 @@ function foo() {
 	console.log(arguments);
 }
 
-function foo(action) {
+function bar(action) {
 	const args = [].slice.call(arguments, 1);
 	action.apply(null, args);
 }
@@ -29,7 +29,7 @@ function foo(...args) {
   console.log(args)
 }
 
-function foo(action, ...args) {
+function bar(action, ...args) {
   action(...args)
 }
 // END!>
