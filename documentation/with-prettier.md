@@ -4,10 +4,10 @@
 
 ```
 module.exports = {
-  "extends": [
-    "@namics/eslint-config/configurations/es8-browser.js",
-    "@namics/eslint-config/configurations/es8-browser-disable-styles.js"
-  ].map(require.resolve)
+  extends: [
+    '@namics/eslint-config/configurations/es8-browser.js',
+    '@namics/eslint-config/configurations/es8-browser-disable-styles.js',
+  ].map(require.resolve),
 };
 ```
 
@@ -15,9 +15,9 @@ module.exports = {
 
 ```
 module.exports = {
-  "extends": [
-    "@namics/eslint-config/configurations/es8-react.js",
-    "@namics/eslint-config/configurations/es8-react-disable-styles.js"
-  ].map(require.resolve)
+  extends: [
+    '@namics/eslint-config/configurations/es8-react.js',
+    '@namics/eslint-config/configurations/es8-react-disable-styles.js',
+  ].map(require.resolve),
 };
 ```
