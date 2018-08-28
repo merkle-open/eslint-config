@@ -1,3 +1,3 @@
 module.exports = {
-	"extends": "./configurations/es6-node.js"
+	extends: './configurations/es6-node.js',
 };

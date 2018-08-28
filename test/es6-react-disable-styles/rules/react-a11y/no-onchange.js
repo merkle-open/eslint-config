@@ -24,7 +24,6 @@
 ;<select onBlur={updateModel}>
   <option />
 </select>
-
 ;<select>
   <option onBlur={handleOnBlur} onChange={handleOnChange} />
 </select>
