@@ -187,6 +187,7 @@ function b(x) {
 ```javascript
 
 // Bad
+/*
 function doSomething(condition) {
 	if (condition) {
 		return true;
@@ -194,6 +195,7 @@ function doSomething(condition) {
 		return;
 	}
 }
+*/
 
 // Good
 function doSomething(condition) {
