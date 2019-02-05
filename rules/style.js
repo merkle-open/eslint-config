@@ -137,7 +137,8 @@ module.exports = {
 		// [08.07.2016] enabled
 
 		// disallow comments inline after code
-		'no-inline-comments': 2,
+		'no-inline-comments': 0,
+		// [05.02.2019] enabled because of webpackChunkName:
 
 		// disallow if as the only statement in an else block
 		'no-lonely-if': 2,

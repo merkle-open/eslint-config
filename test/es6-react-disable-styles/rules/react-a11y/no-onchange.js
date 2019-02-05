@@ -17,14 +17,17 @@
 /* eslint react/prop-types: 0*/
 /* eslint object-shorthand: 0*/
 // <!START
+<div>
+
 // Bad
-;<select onChange={updateModel} />
+<select onChange={updateModel} />
 
 // Good
-;<select onBlur={updateModel}>
+<select onBlur={updateModel}>
   <option />
 </select>
-;<select>
+<select>
   <option onBlur={handleOnBlur} onChange={handleOnChange} />
 </select>
 // END!>
+</div>

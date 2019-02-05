@@ -405,6 +405,11 @@ function _test(productData) {}
 
 :x: Disabled
 
+```javascript
+
+document.window.append('hello'); // inline comment
+
+```
 <br />
 
 
