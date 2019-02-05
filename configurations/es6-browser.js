@@ -1,5 +1,5 @@
 module.exports = {
-
+	parser: 'babel-eslint',
 	extends: [
 		'./es6.js',
 	].map(require.resolve),

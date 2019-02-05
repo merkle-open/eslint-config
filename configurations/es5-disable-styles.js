@@ -1,5 +1,5 @@
 module.exports = {
-
+	parser: 'babel-eslint',
 	extends: [
 		'../rules/best-practices-disable-styles.js',
 		'../rules/errors-disable-styles.js',

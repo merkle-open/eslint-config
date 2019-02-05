@@ -1,5 +1,5 @@
 module.exports = {
-
+	parser: 'babel-eslint',
 	extends: [
 		'../rules/es6-disable.js',
 		'../rules/node-disable.js',

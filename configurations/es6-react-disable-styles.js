@@ -1,4 +1,5 @@
 module.exports = {
+	'parser': 'babel-eslint',
 	'extends': [
 		'./es6-disable-styles.js',
 		'../rules/react-disable-styles.js',

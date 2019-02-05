@@ -1,5 +1,5 @@
 module.exports = {
-
+	parser: 'babel-eslint',
 	extends: [
 		'./es8.js',
 		'../rules/node.js',
