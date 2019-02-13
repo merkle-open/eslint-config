@@ -7,6 +7,6 @@
 // <!START
 // Bad
 function foo(bar) {
-  bar = 13
+  bar = 13;
 }
 // END!>

@@ -26,6 +26,6 @@ function Foo(props) {
 
 // Good
 function Foo({htmlFor, props}) {
-  return <label htmlFor={htmlFor} {...props} />
+  return <label htmlFor={htmlFor} {...props} />;
 }
 // END!>

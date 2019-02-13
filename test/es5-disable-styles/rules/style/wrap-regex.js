@@ -14,6 +14,6 @@ function a() {
 
 // Good
 function a() {
-  return /foo/.test("bar")
+  return /foo/.test("bar");
 }
 // END!>

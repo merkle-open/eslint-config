@@ -2,25 +2,25 @@
 // STATUS = 0
 
 // <!START
-var example
+var example;
 
 // Bad
 example = {
   set a(value) {
-    this.val = value
+    this.val = value;
   }
-}
+};
 
 // Good
 example = {
   set a(value) {
-    this.val = value
+    this.val = value;
   },
   get a() {
-    return this.val
+    return this.val;
   }
-}
+};
 // END!>
 
-document.window.append(example.toString(), null)
-document.window.append(example.toString(), null)
+document.window.append(example.toString(), null);
+document.window.append(example.toString(), null);

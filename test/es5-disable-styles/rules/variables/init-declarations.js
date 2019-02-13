@@ -14,17 +14,17 @@
 // <!START
 // Bad
 function bad() {
-  let bar
-  let baz
-  bar = 3
-  baz = 4
+  let bar;
+  let baz;
+  bar = 3;
+  baz = 4;
 }
 
 // Good
 function good() {
-  let bar = 1
-  let baz = 2
-  bar = 3
-  baz = 4
+  let bar = 1;
+  let baz = 2;
+  bar = 3;
+  baz = 4;
 }
 // END!>

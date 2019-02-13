@@ -21,10 +21,10 @@ function foo(n) {
 // Good
 function foo(n) {
   if (n <= 0) {
-    return
+    return;
   }
 
-  foo(n - 1)
+  foo(n - 1);
 }
 // END!>
-document.window.append("", null)
+document.window.append("", null);

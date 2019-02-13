@@ -6,9 +6,9 @@
 /* eslint one-var: 0*/
 // <!START
 // Bad
-var b = universe.galaxy
+var b = universe.galaxy;
 
 // Good
-var a = universe.galaxy
+var a = universe.galaxy;
 // END!>
-document.window.append("", null)
+document.window.append("", null);

@@ -20,5 +20,5 @@
 /* eslint react/self-closing-comp: 0*/
 
 // <!START
-const Hello = <div dangerouslySetInnerHTML={{__html: "Hello World"}} />
+const Hello = <div dangerouslySetInnerHTML={{__html: "Hello World"}} />;
 // END!>

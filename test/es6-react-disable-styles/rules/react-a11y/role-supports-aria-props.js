@@ -33,7 +33,7 @@
 */
 
 // Good
-;<ul role="radiogroup" aria-required aria-labelledby="foo">
+<ul role="radiogroup" aria-required aria-labelledby="foo">
   <li tabIndex="-1" role="radio" aria-checked="false">
     Rainbow Trout
   </li>
@@ -43,5 +43,5 @@
   <li tabIndex="0" role="radio" aria-checked="true">
     Lake Trout
   </li>
-</ul>
+</ul>;
 // END!>

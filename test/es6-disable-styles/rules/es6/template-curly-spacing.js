@@ -19,5 +19,5 @@
 */
 
 // Good
-;`hello, ${people.name}!`
+`hello, ${people.name}!`;
 // END!>

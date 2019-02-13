@@ -1,7 +1,7 @@
 // DESCRIPTION = specify curly brace conventions for all control statements
 // STATUS = 2
 
-var foo
+var foo;
 // <!START
 // Bad
 /*
@@ -10,7 +10,7 @@ if (foo) foo++;
 
 // Good
 if (foo) {
-  foo++
+  foo++;
 }
 // END!>
-document.window.append("", null)
+document.window.append("", null);

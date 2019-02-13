@@ -4,8 +4,8 @@
 /* eslint no-undef: 0*/
 // <!START
 // Bad
-foo.call(undefined, 1, 2, 3)
+foo.call(undefined, 1, 2, 3);
 
 // Good
-foo(1, 2, 3)
+foo(1, 2, 3);
 // END!>

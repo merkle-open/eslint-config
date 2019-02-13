@@ -7,4 +7,4 @@
 alert('hallo');
 */
 // END!>
-document.window.append("", null)
+document.window.append("", null);

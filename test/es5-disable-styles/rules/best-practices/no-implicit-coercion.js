@@ -18,10 +18,10 @@ foo += '';
 */
 
 // Good
-var b = Boolean(foo)
-var b = foo.indexOf(".") !== -1
-var n = Number(foo)
-var n = Number(foo)
-var s = String(foo)
-foo = String(foo)
+var b = Boolean(foo);
+var b = foo.indexOf(".") !== -1;
+var n = Number(foo);
+var n = Number(foo);
+var s = String(foo);
+foo = String(foo);
 // END!>

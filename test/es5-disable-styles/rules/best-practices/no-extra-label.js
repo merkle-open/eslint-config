@@ -18,6 +18,6 @@ A: switch (a) {
 // Good
 B: switch (a) {
   case 0:
-    break
+    break;
 }
 // END!>

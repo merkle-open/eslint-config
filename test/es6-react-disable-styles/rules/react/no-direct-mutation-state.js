@@ -41,16 +41,16 @@ class Hello extends Component {
   constructor() {
     this.state = {
       isOpen: false
-    }
-    this.handleClick = this.handleClick.bind(this)
+    };
+    this.handleClick = this.handleClick.bind(this);
   }
   handleClick() {
     this.setState({
       isOpen: true
-    })
+    });
   }
   render() {
-    return <div onClick={this.handleClick}>Hello</div>
+    return <div onClick={this.handleClick}>Hello</div>;
   }
 }
 // END!>

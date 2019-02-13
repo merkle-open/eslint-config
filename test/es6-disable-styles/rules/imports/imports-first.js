@@ -20,7 +20,7 @@ import bar from './bar';
 */
 
 // Good
-import foo from "./foo"
-import bar from "./bar"
-initWith(foo)
+import foo from "./foo";
+import bar from "./bar";
+initWith(foo);
 // END!>

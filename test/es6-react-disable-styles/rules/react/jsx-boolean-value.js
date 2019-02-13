@@ -22,5 +22,5 @@ const Hello = <Hello personal={true} />;
 */
 
 // Good
-const Hello = <Hello personal />
+const Hello = <Hello personal />;
 // END!>

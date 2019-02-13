@@ -12,6 +12,6 @@ function foo() {
 
 // Good
 function foo2() {
-  document.window.append("", null)
+  document.window.append("", null);
 }
 // END!>

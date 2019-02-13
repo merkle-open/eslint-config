@@ -21,8 +21,8 @@ typeof bar !== 'fucntion';
 */
 
 // Good
-typeof foo === "string"
-typeof foo === "undefined"
-typeof bar !== "number"
-typeof bar !== "function"
+typeof foo === "string";
+typeof foo === "undefined";
+typeof bar !== "number";
+typeof bar !== "function";
 // END!>

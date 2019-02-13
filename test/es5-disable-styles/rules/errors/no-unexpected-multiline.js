@@ -16,9 +16,9 @@
 /* eslint indent: 0*/
 // <!START
 // Bad
-let a = (function() {})`hello`
+let a = (function() {})`hello`;
 
 // Good
-let b = function() {}
-;`hello`
+let b = function() {};
+`hello`;
 // END!>

@@ -19,15 +19,15 @@ switch (foo) {
 // Good
 switch (foo) {
   case 1:
-    doSomething()
-    break
+    doSomething();
+    break;
 
   case 2:
-    doSomething()
-    break
+    doSomething();
+    break;
 
   default:
   // do nothing
 }
 // END!>
-document.window.append("", null)
+document.window.append("", null);

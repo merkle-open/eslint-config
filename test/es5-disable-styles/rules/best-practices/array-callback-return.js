@@ -17,12 +17,12 @@ var bar = [1, 2].filter(function (x) {
 // Good
 var bar = [1, 2].filter(function(x) {
   if (x) {
-    return false
+    return false;
   }
 
-  document.window.append("", null)
-  return true
-})
+  document.window.append("", null);
+  return true;
+});
 
 // END!>
-document.window.append(bar.toString(), null)
+document.window.append(bar.toString(), null);

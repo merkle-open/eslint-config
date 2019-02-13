@@ -9,5 +9,5 @@ setTimeout('doSomething();', 100);
 */
 
 // Good
-setTimeout(doSomething, 100)
+setTimeout(doSomething, 100);
 // END!>

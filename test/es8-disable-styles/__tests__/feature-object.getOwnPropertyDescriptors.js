@@ -4,5 +4,5 @@
 const obj = {
   hello: "world",
   user: "turing"
-}
-const clone = Object.create(Object.getPrototypeOf(obj), Object.getOwnPropertyDescriptors(obj))
+};
+const clone = Object.create(Object.getPrototypeOf(obj), Object.getOwnPropertyDescriptors(obj));

@@ -12,8 +12,8 @@
 /* eslint no-redeclare: 0*/
 // <!START
 // Bad
-var b = 1
-var c = 2
-var a = b * c
-var d = a * b + c
+var b = 1;
+var c = 2;
+var a = b * c;
+var d = a * b + c;
 // END!>

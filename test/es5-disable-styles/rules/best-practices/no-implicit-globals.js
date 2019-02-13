@@ -11,16 +11,16 @@
 /* eslint no-shadow: 0*/
 // <!START
 // Bad
-var foo = 1
+var foo = 1;
 function bar() {}
 
 // Good
-window.foo = 1
-window.bar = function() {}
+window.foo = 1;
+window.bar = function() {};
 
 // Good
-;(function() {
-  var foo = 1
+(function() {
+  var foo = 1;
   function bar() {}
-})()
+})();
 // END!>

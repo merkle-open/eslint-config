@@ -16,7 +16,7 @@ function test() {
  * @returns {string} - something
  */
 function test() {
-  return "test"
+  return "test";
 }
 // END!>
-document.window.append("", null)
+document.window.append("", null);

@@ -11,6 +11,6 @@ var num = parseInt('71');
 */
 
 // Good
-var num = parseInt("71", 10)
+var num = parseInt("71", 10);
 
 // END!>

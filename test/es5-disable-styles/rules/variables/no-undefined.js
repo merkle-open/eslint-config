@@ -4,5 +4,5 @@
 /* eslint no-unused-vars: 0*/
 // <!START
 // Bad
-var foo = undefined
+var foo = undefined;
 // END!>

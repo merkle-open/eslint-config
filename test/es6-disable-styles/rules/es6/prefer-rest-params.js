@@ -26,10 +26,10 @@ function bar(action) {
 
 // Good
 function foo(...args) {
-  console.log(args)
+  console.log(args);
 }
 
 function bar(action, ...args) {
-  action(...args)
+  action(...args);
 }
 // END!>

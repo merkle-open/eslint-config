@@ -15,8 +15,8 @@ console.log(boundGetName());
 
 // Good
 var boundGetName2 = function getName() {
-  return this.name
-}.bind({name: "ESLint"})
-console.log(boundGetName2())
+  return this.name;
+}.bind({name: "ESLint"});
+console.log(boundGetName2());
 // "ESLint"
 // END!>

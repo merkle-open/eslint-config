@@ -27,7 +27,7 @@
 */
 
 // Good
-;<div role="button" />
-;<div role={role} />
-;<div />
+<div role="button" />;
+<div role={role} />;
+<div />;
 // END!>

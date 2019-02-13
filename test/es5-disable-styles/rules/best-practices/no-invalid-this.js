@@ -5,6 +5,6 @@
 // <!START
 // Bad
 foo(function() {
-  this.a = 0
-})
+  this.a = 0;
+});
 // END!>

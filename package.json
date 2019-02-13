@@ -1,8 +1,12 @@
 {
   "name": "@namics/eslint-config",
-  "version": "6.1.0",
+  "version": "6.1.1",
   "description": "Default configurations for eslint",
-  "author": "Simon Mollweide <simon.mollweide@namics.com>",
+  "author": "Namics AG",
+  "contributors": [
+    "Ernst Ammann <ernst.ammann@namics.com>",
+    "Simon Mollweide <simon.mollweide@namics.com>"
+  ],
   "license": "MIT",
   "private": false,
   "repository": {
@@ -39,10 +43,11 @@
     "jsx"
   ],
   "devDependencies": {
+    "@namics/prettier-config": "0.2.0",
     "eslint": "5.13.0",
     "eslint-plugin-import": "2.16.0",
     "npm-run-all": "4.1.5",
-    "prettier": "1.16.4"
+    "prettier": "1.16.3"
   },
   "peerDependencies": {
     "eslint": ">=5.0.0",
