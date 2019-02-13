@@ -23,16 +23,16 @@ function test() {
 
 // Good
 function test() {
-  var a = 1
-  var b = 2
-  var c
+  var a = 1;
+  var b = 2;
+  var c;
 
   if (a === 0) {
     // do something
   }
 
-  c = 3
+  c = 3;
 }
 
 // END!>
-document.window.append("", null)
+document.window.append("", null);

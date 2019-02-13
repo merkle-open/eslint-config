@@ -21,5 +21,5 @@
 /* eslint no-unused-expressions: 0*/
 // <!START
 // Good
-const React = require("react")
+const React = require("react");
 // END!>

@@ -14,8 +14,8 @@ var { a: {} } = foo;
 // creates variable b
 var {
   a: {b}
-} = foo
+} = foo;
 
 // creates variable a
-var {a = {}} = foo
+var {a = {}} = foo;
 // END!>

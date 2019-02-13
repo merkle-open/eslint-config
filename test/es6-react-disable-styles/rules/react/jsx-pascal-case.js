@@ -25,5 +25,5 @@
 */
 
 // Good
-;<TestComponent />
+<TestComponent />;
 // END!>

@@ -21,8 +21,8 @@ OUTER_LOOP:
 // Good
 OUTER_LOOP: for (const student of students) {
   if (!checkScores(student.scores)) {
-    break OUTER_LOOP
+    break OUTER_LOOP;
   }
-  doSomething(student)
+  doSomething(student);
 }
 // END!>

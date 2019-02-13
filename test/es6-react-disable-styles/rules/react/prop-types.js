@@ -35,10 +35,10 @@ class Hello extends Component {
 // Good
 class Hello extends Component {
   render() {
-    return <div>Hello {this.props.name}</div>
+    return <div>Hello {this.props.name}</div>;
   }
 }
 Hello.propTypes = {
   name: PropTypes.string.isRequired
-}
+};
 // END!>

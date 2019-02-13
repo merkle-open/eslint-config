@@ -14,8 +14,8 @@ function bad() {
 
 // Good
 function good() {
-  let a, b, c
-  const d = 1
-  const e = 2
+  let a, b, c;
+  const d = 1;
+  const e = 2;
 }
 // END!>

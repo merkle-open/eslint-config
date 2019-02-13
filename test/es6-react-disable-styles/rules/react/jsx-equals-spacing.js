@@ -27,7 +27,7 @@
 */
 
 // Good
-;<Hello name={firstname} />
-;<Hello name />
-;<Hello {...props} />
+<Hello name={firstname} />;
+<Hello name />;
+<Hello {...props} />;
 // END!>

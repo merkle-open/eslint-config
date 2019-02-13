@@ -13,8 +13,8 @@ var booleanObject = new Boolean(false);
 */
 
 // Good
-var stringObject = String("Hello world")
-var numberObject = Number(33)
-var booleanObject = Boolean(false)
+var stringObject = String("Hello world");
+var numberObject = Number(33);
+var booleanObject = Boolean(false);
 // END!>
-document.window.append("", null)
+document.window.append("", null);

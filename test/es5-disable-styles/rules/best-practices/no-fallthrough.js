@@ -18,9 +18,9 @@ switch (foo) {
 // Good
 switch (foo) {
   case 1:
-    doSomething()
-    break
+    doSomething();
+    break;
   case 2:
-    doSomethingElse()
+    doSomethingElse();
 }
 // END!>

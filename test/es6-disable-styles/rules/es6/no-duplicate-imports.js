@@ -21,6 +21,6 @@ import { find } from 'module';
 */
 
 // Good
-import {merge, find} from "module"
-import something from "another-module"
+import {merge, find} from "module";
+import something from "another-module";
 // END!>

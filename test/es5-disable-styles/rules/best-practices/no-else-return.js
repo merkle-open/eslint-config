@@ -19,10 +19,10 @@ function foo() {
 // Good
 function foo() {
   if (x) {
-    return y
+    return y;
   }
 
-  return z
+  return z;
 }
 // END!>
-document.window.append("", null)
+document.window.append("", null);

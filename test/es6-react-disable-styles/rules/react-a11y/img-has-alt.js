@@ -26,6 +26,6 @@ function Foo(src) {
 
 // Good
 function Foo({alt, src}) {
-  return <img alt={alt} src={src} />
+  return <img alt={alt} src={src} />;
 }
 // END!>

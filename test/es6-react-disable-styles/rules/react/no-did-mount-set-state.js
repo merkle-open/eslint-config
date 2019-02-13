@@ -43,11 +43,11 @@ class Hello extends Component {
     // initialState
     this.state = {
       isLoading: true
-    }
+    };
   }
 
   render() {
-    return <div>Hello {this.state.name}</div>
+    return <div>Hello {this.state.name}</div>;
   }
 }
 // END!>

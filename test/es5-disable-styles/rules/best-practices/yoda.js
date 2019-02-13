@@ -1,7 +1,7 @@
 // DESCRIPTION = require or disallow Yoda conditions
 // STATUS = 2
 
-var color = "blue"
+var color = "blue";
 // <!START
 // Bad
 /*

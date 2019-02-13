@@ -22,8 +22,8 @@ function *generator() {
 
 // Good
 function* generator() {
-  yield "44"
-  yield "55"
+  yield "44";
+  yield "55";
 }
 
 // END!>

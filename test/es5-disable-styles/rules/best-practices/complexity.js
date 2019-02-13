@@ -42,15 +42,15 @@ function a(x) {
 function b(x) {
   switch (x) {
     case x === 0:
-      return x + 1
+      return x + 1;
     case x === 1:
-      return x + 2
+      return x + 2;
     case x === 2:
-      return x + 3
+      return x + 3;
     case x === 3:
-      return x + 4
+      return x + 4;
     default:
-      return 99
+      return 99;
   }
 }
 

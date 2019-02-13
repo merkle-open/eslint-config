@@ -26,6 +26,6 @@
 */
 
 // Good
-;<MyComponent onChange={this.handleChange} />
-;<MyComponent onChange={this.props.onFoo} />
+<MyComponent onChange={this.handleChange} />;
+<MyComponent onChange={this.props.onFoo} />;
 // END!>

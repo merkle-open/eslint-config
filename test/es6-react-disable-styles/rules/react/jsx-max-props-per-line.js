@@ -25,6 +25,6 @@
 */
 
 // Good
-;<Hello firstName="John" lastName="Smith" />
-;<Hello firstName="John" lastName="Smith" tel={5555555} />
+<Hello firstName="John" lastName="Smith" />;
+<Hello firstName="John" lastName="Smith" tel={5555555} />;
 // END!>

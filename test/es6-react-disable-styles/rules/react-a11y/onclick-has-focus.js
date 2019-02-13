@@ -20,16 +20,16 @@
 /* eslint react/jsx-indent: 0*/
 // <!START
 // Bad
-;<span onClick="submitForm();">Submit</span>
-;<a onClick="showNextPage();">Next page</a>
+<span onClick="submitForm();">Submit</span>;
+<a onClick="showNextPage();">Next page</a>;
 
 // Good
-;<div aria-hidden onClick={() => {}} />
-;<span onClick="doSomething();" tabIndex="0">
+<div aria-hidden onClick={() => {}} />;
+<span onClick="doSomething();" tabIndex="0">
   Click me!
-</span>
-;<span onClick="doSomething();" tabIndex="-1">
+</span>;
+<span onClick="doSomething();" tabIndex="-1">
   Click me too!
-</span>
-;<button onClick="doSomething();">Click the button :)</button>
+</span>;
+<button onClick="doSomething();">Click the button :)</button>;
 // END!>

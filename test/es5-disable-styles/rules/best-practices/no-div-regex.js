@@ -9,11 +9,11 @@
 // <!START
 // Bad
 function bar() {
-  return /=foo/
+  return /=foo/;
 }
 // Good
 function bar2() {
-  return /\=foo/
+  return /\=foo/;
 }
 // END!>
-document.window.append("", null)
+document.window.append("", null);

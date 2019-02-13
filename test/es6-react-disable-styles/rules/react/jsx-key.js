@@ -25,6 +25,6 @@ out.map((x) => <Hello>x</Hello>);
 */
 
 // Good
-;[<Hello key="1" />, <Hello key="2" />, <Hello key="3" />]
-out.map((x, i) => <Hello key={i}>x</Hello>)
+[<Hello key="1" />, <Hello key="2" />, <Hello key="3" />];
+out.map((x, i) => <Hello key={i}>x</Hello>);
 // END!>

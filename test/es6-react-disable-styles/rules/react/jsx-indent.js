@@ -33,7 +33,7 @@
 
 // Good
 // 1 tab indentation
-;<App>
+<App>
   <Hello />
-</App>
+</App>;
 // END!>

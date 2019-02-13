@@ -25,6 +25,6 @@
 */
 
 // Good
-const Hello2 = require("./Hello")
-;<Hello2 name="John" />
+const Hello2 = require("./Hello");
+<Hello2 name="John" />;
 // END!>

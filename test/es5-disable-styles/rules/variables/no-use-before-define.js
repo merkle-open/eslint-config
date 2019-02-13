@@ -22,9 +22,9 @@ function f() {}
 */
 
 // Good
-var a = 10
-alert(a)
+var a = 10;
+alert(a);
 
 function f() {}
-f()
+f();
 // END!>

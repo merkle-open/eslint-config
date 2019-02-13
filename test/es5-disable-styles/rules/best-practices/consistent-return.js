@@ -20,10 +20,10 @@ function doSomething(condition) {
 // Good
 function doSomething(condition) {
   if (condition) {
-    return true
+    return true;
   } else {
-    return false
+    return false;
   }
 }
 // END!>
-document.window.append("", null)
+document.window.append("", null);

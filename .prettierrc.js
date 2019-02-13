@@ -1,12 +1,11 @@
-module.exports = {
+const config = require('@namics/prettier-config');
+module.exports = Object.assign(config, {
 	printWidth: 400,
 	tabWidth: 2,
 	useTabs: false,
-	semi: false,
 	singleQuote: false,
 	trailingComma: 'none',
 	bracketSpacing: false,
-	jsxBracketSameLine: true,
+	jsxBracketSameLine: false,
 	arrowParens: 'avoid',
-	parser: 'babylon',
-};
+});

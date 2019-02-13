@@ -26,5 +26,5 @@
 */
 
 // Good
-;<div onClick={this.handleClick} />
+<div onClick={this.handleClick} />;
 // END!>

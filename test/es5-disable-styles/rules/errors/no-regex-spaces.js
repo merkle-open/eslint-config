@@ -18,6 +18,6 @@ var re = new RegExp('foo   bar');
 */
 
 // Good
-var re = /foo {3}bar/
-var re = new RegExp("foo {3}bar")
+var re = /foo {3}bar/;
+var re = new RegExp("foo {3}bar");
 // END!>

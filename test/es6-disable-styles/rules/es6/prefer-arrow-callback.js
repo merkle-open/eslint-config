@@ -19,9 +19,9 @@ foo(function () { return this.a; }.bind(this));
 
 // Good
 foo(a => {
-  return a
-})
+  return a;
+});
 foo(() => {
-  return this.a
-})
+  return this.a;
+});
 // END!>
