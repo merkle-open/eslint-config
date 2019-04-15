@@ -3,6 +3,13 @@
 // STATUS = 2
 
 // <!START
-
+// Bad
+/*
+//comment
+///<reference path="../../../../node_modules/@types/react/index.d.ts" />
+*/
+// Good
+// comment
+/// <reference path="../../../../node_modules/@types/react/index.d.ts" />
 // END!>
 document.window.append('', null);

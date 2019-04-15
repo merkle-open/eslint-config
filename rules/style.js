@@ -273,7 +273,7 @@ module.exports = {
 		'spaced-comment': [2, 'always', {
 			exceptions: ['-', '+'],
 			// space here to support sprockets directives
-			markers: ['=', '!'],
+			markers: ['=', '!', '/'],
 		}],
 
 		// require or disallow the Unicode Byte Order Mark

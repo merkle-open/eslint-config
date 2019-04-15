@@ -2,7 +2,6 @@
 
 [![Build Status](https://img.shields.io/travis/namics/eslint-config-namics/master.svg)](https://travis-ci.org/namics/eslint-config-namics)
 [![Build Status](https://ci.appveyor.com/api/projects/status/sroqr91h6gjecoqi/branch/master?svg=true)](https://ci.appveyor.com/project/smollweide/eslint-config-namics/branch/master)
-[![Dependencies](https://img.shields.io/david/namics/eslint-config-namics/master.svg)](https://david-dm.org/namics/eslint-config-namics)
 [![npm](https://img.shields.io/npm/v/@namics/eslint-config.svg)](https://www.npmjs.com/package/@namics/eslint-config)
 [![Codestyle](https://img.shields.io/badge/codestyle-namics-green.svg)](https://github.com/namics/eslint-config-namics)
 
@@ -10,6 +9,35 @@
 
 ```bash
 $ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
+```
+
+## Usage Typescript (recommended)
+
+- `@namics/eslint-config/configurations/typescript-browser` - typescript + browser
+- `@namics/eslint-config/configurations/typescript-react` - typescript + react
+- `@namics/eslint-config/configurations/typescript-node` - typescript + node
+
+*package.json*
+
+```json
+{
+  "scripts": {
+    "lint:ts": "eslint . --ext .jsx,.js,.ts,.tsx"
+  }
+}
+```
+
+*Enabling ESLint on TS files in VSCode*
+
+You need to update the eslint.validate setting to:
+
+```json
+"eslint.validate": [
+  "javascript",
+  "javascriptreact",
+  "typescript",
+  "typescriptreact"
+]
 ```
 
 ## Usage ES8 (ES2017)
@@ -84,6 +112,7 @@ then run `npm run lint`
 - [Imports](./documentation/imports.md) (ES6/7/8)
 - [React](./documentation/react.md) (ES6/7/8)
 - [React A11y](./documentation/react-a11y.md) (ES6/7/8)
+- [Typescript](./documentation/typescript.md) (typescript)
 
 ## Thanks to
 

@@ -936,6 +936,18 @@ var sum = 1 + 2;
 
 :white_check_mark: Enabled (error)
 
+```javascript
+
+// Bad
+/*
+//comment
+///<reference path="../../../../node_modules/@types/react/index.d.ts" />
+*/
+// Good
+// comment
+/// <reference path="../../../../node_modules/@types/react/index.d.ts" />
+
+```
 <br />
 
 
