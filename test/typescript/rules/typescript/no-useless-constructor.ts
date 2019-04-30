@@ -9,13 +9,20 @@
 // Bad
 /*
 (() => {
-	alert(a);
-	const a = 10;
+	class A {
+		constructor() {}
+	}
 })();
 */
 // Good
 (() => {
-	const a = 10;
-	alert(a);
+	class A {
+		public constructor() {
+			this._doSomething();
+		}
+		private _doSomething() {
+			document.write('something');
+		}
+	}
 })();
 // END!>

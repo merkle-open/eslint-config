@@ -4,7 +4,7 @@
 /* eslint no-var: 0*/
 /* eslint no-console: 0*/
 /* eslint no-alert: 0*/
-/* eslint no-unused-vars: 0*/
+/* eslint @typescript-eslint/no-unused-vars: 0*/
 /* eslint @typescript-eslint/no-require-imports: 0*/
 
 // <!START

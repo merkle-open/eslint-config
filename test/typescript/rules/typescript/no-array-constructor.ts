@@ -2,7 +2,7 @@
 // STATUS = 2
 
 /* eslint no-console: 0*/
-/* eslint no-unused-vars: 0*/
+/* eslint @typescript-eslint/no-unused-vars: 0*/
 /* eslint no-array-constructor: 0*/
 
 // <!START

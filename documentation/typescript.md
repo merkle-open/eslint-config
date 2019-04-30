@@ -68,6 +68,7 @@ interface IFoo {
 ```javascript
 
 // Bad
+
 /*
 (() => {
 	if (false) {
@@ -540,6 +541,7 @@ class Foo {
 ```javascript
 
 // Bad
+
 /*
 const age: any = 'seventeen';
 */
@@ -1004,7 +1006,7 @@ console.log(z);
 > 
 
 
-:x: Disabled
+:white_check_mark: Enabled (error)
 
 ```javascript
 
@@ -1019,6 +1021,40 @@ console.log(z);
 (() => {
 	const a = 10;
 	alert(a);
+})();
+
+```
+<br />
+
+
+
+### [No useless constructor.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-constructor.md)
+
+> 
+
+
+:white_check_mark: Enabled (error)
+
+```javascript
+
+// Bad
+/*
+(() => {
+	class A {
+		constructor() {}
+	}
+})();
+*/
+// Good
+(() => {
+	class A {
+		public constructor() {
+			this._doSomething();
+		}
+		private _doSomething() {
+			document.write('something');
+		}
+	}
 })();
 
 ```

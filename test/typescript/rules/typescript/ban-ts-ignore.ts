@@ -2,11 +2,12 @@
 // STATUS = 2
 
 /* eslint no-console: 0*/
-/* eslint no-unused-vars: 0*/
+/* eslint @typescript-eslint/no-unused-vars: 0*/
 /* eslint no-constant-condition: 0*/
 
 // <!START
 // Bad
+
 /*
 (() => {
 	if (false) {

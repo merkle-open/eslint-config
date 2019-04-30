@@ -5,6 +5,9 @@ module.exports = {
 		'require-jsdoc': 0,
 		'camelcase': 0,
 		'indent': 0,
+		'no-unused-vars': 0,
+		'no-use-before-define': 0,
+		'no-useless-constructor': 0,
 
 		// Require that member overloads be consecutive (adjacent-overload-signatures from TSLint)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md
@@ -137,18 +140,15 @@ module.exports = {
 
 		// Disallow unused variables (no-unused-vars)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md
-		'@typescript-eslint/no-unused-vars': 0,
-		// already covered by no-unused-vars
+		'@typescript-eslint/no-unused-vars': 2,
 
 		// Disallow the use of variables before they are defined (no-use-before-define)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md
-		'@typescript-eslint/no-use-before-define': 0,
-		// already covered by no-use-before-define
+		'@typescript-eslint/no-use-before-define': 2,
 
 		// Disallow unnecessary constructors
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-constructor.md
-		'@typescript-eslint/no-useless-constructor': 0,
-		// already covered by no-useless-constructor
+		'@typescript-eslint/no-useless-constructor': 2,
 
 		// Disallows the use of require statements except in import statements (no-var-requires)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md
