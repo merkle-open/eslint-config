@@ -4,7 +4,7 @@
 /* eslint no-console: 0*/
 /* eslint @typescript-eslint/no-unused-vars: 0*/
 /* eslint @typescript-eslint/no-non-null-assertion: 0*/
-/* eslint @typescript-eslint/no-angle-bracket-type-assertion: 0*/
+/* eslint @typescript-eslint/consistent-type-assertions: 0*/
 
 // <!START
 // Bad

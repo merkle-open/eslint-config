@@ -3,6 +3,7 @@
 // STATUS = 2
 
 /* eslint no-unused-vars: 0*/
+/* eslint no-redeclare: 0*/
 
 // <!START
 // BAD

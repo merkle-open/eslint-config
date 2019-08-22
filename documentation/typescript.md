@@ -2,7 +2,7 @@
 ## Typescript
 
 
-### [Adjacent overload signatures.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md)
+### [Adjacent overload signatures](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md)
 
 > Require that member overloads be consecutive (adjacent-overload-signatures from TSLint)
 
@@ -33,7 +33,7 @@ interface IFoo {
 
 
 
-### [Array type.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/array-type.md)
+### [Array type](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/array-type.md)
 
 > Requires using either T[] or Array<T> for arrays (array-type)
 
@@ -58,7 +58,7 @@ interface IFoo {
 
 
 
-### [Ban ts ignore.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-ignore.md)
+### [Ban ts ignore](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-ignore.md)
 
 > Bans “// @ts-ignore” comments from being used (ban-ts-ignore)
 
@@ -83,7 +83,7 @@ interface IFoo {
 
 
 
-### [Ban types.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md)
+### [Ban types](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md)
 
 > 
 
@@ -110,7 +110,7 @@ interface IFoo {
 
 
 
-### [Camelcase.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/camelcase.md)
+### [Camelcase](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/camelcase.md)
 
 > 
 
@@ -143,7 +143,7 @@ import { no_camelcased as noCamelcased } from 'eslint';
 
 
 
-### [Class name casing.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/class-name-casing.md)
+### [Class name casing](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/class-name-casing.md)
 
 > 
 
@@ -172,7 +172,42 @@ interface ISomeInterface {
 
 
 
-### [Explicit function return type.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md)
+### [Consistent type assertions](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-assertions.md)
+
+> 
+
+
+:white_check_mark: Enabled (error)
+
+```javascript
+
+// Bad
+/* 
+(() => {
+	type Foo2 = object;
+	const foo = <Foo2>{};
+	const x = { text: true } as Foo2;
+})();
+*/
+
+// Good
+(() => {
+	type T = object;
+	type Foo = object;
+	const data = { test: true };
+	const x: T = { ...data };
+	const y = { ...data } as any;
+	const z = { ...data } as unknown;
+	function foo(some: T) { throw { bar: 5 } as Foo; }
+	foo({ ...data } as T);
+})();
+
+```
+<br />
+
+
+
+### [Explicit function return type](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md)
 
 > 
 
@@ -207,7 +242,7 @@ class Test {
 
 
 
-### [Explicit member accessibility.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md)
+### [Explicit member accessibility](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md)
 
 > 
 
@@ -256,7 +291,7 @@ class Animal {
 
 
 
-### [Generic type naming.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/generic-type-naming.md)
+### [Generic type naming](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/generic-type-naming.md)
 
 > 
 
@@ -285,7 +320,7 @@ class Animal {
 
 
 
-### [Indent.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md)
+### [Indent](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md)
 
 > 
 
@@ -310,7 +345,7 @@ type ReadOnly<TSomeType extends object> = {
 
 
 
-### [Interface name prefix.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/interface-name-prefix.md)
+### [Interface name prefix](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/interface-name-prefix.md)
 
 > 
 
@@ -335,7 +370,7 @@ interface IAnimal {
 
 
 
-### [Member delimiter style.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-delimiter-style.md)
+### [Member delimiter style](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-delimiter-style.md)
 
 > 
 
@@ -362,7 +397,7 @@ interface IFoo {
 
 
 
-### [Member naming.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-naming.md)
+### [Member naming](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-naming.md)
 
 > 
 
@@ -391,7 +426,7 @@ class HappyClass {
 
 
 
-### [Member ordering.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md)
+### [Member ordering](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md)
 
 > 
 
@@ -434,7 +469,7 @@ class Foo {
 
 
 
-### [No angle bracket type assertion.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-angle-bracket-type-assertion.md)
+### [No array constructor](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-array-constructor.md)
 
 > 
 
@@ -445,45 +480,19 @@ class Foo {
 
 // Bad
 /*
-(() => {
-	type Foo = object;
-	const foo = <Foo>{};
-}
-*/
-// Good
-(() => {
-	type Foo = object;
-	const foo: Foo = {};
-})();
-
-```
-<br />
-
-
-
-### [No array constructor.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-array-constructor.md)
-
-> 
-
-
-:white_check_mark: Enabled (error)
-
-```javascript
-
-// Bad
-/*
-(async () => {
-	const arr1 = Array(0, 1, 2);
-	const arr2 = new Array(0, 1, 2);
-})();
-*/
-// Good
 (async () => {
 	const arr1 = Array<number>(0, 1, 2);
 	const arr2 = new Array<number>(0, 1, 2);
 
+	const arr1 = Array(0, 1, 2);
+	const arr2 = new Array(0, 1, 2);
+})();
+*/
+
+// Good
+(async () => {
 	const arr3 = Array(500);
-	const arr4 = new Array(arr1.length);
+	const arr4 = new Array(3);
 })();
 
 ```
@@ -491,7 +500,7 @@ class Foo {
 
 
 
-### [No empty interface.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-interface.md)
+### [No empty interface](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-interface.md)
 
 > 
 
@@ -531,7 +540,7 @@ class Foo {
 
 
 
-### [No explicit any.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md)
+### [No explicit any](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md)
 
 > 
 
@@ -554,7 +563,7 @@ const age: any = 'seventeen';
 
 
 
-### [No extraneous class.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extraneous-class.md)
+### [No extraneous class](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extraneous-class.md)
 
 > 
 
@@ -584,7 +593,7 @@ class ConstructorOnly {
 
 
 
-### [No for in array.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-for-in-array.md)
+### [No for in array](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-for-in-array.md)
 
 > 
 
@@ -610,7 +619,7 @@ for (const x in { a: 3, b: 4, c: 5 }) {
 
 
 
-### [No inferrable types.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-inferrable-types.md)
+### [No inferrable types](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-inferrable-types.md)
 
 > 
 
@@ -639,7 +648,7 @@ for (const x in { a: 3, b: 4, c: 5 }) {
 
 
 
-### [No misused new.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-misused-new.md)
+### [No misused new](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-misused-new.md)
 
 > 
 
@@ -676,7 +685,7 @@ for (const x in { a: 3, b: 4, c: 5 }) {
 
 
 
-### [No namespace.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-namespace.md)
+### [No namespace](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-namespace.md)
 
 > 
 
@@ -700,7 +709,7 @@ declare module 'foo' {}
 
 
 
-### [No non null assertion.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-assertion.md)
+### [No non null assertion](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-assertion.md)
 
 > 
 
@@ -735,38 +744,7 @@ declare module 'foo' {}
 
 
 
-### [No object literal type assertion.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-object-literal-type-assertion.md)
-
-> 
-
-
-:white_check_mark: Enabled (error)
-
-```javascript
-
-// Bad
-/*
-(() => {
-	interface ITest {
-		name: string;
-	}
-	const x = { name: 'test' } as ITest;
-})();
-*/
-// Good
-(() => {
-	interface ITest {
-		name: string;
-	}
-	const x: ITest = { name: 'test' };
-})();
-
-```
-<br />
-
-
-
-### [No parameter properties.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-parameter-properties.md)
+### [No parameter properties](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-parameter-properties.md)
 
 > 
 
@@ -804,7 +782,7 @@ declare module 'foo' {}
 
 
 
-### [No require imports.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-require-imports.md)
+### [No require imports](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-require-imports.md)
 
 > 
 
@@ -825,7 +803,7 @@ import eslint from 'eslint';
 
 
 
-### [No this alias.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-this-alias.md)
+### [No this alias](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-this-alias.md)
 
 > 
 
@@ -859,26 +837,7 @@ import eslint from 'eslint';
 
 
 
-### [No triple slash reference.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-triple-slash-reference.md)
-
-> 
-
-
-:x: Disabled
-
-```javascript
-
-// Good
-(() => {
-	/// <reference path="../../../../node_modules/@types/react/index.d.ts" />
-})();
-
-```
-<br />
-
-
-
-### [No type alias.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-type-alias.md)
+### [No type alias](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-type-alias.md)
 
 > 
 
@@ -908,7 +867,7 @@ import eslint from 'eslint';
 
 
 
-### [No unnecessary qualifier.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-qualifier.md)
+### [No unnecessary qualifier](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-qualifier.md)
 
 > 
 
@@ -937,7 +896,7 @@ namespace Y {
 
 
 
-### [No unnecessary type assertion.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md)
+### [No unnecessary type assertion](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md)
 
 > 
 
@@ -966,7 +925,7 @@ namespace Y {
 
 
 
-### [No unused vars.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md)
+### [No unused vars](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md)
 
 > 
 
@@ -1001,7 +960,7 @@ console.log(z);
 
 
 
-### [No use before define.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md)
+### [No use before define](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md)
 
 > 
 
@@ -1028,7 +987,7 @@ console.log(z);
 
 
 
-### [No useless constructor.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-constructor.md)
+### [No useless constructor](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-constructor.md)
 
 > 
 
@@ -1062,7 +1021,7 @@ console.log(z);
 
 
 
-### [No var requires.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md)
+### [No var requires](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md)
 
 > 
 
@@ -1087,7 +1046,7 @@ import eslint from 'eslint';
 
 
 
-### [Prefer function type.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-function-type.md)
+### [Prefer function type](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-function-type.md)
 
 > 
 
@@ -1136,7 +1095,7 @@ import eslint from 'eslint';
 
 
 
-### [Prefer interface.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-interface.md)
+### [Prefer interface](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-interface.md)
 
 > 
 
@@ -1163,7 +1122,7 @@ import eslint from 'eslint';
 
 
 
-### [Promise function async.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/promise-function-async.md)
+### [Promise function async](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/promise-function-async.md)
 
 > 
 
@@ -1196,7 +1155,7 @@ import eslint from 'eslint';
 
 
 
-### [Restrict plus operands.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-plus-operands.md)
+### [Restrict plus operands](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-plus-operands.md)
 
 > 
 
@@ -1221,7 +1180,26 @@ import eslint from 'eslint';
 
 
 
-### [Type annotation spacing.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/type-annotation-spacing.md)
+### [Triple slash reference](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/triple-slash-reference.md)
+
+> 
+
+
+:white_check_mark: Enabled (error)
+
+```javascript
+
+// Good
+(() => {
+	/// <reference path="../../../../node_modules/@types/react/index.d.ts" />
+})();
+
+```
+<br />
+
+
+
+### [Type annotation spacing](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/type-annotation-spacing.md)
 
 > 
 
@@ -1246,7 +1224,7 @@ import eslint from 'eslint';
 
 
 
-### [Unified signatures.ts](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unified-signatures.md)
+### [Unified signatures](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unified-signatures.md)
 
 > 
 

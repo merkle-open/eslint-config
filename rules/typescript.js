@@ -1,4 +1,4 @@
-/* global module */
+/* eslint-disable */
 /* [12.04.2019] add typescript support */
 module.exports = {
 	rules: {
@@ -65,9 +65,9 @@ module.exports = {
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md
 		'@typescript-eslint/member-ordering': 2,
 
-		// Enforces the use of as Type assertions instead of <Type> assertions (no-angle-bracket-type-assertion)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-angle-bracket-type-assertion.md
-		'@typescript-eslint/no-angle-bracket-type-assertion': 2,
+		// Enforces consistent usage of type assertions. (consistent-type-assertions)
+		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-assertions.md
+		'@typescript-eslint/consistent-type-assertions': [2, { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow-as-parameter' }],
 
 		// Disallow generic Array constructors (no-array-constructor)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-array-constructor.md
@@ -105,10 +105,6 @@ module.exports = {
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-assertion.md
 		'@typescript-eslint/no-non-null-assertion': 2,
 
-		// Forbids an object literal to appear in a type assertion expression (no-object-literal-type-assertion)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-object-literal-type-assertion.md
-		'@typescript-eslint/no-object-literal-type-assertion': 2,
-
 		// Disallow the use of parameter properties in class constructors. (no-parameter-properties)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-parameter-properties.md
 		'@typescript-eslint/no-parameter-properties': 2,
@@ -122,9 +118,9 @@ module.exports = {
 		'@typescript-eslint/no-this-alias': 0,
 		// already covered by consistent-this
 
-		// Disallow /// <reference path="" /> comments (no-triple-slash-reference)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-triple-slash-reference.md
-		'@typescript-eslint/no-triple-slash-reference': 0,
+		// Sets preference level for triple slash directives versus ES6-style import declarations.
+		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/triple-slash-reference.md
+		'@typescript-eslint/triple-slash-reference': [2, { 'path': 'always', 'types': 'prefer-import', 'lib': 'always' }],
 
 		// Disallow the use of type aliases (no-type-alias)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-type-alias.md
@@ -161,10 +157,6 @@ module.exports = {
 		// Use function types instead of interfaces with call signatures (prefer-function-type)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-function-type.md
 		'@typescript-eslint/prefer-function-type': 2,
-
-		// Prefer an interface declaration over a type literal (type T = { ... }) (prefer-interface)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-interface.md
-		'@typescript-eslint/prefer-interface': 2,
 
 		// Require the use of the namespace keyword instead of the module keyword to declare custom TypeScript modules.
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-namespace-keyword.md

@@ -3,6 +3,7 @@
 
 /* eslint no-console: 0*/
 /* eslint @typescript-eslint/no-unused-vars: 0*/
+/* eslint @typescript-eslint/no-inferrable-types: 0*/
 
 // <!START
 // Bad

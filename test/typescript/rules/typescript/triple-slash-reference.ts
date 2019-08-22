@@ -1,5 +1,5 @@
-// Disallow /// <reference path="" /> comments (no-triple-slash-reference)
-// STATUS = 0
+// Disallow /// <reference path="" /> comments (triple-slash-reference)
+// STATUS = 2
 
 /* eslint no-console: 0*/
 /* eslint @typescript-eslint/no-unused-vars: 0*/
