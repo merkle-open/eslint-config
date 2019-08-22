@@ -1,4 +1,4 @@
-/* global module */
+
 module.exports = {
 	rules: {
 		// Disallow await inside of loops

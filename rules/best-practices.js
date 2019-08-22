@@ -1,4 +1,4 @@
-/* global module */
+
 /* [08.07.2016] approved by skill group core team */
 module.exports = {
 	rules: {
