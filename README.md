@@ -1,7 +1,7 @@
 # ESLint config Namics
 
 [![Build Status](https://img.shields.io/travis/namics/eslint-config-namics/master.svg)](https://travis-ci.org/namics/eslint-config-namics)
-[![Build Status](https://ci.appveyor.com/api/projects/status/sroqr91h6gjecoqi/branch/master?svg=true)](https://ci.appveyor.com/project/smollweide/eslint-config-namics/branch/master)
+[![Build status](https://ci.appveyor.com/api/projects/status/o2ka9gbhm1ry6kjm/branch/master?svg=true)](https://ci.appveyor.com/project/namics/eslint-config-namics/branch/master)
 [![npm](https://img.shields.io/npm/v/@namics/eslint-config.svg)](https://www.npmjs.com/package/@namics/eslint-config)
 [![Codestyle](https://img.shields.io/badge/codestyle-namics-green.svg)](https://github.com/namics/eslint-config-namics)
 
