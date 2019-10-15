@@ -18,6 +18,7 @@
   },
   "main": "configurations/es6-browser.js",
   "scripts": {
+    "clean": "npx rimraf package-lock.json node_modules",
     "lint": "npm run lint:js",
     "lint:js": "eslint . --ext .jsx,.js,.ts,.tsx",
     "test": "npm run lint",
@@ -29,7 +30,8 @@
     "prettier:es6react": "prettier --write \"test/es6-react-disable-styles/**/*.js\" \"test/es6-react-disable-styles/**/*.jsx\"",
     "prettier:es8": "prettier --write \"test/es8-disable-styles/**/*.js\" \"test/es8-disable-styles/**/*.jsx\"",
     "prettier:typescript": "prettier --write \"test/typescript-disable-styles/**/*.ts\" \"test/typescript-disable-styles/**/*.tsx\"",
-    "start": "dash4"
+    "start": "dash4",
+    "update-dependencies": "npm-check-updates -u"
   },
   "keywords": [
     "code checker",
@@ -54,6 +56,7 @@
     "@namics/ts-config": "0.4.0",
     "eslint": "6.5.1",
     "eslint-plugin-import": "2.18.2",
+    "npm-check-updates": "3.1.24",
     "npm-run-all": "4.1.5",
     "prettier": "1.18.2",
     "typescript": "3.6.4",
