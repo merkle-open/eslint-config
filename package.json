@@ -1,6 +1,6 @@
 {
   "name": "@namics/eslint-config",
-  "version": "8.0.1",
+  "version": "8.0.2",
   "description": "Default configurations for eslint",
   "author": "Namics AG",
   "contributors": [
