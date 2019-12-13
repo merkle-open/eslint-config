@@ -26,6 +26,7 @@ async function getConfig() {
 						new PluginReadme({ file: 'README.md', width: [12, 8, 8] }),
 						new PluginNpmScripts({
 							scripts: [
+								{ title: 'install', cmd: 'npm i' },
 								{ title: 'test', cmd: 'npm run test' },
 								{ title: 'lint', cmd: 'npm run lint' },
 								{ title: 'prettier', cmd: 'npm run prettier' },
@@ -34,9 +35,7 @@ async function getConfig() {
 							width: [12, 4, 4],
 						}),
 					],
-					[
-						new PluginDependencies(),
-					],
+					[new PluginDependencies()],
 				],
 			},
 		],
