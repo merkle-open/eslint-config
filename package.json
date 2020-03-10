@@ -1,6 +1,6 @@
 {
   "name": "@namics/eslint-config",
-  "version": "8.0.6",
+  "version": "8.0.7",
   "description": "Default configurations for eslint",
   "author": "Namics AG",
   "contributors": [
@@ -49,31 +49,31 @@
     "typescript"
   ],
   "devDependencies": {
-    "@dash4/plugin-dependencies": "0.7.1",
-    "@dash4/plugin-npm-scripts": "0.7.1",
-    "@dash4/plugin-readme": "0.7.1",
-    "@dash4/server": "0.7.1",
+    "@dash4/plugin-dependencies": "0.8.0",
+    "@dash4/plugin-npm-scripts": "0.8.0",
+    "@dash4/plugin-readme": "0.8.0",
+    "@dash4/server": "0.8.0",
     "@namics/prettier-config": "0.4.3",
     "@namics/ts-config": "0.4.4",
-    "acorn": "7.1.0",
+    "acorn": "7.1.1",
     "eslint": "6.8.0",
     "eslint-plugin-import": "2.20.0",
-    "npm-check-updates": "4.0.1",
+    "npm-check-updates": "4.0.4",
     "npm-run-all": "4.1.5",
     "pkg-ok": "2.3.1",
     "prettier": "1.19.1",
-    "typescript": "3.7.5"
+    "typescript": "3.8.3"
   },
   "peerDependencies": {
     "eslint": ">=6",
     "eslint-plugin-import": ">=2"
   },
   "dependencies": {
-    "@types/react": "16.9.17",
-    "@typescript-eslint/eslint-plugin": "2.16.0",
-    "@typescript-eslint/parser": "2.16.0",
-    "babel-eslint": "10.0.3",
+    "@types/react": "16.9.23",
+    "@typescript-eslint/eslint-plugin": "2.23.0",
+    "@typescript-eslint/parser": "2.23.0",
+    "babel-eslint": "10.1.0",
     "eslint-plugin-jsx-a11y": "6.2.3",
-    "eslint-plugin-react": "7.18.0"
+    "eslint-plugin-react": "7.19.0"
   }
 }
