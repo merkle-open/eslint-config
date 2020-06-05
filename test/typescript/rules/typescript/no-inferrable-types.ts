@@ -1,6 +1,7 @@
-// Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean.
+// DESCRIPTION = Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean.
 // STATUS = 2
 
+/* eslint max-len: 0*/
 /* eslint no-console: 0*/
 /* eslint @typescript-eslint/no-unused-vars: 0*/
 /* eslint no-restricted-syntax: 0*/

@@ -1,4 +1,4 @@
-// Functions that return promises must be async (promise-function-async)
+// DESCRIPTION = Functions that return promises must be async (promise-function-async)
 // STATUS = 2
 
 /* eslint no-console: 0*/

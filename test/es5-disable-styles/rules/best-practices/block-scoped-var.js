@@ -20,7 +20,7 @@ example = {
 
 // Good
 example = {
-  doIf: function() {
+  doIf: function () {
     var build = true;
 
     if (1 === 2) {

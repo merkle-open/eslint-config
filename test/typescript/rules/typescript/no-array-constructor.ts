@@ -1,4 +1,4 @@
-// Disallow generic Array constructors (no-array-constructor)
+// DESCRIPTION = Disallow generic Array constructors (no-array-constructor)
 // STATUS = 2
 
 /* eslint no-console: 0*/

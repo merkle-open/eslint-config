@@ -1,5 +1,5 @@
 
-// Enforces that types will not to be used (ban-types)
+// DESCRIPTION = Enforces that types will not to be used (ban-types)
 // STATUS = 2
 
 /* eslint no-console: 0*/

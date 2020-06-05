@@ -1,4 +1,4 @@
-// Require explicit return types on functions and class methods (explicit-function-return-type)
+// DESCRIPTION = Require explicit return types on functions and class methods (explicit-function-return-type)
 // STATUS = 0
 
 /* eslint no-console: 0*/

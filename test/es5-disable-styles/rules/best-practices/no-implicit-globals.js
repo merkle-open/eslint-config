@@ -16,10 +16,10 @@ function bar() {}
 
 // Good
 window.foo = 1;
-window.bar = function() {};
+window.bar = function () {};
 
 // Good
-(function() {
+(function () {
   var foo = 1;
   function bar() {}
 })();

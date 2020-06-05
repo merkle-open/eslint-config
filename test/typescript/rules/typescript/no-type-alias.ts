@@ -1,6 +1,7 @@
-// Disallow the use of type aliases (no-type-alias)
+// DESCRIPTION = Disallow the use of type aliases (no-type-alias)
 // STATUS = 0
 
+/* eslint-disable @typescript-eslint/naming-convention */
 /* eslint no-console: 0*/
 /* eslint @typescript-eslint/no-unused-vars: 0*/
 /* eslint @typescript-eslint/no-extraneous-class: 0*/

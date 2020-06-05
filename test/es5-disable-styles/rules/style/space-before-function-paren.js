@@ -33,7 +33,7 @@ function foo() {
   // ...
 }
 
-var bar = function() {
+var bar = function () {
   // ...
 };
 

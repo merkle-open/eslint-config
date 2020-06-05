@@ -1,6 +1,7 @@
-// Warns when a namespace qualifier is unnecessary. (no-unnecessary-qualifier)
+// DESCRIPTION = Warns when a namespace qualifier is unnecessary. (no-unnecessary-qualifier)
 // STATUS = 2
 
+/* eslint-disable @typescript-eslint/naming-convention */
 /* eslint no-console: 0*/
 /* eslint @typescript-eslint/no-unused-vars: 0*/
 /* eslint @typescript-eslint/no-extraneous-class: 0*/

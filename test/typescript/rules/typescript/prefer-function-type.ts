@@ -1,4 +1,4 @@
-// Use function types instead of interfaces with call signatures (prefer-function-type)
+// DESCRIPTION = Use function types instead of interfaces with call signatures (prefer-function-type)
 // STATUS = 2
 
 /* eslint no-console: 0*/

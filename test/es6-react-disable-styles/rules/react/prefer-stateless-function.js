@@ -30,7 +30,7 @@ class Foo extends React.Component {
 */
 
 // Good
-const Foo = function(props) {
+const Foo = function (props) {
   return <div>{props.foo}</div>;
 };
 // END!>

@@ -4,7 +4,7 @@
 /* eslint no-undef: 0*/
 // <!START
 // Bad
-foo(function() {
+foo(function () {
   this.a = 0;
 });
 // END!>

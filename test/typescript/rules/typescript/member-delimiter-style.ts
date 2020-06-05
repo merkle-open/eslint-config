@@ -1,5 +1,5 @@
 
-// Require a specific member delimiter style for interfaces and type literals (member-delimiter-style)
+// DESCRIPTION = Require a specific member delimiter style for interfaces and type literals (member-delimiter-style)
 // STATUS = 2
 
 /* eslint no-console: 0*/

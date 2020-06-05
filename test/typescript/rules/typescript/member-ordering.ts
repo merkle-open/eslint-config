@@ -1,4 +1,4 @@
-// Require a consistent member declaration order (member-ordering)
+// DESCRIPTION = Require a consistent member declaration order (member-ordering)
 // STATUS = 2
 
 /* eslint no-console: 0*/

@@ -1,4 +1,4 @@
-// Disallow unused variables (no-unused-vars)
+// DESCRIPTION = Disallow unused variables (no-unused-vars)
 // STATUS = 2
 
 /* eslint no-console: 0*/

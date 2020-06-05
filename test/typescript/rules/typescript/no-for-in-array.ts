@@ -1,4 +1,4 @@
-// Disallow iterating over an array with a for-in loop (no-for-in-array)
+// DESCRIPTION = Disallow iterating over an array with a for-in loop (no-for-in-array)
 // STATUS = 2
 
 /* eslint no-console: 0*/

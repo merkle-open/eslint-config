@@ -1,4 +1,4 @@
-// Disallows non-null assertions using the ! postfix operator (no-non-null-assertion)
+// DESCRIPTION = Disallows non-null assertions using the ! postfix operator (no-non-null-assertion)
 // STATUS = 2
 
 /* eslint no-console: 0*/

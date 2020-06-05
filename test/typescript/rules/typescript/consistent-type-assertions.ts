@@ -1,6 +1,8 @@
-// Enforces consistent usage of type assertions. (consistent-type-assertions)
+// DESCRIPTION = Enforces consistent usage of type assertions. (consistent-type-assertions)
 // STATUS = 2
 
+/* eslint-disable @typescript-eslint/naming-convention */
+/* eslint-disable @typescript-eslint/ban-types */
 /* eslint no-console: 0*/
 /* eslint no-trailing-spaces: 0*/
 /* eslint no-throw-literal: 0*/

@@ -1,4 +1,4 @@
-// Enforce valid definition of new and constructor. (no-misused-new)
+// DESCRIPTION = Enforce valid definition of new and constructor. (no-misused-new)
 // STATUS = 2
 
 /* eslint no-console: 0*/

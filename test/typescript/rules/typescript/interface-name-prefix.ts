@@ -1,4 +1,4 @@
-// Require that interface names be prefixed with I (interface-name-prefix)
+// DESCRIPTION = Require that interface names be prefixed with I (interface-name-prefix)
 // STATUS = 2
 
 /* eslint no-console: 0*/

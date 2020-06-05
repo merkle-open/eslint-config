@@ -1,4 +1,4 @@
-// Disallow /// <reference path="" /> comments (triple-slash-reference)
+// DESCRIPTION = Disallow /// <reference path="" /> comments (triple-slash-reference)
 // STATUS = 2
 
 /* eslint no-console: 0*/

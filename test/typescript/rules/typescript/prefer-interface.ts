@@ -1,5 +1,5 @@
 
-// Prefer an interface declaration over a type literal (type T = { ... }) (prefer-interface)
+// DESCRIPTION = Prefer an interface declaration over a type literal (type T = { ... }) (prefer-interface)
 // STATUS = 2
 
 /* eslint no-console: 0*/

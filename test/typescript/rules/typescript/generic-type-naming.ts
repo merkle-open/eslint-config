@@ -1,6 +1,8 @@
-// Enforces naming of generic type variables (generic-type-naming)
+// DESCRIPTION = Enforces naming of generic type variables (generic-type-naming)
 // STATUS = 2
 
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/naming-convention */
 /* eslint no-console: 0*/
 /* eslint @typescript-eslint/no-unused-vars: 0*/
 /* eslint @typescript-eslint/no-type-alias: 0*/

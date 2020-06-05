@@ -1,4 +1,4 @@
-// Disallow usage of the any type (no-explicit-any)
+// DESCRIPTION = Disallow usage of the any type (no-explicit-any)
 // STATUS = 0
 
 /* eslint no-console: 0*/

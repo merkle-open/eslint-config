@@ -1,4 +1,4 @@
-// Disallow the declaration of empty interfaces (no-empty-interface)
+// DESCRIPTION = Disallow the declaration of empty interfaces (no-empty-interface)
 // STATUS = 2
 
 /* eslint no-console: 0*/

@@ -1,6 +1,7 @@
-// Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter.
+// DESCRIPTION = Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter.
 // STATUS = 2
 
+/* eslint max-len: 0*/
 /* eslint no-console: 0*/
 /* eslint no-alert: 0*/
 /* eslint @typescript-eslint/no-unused-vars: 0*/

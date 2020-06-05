@@ -21,17 +21,58 @@ module.exports = {
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md
 		'@typescript-eslint/ban-types': 2,
 
-		// Bans “// @ts-ignore” comments from being used (ban-ts-ignore)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-ignore.md
-		'@typescript-eslint/ban-ts-ignore': 2,
+		// Bans // @ts-<directive> comments from being used or requires descriptions after directive (ban-ts-comment)
+		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-comment.md
+		'@typescript-eslint/ban-ts-comment': 2,
 
-		// Enforce camelCase naming convention (camelcase)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/camelcase.md
-		'@typescript-eslint/camelcase': [2, { properties: 'always' }],
-
-		// Require PascalCased class and interface names (class-name-casing)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/class-name-casing.md
-		'@typescript-eslint/class-name-casing': 2,
+		// Enforces naming conventions for everything across a codebase (naming-convention)
+		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
+		'@typescript-eslint/naming-convention': [2, 
+			{
+				"selector": "default",
+				"format": ["camelCase"]
+            },
+            {
+                "selector": "variable",
+                "format": ["camelCase", "UPPER_CASE"],
+                "leadingUnderscore": "allow"
+            }, 
+			{
+				"selector": "class",
+				"format": ["PascalCase"]
+			},
+			{
+				"selector": "enum",
+				"format": ["UPPER_CASE"]
+			},
+			{
+				"selector": "typeAlias",
+				"format": ["PascalCase"],
+				"prefix": ["T"]
+			},
+			{
+				"selector": "interface",
+				"format": ["PascalCase"],
+				"prefix": ["I"]
+            },
+            {
+                "selector": "method",
+                "modifiers": ["private"],
+                "format": ["camelCase"],
+                "leadingUnderscore": "require"
+            },
+            {
+                "selector": "property",
+                "modifiers": ["private"],
+                "format": ["camelCase"],
+                "leadingUnderscore": "require"
+            },
+            {
+                "selector": "typeParameter",
+                "format": ["PascalCase"],
+                "prefix": ["T"]
+            },
+		],
 
 		// Require explicit return types on functions and class methods (explicit-function-return-type)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md
@@ -41,25 +82,13 @@ module.exports = {
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md
 		'@typescript-eslint/explicit-member-accessibility': 2,
 
-		// Enforces naming of generic type variables (generic-type-naming)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/generic-type-naming.md
-		'@typescript-eslint/generic-type-naming': [2, '^T[A-Z][a-zA-Z]+$'],
-
 		// Enforce consistent indentation (indent)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md
 		'@typescript-eslint/indent': [2, 'tab'],
 
-		// Require that interface names be prefixed with I (interface-name-prefix)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/interface-name-prefix.md
-		'@typescript-eslint/interface-name-prefix': [2, 'always'],
-
 		// Require a specific member delimiter style for interfaces and type literals (member-delimiter-style)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-delimiter-style.md
 		'@typescript-eslint/member-delimiter-style': 2,
-
-		// Enforces naming conventions for class members by visibility. (member-naming)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-naming.md
-		'@typescript-eslint/member-naming': [2, { private: '^_' }],
 
 		// Require a consistent member declaration order (member-ordering)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md

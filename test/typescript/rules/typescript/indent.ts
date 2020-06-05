@@ -1,6 +1,8 @@
-// Enforce consistent indentation (indent)
+// DESCRIPTION = Enforce consistent indentation (indent)
 // STATUS = 2
 
+/* eslint-disable @typescript-eslint/ban-types */
+/* eslint-disable @typescript-eslint/naming-convention */
 /* eslint no-console: 0*/
 /* eslint @typescript-eslint/no-unused-vars: 0*/
 

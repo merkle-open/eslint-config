@@ -1,4 +1,4 @@
-// When adding two variables, operands must both be of type number or of type string.
+// DESCRIPTION = When adding two variables, operands must both be of type number or of type string.
 // STATUS = 2
 
 /* eslint no-console: 0*/

@@ -15,7 +15,7 @@ var bar = [1, 2].filter(function (x) {
 */
 
 // Good
-var bar = [1, 2].filter(function(x) {
+var bar = [1, 2].filter(function (x) {
   if (x) {
     return false;
   }

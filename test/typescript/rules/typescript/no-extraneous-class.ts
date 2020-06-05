@@ -1,4 +1,4 @@
-// Forbids the use of classes as namespaces (no-extraneous-class)
+// DESCRIPTION = Forbids the use of classes as namespaces (no-extraneous-class)
 // STATUS = 2
 
 /* eslint no-console: 0*/

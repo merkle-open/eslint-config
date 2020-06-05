@@ -1,4 +1,4 @@
-// Disallow the use of parameter properties in class constructors. (no-parameter-properties)
+// DESCRIPTION = Disallow the use of parameter properties in class constructors. (no-parameter-properties)
 // STATUS = 2
 
 /* eslint no-console: 0*/

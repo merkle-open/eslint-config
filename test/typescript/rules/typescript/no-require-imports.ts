@@ -1,4 +1,4 @@
-// Disallows invocation of require() (no-require-imports)
+// DESCRIPTION = Disallows invocation of require() (no-require-imports)
 // STATUS = 2
 
 /* eslint no-console: 0*/

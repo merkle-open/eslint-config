@@ -1,4 +1,4 @@
-// Warns if a type assertion does not change the type of an expression (no-unnecessary-type-assertion)
+// DESCRIPTION = Warns if a type assertion does not change the type of an expression (no-unnecessary-type-assertion)
 // STATUS = 2
 
 /* eslint no-console: 0*/

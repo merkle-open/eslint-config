@@ -11,7 +11,7 @@ var x = function () { return { y: 1 }; }();
 */
 
 // Good
-var x = function() {
+var x = function () {
   return {y: 1};
 };
 // END!>

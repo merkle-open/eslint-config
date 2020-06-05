@@ -1,4 +1,4 @@
-// Require consistent spacing around type annotations
+// DESCRIPTION = Require consistent spacing around type annotations
 // STATUS = 2
 
 /* eslint no-console: 0*/

@@ -1,4 +1,4 @@
-// Disallow aliasing this (no-this-alias)
+// DESCRIPTION = Disallow aliasing this (no-this-alias)
 // STATUS = 0
 
 /* eslint no-console: 0*/
