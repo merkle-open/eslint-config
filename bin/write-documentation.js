@@ -27,6 +27,10 @@ function getESLintUrl(name, groupName) {
 			return 'https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/' + name + '.md';
 		case 'react-a11y':
 			return 'https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/' + name + '.md';
+		case 'react-hooks':
+			return 'https://reactjs.org/docs/hooks-rules.html';
+		case 'typescript':
+			return 'https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/' + name.replace(/.ts$/, '') + '.md';
 		default:
 			return 'http://eslint.org/docs/rules/' + name;
 	}
@@ -133,7 +137,7 @@ function addSnippet(arr, fileData) {
 function addRule(arr, name, path, groupName) {
 
 	var fileData = utils.readFile(path);
-	var nameCleaned = name.replace(/\.js$/, '');
+	var nameCleaned = name.replace(/\.js$/, '').replace(/\.ts$/, '');
 	var title = utils.capitalize(nameCleaned.replace(/-/g, ' '));
 
 	arr.push('### [' + title + '](' + getESLintUrl(nameCleaned, groupName) + ')');

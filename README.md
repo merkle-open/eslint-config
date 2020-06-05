@@ -112,6 +112,7 @@ then run `npm run lint`
 - [Imports](./documentation/imports.md) (ES6/7/8)
 - [React](./documentation/react.md) (ES6/7/8)
 - [React A11y](./documentation/react-a11y.md) (ES6/7/8)
+- [React hooks](./documentation/react-hooks.md) (ES6/7/8)
 - [Typescript](./documentation/typescript.md) (typescript)
 
 ## Thanks to

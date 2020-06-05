@@ -3,11 +3,13 @@ module.exports = {
 	'plugins': [
 		'jsx-a11y',
 		'react',
+		'react-hooks',
 	],
 	'extends': [
 		'./es7.js',
 		'../rules/react.js',
 		'../rules/react-a11y.js',
+		'../rules/react-hooks.js',
 	].map(require.resolve),
 	'env': {
 		'browser': true,

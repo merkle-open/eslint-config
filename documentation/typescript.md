@@ -2,7 +2,7 @@
 ## Typescript
 
 
-### [Adjacent overload signatures]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md)
+### [Adjacent overload signatures](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md)
 
 > Require that member overloads be consecutive (adjacent-overload-signatures from TSLint)
 
@@ -32,7 +32,8 @@ interface IFoo {
 <br />
 
 
-### [Array type]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/array-type.md)
+
+### [Array type](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/array-type.md)
 
 > Requires using either T[] or Array<T> for arrays (array-type)
 
@@ -57,7 +58,7 @@ interface IFoo {
 
 
 
-### [Ban ts comment]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-comment.md)
+### [Ban ts comment](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-ts-comment.md)
 
 > Bans // @ts-<directive> comments from being used or requires descriptions after directive (ban-ts-comment)
 
@@ -87,7 +88,7 @@ interface IFoo {
 
 
 
-### [Ban types]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md)
+### [Ban types](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/ban-types.md)
 
 > Enforces that types will not to be used (ban-types)
 
@@ -114,7 +115,7 @@ interface IFoo {
 
 
 
-### [Consistent type assertions]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-assertions.md)
+### [Consistent type assertions](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-assertions.md)
 
 > Enforces consistent usage of type assertions. (consistent-type-assertions)
 
@@ -149,7 +150,7 @@ interface IFoo {
 
 
 
-### [Explicit function return type]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md)
+### [Explicit function return type](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-function-return-type.md)
 
 > Require explicit return types on functions and class methods (explicit-function-return-type)
 
@@ -184,7 +185,7 @@ class Test {
 
 
 
-### [Explicit member accessibility]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md)
+### [Explicit member accessibility](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md)
 
 > Require explicit return types on functions and class methods (explicit-function-return-type)
 
@@ -233,7 +234,7 @@ class Animal {
 
 
 
-### [Generic type naming]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/generic-type-naming.md)
+### [Generic type naming](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/generic-type-naming.md)
 
 > Enforces naming of generic type variables (generic-type-naming)
 
@@ -262,7 +263,7 @@ class Animal {
 
 
 
-### [Indent]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md)
+### [Indent](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/indent.md)
 
 > Enforce consistent indentation (indent)
 
@@ -287,7 +288,7 @@ type ReadOnly<TSomeType extends object> = {
 
 
 
-### [Interface name prefix]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/interface-name-prefix.md)
+### [Interface name prefix](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/interface-name-prefix.md)
 
 > Require that interface names be prefixed with I (interface-name-prefix)
 
@@ -312,7 +313,7 @@ interface IAnimal {
 
 
 
-### [Member delimiter style]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-delimiter-style.md)
+### [Member delimiter style](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-delimiter-style.md)
 
 > Require a specific member delimiter style for interfaces and type literals (member-delimiter-style)
 
@@ -339,7 +340,7 @@ interface IFoo {
 
 
 
-### [Member ordering]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md)
+### [Member ordering](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/member-ordering.md)
 
 > Require a consistent member declaration order (member-ordering)
 
@@ -382,7 +383,7 @@ class Foo {
 
 
 
-### [Naming convention]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md)
+### [Naming convention](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md)
 
 > Enforces naming conventions for everything across a codebase (naming-convention)
 
@@ -505,7 +506,7 @@ import { no_camelcased as noCamelcased } from 'eslint';
 
 
 
-### [No array constructor]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-array-constructor.md)
+### [No array constructor](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-array-constructor.md)
 
 > Disallow generic Array constructors (no-array-constructor)
 
@@ -536,7 +537,7 @@ import { no_camelcased as noCamelcased } from 'eslint';
 
 
 
-### [No empty interface]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-interface.md)
+### [No empty interface](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-empty-interface.md)
 
 > Disallow the declaration of empty interfaces (no-empty-interface)
 
@@ -576,7 +577,7 @@ import { no_camelcased as noCamelcased } from 'eslint';
 
 
 
-### [No explicit any]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md)
+### [No explicit any](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-explicit-any.md)
 
 > Disallow usage of the any type (no-explicit-any)
 
@@ -599,7 +600,7 @@ const age: any = 'seventeen';
 
 
 
-### [No extraneous class]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extraneous-class.md)
+### [No extraneous class](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extraneous-class.md)
 
 > Forbids the use of classes as namespaces (no-extraneous-class)
 
@@ -629,7 +630,7 @@ class ConstructorOnly {
 
 
 
-### [No for in array]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-for-in-array.md)
+### [No for in array](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-for-in-array.md)
 
 > Disallow iterating over an array with a for-in loop (no-for-in-array)
 
@@ -655,7 +656,7 @@ for (const x in { a: 3, b: 4, c: 5 }) {
 
 
 
-### [No inferrable types]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-inferrable-types.md)
+### [No inferrable types](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-inferrable-types.md)
 
 > Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean.
 
@@ -684,7 +685,7 @@ for (const x in { a: 3, b: 4, c: 5 }) {
 
 
 
-### [No misused new]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-misused-new.md)
+### [No misused new](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-misused-new.md)
 
 > Enforce valid definition of new and constructor. (no-misused-new)
 
@@ -721,7 +722,7 @@ for (const x in { a: 3, b: 4, c: 5 }) {
 
 
 
-### [No namespace]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-namespace.md)
+### [No namespace](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-namespace.md)
 
 > Disallow the use of custom TypeScript modules and namespaces (no-namespace)
 
@@ -745,7 +746,7 @@ declare module 'foo' {}
 
 
 
-### [No non null assertion]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-assertion.md)
+### [No non null assertion](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-assertion.md)
 
 > Disallows non-null assertions using the ! postfix operator (no-non-null-assertion)
 
@@ -780,7 +781,7 @@ declare module 'foo' {}
 
 
 
-### [No parameter properties]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-parameter-properties.md)
+### [No parameter properties](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-parameter-properties.md)
 
 > Disallow the use of parameter properties in class constructors. (no-parameter-properties)
 
@@ -818,7 +819,7 @@ declare module 'foo' {}
 
 
 
-### [No require imports]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-require-imports.md)
+### [No require imports](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-require-impo.md)
 
 > Disallows invocation of require() (no-require-imports)
 
@@ -839,7 +840,7 @@ import eslint from 'eslint';
 
 
 
-### [No this alias]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-this-alias.md)
+### [No this alias](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-this-alias.md)
 
 > Disallow aliasing this (no-this-alias)
 
@@ -873,7 +874,7 @@ import eslint from 'eslint';
 
 
 
-### [No type alias]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-type-alias.md)
+### [No type alias](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-type-alias.md)
 
 > Disallow the use of type aliases (no-type-alias)
 
@@ -903,7 +904,7 @@ import eslint from 'eslint';
 
 
 
-### [No unnecessary qualifier]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-qualifier.md)
+### [No unnecessary qualifier](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-qualifier.md)
 
 > Warns when a namespace qualifier is unnecessary. (no-unnecessary-qualifier)
 
@@ -932,7 +933,7 @@ namespace Y {
 
 
 
-### [No unnecessary type assertion]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md)
+### [No unnecessary type assertion](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md)
 
 > Warns if a type assertion does not change the type of an expression (no-unnecessary-type-assertion)
 
@@ -961,7 +962,7 @@ namespace Y {
 
 
 
-### [No unused vars]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md)
+### [No unused vars](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-unused-vars.md)
 
 > Disallow unused variables (no-unused-vars)
 
@@ -996,7 +997,7 @@ console.log(z);
 
 
 
-### [No use before define]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md)
+### [No use before define](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md)
 
 > Disallow the use of variables before they are defined (no-use-before-define)
 
@@ -1023,7 +1024,7 @@ console.log(z);
 
 
 
-### [No useless constructor]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-constructor.md)
+### [No useless constructor](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-useless-constructor.md)
 
 > Disallow the use of variables before they are defined (no-use-before-define)
 
@@ -1057,7 +1058,7 @@ console.log(z);
 
 
 
-### [No var requires]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md)
+### [No var requires](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-var-requires.md)
 
 > Disallows the use of require statements except in import statements (no-var-requires)
 
@@ -1082,7 +1083,7 @@ import eslint from 'eslint';
 
 
 
-### [Prefer function type]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-function-type.md)
+### [Prefer function type](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-function-type.md)
 
 > Use function types instead of interfaces with call signatures (prefer-function-type)
 
@@ -1131,7 +1132,7 @@ import eslint from 'eslint';
 
 
 
-### [Prefer interface]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-interface.md)
+### [Prefer interface](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/prefer-interface.md)
 
 > Prefer an interface declaration over a type literal (type T = { ... }) (prefer-interface)
 
@@ -1158,7 +1159,7 @@ import eslint from 'eslint';
 
 
 
-### [Promise function async]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/promise-function-async.md)
+### [Promise function async](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/promise-function-async.md)
 
 > Functions that return promises must be async (promise-function-async)
 
@@ -1191,7 +1192,7 @@ import eslint from 'eslint';
 
 
 
-### [Restrict plus operands]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-plus-operands.md)
+### [Restrict plus operands](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/restrict-plus-operands.md)
 
 > When adding two variables, operands must both be of type number or of type string.
 
@@ -1216,7 +1217,7 @@ import eslint from 'eslint';
 
 
 
-### [Triple slash reference]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/triple-slash-reference.md)
+### [Triple slash reference](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/triple-slash-reference.md)
 
 > Disallow /// <reference path="" /> comments (triple-slash-reference)
 
@@ -1235,7 +1236,7 @@ import eslint from 'eslint';
 
 
 
-### [Type annotation spacing]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/type-annotation-spacing.md)
+### [Type annotation spacing](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/type-annotation-spacing.md)
 
 > Require consistent spacing around type annotations
 
@@ -1260,7 +1261,7 @@ import eslint from 'eslint';
 
 
 
-### [Unified signatures]( https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unified-signatures.md)
+### [Unified signatures](https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unified-signatures.md)
 
 > Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter.
 
