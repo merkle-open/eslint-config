@@ -6,6 +6,6 @@ module.exports = {
 
 		// Checks effect dependencies
 		// https://reactjs.org/docs/hooks-rules.html
-		'react-hooks/exhaustive-deps': 2,
+		'react-hooks/exhaustive-deps': 1,
 	},
 };

@@ -437,10 +437,6 @@ import { no_camelcased } from 'eslint';
 	}
 
 	// enum
-	enum MyEnum {
-		a = 'a',
-		b = 'b',
-	}
 	enum myEnum {
 		a = 'a',
 		b = 'b',
@@ -471,6 +467,7 @@ import { no_camelcased as noCamelcased } from 'eslint';
 
 	// typeAlias
 	type TMyType = string;
+	type IMyType = string;
 
 	// member naming
 	class HappyClass {
@@ -497,8 +494,33 @@ import { no_camelcased as noCamelcased } from 'eslint';
 		a = 'a',
 		b = 'b',
 	}
+	enum MyEnum {
+		a = 'a',
+		b = 'b',
+	}
 
-	type TReadOnly<TSomeType extends string> = {readonly [TKey in keyof TSomeType]: TSomeType[TKey]};
+	type TReadOnly<TSomeType extends string> = { readonly [TKey in keyof TSomeType]: TSomeType[TKey] };
+
+	// they should be okay
+	const ERROR_CODES = {
+		INVALID_USER_INPUT: 'INVALID_USER_INPUT',
+		INVALID_SESSION_ID: 'INVALID_SESSION_ID',
+		INTERNAL_SERVER_ERROR: 'INTERNAL_SERVER_ERROR',
+	};
+
+	function mockWriteFile() {
+		return (_filePath: string, _data: unknown, onWrote: () => void) => {
+			onWrote();
+		};
+	}
+
+	const mockAuth = {
+		access_token: 'authToken',
+		signature: 'signature',
+		Authorization: ({ accessToken }) => `Bearer ${accessToken}`,
+	};
+
+	const Component = () => {};
 })();
 
 ```

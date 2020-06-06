@@ -28,13 +28,9 @@ module.exports = {
 		// Enforces naming conventions for everything across a codebase (naming-convention)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
 		'@typescript-eslint/naming-convention': [2, 
-			{
-				"selector": "default",
-				"format": ["camelCase"]
-            },
             {
                 "selector": "variable",
-                "format": ["camelCase", "UPPER_CASE"],
+                "format": ["camelCase", "UPPER_CASE", "PascalCase"],
                 "leadingUnderscore": "allow"
             }, 
 			{
@@ -43,12 +39,11 @@ module.exports = {
 			},
 			{
 				"selector": "enum",
-				"format": ["UPPER_CASE"]
+				"format": ["UPPER_CASE", "PascalCase"]
 			},
 			{
 				"selector": "typeAlias",
-				"format": ["PascalCase"],
-				"prefix": ["T"]
+				"format": ["PascalCase"]
 			},
 			{
 				"selector": "interface",
