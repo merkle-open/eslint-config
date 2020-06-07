@@ -1,8 +1,12 @@
 module.exports = {
 	parser: 'babel-eslint',
+	plugins: [
+		'security',
+	],
 	extends: [
 		'./es6.js',
 		'../rules/node.js',
+		'../rules/node-security.js',
 	].map(require.resolve),
 	env: {
 		browser: false,
@@ -15,5 +19,4 @@ module.exports = {
 		serviceworker: true,
 		worker: true,
 	},
-
 };

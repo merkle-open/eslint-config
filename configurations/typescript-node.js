@@ -1,7 +1,11 @@
 module.exports = {
+	plugins: [
+		'security',
+	],
 	extends: [
 		'./typescript.js',
 		'../rules/node.js',
+		'../rules/node-security.js',
 	].map(require.resolve),
 	env: {
 		browser: false,

@@ -1,6 +1,7 @@
 // DESCRIPTION = encourages use of dot notation whenever possible
 // STATUS = 2
 
+/* eslint-disable security/detect-object-injection */
 /* eslint no-unused-vars: 0*/
 /* eslint no-undef: 0*/
 /* eslint no-redeclare: 0*/

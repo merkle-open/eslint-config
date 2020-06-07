@@ -1,4 +1,5 @@
 'use strict';
+/* eslint-disable security/detect-non-literal-fs-filename */
 /* eslint "no-console": 0 */
 
 var fs = require('fs');

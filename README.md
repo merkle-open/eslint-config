@@ -13,9 +13,27 @@ $ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
 
 ## Usage Typescript (recommended)
 
-- `@namics/eslint-config/configurations/typescript-browser` - typescript + browser
-- `@namics/eslint-config/configurations/typescript-react` - typescript + react
-- `@namics/eslint-config/configurations/typescript-node` - typescript + node
+> Typescript + React + Prettier
+
+*.eslintrc.js*
+
+```js
+module.exports = {
+  extends: [
+    '@namics/eslint-config/configurations/typescript-browser',
+    '@namics/eslint-config/configurations/typescript-browser-disable-styles',
+    '@namics/eslint-config/configurations/typescript-react',
+    '@namics/eslint-config/configurations/typescript-react-disable-styles',
+  ].map(require.resolve),
+};
+```
+
+*.eslintignore*
+
+```
+/.idea/
+/node_modules/
+```
 
 *package.json*
 
@@ -40,80 +58,150 @@ You need to update the eslint.validate setting to:
 ]
 ```
 
-## Usage ES8 (ES2017)
+## Example configurations
 
-- `@namics/eslint-config/configurations/es8-browser` - ES8 + browser
-- `@namics/eslint-config/configurations/es8-react` - ES8 + react
-- `@namics/eslint-config/configurations/es8-node` - ES8 + node
+<details>
+<summary>Usage ES8 (ES2017) Browser + React</summary>
 
-## Usage ES7 (ES2016)
+<br />
 
-- `@namics/eslint-config/configurations/es7-browser` - ES7 + browser (deprecated)
-- `@namics/eslint-config/configurations/es7-react` - ES7 + react (deprecated)
-- `@namics/eslint-config/configurations/es7-node` - ES7 + node
+*.eslintrc.js*
 
-## Usage ES6 (ES2015) - deprecated
-
-- `@namics/eslint-config/configurations/es6-browser` - ES6 + browser (deprecated)
-- `@namics/eslint-config/configurations/es6-react` - ES6 + react (deprecated)
-- `@namics/eslint-config/configurations/es6-node` - ES6 + node (deprecated)
-
-## Usage with Prettier
-
-- [configuration with prettier](./documentation/with-prettier.md)
-
-### .eslintrc.js (add globals here if needed)
-
-```
+```js
 module.exports = {
-  extends: require.resolve('@namics/eslint-config/configurations/es8-browser.js'),
+  extends: [
+    '@namics/eslint-config/configurations/es8-browser',
+    '@namics/eslint-config/configurations/es8-react',
+  ].map(require.resolve),
 };
 ```
 
-### .eslintignore
+</details>
 
+<details>
+<summary>Usage ES8 (ES2017) Node.js</summary>
+
+<br />
+
+*.eslintrc.js*
+
+```js
+module.exports = {
+  extends: [
+    '@namics/eslint-config/configurations/es8-node',
+  ].map(require.resolve),
+};
 ```
-/.idea/
-/node_modules/
+
+</details>
+
+<details>
+<summary>Usage ES7 (ES2016) Browser + React</summary>
+
+<br />
+
+*.eslintrc.js*
+
+```js
+module.exports = {
+  extends: [
+    '@namics/eslint-config/configurations/es7-browser',
+    '@namics/eslint-config/configurations/es7-react',
+  ].map(require.resolve),
+};
 ```
 
-### package.json
+</details>
 
+<details>
+<summary>Usage ES7 (ES2016) Node.js</summary>
+
+<br />
+
+*.eslintrc.js*
+
+```js
+module.exports = {
+  extends: [
+    '@namics/eslint-config/configurations/es7-node',
+  ].map(require.resolve),
+};
 ```
-"scripts": {
-  "lint": "npm run lint:js",
-  "lint:js": "eslint ."
-},
+
+</details>
+
+<details>
+<summary>Usage with Prettier</summary>
+
+<br />
+
+- [configuration with prettier](./documentation/with-prettier.md)
+
+
+</details>
+
+<details>
+<summary>Usage in Monorepo (typescript, node.js, react)</summary>
+
+<br />
+
+*.eslintrc.js*
+
+```js
+module.exports = {
+  extends: [
+    // js configuration files for example webpack.config.js
+    '@namics/eslint-config/configurations/es8-node.js',
+    '@namics/eslint-config/configurations/es8-node-disable-styles.js',
+    ].map(require.resolve),
+    overrides: [
+      {
+        // react components and other client side code
+        files: ['*.ts', '*.tsx'],
+        extends: [
+          '@namics/eslint-config/configurations/typescript-react.js',
+          '@namics/eslint-config/configurations/typescript-react-disable-styles.js',
+        ].map(require.resolve),
+        settings: {
+          react: {
+            version: '16',
+          },
+        },
+      },
+      {
+        // node.js server side code
+        files: [
+          'packages/graph-ql/**/*.ts',
+          'packages/graph-ql/**/*.tsx',
+        ],
+        extends: [
+          '@namics/eslint-config/configurations/typescript-node.js',
+          '@namics/eslint-config/configurations/typescript-node-disable-styles.js',
+        ].map(require.resolve),
+      },
+    ],
+  ],
+};
 ```
-then run `npm run lint`
 
-### Example usage in project tree
+</details>
 
-- .eslintrc.js (es8-react)
-- .eslintignore
-- src
-    - app.jsx
-- test
-    - .eslintrc.js (es8-node)
-    - index.js
-- scripts
-    - .eslintrc.js (es6-node)
-    - index.js
 
 ## Documentation
 
-- [Best practices](./documentation/best-practices.md) (ES5/6/7/8)
-- [Style](./documentation/style.md) (ES5/6/7/8)
-- [Variables](./documentation/variables.md) (ES5/6/7/8)
-- [Errors](./documentation/errors.md) (ES5/6/7/8)
-- [Node](./documentation/node.md) (ES5/6/7/8)
-- [ES6](./documentation/es6.md) (ES6/7/8)
-- [ES8](./documentation/es8.md) (ES8)
-- [Imports](./documentation/imports.md) (ES6/7/8)
-- [React](./documentation/react.md) (ES6/7/8)
-- [React A11y](./documentation/react-a11y.md) (ES6/7/8)
-- [React hooks](./documentation/react-hooks.md) (ES6/7/8)
-- [Typescript](./documentation/typescript.md) (typescript)
+- [Best practices](./documentation/best-practices.md) (ES5/6/7/8,ts)
+- [Style](./documentation/style.md) (ES5/6/7/8,ts)
+- [Variables](./documentation/variables.md) (ES5/6/7/8,ts)
+- [Errors](./documentation/errors.md) (ES5/6/7/8,ts)
+- [Node](./documentation/node.md) (ES5/6/7/8,ts)
+- [Node security](./documentation/security.md) (ES5/6/7/8,ts)
+- [ES6](./documentation/es6.md) (ES6/7/8,ts)
+- [ES8](./documentation/es8.md) (ES8,ts)
+- [Imports](./documentation/imports.md) (ES6/7/8,ts)
+- [React](./documentation/react.md) (ES6/7/8,ts)
+- [React A11y](./documentation/react-a11y.md) (ES6/7/8,ts)
+- [React hooks](./documentation/react-hooks.md) (ES6/7/8,ts)
+- [Typescript](./documentation/typescript.md) (ts)
 
 ## Thanks to
 

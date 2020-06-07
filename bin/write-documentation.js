@@ -1,3 +1,4 @@
+/* eslint-disable security/detect-non-literal-fs-filename */
 /* eslint "complexity": 0 */
 
 /*
@@ -31,6 +32,8 @@ function getESLintUrl(name, groupName) {
 			return 'https://reactjs.org/docs/hooks-rules.html';
 		case 'typescript':
 			return 'https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/' + name.replace(/.ts$/, '') + '.md';
+		case 'security':
+			return 'https://www.npmjs.com/package/eslint-plugin-security#' + name;
 		default:
 			return 'http://eslint.org/docs/rules/' + name;
 	}
