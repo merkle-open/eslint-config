@@ -24,6 +24,7 @@
     "test": "npm run lint",
     "docs": "node bin/write-documentation",
     "prepublishOnly": "pkg-ok",
+    "prestart": "npx @namics/env-linter --versions=\"node=12.18.3,npm=6.14.6\" --saveExact --dependenciesExactVersion",
     "prettier": "npm-run-all prettier:*",
     "prettier:es5": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es5-disable-styles/**/*.js\"",
     "prettier:es5node": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es5-node-disable-styles/**/*.js\"",
@@ -49,32 +50,32 @@
     "typescript"
   ],
   "devDependencies": {
-    "@dash4/plugin-dependencies": "0.8.5",
-    "@dash4/plugin-npm-scripts": "0.8.5",
-    "@dash4/plugin-readme": "0.8.5",
-    "@dash4/server": "0.8.5",
+    "@dash4/plugin-dependencies": "0.9.0",
+    "@dash4/plugin-npm-scripts": "0.9.0",
+    "@dash4/plugin-readme": "0.9.0",
+    "@dash4/server": "0.9.0",
     "@namics/prettier-config": "1.1.0",
     "@namics/ts-config": "1.0.1",
-    "acorn": "7.3.1",
-    "eslint": "7.1.0",
-    "eslint-plugin-import": "2.20.2",
-    "npm-check-updates": "7.0.1",
+    "acorn": "8.0.1",
+    "eslint": "7.7.0",
+    "eslint-plugin-import": "2.22.0",
+    "npm-check-updates": "7.1.1",
     "npm-run-all": "4.1.5",
     "pkg-ok": "2.3.1",
-    "prettier": "2.0.5",
-    "typescript": "3.9.6"
+    "prettier": "2.1.1",
+    "typescript": "4.0.2"
   },
   "peerDependencies": {
     "eslint": ">=6",
     "eslint-plugin-import": ">=2"
   },
   "dependencies": {
-    "@types/react": "16.9.41",
-    "@typescript-eslint/eslint-plugin": "3.6.0",
-    "@typescript-eslint/parser": "3.6.0",
+    "@types/react": "16.9.47",
+    "@typescript-eslint/eslint-plugin": "3.10.1",
+    "@typescript-eslint/parser": "3.10.1",
     "babel-eslint": "10.1.0",
     "eslint-plugin-jsx-a11y": "6.3.1",
-    "eslint-plugin-react": "7.20.3",
-    "eslint-plugin-react-hooks": "4.0.6"
+    "eslint-plugin-react": "7.20.6",
+    "eslint-plugin-react-hooks": "4.1.0"
   }
 }
