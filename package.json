@@ -18,7 +18,7 @@
   },
   "main": "configurations/es6-browser.js",
   "scripts": {
-    "clean": "npx rimraf package-lock.json node_modules",
+    "clean": "npx --ignore-existing --quiet rimraf package-lock.json node_modules",
     "lint": "npm run lint:js",
     "lint:js": "eslint . --ext .jsx,.js,.ts,.tsx",
     "test": "npm run lint",
