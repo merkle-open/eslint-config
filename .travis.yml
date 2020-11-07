@@ -1,9 +1,0 @@
-language: node_js
-before_script:
-  - npm install eslint eslint-plugin-import
-script:
-  - npm test
-node_js:
-  - "14"
-  - "12"
-  - "10"
