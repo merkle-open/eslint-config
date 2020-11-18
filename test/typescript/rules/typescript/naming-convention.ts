@@ -1,6 +1,7 @@
 // DESCRIPTION = Enforces naming conventions for everything across a codebase (naming-convention)
 // STATUS = 2
 
+/* eslint-disable no-shadow */
 /* eslint no-console: 0*/
 /* eslint @typescript-eslint/no-unused-vars: 0*/
 /* eslint-disable @typescript-eslint/no-empty-interface */
