@@ -1,13 +1,62 @@
 /* eslint-disable */
+const styles = require('./style');
+const variables = require('./variables');
+const errors = require('./errors');
+const bestPractices = require('./best-practices');
+const es6 = require('./es6');
+
+const replaceRule = (name, ruleSet, fallback) => {
+	return { 
+        [name]: 0,
+        [`@typescript-eslint/${name}`]: ruleSet.rules[name] || fallback || 0,
+    };
+};
+
 /* [12.04.2019] add typescript support */
 module.exports = {
 	rules: {
 		'require-jsdoc': 0,
-		'camelcase': 0,
-		'indent': 0,
+		camelcase: 0,
 		'no-unused-vars': 0,
 		'no-use-before-define': 0,
 		'no-useless-constructor': 0,
+
+        // default overrides
+        // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
+		...replaceRule('brace-style', styles),
+		...replaceRule('comma-dangle', errors),
+		...replaceRule('comma-spacing', styles),
+		...replaceRule('default-param-last', styles),
+		...replaceRule('dot-notation', bestPractices),
+		...replaceRule('func-call-spacing', styles),
+		...replaceRule('indent', styles),
+		...replaceRule('init-declarations', variables),
+		...replaceRule('keyword-spacing', styles),
+		...replaceRule('lines-between-class-members', styles),
+		...replaceRule('no-array-constructor', styles),
+		...replaceRule('no-dupe-class-members', es6),
+		...replaceRule('no-duplicate-imports', es6),
+		...replaceRule('no-empty-function', bestPractices),
+		...replaceRule('no-extra-parens', errors),
+		...replaceRule('no-extra-semi', errors),
+		...replaceRule('no-implied-eval', bestPractices),
+		...replaceRule('no-invalid-this', bestPractices),
+		...replaceRule('no-loop-func', bestPractices),
+		...replaceRule('no-loss-of-precision', bestPractices),
+		...replaceRule('no-magic-numbers', bestPractices),
+		...replaceRule('no-redeclare', bestPractices),
+		...replaceRule('no-shadow', variables),
+		...replaceRule('no-throw-literal', bestPractices),
+		...replaceRule('no-unused-expressions', bestPractices),
+		...replaceRule('no-unused-vars', variables),
+		...replaceRule('no-use-before-define', variables),
+		...replaceRule('no-useless-constructor', es6),
+		...replaceRule('quotes', styles),
+		...replaceRule('require-await', styles),
+		...replaceRule('return-await', styles),
+		...replaceRule('semi', styles),
+		...replaceRule('space-before-function-paren', styles),
+		...replaceRule('space-infix-ops', styles),
 
 		// Require that member overloads be consecutive (adjacent-overload-signatures from TSLint)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md
@@ -27,46 +76,47 @@ module.exports = {
 
 		// Enforces naming conventions for everything across a codebase (naming-convention)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md
-		'@typescript-eslint/naming-convention': [2, 
-            {
-                "selector": "variable",
-                "format": ["camelCase", "UPPER_CASE", "PascalCase"],
-                "leadingUnderscore": "allow"
-            }, 
+		'@typescript-eslint/naming-convention': [
+			2,
 			{
-				"selector": "class",
-				"format": ["PascalCase"]
+				selector: 'variable',
+				format: ['camelCase', 'UPPER_CASE', 'PascalCase'],
+				leadingUnderscore: 'allow',
 			},
 			{
-				"selector": "enum",
-				"format": ["UPPER_CASE", "PascalCase"]
+				selector: 'class',
+				format: ['PascalCase'],
 			},
 			{
-				"selector": "typeAlias",
-				"format": ["PascalCase"]
+				selector: 'enum',
+				format: ['UPPER_CASE', 'PascalCase'],
 			},
 			{
-				"selector": "interface",
-				"format": ["PascalCase"],
-				"prefix": ["I"]
-            },
-            {
-                "selector": "method",
-                "modifiers": ["private"],
-                "format": ["camelCase"],
-                "leadingUnderscore": "require"
-            },
-            {
-                "selector": "property",
-                "modifiers": ["private"],
-                "format": ["camelCase"],
-                "leadingUnderscore": "require"
-            },
-            {
-                "selector": "typeParameter",
-                "format": ["PascalCase"],
-                "prefix": ["T"]
-            },
+				selector: 'typeAlias',
+				format: ['PascalCase'],
+			},
+			{
+				selector: 'interface',
+				format: ['PascalCase'],
+				prefix: ['I'],
+			},
+			{
+				selector: 'method',
+				modifiers: ['private'],
+				format: ['camelCase'],
+				leadingUnderscore: 'require',
+			},
+			{
+				selector: 'property',
+				modifiers: ['private'],
+				format: ['camelCase'],
+				leadingUnderscore: 'require',
+			},
+			{
+				selector: 'typeParameter',
+				format: ['PascalCase'],
+				prefix: ['T'],
+			},
 		],
 
 		// Require explicit return types on functions and class methods (explicit-function-return-type)
@@ -91,7 +141,10 @@ module.exports = {
 
 		// Enforces consistent usage of type assertions. (consistent-type-assertions)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/consistent-type-assertions.md
-		'@typescript-eslint/consistent-type-assertions': [2, { assertionStyle: 'as', objectLiteralTypeAssertions: 'allow-as-parameter' }],
+		'@typescript-eslint/consistent-type-assertions': [
+			2,
+			{ assertionStyle: 'as', objectLiteralTypeAssertions: 'allow-as-parameter' },
+		],
 
 		// Disallow generic Array constructors (no-array-constructor)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-array-constructor.md
@@ -144,7 +197,7 @@ module.exports = {
 
 		// Sets preference level for triple slash directives versus ES6-style import declarations.
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/triple-slash-reference.md
-		'@typescript-eslint/triple-slash-reference': [2, { 'path': 'always', 'types': 'prefer-import', 'lib': 'always' }],
+		'@typescript-eslint/triple-slash-reference': [2, { path: 'always', types: 'prefer-import', lib: 'always' }],
 
 		// Disallow the use of type aliases (no-type-alias)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-type-alias.md
@@ -201,6 +254,5 @@ module.exports = {
 		// Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter.
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/unified-signatures.md
 		'@typescript-eslint/unified-signatures': 2,
-
 	},
 };

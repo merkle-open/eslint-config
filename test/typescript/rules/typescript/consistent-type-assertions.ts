@@ -5,7 +5,7 @@
 /* eslint-disable @typescript-eslint/ban-types */
 /* eslint no-console: 0*/
 /* eslint no-trailing-spaces: 0*/
-/* eslint no-throw-literal: 0*/
+/* eslint @typescript-eslint/no-throw-literal: 0*/
 /* eslint @typescript-eslint/no-unused-vars: 0*/
 
 // <!START

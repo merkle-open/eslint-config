@@ -16,7 +16,7 @@ class ConstructorOnly {
 */
 // Good
 class ConstructorOnly {
-	private _version: string = '1.1.0'
+	private _version: string = '1.1.0';
 	public constructor() {
 		console.log(`constructor ${this._version}`);
 	}
