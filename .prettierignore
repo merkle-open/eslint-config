@@ -19,3 +19,4 @@
 **/.yo-rc.json
 
 test/typescript-disable-styles/__tests__/member-delimiter-style.ts
+test/typescript-react
