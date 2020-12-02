@@ -8,6 +8,8 @@ interface IInputProps {
 	onChange: React.HTMLProps<HTMLInputElement>['onChange'];
 }
 
+export const Button = (): JSX.Element => <button>Button</button>;
+
 export function Input({ label, value = '', name, disabled, onChange }: IInputProps) {
 	return (
 		<label>
