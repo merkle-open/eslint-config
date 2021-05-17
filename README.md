@@ -1,8 +1,8 @@
-# ESLint config Namics
+# ESLint config
 
-[![Build Status](https://github.com/namics/eslint-config-namics/workflows/ci/badge.svg)](https://github.com/namics/eslint-config-namics/actions)
+[![Build Status](https://github.com/merkle-open/eslint-config/workflows/ci/badge.svg)](https://github.com/merkle-open/eslint-config/actions)
 [![npm](https://img.shields.io/npm/v/@namics/eslint-config.svg)](https://www.npmjs.com/package/@namics/eslint-config)
-[![Codestyle](https://img.shields.io/badge/codestyle-namics-green.svg)](https://github.com/namics/eslint-config-namics)
+[![Codestyle](https://img.shields.io/badge/codestyle-namics-green.svg)](https://github.com/merkle-open/eslint-config)
 
 ## Installation
 
@@ -116,6 +116,7 @@ then run `npm run lint`
 
 ## Thanks to
 
+* [Merkle.](https://www.merkleinc.com/)
 * [Namics.](https://www.namics.com/en/)
 * [ESLint](https://github.com/eslint/eslint) for ESLint and the documentation [eslint.org](http://eslint.org/)
 * [Walmart](https://github.com/walmartlabs) for sharing their config in [eslint-config-walmart](https://github.com/walmartlabs/eslint-config-walmart)
@@ -127,4 +128,4 @@ then run `npm run lint`
 
 ## Changelog
 
-Please see the [Releases](https://github.com/namics/eslint-config-namics/releases)
+Please see the [Releases](https://github.com/merkle-open/eslint-config/releases)
