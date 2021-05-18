@@ -67,7 +67,7 @@
     "typescript": "4.2.4"
   },
   "peerDependencies": {
-    "eslint": ">=7",
+    "eslint": ">=6",
     "eslint-plugin-import": ">=2"
   },
   "dependencies": {
