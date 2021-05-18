@@ -5,7 +5,7 @@ module.exports = {
 		// require trailing commas in multiline object literals
 		'comma-dangle': [2, 'always-multiline'],
 		// [13.07.2016] enabled
-		// [20.09.2016] always-multiline -> https://github.com/namics/eslint-config-namics/issues/1
+		// [20.09.2016] always-multiline -> https://github.com/merkle-open/eslint-config/issues/1
 
 		// disallow assignment in conditional expressions
 		'no-cond-assign': [2, 'always'],

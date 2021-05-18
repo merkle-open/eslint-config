@@ -1,8 +1,8 @@
-# ESLint config Namics
+# ESLint config
 
-[![Build Status](https://github.com/namics/eslint-config-namics/workflows/ci/badge.svg)](https://github.com/namics/eslint-config-namics/actions)
+[![Build Status](https://github.com/merkle-open/eslint-config/workflows/ci/badge.svg)](https://github.com/merkle-open/eslint-config/actions)
 [![npm](https://img.shields.io/npm/v/@namics/eslint-config.svg)](https://www.npmjs.com/package/@namics/eslint-config)
-[![Codestyle](https://img.shields.io/badge/codestyle-namics-green.svg)](https://github.com/namics/eslint-config-namics)
+[![Codestyle](https://img.shields.io/badge/codestyle-merkle-green.svg)](https://github.com/merkle-open/eslint-config)
 
 ## Installation
 
@@ -16,7 +16,7 @@ $ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
 - `@namics/eslint-config/configurations/typescript-react` - typescript + react
 - `@namics/eslint-config/configurations/typescript-node` - typescript + node
 
-*package.json*
+_package.json_
 
 ```json
 {
@@ -26,7 +26,7 @@ $ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
 }
 ```
 
-*Enabling ESLint on TS files in VSCode*
+_Enabling ESLint on TS files in VSCode_
 
 You need to update the eslint.validate setting to:
 
@@ -84,6 +84,7 @@ module.exports = {
   "lint:js": "eslint ."
 },
 ```
+
 then run `npm run lint`
 
 ### Example usage in project tree
@@ -91,13 +92,13 @@ then run `npm run lint`
 - .eslintrc.js (es8-react)
 - .eslintignore
 - src
-    - app.jsx
+  - app.jsx
 - test
-    - .eslintrc.js (es8-node)
-    - index.js
+  - .eslintrc.js (es8-node)
+  - index.js
 - scripts
-    - .eslintrc.js (es6-node)
-    - index.js
+  - .eslintrc.js (es6-node)
+  - index.js
 
 ## Documentation
 
@@ -116,10 +117,11 @@ then run `npm run lint`
 
 ## Thanks to
 
-* [Namics.](https://www.namics.com/en/)
-* [ESLint](https://github.com/eslint/eslint) for ESLint and the documentation [eslint.org](http://eslint.org/)
-* [Walmart](https://github.com/walmartlabs) for sharing their config in [eslint-config-walmart](https://github.com/walmartlabs/eslint-config-walmart)
-* [AirBnB](https://github.com/airbnb) for sharing their eslint config in [JavaScript Style Guide](https://github.com/airbnb/javascript)
+- [Merkle.](https://www.merkleinc.com/)
+- [Namics.](https://www.namics.com/en/)
+- [ESLint](https://github.com/eslint/eslint) for ESLint and the documentation [eslint.org](http://eslint.org/)
+- [Walmart](https://github.com/walmartlabs) for sharing their config in [eslint-config-walmart](https://github.com/walmartlabs/eslint-config-walmart)
+- [AirBnB](https://github.com/airbnb) for sharing their eslint config in [JavaScript Style Guide](https://github.com/airbnb/javascript)
 
 ## License
 
@@ -127,4 +129,4 @@ then run `npm run lint`
 
 ## Changelog
 
-Please see the [Releases](https://github.com/namics/eslint-config-namics/releases)
+Please see the [Releases](https://github.com/merkle-open/eslint-config/releases)

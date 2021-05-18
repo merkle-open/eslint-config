@@ -2,19 +2,15 @@
   "name": "@namics/eslint-config",
   "version": "9.0.5",
   "description": "Default configurations for eslint",
-  "author": "Namics AG",
-  "contributors": [
-    "Ernst Ammann <ernst.ammann@namics.com>",
-    "Simon Mollweide <simon.mollweide@namics.com>"
-  ],
+  "author": "Merkle Inc.",
   "license": "MIT",
   "private": false,
   "repository": {
     "type": "git",
-    "url": "https://github.com/namics/eslint-config-namics.git"
+    "url": "https://github.com/merkle-open/eslint-config.git"
   },
   "bugs": {
-    "url": "https://github.com/namics/eslint-config-namics/issues"
+    "url": "https://github.com/merkle-open/eslint-config/issues"
   },
   "main": "configurations/es6-browser.js",
   "scripts": {
