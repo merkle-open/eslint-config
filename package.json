@@ -3,10 +3,6 @@
   "version": "9.0.5",
   "description": "Default configurations for eslint",
   "author": "Merkle Inc.",
-  "contributors": [
-    "Ernst Ammann <ernst.ammann@emea.merkleinc.com>",
-    "Simon Mollweide"
-  ],
   "license": "MIT",
   "private": false,
   "repository": {
