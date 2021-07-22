@@ -116,6 +116,7 @@ then run `npm run lint`
 - [Typescript](./documentation/typescript.md) (typescript)
 
 ## Build release
+
 1. Create feature or bugfix branch based on master
 2. Make changes and create pull request, add reviewer, wait for approval
 3. Merge pull request into master
