@@ -124,7 +124,6 @@ then run `npm run lint`
 6. Create and push git tag for version
 7. Add release notes on GitHub
 
-
 ## Thanks to
 
 - [Merkle.](https://www.merkleinc.com/)
