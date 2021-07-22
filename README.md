@@ -115,6 +115,16 @@ then run `npm run lint`
 - [React hooks](./documentation/react-hooks.md) (ES6/7/8)
 - [Typescript](./documentation/typescript.md) (typescript)
 
+## Build release
+1. Create feature or bugfix branch based on master
+2. Make changes and create pull request, add reviewer, wait for approval
+3. Merge pull request into master
+4. Prepare release notes, adjust package.json to next version ([Semantic Versioning](semantic versioning))
+5. Run `npm publish` (locally) to create npm version
+6. Create and push git tag for version
+7. Add release notes on GitHub
+
+
 ## Thanks to
 
 - [Merkle.](https://www.merkleinc.com/)
