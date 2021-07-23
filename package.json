@@ -29,7 +29,6 @@
     "prettier:es8": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es8-disable-styles/**/*.js\"",
     "prettier:typescript": "prettier --config \".prettierrc.unstyled.js\" --write \"test/typescript-disable-styles/**/*.ts\"",
     "prettier:typescriptreact": "prettier --config \".prettierrc.unstyled.js\" --write \"test/typescript-react-disable-styles/**/*.tsx\"",
-    "start": "dash4",
     "update-dependencies": "npm-check-updates -u"
   },
   "keywords": [
@@ -47,10 +46,6 @@
     "typescript"
   ],
   "devDependencies": {
-    "@dash4/plugin-dependencies": "0.9.3",
-    "@dash4/plugin-npm-scripts": "0.9.3",
-    "@dash4/plugin-readme": "0.9.3",
-    "@dash4/server": "0.9.3",
     "@namics/prettier-config": "2.0.1",
     "@namics/ts-config": "1.1.1",
     "acorn": "8.4.1",
@@ -60,6 +55,7 @@
     "npm-check-updates": "11.8.3",
     "npm-run-all": "4.1.5",
     "prettier": "2.3.2",
+    "react": "16.13.1",
     "typescript": "4.3.5"
   },
   "peerDependencies": {
