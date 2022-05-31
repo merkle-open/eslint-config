@@ -15,12 +15,19 @@ module.exports = {
 		'../rules/imports.js',
 		'../rules/es6.js',
 		'../rules/es8.js',
-		'../rules/typescript.js',
 	].map(require.resolve),
 
-	'parserOptions': {
-		'project': './tsconfig.json',
-	},
+	'overrides': [
+		{
+			files: ['*.ts', '*.tsx', '*.vue'], // TypeScript files extensions
+			extends: [
+				'../rules/typescript.js',
+			],
+			parserOptions: {
+				project: './tsconfig.json', // Specify it only for TypeScript files
+			},
+		},
+	],
 
 	'settings': {
 		'import/resolver': {

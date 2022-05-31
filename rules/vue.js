@@ -7,9 +7,6 @@ module.exports = {
 		'import',
 	],
 	rules: {
-		// https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/no-unresolved.md
-		// If you're using a module bundler other than Node or Webpack,
-		// you may end up with a lot of false positive reports of missing dependencies.
-		'import/no-unresolved': 0,
+		// No rules yet. The recommended set is enough for now.
 	},
 };

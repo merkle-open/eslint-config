@@ -1,15 +1,13 @@
 module.exports = {
 	plugins: [
 		'@typescript-eslint',
-		'vue',
-		// 'jsx-a11y',
-		// 'react',
-		// 'react-hooks',
 	],
 	extends: [
+		'plugin:vue/vue3-essential',
+		'@vue/typescript/recommended',
 		'./typescript.js',
 		'../rules/vue.js',
-	].map(require.resolve),
+	],
 	env: {
 		browser: true,
 		node: false,
@@ -21,6 +19,17 @@ module.exports = {
 		serviceworker: true,
 		worker: true,
 	},
+	overrides: [
+		{
+			files: [
+				'./src/**/*.vue',
+				'./tests/**/*',
+			],
+			rules: {
+				'import/no-unresolved': 0,
+			},
+		},
+	],
 	parser: 'vue-eslint-parser',
 	parserOptions: {
 		parser: '@typescript-eslint/parser',

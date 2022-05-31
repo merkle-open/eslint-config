@@ -14,16 +14,21 @@ $ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
 
 - `@namics/eslint-config/configurations/typescript-browser` - typescript + browser
 - `@namics/eslint-config/configurations/typescript-react` - typescript + react
+- `@namics/eslint-config/configurations/typescript-vue` - typescript + vue
 - `@namics/eslint-config/configurations/typescript-node` - typescript + node
 
 _package.json_
 
+Non-Vue Only, "vue-cli-service lint" is kept as is otherwise
+
 ```json
+
 {
   "scripts": {
     "lint:ts": "eslint . --ext .jsx,.js,.ts,.tsx"
   }
 }
+
 ```
 
 _Enabling ESLint on TS files in VSCode_
