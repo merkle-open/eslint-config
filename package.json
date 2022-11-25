@@ -1,26 +1,26 @@
 {
   "name": "@namics/eslint-config",
-  "version": "9.1.1",
   "description": "Default configurations for eslint",
-  "author": "Merkle Inc.",
+  "version": "9.1.1",
+  "repository": "https://github.com/merkle-open/eslint-config.git",
   "license": "MIT",
+  "author": "Merkle Inc.",
   "private": false,
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/merkle-open/eslint-config.git"
+  "engines": {
+    "node": ">=14"
   },
   "bugs": {
     "url": "https://github.com/merkle-open/eslint-config/issues"
   },
-  "main": "configurations/es6-browser.js",
+  "main": "configurations/es8-browser.js",
   "scripts": {
-    "clean": "npx --ignore-existing --quiet rimraf package-lock.json node_modules",
+    "clean": "npx -y rimraf package-lock.json node_modules",
     "lint": "npm run lint:js",
     "lint:js": "eslint . --ext .jsx,.js,.ts,.tsx",
     "test": "npm run lint",
     "docs": "node bin/write-documentation",
     "prepublishOnly": "npx pkg-ok@2.3.1",
-    "prestart": "npx @namics/env-linter --versions=\"node=14.17.3,npm=6.14.13\" --saveExact --dependenciesExactVersion",
+    "prestart": "npx -y env-linter --versions=\"node=18.12.1,npm=8.19.2\" --saveExact --dependenciesExactVersion",
     "prettier": "npm-run-all prettier:*",
     "prettier:es5": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es5-disable-styles/**/*.js\"",
     "prettier:es5node": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es5-node-disable-styles/**/*.js\"",
@@ -29,7 +29,8 @@
     "prettier:es8": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es8-disable-styles/**/*.js\"",
     "prettier:typescript": "prettier --config \".prettierrc.unstyled.js\" --write \"test/typescript-disable-styles/**/*.ts\"",
     "prettier:typescriptreact": "prettier --config \".prettierrc.unstyled.js\" --write \"test/typescript-react-disable-styles/**/*.tsx\"",
-    "update-dependencies": "npm-check-updates -u"
+    "start": "npm-run-all test prettier ",
+    "update-dependencies": "npm-check-updates -u -x node-fetch"
   },
   "keywords": [
     "code checker",
@@ -46,29 +47,29 @@
     "typescript"
   ],
   "devDependencies": {
-    "@namics/prettier-config": "2.0.1",
-    "@namics/ts-config": "1.1.1",
-    "acorn": "8.4.1",
-    "eslint": "7.16.0",
-    "eslint-plugin-import": "2.22.1",
-    "node-fetch": "2.6.1",
-    "npm-check-updates": "11.8.3",
+    "@namics/prettier-config": "3.0.1",
+    "@namics/ts-config": "2.0.1",
+    "acorn": "8.8.1",
+    "eslint": "7.32.0",
+    "eslint-plugin-import": "2.26.0",
+    "node-fetch": "2.6.7",
+    "npm-check-updates": "16.4.3",
     "npm-run-all": "4.1.5",
-    "prettier": "2.3.2",
-    "react": "16.13.1",
-    "typescript": "4.3.5"
+    "prettier": "2.8.0",
+    "react": "18.2.0",
+    "typescript": "4.9.3"
   },
   "peerDependencies": {
     "eslint": ">=6",
     "eslint-plugin-import": ">=2"
   },
   "dependencies": {
-    "@types/react": "17.0.14",
-    "@typescript-eslint/eslint-plugin": "4.28.4",
-    "@typescript-eslint/parser": "4.28.4",
+    "@types/react": "18.0.25",
+    "@typescript-eslint/eslint-plugin": "5.44.0",
+    "@typescript-eslint/parser": "5.44.0",
     "babel-eslint": "10.1.0",
-    "eslint-plugin-jsx-a11y": "6.4.1",
-    "eslint-plugin-react": "7.24.0",
-    "eslint-plugin-react-hooks": "4.2.0"
+    "eslint-plugin-jsx-a11y": "6.6.1",
+    "eslint-plugin-react": "7.31.11",
+    "eslint-plugin-react-hooks": "4.6.0"
   }
 }
