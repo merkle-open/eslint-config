@@ -1,3 +1,3 @@
 module.exports = {
-	"extends": "../../configurations/es7-browser.js"
+	extends: '../../configurations/es7-browser.js',
 };

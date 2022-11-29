@@ -1,3 +1,3 @@
 module.exports = {
-	"extends": "../../configurations/es8-browser.js"
+	extends: '../../configurations/es8-browser.js',
 };

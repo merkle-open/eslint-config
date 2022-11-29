@@ -1,3 +1,3 @@
 module.exports = {
-	"extends": "../../configurations/typescript-browser.js"
+	extends: '../../configurations/typescript-browser.js',
 };
