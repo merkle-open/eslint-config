@@ -20,7 +20,7 @@
     "test": "npm run lint",
     "docs": "node bin/write-documentation",
     "prepublishOnly": "npx pkg-ok@2.3.1",
-    "prestart": "npx -y env-linter --versions=\"node=18.12.1,npm=8.19.2\" --saveExact --dependenciesExactVersion",
+    "prestart": "npx -y env-linter --versions --saveExact --dependenciesExactVersion",
     "prettier": "npm-run-all prettier:*",
     "prettier:es5": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es5-disable-styles/**/*.js\"",
     "prettier:es5node": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es5-node-disable-styles/**/*.js\"",

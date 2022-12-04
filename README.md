@@ -127,8 +127,7 @@ then run `npm run lint`
 
 ## Thanks to
 
-- [Merkle.](https://www.merkleinc.com/)
-- [Namics.](https://www.namics.com/en/)
+- [Merkle](https://www.merkleinc.ch/)
 - [ESLint](https://github.com/eslint/eslint) for ESLint and the documentation [eslint.org](http://eslint.org/)
 - [Walmart](https://github.com/walmartlabs) for sharing their config in [eslint-config-walmart](https://github.com/walmartlabs/eslint-config-walmart)
 - [AirBnB](https://github.com/airbnb) for sharing their eslint config in [JavaScript Style Guide](https://github.com/airbnb/javascript)
