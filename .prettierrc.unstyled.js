@@ -6,6 +6,6 @@ module.exports = Object.assign(config, {
 	singleQuote: false,
 	trailingComma: 'none',
 	bracketSpacing: false,
-	jsxBracketSameLine: false,
+	bracketSameLine: false,
 	arrowParens: 'avoid',
 });
