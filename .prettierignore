@@ -3,20 +3,6 @@
 **/package.json
 **/package-lock.json
 
-# Generated
-**/bower.json
-**/lerna.json
-
-# Build
-**/build
-**/dist
-**/public
-**/coverage
-**/storybook-static
-
-# Nitro
-**/project/blueprints
-**/.yo-rc.json
-
+# Project
 test/typescript-disable-styles/__tests__/member-delimiter-style.ts
 test/typescript-react
