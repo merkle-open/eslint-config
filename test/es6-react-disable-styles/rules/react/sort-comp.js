@@ -25,10 +25,10 @@ class Hello extends React.Component {
   static isAllowed() {}
 
   // Lifecycle
-  componentWillMount() {}
-  componentWillReceiveProps() {}
+  static getDerivedStateFromProps(props, state) {}
+  componentDidMount() {}
   shouldComponentUpdate() {}
-  componentWillUpdate() {}
+  getSnapshotBeforeUpdate() {}
   componentDidUpdate() {}
   componentWillUnmount() {}
 
