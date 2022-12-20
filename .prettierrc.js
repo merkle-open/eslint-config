@@ -1,1 +1,1 @@
-module.exports = require("@namics/prettier-config");
+module.exports = require('@namics/prettier-config');

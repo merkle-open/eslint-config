@@ -6,5 +6,4 @@ module.exports = {
 		'../rules/style-disable-styles.js',
 		'../rules/variables-disable-styles.js',
 	].map(require.resolve),
-
 };

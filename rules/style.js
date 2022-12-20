@@ -1,4 +1,3 @@
-
 /* [11.07.2016] approved by skill group core team */
 module.exports = {
 	rules: {
@@ -63,15 +62,18 @@ module.exports = {
 		'key-spacing': [2, { beforeColon: false, afterColon: true }],
 
 		// require a space before & after certain keywords
-		'keyword-spacing': [2, {
-			before: true,
-			after: true,
-			overrides: {
-				return: { after: true },
-				throw: { after: true },
-				case: { after: true },
+		'keyword-spacing': [
+			2,
+			{
+				before: true,
+				after: true,
+				overrides: {
+					return: { after: true },
+					throw: { after: true },
+					case: { after: true },
+				},
 			},
-		}],
+		],
 
 		// disallow mixed 'LF' and 'CRLF' as linebreaks
 		'linebreak-style': 0,
@@ -198,16 +200,22 @@ module.exports = {
 
 		// enforce 'same line' or 'multiple line' on object properties.
 		// http://eslint.org/docs/rules/object-property-newline
-		'object-property-newline': [0, {
-			allowMultiplePropertiesPerLine: true,
-		}],
+		'object-property-newline': [
+			0,
+			{
+				allowMultiplePropertiesPerLine: true,
+			},
+		],
 
 		// allow just one var statement per function
-		'one-var': [2, {
-			'var': 'never',
-			'let': 'never',
-			'const': 'never',
-		}],
+		'one-var': [
+			2,
+			{
+				var: 'never',
+				let: 'never',
+				const: 'never',
+			},
+		],
 		// [08.07.2016] enabled never
 
 		// require a newline around variable declaration
@@ -234,14 +242,17 @@ module.exports = {
 
 		// do not require jsdoc
 		// http://eslint.org/docs/rules/require-jsdoc
-		'require-jsdoc': [2, {
-			require: {
-				FunctionDeclaration: true,
-				MethodDefinition: true,
-				ClassDeclaration: true,
-				ArrowFunctionExpression: false,
+		'require-jsdoc': [
+			2,
+			{
+				require: {
+					FunctionDeclaration: true,
+					MethodDefinition: true,
+					ClassDeclaration: true,
+					ArrowFunctionExpression: false,
+				},
 			},
-		}],
+		],
 		// [08.07.2016] enabled
 
 		// require or disallow use of semicolons instead of ASI
@@ -270,11 +281,15 @@ module.exports = {
 		'space-unary-ops': 0,
 
 		// require or disallow a space immediately following the // or /* in a comment
-		'spaced-comment': [2, 'always', {
-			exceptions: ['-', '+'],
-			// space here to support sprockets directives
-			markers: ['=', '!', '/'],
-		}],
+		'spaced-comment': [
+			2,
+			'always',
+			{
+				exceptions: ['-', '+'],
+				// space here to support sprockets directives
+				markers: ['=', '!', '/'],
+			},
+		],
 
 		// require or disallow the Unicode Byte Order Mark
 		// http://eslint.org/docs/rules/unicode-bom

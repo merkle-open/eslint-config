@@ -4,5 +4,4 @@ module.exports = {
 		'./es8-disable-styles.js',
 		'../rules/node-disable-styles.js',
 	].map(require.resolve),
-
 };

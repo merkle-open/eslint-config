@@ -3,9 +3,7 @@ module.exports = {
 	env: {
 		es6: true,
 	},
-	plugins: [
-		'import',
-	],
+	plugins: ['import'],
 
 	settings: {
 		'import/resolver': {
@@ -28,5 +26,4 @@ module.exports = {
 		ecmaVersion: 7,
 		sourceType: 'module',
 	},
-
 };

@@ -1,13 +1,10 @@
 module.exports = {
-
 	parser: 'babel-eslint',
 
 	env: {
 		es6: true,
 	},
-	plugins: [
-		'import',
-	],
+	plugins: ['import'],
 
 	settings: {
 		'import/resolver': {
@@ -31,5 +28,4 @@ module.exports = {
 		ecmaVersion: 8,
 		sourceType: 'module',
 	},
-
 };

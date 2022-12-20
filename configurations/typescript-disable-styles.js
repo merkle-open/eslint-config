@@ -1,5 +1,4 @@
 module.exports = {
-
 	extends: [
 		'../rules/best-practices-disable-styles.js',
 		'../rules/errors-disable-styles.js',
@@ -10,5 +9,4 @@ module.exports = {
 		'../rules/es8-disable-styles.js',
 		'../rules/typescript-disable-styles.js',
 	].map(require.resolve),
-
 };

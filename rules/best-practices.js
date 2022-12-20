@@ -1,4 +1,3 @@
-
 /* [08.07.2016] approved by skill group core team */
 module.exports = {
 	rules: {
@@ -56,13 +55,12 @@ module.exports = {
 
 		// disallow empty functions, except for standalone funcs/arrows
 		// http://eslint.org/docs/rules/no-empty-function
-		'no-empty-function': [2, {
-			allow: [
-				'arrowFunctions',
-				'functions',
-				'methods',
-			],
-		}],
+		'no-empty-function': [
+			2,
+			{
+				allow: ['arrowFunctions', 'functions', 'methods'],
+			},
+		],
 
 		// disallow empty destructuring patterns
 		// http://eslint.org/docs/rules/no-empty-pattern
@@ -118,12 +116,15 @@ module.exports = {
 
 		// disallow magic numbers
 		// http://eslint.org/docs/rules/no-magic-numbers
-		'no-magic-numbers': [0, {
-			ignore: [],
-			ignoreArrayIndexes: true,
-			enforceConst: true,
-			detectObjects: false,
-		}],
+		'no-magic-numbers': [
+			0,
+			{
+				ignore: [],
+				ignoreArrayIndexes: true,
+				enforceConst: true,
+				detectObjects: false,
+			},
+		],
 
 		// disallow use of multiple spaces
 		'no-multi-spaces': 2,
@@ -209,9 +210,7 @@ module.exports = {
 		// [08.07.2016] enabled
 
 		// disallow usage of configurable warning terms in comments: e.g.
-		'no-warning-comments': [0,
-			{ terms: ['todo', 'fixme'], location: 'start' },
-		],
+		'no-warning-comments': [0, { terms: ['todo', 'fixme'], location: 'start' }],
 
 		// disallow use of the with statement
 		'no-with': 2,

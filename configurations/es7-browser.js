@@ -1,8 +1,6 @@
 module.exports = {
 	parser: 'babel-eslint',
-	extends: [
-		'./es7.js',
-	].map(require.resolve),
+	extends: ['./es7.js'].map(require.resolve),
 	env: {
 		browser: true,
 		node: false,

@@ -1,12 +1,7 @@
 module.exports = {
-
-	'parser': '@typescript-eslint/parser',
-
-	'plugins': [
-		'@typescript-eslint',
-	],
-
-	'extends': [
+	parser: '@typescript-eslint/parser',
+	plugins: ['@typescript-eslint'],
+	extends: [
 		'../rules/node-disable.js',
 		'../rules/best-practices.js',
 		'../rules/errors.js',
@@ -17,15 +12,13 @@ module.exports = {
 		'../rules/es8.js',
 		'../rules/typescript.js',
 	].map(require.resolve),
-
-	'parserOptions': {
-		'project': './tsconfig.json',
+	parserOptions: {
+		project: './tsconfig.json',
 	},
-
-	'settings': {
+	settings: {
 		'import/resolver': {
-			'node': {
-				'extensions': ['.js', '.ts', '.jsx', '.tsx', '.json'],
+			node: {
+				extensions: ['.js', '.ts', '.jsx', '.tsx', '.json'],
 			},
 		},
 	},

@@ -3,9 +3,7 @@ module.exports = {
 	env: {
 		es6: true,
 	},
-	plugins: [
-		'import',
-	],
+	plugins: ['import'],
 
 	settings: {
 		'import/resolver': {
@@ -32,5 +30,4 @@ module.exports = {
 			objectLiteralDuplicateProperties: false,
 		},
 	},
-
 };

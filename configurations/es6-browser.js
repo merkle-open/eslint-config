@@ -1,8 +1,6 @@
 module.exports = {
 	parser: 'babel-eslint',
-	extends: [
-		'./es6.js',
-	].map(require.resolve),
+	extends: ['./es6.js'].map(require.resolve),
 	env: {
 		browser: true,
 		node: false,
@@ -14,5 +12,4 @@ module.exports = {
 		serviceworker: true,
 		worker: true,
 	},
-
 };

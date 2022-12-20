@@ -19,7 +19,6 @@ var data;
  * @returns {string} eslint documentation url
  */
 function getESLintUrl(name, groupName) {
-
 	switch (groupName) {
 		case 'imports':
 			return 'https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/' + name + '.md';
@@ -30,11 +29,14 @@ function getESLintUrl(name, groupName) {
 		case 'react-hooks':
 			return 'https://reactjs.org/docs/hooks-rules.html';
 		case 'typescript':
-			return 'https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/' + name.replace(/.ts$/, '') + '.md';
+			return (
+				'https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/' +
+				name.replace(/.ts$/, '') +
+				'.md'
+			);
 		default:
 			return 'http://eslint.org/docs/rules/' + name;
 	}
-
 }
 
 /**
@@ -43,17 +45,20 @@ function getESLintUrl(name, groupName) {
  * @returns {string} statusIcon (unicode character)
  */
 function getStatusIcon(fileData) {
-	var exp = (/STATUS = (.*)/).exec(fileData);
+	var exp = /STATUS = (.*)/.exec(fileData);
 
 	if (exp === null || exp.length < 1) {
 		return '';
 	}
 
 	switch (parseInt(exp[1].trim(), 10)) {
-		case 0: return ':x:';
+		case 0:
+			return ':x:';
 		case 1:
-		case 2: return ':white_check_mark:';
-		default: return '';
+		case 2:
+			return ':white_check_mark:';
+		default:
+			return '';
 	}
 }
 
@@ -63,17 +68,21 @@ function getStatusIcon(fileData) {
  * @returns {string} status
  */
 function getStatus(fileData) {
-	var exp = (/STATUS = (.*)/).exec(fileData);
+	var exp = /STATUS = (.*)/.exec(fileData);
 
 	if (exp === null || exp.length < 1) {
 		return '';
 	}
 
 	switch (parseInt(exp[1].trim(), 10)) {
-		case 0: return 'Disabled';
-		case 1: return 'Enabled (warning)';
-		case 2: return 'Enabled (error)';
-		default: return '';
+		case 0:
+			return 'Disabled';
+		case 1:
+			return 'Enabled (warning)';
+		case 2:
+			return 'Enabled (error)';
+		default:
+			return '';
 	}
 }
 
@@ -83,7 +92,7 @@ function getStatus(fileData) {
  * @returns {string} description
  */
 function getDescription(fileData) {
-	var exp = (/DESCRIPTION = (.*)/).exec(fileData);
+	var exp = /DESCRIPTION = (.*)/.exec(fileData);
 
 	if (exp === null || exp.length < 1) {
 		return '';
@@ -108,7 +117,7 @@ function getTitle(name) {
  * @returns {void}
  */
 function addSnippet(arr, fileData) {
-	var exp = (/<!START([\s\S]*)(END!>)/).exec(fileData);
+	var exp = /<!START([\s\S]*)(END!>)/.exec(fileData);
 	var code;
 
 	if (exp === null || exp.length < 1) {
@@ -135,7 +144,6 @@ function addSnippet(arr, fileData) {
  * @returns {void}
  */
 function addRule(arr, name, path, groupName) {
-
 	var fileData = utils.readFile(path);
 	var nameCleaned = name.replace(/\.js$/, '').replace(/\.ts$/, '');
 	var title = utils.capitalize(nameCleaned.replace(/-/g, ' '));

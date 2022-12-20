@@ -18,7 +18,6 @@ var data;
  * @returns {void}
  */
 function writeTestFiles() {
-
 	if (argv.length < 4) {
 		return;
 	}
@@ -27,10 +26,7 @@ function writeTestFiles() {
 	destPath = argv[3];
 	data = utils.readFile(filePath);
 
-
 	data.split('\n\n').map(function (rule) {
-
-
 		var ruleSpl = rule.split('\n');
 		var desc;
 		var destFileName;
@@ -65,12 +61,12 @@ function writeTestFiles() {
 		}
 
 		fileData.push('// DESCRIPTION = ' + desc);
-		fileData.push('// STATUS = ' + parseInt((nameStatusSpl[1] || 0), 10));
+		fileData.push('// STATUS = ' + parseInt(nameStatusSpl[1] || 0, 10));
 		fileData.push('');
 		fileData.push('// <!START');
 		fileData.push('');
 		fileData.push('// END!>');
-		fileData.push('document.window.append(\'\', null);');
+		fileData.push("document.window.append('', null);");
 		fileData.push('');
 
 		utils.writeFile(destFileName, fileData.join('\n'));

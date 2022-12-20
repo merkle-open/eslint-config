@@ -1,7 +1,5 @@
 module.exports = {
-	extends: [
-		'./typescript.js',
-	].map(require.resolve),
+	extends: ['./typescript.js'].map(require.resolve),
 	env: {
 		browser: true,
 		node: false,

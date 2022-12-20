@@ -1,4 +1,3 @@
-
 /* [22.07.2016] approved by skill group core team */
 module.exports = {
 	// View link below for react rules documentation
@@ -30,10 +29,13 @@ module.exports = {
 
 		// Enforce event handler naming conventions in JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md
-		'react/jsx-handler-names': [2, {
-			eventHandlerPrefix: 'handle',
-			eventHandlerPropPrefix: 'on',
-		}],
+		'react/jsx-handler-names': [
+			2,
+			{
+				eventHandlerPrefix: 'handle',
+				eventHandlerPropPrefix: 'on',
+			},
+		],
 		// [21.07.2016] enabled
 
 		// Validate props indentation in JSX
@@ -53,11 +55,14 @@ module.exports = {
 
 		// Prevent usage of .bind() in JSX props
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md
-		'react/jsx-no-bind': [2, {
-			ignoreRefs: true,
-			allowArrowFunctions: true,
-			allowBind: false,
-		}],
+		'react/jsx-no-bind': [
+			2,
+			{
+				ignoreRefs: true,
+				allowArrowFunctions: true,
+				allowBind: false,
+			},
+		],
 
 		// Prevent duplicate props in JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md
@@ -73,32 +78,41 @@ module.exports = {
 
 		// Enforce PascalCase for user-defined JSX components
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md
-		'react/jsx-pascal-case': [2, {
-			allowAllCaps: true,
-			ignore: [],
-		}],
+		'react/jsx-pascal-case': [
+			2,
+			{
+				allowAllCaps: true,
+				ignore: [],
+			},
+		],
 
 		// Enforce propTypes declarations alphabetical sorting
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md
-		'react/sort-prop-types': [2, {
-			ignoreCase: true,
-			callbacksLast: true,
-			requiredFirst: true,
-		}],
+		'react/sort-prop-types': [
+			2,
+			{
+				ignoreCase: true,
+				callbacksLast: true,
+				requiredFirst: true,
+			},
+		],
 
 		// deprecated in favor of react/jsx-sort-props
 		'react/jsx-sort-prop-types': 0,
 
 		// Enforce props alphabetical sorting
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
-		'react/jsx-sort-props': [2, {
-			noSortAlphabetically: true,
-			reservedFirst: true,
-			ignoreCase: true,
-			callbacksLast: true,
-			shorthandFirst: true,
-			shorthandLast: false,
-		}],
+		'react/jsx-sort-props': [
+			2,
+			{
+				noSortAlphabetically: true,
+				reservedFirst: true,
+				ignoreCase: true,
+				callbacksLast: true,
+				shorthandFirst: true,
+				shorthandLast: false,
+			},
+		],
 
 		// Prevent React to be incorrectly marked as unused
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
@@ -179,33 +193,42 @@ module.exports = {
 
 		// Enforce spaces before the closing bracket of self-closing JSX elements
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md
-		'react/jsx-tag-spacing': [2, {
-			'closingSlash': 'never',
-			'beforeSelfClosing': 'always',
-			'afterOpening': 'never',
-		}],
+		'react/jsx-tag-spacing': [
+			2,
+			{
+				closingSlash: 'never',
+				beforeSelfClosing: 'always',
+				afterOpening: 'never',
+			},
+		],
 
 		// Enforce component methods order
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md
-		'react/sort-comp': [2, {
-			order: [
-				'static-methods',
-				'lifecycle',
-				'/^handle.+$/',
-				'/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
-				'everything-else',
-				'/^render.+$/',
-				'render',
-			],
-		}],
+		'react/sort-comp': [
+			2,
+			{
+				order: [
+					'static-methods',
+					'lifecycle',
+					'/^handle.+$/',
+					'/^(get|set)(?!(InitialState$|DefaultProps$|ChildContext$)).+$/',
+					'everything-else',
+					'/^render.+$/',
+					'render',
+				],
+			},
+		],
 
 		// Prevent missing parentheses around multilines JSX
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md
-		'react/jsx-wrap-multilines': [2, {
-			declaration: true,
-			assignment: true,
-			return: true,
-		}],
+		'react/jsx-wrap-multilines': [
+			2,
+			{
+				declaration: true,
+				assignment: true,
+				return: true,
+			},
+		],
 
 		// Require that the first prop in a JSX element be on a new line when the element is multiline
 		// https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md

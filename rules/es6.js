@@ -1,4 +1,3 @@
-
 /* [18.07.2016] approved by skill group core team */
 module.exports = {
 	rules: {
@@ -28,9 +27,12 @@ module.exports = {
 
 		// disallow arrow functions where they could be confused with comparisons
 		// http://eslint.org/docs/rules/no-confusing-arrow
-		'no-confusing-arrow': [2, {
-			allowParens: true,
-		}],
+		'no-confusing-arrow': [
+			2,
+			{
+				allowParens: true,
+			},
+		],
 
 		// disallow modifying variables that are declared using const
 		'no-const-assign': 2,
@@ -64,33 +66,46 @@ module.exports = {
 
 		// disallow renaming import, export, and destructured assignments to the same name
 		// http://eslint.org/docs/rules/no-useless-rename
-		'no-useless-rename': [2, {
-			ignoreDestructuring: false,
-			ignoreImport: false,
-			ignoreExport: false,
-		}],
+		'no-useless-rename': [
+			2,
+			{
+				ignoreDestructuring: false,
+				ignoreImport: false,
+				ignoreExport: false,
+			},
+		],
 
 		// require let or const instead of var
 		'no-var': 2,
 
 		// require method and property shorthand syntax for object literals
 		// http://eslint.org/docs/rules/object-shorthand
-		'object-shorthand': [2, 'always', {
-			ignoreConstructors: false,
-			avoidQuotes: true,
-		}],
+		'object-shorthand': [
+			2,
+			'always',
+			{
+				ignoreConstructors: false,
+				avoidQuotes: true,
+			},
+		],
 
 		// suggest using arrow functions as callbacks
-		'prefer-arrow-callback': [2, {
-			allowNamedFunctions: false,
-			allowUnboundThis: true,
-		}],
+		'prefer-arrow-callback': [
+			2,
+			{
+				allowNamedFunctions: false,
+				allowUnboundThis: true,
+			},
+		],
 
 		// suggest using of const declaration for variables that are never modified after declared
-		'prefer-const': [2, {
-			destructuring: 'any',
-			ignoreReadBeforeAssign: true,
-		}],
+		'prefer-const': [
+			2,
+			{
+				destructuring: 'any',
+				ignoreReadBeforeAssign: true,
+			},
+		],
 
 		// suggest using Reflect methods where applicable
 		'prefer-reflect': 0,

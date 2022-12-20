@@ -1,4 +1,3 @@
-
 /* [13.07.2016] approved by skill group core team */
 module.exports = {
 	rules: {
@@ -45,11 +44,15 @@ module.exports = {
 
 		// disallow unnecessary parentheses
 		// http://eslint.org/docs/rules/no-extra-parens
-		'no-extra-parens': [0, 'all', {
-			conditionalAssign: true,
-			nestedBinaryExpressions: false,
-			returnAssign: false,
-		}],
+		'no-extra-parens': [
+			0,
+			'all',
+			{
+				conditionalAssign: true,
+				nestedBinaryExpressions: false,
+				returnAssign: false,
+			},
+		],
 
 		// disallow unnecessary semicolons
 		'no-extra-semi': 2,
@@ -97,26 +100,29 @@ module.exports = {
 
 		// ensure JSDoc comments are valid
 		// http://eslint.org/docs/rules/valid-jsdoc
-		'valid-jsdoc': [2, {
-			prefer: {
-				arg: 'param',
-				argument: 'param',
-				params: 'param',
-				class: 'constructor',
-				return: 'returns',
-				virtual: 'abstract',
+		'valid-jsdoc': [
+			2,
+			{
+				prefer: {
+					arg: 'param',
+					argument: 'param',
+					params: 'param',
+					class: 'constructor',
+					return: 'returns',
+					virtual: 'abstract',
+				},
+				preferType: {
+					Boolean: 'boolean',
+					Number: 'number',
+					object: 'Object',
+					String: 'string',
+					array: 'Array',
+					xml: 'XML',
+				},
+				requireReturnDescription: true,
+				requireParamDescription: true,
 			},
-			preferType: {
-				Boolean: 'boolean',
-				Number: 'number',
-				object: 'Object',
-				String: 'string',
-				array: 'Array',
-				xml: 'XML',
-			},
-			requireReturnDescription: true,
-			requireParamDescription: true,
-		}],
+		],
 
 		// ensure that the results of typeof are compared against a valid string
 		'valid-typeof': 2,

@@ -1,4 +1,3 @@
-
 /* [21.07.2016] approved by skill group core team */
 module.exports = {
 	env: {
@@ -8,10 +7,7 @@ module.exports = {
 		ecmaVersion: 6,
 		sourceType: 'module',
 	},
-	plugins: [
-		'import',
-	],
-
+	plugins: ['import'],
 	settings: {
 		'import/resolver': {
 			node: {
@@ -19,7 +15,6 @@ module.exports = {
 			},
 		},
 	},
-
 	rules: {
 		// Static analysis:
 
@@ -58,10 +53,13 @@ module.exports = {
 
 		// Forbid the use of extraneous packages
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
-		'import/no-extraneous-dependencies': [0, {
-			devDependencies: false,
-			optionalDependencies: false,
-		}],
+		'import/no-extraneous-dependencies': [
+			0,
+			{
+				devDependencies: false,
+				optionalDependencies: false,
+			},
+		],
 
 		// Forbid mutable exports
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md
@@ -101,10 +99,13 @@ module.exports = {
 
 		// Enforce a convention in module import order
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
-		'import/order': [0, {
-			'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-			'newlines-between': 'never',
-		}],
+		'import/order': [
+			0,
+			{
+				'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+				'newlines-between': 'never',
+			},
+		],
 
 		// Require a newline after the last import/require in a group
 		// https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md

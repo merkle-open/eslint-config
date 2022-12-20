@@ -6,10 +6,10 @@ const bestPractices = require('./best-practices');
 const es6 = require('./es6');
 
 const replaceRule = (name, ruleSet, fallback) => {
-	return { 
-        [name]: 0,
-        [`@typescript-eslint/${name}`]: ruleSet.rules[name] || fallback || 0,
-    };
+	return {
+		[name]: 0,
+		[`@typescript-eslint/${name}`]: ruleSet.rules[name] || fallback || 0,
+	};
 };
 
 /* [12.04.2019] add typescript support */
@@ -19,12 +19,12 @@ module.exports = {
 		camelcase: 0,
 		'no-unused-vars': 0,
 		'no-use-before-define': 0,
-        'no-useless-constructor': 0,
-        // https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/FAQ.md#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
-        'no-undef': 0,
+		'no-useless-constructor': 0,
+		// https://github.com/typescript-eslint/typescript-eslint/blob/master/docs/getting-started/linting/FAQ.md#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
+		'no-undef': 0,
 
-        // default overrides
-        // https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
+		// default overrides
+		// https://github.com/typescript-eslint/typescript-eslint/tree/master/packages/eslint-plugin#extension-rules
 		...replaceRule('brace-style', styles),
 		...replaceRule('comma-dangle', errors),
 		...replaceRule('comma-spacing', styles),

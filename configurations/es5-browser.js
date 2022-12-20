@@ -1,8 +1,6 @@
 module.exports = {
 	parser: 'babel-eslint',
-	extends: [
-		'./es5.js',
-	].map(require.resolve),
+	extends: ['./es5.js'].map(require.resolve),
 	env: {
 		browser: true,
 		node: false,
@@ -10,5 +8,4 @@ module.exports = {
 		mocha: false,
 		jasmine: false,
 	},
-
 };

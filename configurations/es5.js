@@ -13,5 +13,4 @@ module.exports = {
 		ecmaVersion: 5,
 		sourceType: 'module',
 	},
-
 };

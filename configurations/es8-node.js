@@ -15,5 +15,4 @@ module.exports = {
 		serviceworker: true,
 		worker: true,
 	},
-
 };

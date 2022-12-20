@@ -29,7 +29,7 @@
     "prettier:es8": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es8-disable-styles/**/*.js\"",
     "prettier:typescript": "prettier --config \".prettierrc.unstyled.js\" --write \"test/typescript-disable-styles/**/*.ts\"",
     "prettier:typescriptreact": "prettier --config \".prettierrc.unstyled.js\" --write \"test/typescript-react-disable-styles/**/*.tsx\"",
-    "start": "npm-run-all test prettier ",
+    "start": "npm-run-all test prettier",
     "update-dependencies": "npm-check-updates -u -x node-fetch"
   },
   "keywords": [

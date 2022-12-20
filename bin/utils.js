@@ -4,7 +4,6 @@
 var fs = require('fs');
 
 module.exports = {
-
 	/**
 	 *
 	 * @method getStats
@@ -24,7 +23,6 @@ module.exports = {
 	 * @public
 	 */
 	existDir: function (dirName) {
-
 		var isDir = false;
 
 		try {
@@ -44,7 +42,6 @@ module.exports = {
 	 * @public
 	 */
 	existFile: function (path) {
-
 		var isFile = false;
 
 		try {
@@ -121,5 +118,4 @@ module.exports = {
 		// Capitalize the first letter
 		return str.substr(0, 1).toUpperCase().concat(str.substr(1));
 	},
-
 };
