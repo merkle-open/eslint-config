@@ -34,9 +34,7 @@ module.exports = {
 			},
 		},
 		'react': {
-			'pragma': 'React',
-			'version': '16',
+			'version': 'detect',
 		},
 	},
-
 };

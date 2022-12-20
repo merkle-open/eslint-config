@@ -36,6 +36,8 @@ module.exports = {
 				'extensions': ['.js', '.jsx', '.json'],
 			},
 		},
+		'react': {
+			'version': 'detect',
+		},
 	},
-
 };
