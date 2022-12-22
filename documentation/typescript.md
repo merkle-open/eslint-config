@@ -1133,11 +1133,11 @@ import eslint from 'eslint';
 // Good
 (() => {
 	interface IFoo {
-		bar: number;
 		(): void;
+		bar: number;
 	}
 
-	function foo(bar: { baz: number;(): string }): string {
+	function foo(bar: { (): string; baz: number }): string {
 		return bar();
 	}
 
