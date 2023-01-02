@@ -1,20 +1,20 @@
 # ESLint config
 
 [![Build Status](https://github.com/merkle-open/eslint-config/workflows/ci/badge.svg)](https://github.com/merkle-open/eslint-config/actions)
-[![npm](https://img.shields.io/npm/v/@namics/eslint-config.svg)](https://www.npmjs.com/package/@namics/eslint-config)
+[![npm](https://img.shields.io/npm/v/@merkle-open/eslint-config.svg)](https://www.npmjs.com/package/@merkle-open/eslint-config)
 [![Codestyle](https://img.shields.io/badge/codestyle-merkle-green.svg)](https://github.com/merkle-open/eslint-config)
 
 ## Installation
 
 ```bash
-$ npm install --save-dev eslint eslint-plugin-import @namics/eslint-config
+$ npm install --save-dev eslint eslint-plugin-import @merkle-open/eslint-config
 ```
 
 ## Usage Typescript (recommended)
 
-- `@namics/eslint-config/configurations/typescript-browser` - typescript + browser
-- `@namics/eslint-config/configurations/typescript-react` - typescript + react
-- `@namics/eslint-config/configurations/typescript-node` - typescript + node
+- `@merkle-open/eslint-config/configurations/typescript-browser` - typescript + browser
+- `@merkle-open/eslint-config/configurations/typescript-react` - typescript + react
+- `@merkle-open/eslint-config/configurations/typescript-node` - typescript + node
 
 _package.json_
 
@@ -41,21 +41,21 @@ You need to update the eslint.validate setting to:
 
 ## Usage ES8 (ES2017)
 
-- `@namics/eslint-config/configurations/es8-browser` - ES8 + browser
-- `@namics/eslint-config/configurations/es8-react` - ES8 + react
-- `@namics/eslint-config/configurations/es8-node` - ES8 + node
+- `@merkle-open/eslint-config/configurations/es8-browser` - ES8 + browser
+- `@merkle-open/eslint-config/configurations/es8-react` - ES8 + react
+- `@merkle-open/eslint-config/configurations/es8-node` - ES8 + node
 
 ## Usage ES7 (ES2016)
 
-- `@namics/eslint-config/configurations/es7-browser` - ES7 + browser (deprecated)
-- `@namics/eslint-config/configurations/es7-react` - ES7 + react (deprecated)
-- `@namics/eslint-config/configurations/es7-node` - ES7 + node
+- `@merkle-open/eslint-config/configurations/es7-browser` - ES7 + browser (deprecated)
+- `@merkle-open/eslint-config/configurations/es7-react` - ES7 + react (deprecated)
+- `@merkle-open/eslint-config/configurations/es7-node` - ES7 + node
 
 ## Usage ES6 (ES2015) - deprecated
 
-- `@namics/eslint-config/configurations/es6-browser` - ES6 + browser (deprecated)
-- `@namics/eslint-config/configurations/es6-react` - ES6 + react (deprecated)
-- `@namics/eslint-config/configurations/es6-node` - ES6 + node (deprecated)
+- `@merkle-open/eslint-config/configurations/es6-browser` - ES6 + browser (deprecated)
+- `@merkle-open/eslint-config/configurations/es6-react` - ES6 + react (deprecated)
+- `@merkle-open/eslint-config/configurations/es6-node` - ES6 + node (deprecated)
 
 ## Usage with Prettier
 
@@ -65,7 +65,7 @@ You need to update the eslint.validate setting to:
 
 ```
 module.exports = {
-  extends: require.resolve('@namics/eslint-config/configurations/es8-browser.js'),
+  extends: require.resolve('@merkle-open/eslint-config/configurations/es8-browser.js'),
 };
 ```
 

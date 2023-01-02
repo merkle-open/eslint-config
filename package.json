@@ -1,7 +1,7 @@
 {
-  "name": "@namics/eslint-config",
+  "name": "@merkle-open/eslint-config",
   "description": "Default configurations for eslint",
-  "version": "10.0.0",
+  "version": "1.0.0",
   "repository": "https://github.com/merkle-open/eslint-config.git",
   "license": "MIT",
   "author": "Merkle Inc.",
@@ -47,8 +47,8 @@
     "typescript"
   ],
   "devDependencies": {
-    "@namics/prettier-config": "3.0.1",
-    "@namics/ts-config": "2.0.1",
+    "@merkle-open/prettier-config": "1.0.0",
+    "@merkle-open/ts-config": "1.0.0",
     "acorn": "8.8.1",
     "eslint": "7.32.0",
     "eslint-plugin-import": "2.26.0",
@@ -65,8 +65,8 @@
   },
   "dependencies": {
     "@types/react": "18.0.26",
-    "@typescript-eslint/eslint-plugin": "5.47.0",
-    "@typescript-eslint/parser": "5.47.0",
+    "@typescript-eslint/eslint-plugin": "5.47.1",
+    "@typescript-eslint/parser": "5.47.1",
     "babel-eslint": "10.1.0",
     "eslint-plugin-jsx-a11y": "6.6.1",
     "eslint-plugin-react": "7.31.11",
