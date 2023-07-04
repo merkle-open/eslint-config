@@ -30,7 +30,7 @@
     "prettier:typescript": "prettier --config \".prettierrc.unstyled.js\" --write \"test/typescript-disable-styles/**/*.ts\"",
     "prettier:typescriptreact": "prettier --config \".prettierrc.unstyled.js\" --write \"test/typescript-react-disable-styles/**/*.tsx\"",
     "start": "npm-run-all test prettier",
-    "update-dependencies": "npm-check-updates -u -x node-fetch"
+    "update-dependencies": "npm-check-updates -u -x node-fetch --deprecated"
   },
   "keywords": [
     "code checker",
@@ -47,29 +47,29 @@
     "typescript"
   ],
   "devDependencies": {
-    "@merkle-open/prettier-config": "1.0.0",
-    "@merkle-open/ts-config": "1.0.0",
-    "acorn": "8.8.1",
+    "@merkle-open/prettier-config": "1.1.0",
+    "@merkle-open/ts-config": "1.1.0",
+    "acorn": "8.9.0",
     "eslint": "7.32.0",
-    "eslint-plugin-import": "2.26.0",
-    "node-fetch": "2.6.7",
-    "npm-check-updates": "16.6.2",
+    "eslint-plugin-import": "2.27.5",
+    "node-fetch": "2.6.12",
+    "npm-check-updates": "16.10.13",
     "npm-run-all": "4.1.5",
-    "prettier": "2.8.1",
+    "prettier": "2.8.8",
     "react": "18.2.0",
-    "typescript": "4.9.4"
+    "typescript": "5.1.6"
   },
   "peerDependencies": {
     "eslint": ">=6 <8",
     "eslint-plugin-import": ">=2"
   },
   "dependencies": {
-    "@types/react": "18.0.26",
-    "@typescript-eslint/eslint-plugin": "5.47.1",
-    "@typescript-eslint/parser": "5.47.1",
+    "@types/react": "18.2.14",
+    "@typescript-eslint/eslint-plugin": "5.61.0",
+    "@typescript-eslint/parser": "5.61.0",
     "babel-eslint": "10.1.0",
-    "eslint-plugin-jsx-a11y": "6.6.1",
-    "eslint-plugin-react": "7.31.11",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-react": "7.32.2",
     "eslint-plugin-react-hooks": "4.6.0"
   }
 }
