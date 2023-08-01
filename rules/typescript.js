@@ -37,7 +37,6 @@ module.exports = {
 		...replaceRule('lines-between-class-members', styles),
 		...replaceRule('no-array-constructor', styles),
 		...replaceRule('no-dupe-class-members', es6),
-		...replaceRule('no-duplicate-imports', es6),
 		...replaceRule('no-empty-function', bestPractices),
 		...replaceRule('no-extra-parens', errors),
 		...replaceRule('no-extra-semi', errors),
@@ -183,10 +182,6 @@ module.exports = {
 		// Disallows non-null assertions using the ! postfix operator (no-non-null-assertion)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-non-null-assertion.md
 		'@typescript-eslint/no-non-null-assertion': 2,
-
-		// Disallow the use of parameter properties in class constructors. (no-parameter-properties)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-parameter-properties.md
-		'@typescript-eslint/no-parameter-properties': 2,
 
 		// Disallows invocation of require() (no-require-imports)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-require-imports.md
