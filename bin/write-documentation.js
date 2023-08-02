@@ -21,16 +21,16 @@ var data;
 function getESLintUrl(name, groupName) {
 	switch (groupName) {
 		case 'imports':
-			return 'https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/' + name + '.md';
+			return 'https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/' + name + '.md';
 		case 'react':
-			return 'https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/' + name + '.md';
+			return 'https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/' + name + '.md';
 		case 'react-a11y':
-			return 'https://github.com/evcohen/eslint-plugin-jsx-a11y/blob/master/docs/rules/' + name + '.md';
+			return 'https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/' + name + '.md';
 		case 'react-hooks':
 			return 'https://reactjs.org/docs/hooks-rules.html';
 		case 'typescript':
 			return (
-				'https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/' +
+				'https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/' +
 				name.replace(/.ts$/, '') +
 				'.md'
 			);

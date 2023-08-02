@@ -2,7 +2,7 @@
 ## React
 
 
-### [Display name](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/display-name.md)
+### [Display name](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/display-name.md)
 
 > Prevent missing displayName in a React component definition
 
@@ -25,7 +25,7 @@ const Hello = React.createClass({
 
 
 
-### [Forbid prop types](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md)
+### [Forbid prop types](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md)
 
 > Forbid certain propTypes (any, array, object)
 
@@ -36,7 +36,7 @@ const Hello = React.createClass({
 
 
 
-### [Jsx boolean value](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md)
+### [Jsx boolean value](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md)
 
 > Enforce boolean attributes notation in JSX
 
@@ -58,7 +58,7 @@ const Hello = <Hello personal />;
 
 
 
-### [Jsx closing bracket location](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md)
+### [Jsx closing bracket location](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md)
 
 > Validate closing bracket location in JSX
 
@@ -90,7 +90,7 @@ const Hello = <Hello personal />;
 
 
 
-### [Jsx curly spacing](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md)
+### [Jsx curly spacing](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md)
 
 > Enforce or disallow spaces inside of curly braces in JSX attributes
 
@@ -119,7 +119,7 @@ const Hello = <Hello personal />;
 
 
 
-### [Jsx equals spacing](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-equals-spacing.md)
+### [Jsx equals spacing](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-equals-spacing.md)
 
 > enforce spacing around jsx equals signs
 
@@ -145,7 +145,7 @@ const Hello = <Hello personal />;
 
 
 
-### [Jsx first prop new line](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md)
+### [Jsx first prop new line](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md)
 
 > Require that the first prop in a JSX element be on a new line when the element is multiline
 
@@ -171,7 +171,7 @@ const Hello = <Hello personal />;
 
 
 
-### [Jsx handler names](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md)
+### [Jsx handler names](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md)
 
 > Enforce event handler naming conventions in JSX
 
@@ -195,7 +195,7 @@ const Hello = <Hello personal />;
 
 
 
-### [Jsx indent props](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md)
+### [Jsx indent props](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md)
 
 > Validate props indentation in JSX
 
@@ -227,7 +227,7 @@ firstName="John"
 
 
 
-### [Jsx indent](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md)
+### [Jsx indent](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md)
 
 > enforce JSX indentation
 
@@ -260,7 +260,7 @@ firstName="John"
 
 
 
-### [Jsx key](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-key.md)
+### [Jsx key](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-key.md)
 
 > Validate JSX has key prop when in array or iterator
 
@@ -284,7 +284,7 @@ out.map((x, i) => <Hello key={i}>x</Hello>);
 
 
 
-### [Jsx max props per line](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md)
+### [Jsx max props per line](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md)
 
 > Limit maximum of props on a single line in JSX
 
@@ -311,7 +311,7 @@ out.map((x, i) => <Hello key={i}>x</Hello>);
 
 
 
-### [Jsx no bind](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md)
+### [Jsx no bind](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md)
 
 > Prevent usage of .bind() in JSX props
 
@@ -333,7 +333,7 @@ out.map((x, i) => <Hello key={i}>x</Hello>);
 
 
 
-### [Jsx no duplicate props](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md)
+### [Jsx no duplicate props](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md)
 
 > Prevent duplicate props in JSX
 
@@ -355,7 +355,7 @@ out.map((x, i) => <Hello key={i}>x</Hello>);
 
 
 
-### [Jsx no literals](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md)
+### [Jsx no literals](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md)
 
 > Prevent usage of unwrapped JSX strings
 
@@ -375,7 +375,7 @@ const B = <div>{test}</div>;
 
 
 
-### [Jsx no target blank](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md)
+### [Jsx no target blank](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md)
 
 > disallow target="_blank" on links
 
@@ -392,7 +392,7 @@ const Hello = <a target="_blank"></a>;
 
 
 
-### [Jsx no undef](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md)
+### [Jsx no undef](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md)
 
 > Disallow undeclared variables in JSX
 
@@ -415,7 +415,7 @@ const Hello2 = require('./Hello');
 
 
 
-### [Jsx pascal case](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md)
+### [Jsx pascal case](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md)
 
 > Enforce PascalCase for user-defined JSX components
 
@@ -438,7 +438,7 @@ const Hello2 = require('./Hello');
 
 
 
-### [Jsx quotes](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-quotes.md)
+### [Jsx quotes](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-quotes.md)
 
 > specify whether double or single quotes should be used in JSX attributes
 
@@ -449,7 +449,7 @@ const Hello2 = require('./Hello');
 
 
 
-### [Jsx sort props](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md)
+### [Jsx sort props](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md)
 
 > Enforce props alphabetical sorting
 
@@ -485,7 +485,7 @@ const Hello2 = require('./Hello');
 
 
 
-### [Jsx tag spacing](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md)
+### [Jsx tag spacing](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md)
 
 > Enforce spaces before the closing bracket of self-closing JSX elements
 
@@ -509,7 +509,7 @@ const Hello2 = require('./Hello');
 
 
 
-### [Jsx uses react](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md)
+### [Jsx uses react](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md)
 
 > Prevent React to be incorrectly marked as unused
 
@@ -525,7 +525,7 @@ const React = require('react');
 
 
 
-### [Jsx uses vars](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md)
+### [Jsx uses vars](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md)
 
 > Prevent variables used in JSX to be incorrectly marked as unused
 
@@ -536,7 +536,7 @@ const React = require('react');
 
 
 
-### [No danger](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-danger.md)
+### [No danger](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-danger.md)
 
 > Prevent usage of dangerous JSX properties
 
@@ -552,7 +552,7 @@ const Hello = (<div dangerouslySetInnerHTML={{ __html: 'Hello World' }}></div>);
 
 
 
-### [No deprecated](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md)
+### [No deprecated](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md)
 
 > Prevent usage of deprecated methods
 
@@ -575,7 +575,7 @@ React.renderToStaticMarkup(<MyComponent />);
 
 
 
-### [No did mount set state](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-mount-set-state.md)
+### [No did mount set state](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-did-mount-set-state.md)
 
 > Prevent usage of setState in componentDidMount
 
@@ -616,7 +616,7 @@ class Hello extends Component {
 
 
 
-### [No did update set state](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-update-set-state.md)
+### [No did update set state](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-did-update-set-state.md)
 
 > Prevent usage of setState in componentDidUpdate
 
@@ -644,7 +644,7 @@ const Hello = React.createClass({
 
 
 
-### [No direct mutation state](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md)
+### [No direct mutation state](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md)
 
 > Prevent direct mutation of this.state
 
@@ -692,7 +692,7 @@ class Hello extends Component {
 
 
 
-### [No is mounted](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md)
+### [No is mounted](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md)
 
 > Prevent usage of isMounted
 
@@ -720,7 +720,7 @@ const Hello = React.createClass({
 
 
 
-### [No multi comp](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md)
+### [No multi comp](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md)
 
 > Prevent multiple component definition per file
 
@@ -749,7 +749,7 @@ const HelloJohn = React.createClass({
 
 
 
-### [No set state](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-set-state.md)
+### [No set state](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-set-state.md)
 
 > Prevent usage of setState
 
@@ -760,7 +760,7 @@ const HelloJohn = React.createClass({
 
 
 
-### [No string refs](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md)
+### [No string refs](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md)
 
 > Prevent using string references
 
@@ -771,7 +771,7 @@ const HelloJohn = React.createClass({
 
 
 
-### [No unknown property](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md)
+### [No unknown property](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md)
 
 > Prevent usage of unknown DOM property
 
@@ -793,7 +793,7 @@ const Hello = <div className="hello">Hello World</div>;
 
 
 
-### [Prefer es6 class](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md)
+### [Prefer es6 class](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md)
 
 > Require ES6 class declarations over React.createClass
 
@@ -823,7 +823,7 @@ class Hello extends React.Component {
 
 
 
-### [Prefer stateless function](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md)
+### [Prefer stateless function](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md)
 
 > Require stateless functions when not using lifecycle methods, setState or ref
 
@@ -854,7 +854,7 @@ const Foo = function (props) {
 
 
 
-### [Prop types](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/prop-types.md)
+### [Prop types](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prop-types.md)
 
 > Prevent missing props validation in a React component definition
 
@@ -887,7 +887,7 @@ Hello.propTypes = {
 
 
 
-### [React in jsx scope](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md)
+### [React in jsx scope](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md)
 
 > Prevent missing React when using JSX
 
@@ -904,7 +904,7 @@ const React = require('react');
 
 
 
-### [Require extension](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-extension.md)
+### [Require extension](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/require-extension.md)
 
 > Restrict file extensions that may be required
 
@@ -915,7 +915,7 @@ const React = require('react');
 
 
 
-### [Require render return](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/require-render-return.md)
+### [Require render return](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/require-render-return.md)
 
 > Require render() methods to return something
 
@@ -945,7 +945,7 @@ class Hello extends React.Component {
 
 
 
-### [Self closing comp](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md)
+### [Self closing comp](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md)
 
 > Prevent extra closing tags for components without children
 
@@ -967,7 +967,7 @@ const HelloJohn = <Hello name="John" />;
 
 
 
-### [Sort comp](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-comp.md)
+### [Sort comp](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/sort-comp.md)
 
 > Enforce component methods order
 
@@ -1014,7 +1014,7 @@ class Hello extends React.Component {
 
 
 
-### [Sort prop types](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md)
+### [Sort prop types](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md)
 
 > Enforce propTypes declarations alphabetical sorting
 
@@ -1045,7 +1045,7 @@ Test2.propTypes = {
 
 
 
-### [Wrap multilines](https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md)
+### [Wrap multilines](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md)
 
 > Prevent missing parentheses around multilines JSX
 

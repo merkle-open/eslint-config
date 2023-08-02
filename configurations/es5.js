@@ -1,5 +1,5 @@
 module.exports = {
-	parser: 'babel-eslint',
+	parser: '@babel/eslint-parser',
 	extends: [
 		'../rules/es6-disable.js',
 		'../rules/node-disable.js',
@@ -10,6 +10,7 @@ module.exports = {
 	].map(require.resolve),
 	env: {},
 	parserOptions: {
+		requireConfigFile: false,
 		ecmaVersion: 5,
 		sourceType: 'module',
 	},

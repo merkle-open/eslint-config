@@ -1,5 +1,5 @@
 module.exports = {
-	parser: 'babel-eslint',
+	parser: '@babel/eslint-parser',
 	plugins: ['jsx-a11y', 'react', 'react-hooks'],
 	extends: ['./es7.js', '../rules/react.js', '../rules/react-a11y.js', '../rules/react-hooks.js'].map(
 		require.resolve
@@ -20,6 +20,9 @@ module.exports = {
 		sourceType: 'module',
 		ecmaFeatures: {
 			jsx: true,
+		},
+		babelOptions: {
+			presets: ['@babel/preset-react'],
 		},
 	},
 	settings: {
