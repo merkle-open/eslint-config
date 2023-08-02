@@ -2,7 +2,7 @@
 ## Imports
 
 
-### [Default](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/default.md)
+### [Default](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/default.md)
 
 > ensure default import coupled with default export
 
@@ -13,7 +13,7 @@
 
 
 
-### [Export](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/export.md)
+### [Export](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/export.md)
 
 > disallow invalid exports, e.g. multiple defaults
 
@@ -24,7 +24,7 @@
 
 
 
-### [Extensions](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md)
+### [Extensions](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/extensions.md)
 
 > Ensure consistent use of file extension within the import path
 
@@ -35,7 +35,7 @@
 
 
 
-### [Imports first](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/imports-first.md)
+### [Imports first](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/imports-first.md)
 
 > disallow non-import statements appearing before import statements
 
@@ -61,7 +61,7 @@ initWith(foo);
 
 
 
-### [Named](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md)
+### [Named](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/named.md)
 
 > ensure named imports coupled with named exports
 
@@ -72,7 +72,7 @@ initWith(foo);
 
 
 
-### [Namespace](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/namespace.md)
+### [Namespace](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/namespace.md)
 
 > enforces names exist at the time they are dereferenced, when imported as a full namespace
 
@@ -83,7 +83,7 @@ initWith(foo);
 
 
 
-### [Newline after import](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md)
+### [Newline after import](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/newline-after-import.md)
 
 > Require a newline after the last import/require in a group
 
@@ -94,7 +94,7 @@ initWith(foo);
 
 
 
-### [No amd](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-amd.md)
+### [No amd](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/no-amd.md)
 
 > disallow AMD require/define
 
@@ -105,7 +105,7 @@ initWith(foo);
 
 
 
-### [No commonjs](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-commonjs.md)
+### [No commonjs](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/no-commonjs.md)
 
 > disallow require()
 
@@ -116,7 +116,7 @@ initWith(foo);
 
 
 
-### [No deprecated](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-deprecated.md)
+### [No deprecated](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/no-deprecated.md)
 
 > disallow use of jsdoc-marked-deprecated imports
 
@@ -127,7 +127,7 @@ initWith(foo);
 
 
 
-### [No duplicates](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md)
+### [No duplicates](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/no-duplicates.md)
 
 > disallow duplicate imports
 
@@ -149,7 +149,7 @@ import { something } from './mod.js';
 
 
 
-### [No extraneous dependencies](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md)
+### [No extraneous dependencies](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/no-extraneous-dependencies.md)
 
 > Forbid the use of extraneous packages
 
@@ -160,7 +160,7 @@ import { something } from './mod.js';
 
 
 
-### [No mutable exports](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-mutable-exports.md)
+### [No mutable exports](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/no-mutable-exports.md)
 
 > Forbid mutable exports
 
@@ -181,7 +181,7 @@ export { count };
 
 
 
-### [No named as default member](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default-member.md)
+### [No named as default member](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/no-named-as-default-member.md)
 
 > warn on accessing default export property names that are also named exports
 
@@ -192,7 +192,7 @@ export { count };
 
 
 
-### [No named as default](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md)
+### [No named as default](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/no-named-as-default.md)
 
 > do not allow a default import name to match a named export
 
@@ -203,7 +203,7 @@ export { count };
 
 
 
-### [No namespace](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-namespace.md)
+### [No namespace](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/no-namespace.md)
 
 > disallow namespace imports
 
@@ -214,7 +214,7 @@ export { count };
 
 
 
-### [No nodejs modules](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-nodejs-modules.md)
+### [No nodejs modules](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/no-nodejs-modules.md)
 
 > No Node.js builtin modules
 
@@ -225,7 +225,7 @@ export { count };
 
 
 
-### [No unresolved](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md)
+### [No unresolved](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/no-unresolved.md)
 
 > ensure imports point to files/modules that can be resolved
 
@@ -236,7 +236,7 @@ export { count };
 
 
 
-### [Order](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md)
+### [Order](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/order.md)
 
 > Enforce a convention in module import order
 
@@ -247,7 +247,7 @@ export { count };
 
 
 
-### [Prefer default export](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/prefer-default-export.md)
+### [Prefer default export](https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/prefer-default-export.md)
 
 > Require modules with a single export to use a default export
 
