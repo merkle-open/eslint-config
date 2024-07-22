@@ -2,7 +2,10 @@
   "name": "@merkle-open/eslint-config",
   "description": "Default configurations for eslint",
   "version": "4.0.0",
-  "repository": "https://github.com/merkle-open/eslint-config.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/merkle-open/eslint-config.git"
+  },
   "license": "MIT",
   "author": "Merkle Inc.",
   "private": false,
