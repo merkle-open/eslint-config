@@ -50,17 +50,17 @@
     "typescript"
   ],
   "devDependencies": {
-    "@merkle-open/prettier-config": "1.2.0",
-    "@merkle-open/ts-config": "1.1.0",
-    "acorn": "8.12.1",
+    "@merkle-open/prettier-config": "1.2.1",
+    "@merkle-open/ts-config": "1.1.1",
+    "acorn": "8.15.0",
     "eslint": "8.57.0",
-    "eslint-plugin-import": "2.29.1",
+    "eslint-plugin-import": "2.32.0",
     "node-fetch": "2.7.0",
-    "npm-check-updates": "16.14.20",
+    "npm-check-updates": "19.0.0",
     "npm-run-all": "4.1.5",
-    "prettier": "3.3.3",
+    "prettier": "3.6.2",
     "react": "18.3.1",
-    "typescript": "5.5.3"
+    "typescript": "5.9.3"
   },
   "peerDependencies": {
     "eslint": "^8.0.0",
@@ -70,11 +70,11 @@
     "@types/react": "18.3.3",
     "@typescript-eslint/eslint-plugin": "7.16.1",
     "@typescript-eslint/parser": "7.16.1",
-    "@babel/core": "7.24.9",
-    "@babel/eslint-parser": "7.24.8",
-    "@babel/preset-react": "7.24.7",
-    "eslint-plugin-jsx-a11y": "6.9.0",
-    "eslint-plugin-react": "7.35.0",
+    "@babel/core": "7.28.4",
+    "@babel/eslint-parser": "7.28.4",
+    "@babel/preset-react": "7.27.1",
+    "eslint-plugin-jsx-a11y": "6.10.2",
+    "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "4.6.2"
   }
 }
