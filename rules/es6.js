@@ -1,6 +1,5 @@
 /* [18.07.2016] approved by skill group core team */
-module.exports = {
-	rules: {
+export default {
 		// enforces no braces where they can be omitted
 		// http://eslint.org/docs/rules/arrow-body-style
 		'arrow-body-style': 0,
@@ -136,5 +135,4 @@ module.exports = {
 		// enforce spacing around the * in yield* expressions
 		// http://eslint.org/docs/rules/yield-star-spacing
 		'yield-star-spacing': [2, 'after'],
-	},
-};
+	};
