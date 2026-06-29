@@ -14,7 +14,6 @@ const replaceRule = (name, ruleSet, fallback) => {
 
 /* [12.04.2019] add typescript support */
 export default {
-		'require-jsdoc': 0,
 		camelcase: 0,
 		'no-unused-vars': 0,
 		'no-use-before-define': 0,

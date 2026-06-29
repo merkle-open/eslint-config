@@ -132,7 +132,6 @@ export default {
 		'no-multi-str': 2,
 
 		// disallow reassignments of native objects
-		'no-native-reassign': 2,
 		// [08.07.2016] enabled
 
 		// disallow use of new operator when not part of the assignment or comparison
