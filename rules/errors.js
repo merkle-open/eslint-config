@@ -68,9 +68,6 @@ export default {
 		// disallow irregular whitespace outside of strings and comments
 		'no-irregular-whitespace': 2,
 
-		// disallow negation of the left operand of an in expression
-		'no-negated-in-lhs': 2,
-
 		// disallow the use of object properties of the global object (Math and JSON) as functions
 		'no-obj-calls': 2,
 
@@ -96,32 +93,6 @@ export default {
 
 		// disallow comparisons with the value NaN
 		'use-isnan': 2,
-
-		// ensure JSDoc comments are valid
-		// http://eslint.org/docs/rules/valid-jsdoc
-		'valid-jsdoc': [
-			2,
-			{
-				prefer: {
-					arg: 'param',
-					argument: 'param',
-					params: 'param',
-					class: 'constructor',
-					return: 'returns',
-					virtual: 'abstract',
-				},
-				preferType: {
-					Boolean: 'boolean',
-					Number: 'number',
-					object: 'Object',
-					String: 'string',
-					array: 'Array',
-					xml: 'XML',
-				},
-				requireReturnDescription: true,
-				requireParamDescription: true,
-			},
-		],
 
 		// ensure that the results of typeof are compared against a valid string
 		'valid-typeof': 2,
