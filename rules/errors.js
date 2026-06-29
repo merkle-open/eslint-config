@@ -1,6 +1,5 @@
 /* [13.07.2016] approved by skill group core team */
-module.exports = {
-	rules: {
+export default {
 		// require trailing commas in multiline object literals
 		'comma-dangle': [2, 'always-multiline'],
 		// [13.07.2016] enabled
@@ -126,5 +125,4 @@ module.exports = {
 
 		// ensure that the results of typeof are compared against a valid string
 		'valid-typeof': 2,
-	},
-};
+	};

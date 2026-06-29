@@ -13,8 +13,7 @@ const replaceRule = (name, ruleSet, fallback) => {
 };
 
 /* [12.04.2019] add typescript support */
-module.exports = {
-	rules: {
+export default {
 		'require-jsdoc': 0,
 		camelcase: 0,
 		'no-unused-vars': 0,
@@ -251,5 +250,4 @@ module.exports = {
 		// Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter.
 		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/unified-signatures.md
 		'@typescript-eslint/unified-signatures': 2,
-	},
-};
+	};

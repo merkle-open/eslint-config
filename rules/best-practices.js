@@ -1,6 +1,5 @@
 /* [08.07.2016] approved by skill group core team */
-module.exports = {
-	rules: {
+export default {
 		// enforces getter/setter pairs in objects
 		'accessor-pairs': 0,
 
@@ -228,5 +227,4 @@ module.exports = {
 
 		// require or disallow Yoda conditions
 		'yoda': 2,
-	},
-};
+	};

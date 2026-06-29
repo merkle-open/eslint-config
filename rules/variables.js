@@ -1,6 +1,5 @@
 /* [13.07.2016] approved by skill group core team */
-module.exports = {
-	rules: {
+export default {
 		// enforce or disallow variable initializations at definition
 		'init-declarations': 0,
 
@@ -36,5 +35,4 @@ module.exports = {
 
 		// disallow use of variables before they are defined
 		'no-use-before-define': 2,
-	},
-};
+	};
