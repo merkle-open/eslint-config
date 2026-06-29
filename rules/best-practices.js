@@ -226,4 +226,7 @@ export default {
 
 		// require or disallow Yoda conditions
 		'yoda': 2,
+
+		// babel inserts `'use strict';` for us
+		'strict': [2, 'never'],
 	};
