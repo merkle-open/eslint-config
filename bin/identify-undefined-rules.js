@@ -1,8 +1,8 @@
+import path from 'path';
+import { promises as fs } from 'fs';
+import fetch from 'node-fetch';
+
 /* eslint-disable no-console */
-const path = require('path');
-const fs = require('fs').promises;
-// eslint-disable-next-line no-redeclare
-const fetch = require('node-fetch');
 
 const appendPrefix = (prefix) => (val) => `${prefix}${val}`;
 const ruleNotDefined = (ruleSet) => (val) => Boolean(!ruleSet[val]);
@@ -16,8 +16,8 @@ const prettyPrint = (val) => `- ${val}`;
  */
 async function identifyUndefinedRules(pathRules, url, prefix) {
 	const cwd = await fs.realpath(process.cwd());
-	// eslint-disable-next-line global-require
-	const rulesFile = await require(path.join(cwd, pathRules));
+	// Import rule file
+	const { default: rulesFile } = await import(path.join(cwd, pathRules));
 	const checkForRules = [];
 	const checkForFile = await (await fetch(url)).text();
 
@@ -29,7 +29,7 @@ async function identifyUndefinedRules(pathRules, url, prefix) {
 		checkForRules.push(appendPrefix(prefix)(arr[1]));
 	}
 
-	const missingRules = checkForRules.filter(ruleNotDefined(rulesFile.rules));
+	const missingRules = checkForRules.filter(ruleNotDefined(rulesFile));
 
 	if (missingRules.length <= 0) {
 		console.log('All rules are defined');
