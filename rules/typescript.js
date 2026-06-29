@@ -1,14 +1,14 @@
 /* eslint-disable */
-const styles = require('./style');
-const variables = require('./variables');
-const errors = require('./errors');
-const bestPractices = require('./best-practices');
-const es6 = require('./es6');
+import styles from './style.js';
+import variables from './variables.js';
+import errors from './errors.js';
+import bestPractices from './best-practices.js';
+import es2025 from './es2025.js';
 
 const replaceRule = (name, ruleSet, fallback) => {
 	return {
 		[name]: 0,
-		[`@typescript-eslint/${name}`]: ruleSet.rules[name] || fallback || 0,
+		[`@typescript-eslint/${name}`]: ruleSet[name] || fallback || 0,
 	};
 };
 
@@ -34,7 +34,7 @@ export default {
 		...replaceRule('keyword-spacing', styles),
 		...replaceRule('lines-between-class-members', styles),
 		...replaceRule('no-array-constructor', styles),
-		...replaceRule('no-dupe-class-members', es6),
+		...replaceRule('no-dupe-class-members', es2025),
 		...replaceRule('no-empty-function', bestPractices),
 		...replaceRule('no-extra-parens', errors),
 		...replaceRule('no-extra-semi', errors),
@@ -49,7 +49,7 @@ export default {
 		...replaceRule('no-unused-expressions', bestPractices),
 		...replaceRule('no-unused-vars', variables),
 		...replaceRule('no-use-before-define', variables),
-		...replaceRule('no-useless-constructor', es6),
+		...replaceRule('no-useless-constructor', es2025),
 		...replaceRule('quotes', styles),
 		...replaceRule('require-await', styles),
 		...replaceRule('return-await', styles),
@@ -64,10 +64,6 @@ export default {
 		// Requires using either T[] or Array<T> for arrays (array-type)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/array-type.md
 		'@typescript-eslint/array-type': 2,
-
-		// Enforces that types will not to be used (ban-types)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/ban-types.md
-		'@typescript-eslint/ban-types': 2,
 
 		// Bans // @ts-<directive> comments from being used or requires descriptions after directive (ban-ts-comment)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/ban-ts-comment.md
@@ -149,10 +145,6 @@ export default {
 		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-array-constructor.md
 		'@typescript-eslint/no-array-constructor': 2,
 
-		// Disallow the declaration of empty interfaces (no-empty-interface)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-empty-interface.md
-		'@typescript-eslint/no-empty-interface': 2,
-
 		// Disallow usage of the any type (no-explicit-any)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-explicit-any.md
 		'@typescript-eslint/no-explicit-any': 0,
@@ -194,10 +186,6 @@ export default {
 		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/triple-slash-reference.md
 		'@typescript-eslint/triple-slash-reference': [2, { path: 'always', types: 'prefer-import', lib: 'always' }],
 
-		// Disallow the use of type aliases (no-type-alias)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-type-alias.md
-		'@typescript-eslint/no-type-alias': 0,
-
 		// Warns when a namespace qualifier is unnecessary. (no-unnecessary-qualifier)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-unnecessary-qualifier.md
 		'@typescript-eslint/no-unnecessary-qualifier': 2,
@@ -217,10 +205,6 @@ export default {
 		// Disallow unnecessary constructors
 		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-useless-constructor.md
 		'@typescript-eslint/no-useless-constructor': 2,
-
-		// Disallows the use of require statements except in import statements (no-var-requires)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-var-requires.md
-		'@typescript-eslint/no-var-requires': 2,
 
 		// Use for-of loops instead of standard for loops over arrays (prefer-for-of)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/prefer-for-of.md
