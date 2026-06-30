@@ -1,6 +1,5 @@
 /* not yet approved by skill group core team */
-module.exports = {
-	rules: {
+export default {
 		// specify curly brace conventions for all control statements
 		'curly': 0,
 
@@ -23,5 +22,4 @@ module.exports = {
 		// require immediate function invocation to be wrapped in parentheses
 		// http://eslint.org/docs/rules/wrap-iife.html
 		'wrap-iife': 0,
-	},
 };
