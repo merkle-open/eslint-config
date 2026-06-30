@@ -113,7 +113,7 @@ export default {
 
 		// Prevent React to be incorrectly marked as unused
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
-		'react/jsx-uses-react': 2,
+		'react/jsx-uses-react': 'off',  // Not needed with React 17+ JSX transform
 
 		// Prevent variables used in JSX to be incorrectly marked as unused
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
@@ -174,7 +174,7 @@ export default {
 
 		// Prevent missing React when using JSX
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
-		'react/react-in-jsx-scope': 2,
+		'react/react-in-jsx-scope': 'off',  // Not needed with React 17+ JSX transform
 
 		// Restrict file extensions that may be required
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/require-extension.md
