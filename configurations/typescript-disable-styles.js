@@ -1,12 +1,20 @@
-module.exports = {
-	extends: [
-		'../rules/best-practices-disable-styles.js',
-		'../rules/errors-disable-styles.js',
-		'../rules/style-disable-styles.js',
-		'../rules/variables-disable-styles.js',
-		'../rules/imports-disable-styles.js',
-		'../rules/es6-disable-styles.js',
-		'../rules/es8-disable-styles.js',
-		'../rules/typescript-disable-styles.js',
-	].map(require.resolve),
-};
+import { defineConfig } from "eslint/config";
+import bestPractices from "../disable-styles/best-practices.js";
+import errors from "../disable-styles/errors.js";
+import style from "../disable-styles/style.js";
+import es2025 from "../disable-styles/es2025.js";
+import imports from "../disable-styles/imports.js";
+import typescript from "../disable-styles/typescript.js";
+
+export default defineConfig([
+  {
+    rules: {
+      ...bestPractices,
+      ...errors,
+      ...style,
+      ...es2025,
+      ...imports,
+      ...typescript,
+    },
+  },
+]);

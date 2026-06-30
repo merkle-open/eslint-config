@@ -4,7 +4,6 @@ import errors from "../disable-styles/errors.js";
 import style from "../disable-styles/style.js";
 import es2025 from "../disable-styles/es2025.js";
 import imports from "../disable-styles/imports.js";
-import typescript from "../disable-styles/typescript.js";
 import react from "../disable-styles/react.js";
 
 export default defineConfig([
@@ -15,7 +14,6 @@ export default defineConfig([
       ...style,
       ...es2025,
       ...imports,
-      ...typescript,
       ...react,
     },
   },
