@@ -11,7 +11,7 @@
   "type": "module",
   "private": false,
   "engines": {
-    "node": "^20.19.0 || ^22.13.0 || >=24"
+    "node": ">=18.18.0"
   },
   "bugs": {
     "url": "https://github.com/merkle-open/eslint-config/issues"
