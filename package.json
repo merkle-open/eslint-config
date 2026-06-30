@@ -16,24 +16,29 @@
   "bugs": {
     "url": "https://github.com/merkle-open/eslint-config/issues"
   },
-  "main": "configurations/es8-browser.js",
+  "exports": {
+    ".": "./index.js",
+    "./typescript-browser": "./configurations/typescript-browser.js",
+    "./typescript-browser-disable-styles": "./configurations/typescript-browser-disable-styles.js",
+    "./typescript-node": "./configurations/typescript-node.js",
+    "./typescript-node-disable-styles": "./configurations/typescript-node-disable-styles.js",
+    "./typescript-react": "./configurations/typescript-react.js",
+    "./typescript-react-disable-styles": "./configurations/typescript-react-disable-styles.js",
+    "./es-browser": "./configurations/es-browser.js",
+    "./es-browser-disable-styles": "./configurations/es-browser-disable-styles.js",
+    "./es-node": "./configurations/es-node.js",
+    "./es-node-disable-styles": "./configurations/es-node-disable-styles.js",
+    "./es-react": "./configurations/es-react.js",
+    "./es-react-disable-styles": "./configurations/es-react-disable-styles.js"
+  },
   "scripts": {
     "clean": "npx -y rimraf package-lock.json node_modules",
-    "lint": "npm run lint:js",
-    "lint:js": "eslint .",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
     "test": "npm run lint",
     "docs": "node bin/write-documentation",
-    "prepublishOnly": "npx pkg-ok@2.3.1",
-    "prestart": "npx -y env-linter --versions --saveExact --dependenciesExactVersion",
-    "prettier": "npm-run-all prettier:*",
-    "prettier:es5": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es5-disable-styles/**/*.js\"",
-    "prettier:es5node": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es5-node-disable-styles/**/*.js\"",
-    "prettier:es6": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es6-disable-styles/**/*.js\"",
-    "prettier:es6react": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es6-react-disable-styles/**/*.js\"",
-    "prettier:es8": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es8-disable-styles/**/*.js\"",
-    "prettier:typescript": "prettier --config \".prettierrc.unstyled.js\" --write \"test/typescript-disable-styles/**/*.ts\"",
-    "prettier:typescriptreact": "prettier --config \".prettierrc.unstyled.js\" --write \"test/typescript-react-disable-styles/**/*.tsx\"",
-    "start": "npm-run-all test prettier",
+    "prepublishOnly": "npm run lint && npm run test",
     "update-dependencies": "npm-check-updates -u -x node-fetch --deprecated"
   },
   "keywords": [
@@ -57,7 +62,6 @@
     "eslint": "10.6.0",
     "node-fetch": "2.7.0",
     "npm-check-updates": "19.0.0",
-    "npm-run-all": "4.1.5",
     "prettier": "3.8.1",
     "react": "18.3.1",
     "typescript": "5.9.3"
