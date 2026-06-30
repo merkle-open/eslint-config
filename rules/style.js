@@ -1,6 +1,5 @@
 /* [11.07.2016] approved by skill group core team */
-module.exports = {
-	rules: {
+export default {
 		// enforce spacing inside array brackets
 		'array-bracket-spacing': [2, 'never'],
 
@@ -35,12 +34,6 @@ module.exports = {
 
 		// enforces use of function declarations or expressions
 		'func-style': 0,
-
-		// Blacklist certain identifiers to prevent them being used
-		// http://eslint.org/docs/rules/id-blacklist
-		'id-blacklist': [2, 'callback'],
-		// [08.07.2016] enabled
-		// [20.09.2016] removed data because needed in jquery ajax options
 
 		// this option enforces minimum and maximum identifier lengths
 		// (variable names, property names etc.)
@@ -159,9 +152,6 @@ module.exports = {
 		// disallow nested ternary expressions
 		'no-nested-ternary': 2,
 
-		// disallow use of the Object constructor
-		'no-new-object': 2,
-
 		// disallow use of unary operators, ++ and --
 		'no-plusplus': 0,
 
@@ -173,9 +163,6 @@ module.exports = {
 			'LabeledStatement',
 			'WithStatement',
 		],
-
-		// disallow space between function identifier and application
-		'no-spaced-func': 2,
 
 		// disallow the use of ternary operators
 		'no-ternary': 0,
@@ -240,21 +227,6 @@ module.exports = {
 		// specify whether double or single quotes should be used
 		'quotes': [2, 'single', { avoidEscape: true }],
 
-		// do not require jsdoc
-		// http://eslint.org/docs/rules/require-jsdoc
-		'require-jsdoc': [
-			2,
-			{
-				require: {
-					FunctionDeclaration: true,
-					MethodDefinition: true,
-					ClassDeclaration: true,
-					ArrowFunctionExpression: false,
-				},
-			},
-		],
-		// [08.07.2016] enabled
-
 		// require or disallow use of semicolons instead of ASI
 		'semi': [2, 'always'],
 
@@ -298,5 +270,4 @@ module.exports = {
 		// require regex literals to be wrapped in parentheses
 		'wrap-regex': 2,
 		// [11.07.2016] enabled
-	},
-};
+	};

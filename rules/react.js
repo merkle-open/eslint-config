@@ -1,8 +1,5 @@
 /* [22.07.2016] approved by skill group core team */
-module.exports = {
-	// View link below for react rules documentation
-	// https://github.com/jsx-eslint/eslint-plugin-react#list-of-supported-rules#list-of-supported-rules
-	rules: {
+export default {
 		// specify whether double or single quotes should be used in JSX attributes
 		// http://eslint.org/docs/rules/jsx-quotes
 		'jsx-quotes': [2, 'prefer-double'],
@@ -246,5 +243,4 @@ module.exports = {
 		// disallow target="_blank' on links
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md
 		'react/jsx-no-target-blank': 0,
-	},
-};
+	};

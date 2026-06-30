@@ -1,6 +1,5 @@
 /* [08.07.2016] approved by skill group core team */
-module.exports = {
-	rules: {
+export default {
 		// enforces getter/setter pairs in objects
 		'accessor-pairs': 0,
 
@@ -133,7 +132,6 @@ module.exports = {
 		'no-multi-str': 2,
 
 		// disallow reassignments of native objects
-		'no-native-reassign': 2,
 		// [08.07.2016] enabled
 
 		// disallow use of new operator when not part of the assignment or comparison
@@ -228,5 +226,7 @@ module.exports = {
 
 		// require or disallow Yoda conditions
 		'yoda': 2,
-	},
-};
+
+		// babel inserts `'use strict';` for us
+		'strict': [2, 'never'],
+	};
