@@ -1,5 +1,6 @@
 /* [18.07.2016] approved by skill group core team */
-export default {
+module.exports = {
+	rules: {
 		// enforce return after a callback
 		'callback-return': 0,
 
@@ -30,4 +31,5 @@ export default {
 
 		// disallow use of synchronous methods (off by default)
 		'no-sync': 0,
-	};
+	},
+};

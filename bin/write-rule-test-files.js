@@ -1,5 +1,3 @@
-import utils  from './utils';
-
 /* eslint "no-console": 0 */
 
 /*
@@ -9,6 +7,7 @@ import utils  from './utils';
 
 */
 
+var utils = require('./utils');
 var argv = process.argv;
 var filePath;
 var destPath;

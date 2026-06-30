@@ -1,9 +1,9 @@
-import fs  from 'fs';
-
+'use strict';
 /* eslint "no-console": 0 */
 
+var fs = require('fs');
 
-export default {
+module.exports = {
 	/**
 	 *
 	 * @method getStats

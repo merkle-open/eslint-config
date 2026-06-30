@@ -1,5 +1,6 @@
 /* [11.07.2016] approved by skill group core team */
-export default {
+module.exports = {
+	rules: {
 		// enforce spacing inside array brackets
 		'array-bracket-spacing': 0,
 
@@ -130,4 +131,5 @@ export default {
 
 		// require regex literals to be wrapped in parentheses
 		'wrap-regex': 0,
+	},
 };

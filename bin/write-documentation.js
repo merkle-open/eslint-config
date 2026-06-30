@@ -1,5 +1,3 @@
-import utils  from './utils';
-
 /* eslint "complexity": 0 */
 
 /*
@@ -9,6 +7,7 @@ import utils  from './utils';
 
 */
 
+var utils = require('./utils');
 var ig = ['.DS_Store', '.eslintrc'];
 var fileName;
 var data;

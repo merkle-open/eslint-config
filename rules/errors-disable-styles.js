@@ -1,5 +1,6 @@
 /* not yet approved by skill group core team */
-export default {
+module.exports = {
+	rules: {
 		// require trailing commas in multiline object literals
 		'comma-dangle': 0,
 
@@ -11,4 +12,5 @@ export default {
 
 		// Avoid code that looks like two expressions but is actually one
 		'no-unexpected-multiline': 0,
+	},
 };
