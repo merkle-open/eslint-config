@@ -94,9 +94,6 @@ export default {
 			},
 		],
 
-		// deprecated in favor of react/jsx-sort-props
-		'react/jsx-sort-prop-types': 0,
-
 		// Enforce props alphabetical sorting
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md
 		'react/jsx-sort-props': [
@@ -175,10 +172,6 @@ export default {
 		// Prevent missing React when using JSX
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md
 		'react/react-in-jsx-scope': 'off',  // Not needed with React 17+ JSX transform
-
-		// Restrict file extensions that may be required
-		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/require-extension.md
-		'react/require-extension': [0, { extensions: ['.jsx'] }],
 
 		// Require render() methods to return something
 		// https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/require-render-return.md

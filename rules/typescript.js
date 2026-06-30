@@ -93,7 +93,6 @@ export default {
 			{
 				selector: 'interface',
 				format: ['PascalCase'],
-				prefix: ['I'],
 			},
 			{
 				selector: 'method',
@@ -121,14 +120,6 @@ export default {
 		// Require explicit accessibility modifiers on class properties and methods (explicit-member-accessibility)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md
 		'@typescript-eslint/explicit-member-accessibility': 2,
-
-		// Enforce consistent indentation (indent)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/indent.md
-		'@typescript-eslint/indent': [2, 'tab'],
-
-		// Require a specific member delimiter style for interfaces and type literals (member-delimiter-style)
-		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/member-delimiter-style.md
-		'@typescript-eslint/member-delimiter-style': 2,
 
 		// Require a consistent member declaration order (member-ordering)
 		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/member-ordering.md
@@ -225,10 +216,6 @@ export default {
 		// When adding two variables, operands must both be of type number or of type string.
 		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/restrict-plus-operands.md
 		'@typescript-eslint/restrict-plus-operands': 2,
-
-		// Require consistent spacing around type annotations
-		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/type-annotation-spacing.md
-		'@typescript-eslint/type-annotation-spacing': 2,
 
 		// Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter.
 		// https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/unified-signatures.md
