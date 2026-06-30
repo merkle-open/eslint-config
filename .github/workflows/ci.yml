@@ -16,19 +16,22 @@ jobs:
     name: Test - ${{ matrix.platform }} - Node v${{ matrix.node-version }}
     strategy:
       matrix:
-        node-version: [ 18.17.x, 20.x, 22.x, 24.x ]
+        node-version: [ "18.17", "20", "22", "24" ]
         platform: [ ubuntu-latest, windows-latest ]
     runs-on: ${{ matrix.platform }}
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v4
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+          check-latest: true
+      - name: Check Node version
+        run: node --version && npm --version
       - name: Clear npm cache
         run: npm cache clean --force
       - name: Install dependencies
-        run: npm ci --legacy-peer-deps
+        run: npm ci --legacy-peer-deps --verbose
       - name: Run tests
         run: npm test
 
