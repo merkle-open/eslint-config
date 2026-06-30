@@ -1,17 +1,16 @@
-module.exports = {
-	extends: [
-		'./typescript.js',
-		'../rules/node.js',
-	].map(require.resolve),
-	env: {
-		browser: false,
-		node: true,
-		amd: false,
-		mocha: true,
-		jasmine: true,
-		jest: true,
-		jquery: true,
-		serviceworker: true,
-		worker: true,
-	},
-};
+import typescript from "./typescript.js";
+import globals from "globals";
+import nodeRules from "../rules/node.js";
+
+export default [
+  ...typescript,
+  {
+    files: ["**/*.{ts,tsx,mts,cts}"],
+    languageOptions: {
+      globals: { ...globals.node, ...globals.nodeBuiltin },
+    },
+    rules: {
+      ...nodeRules,
+    },
+  },
+];
