@@ -1,6 +1,4 @@
 /* not yet approved by skill group core team */
-module.exports = {
-	rules: {
+export default {
 		// there aren't style rules for node
-	},
 };

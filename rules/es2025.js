@@ -1,6 +1,7 @@
 /* [18.07.2016] approved by skill group core team */
-module.exports = {
-	rules: {
+/* ES2015–ES2025 rules merged from es6.js and es8.js */
+export default {
+
 		// enforces no braces where they can be omitted
 		// http://eslint.org/docs/rules/arrow-body-style
 		'arrow-body-style': 0,
@@ -136,5 +137,10 @@ module.exports = {
 		// enforce spacing around the * in yield* expressions
 		// http://eslint.org/docs/rules/yield-star-spacing
 		'yield-star-spacing': [2, 'after'],
-	},
-};
+
+		// Disallow await inside of loops
+		// https://eslint.org/docs/rules/no-await-in-loop
+		'no-await-in-loop': 2,
+		// [13.02.2018] enabled
+	};
+

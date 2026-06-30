@@ -1,5 +1,3 @@
-module.exports = {
-	rules: {
+export default {
 		// there aren't style rules for node
-	},
 };
