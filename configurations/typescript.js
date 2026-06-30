@@ -2,7 +2,6 @@ import tseslint from "typescript-eslint";
 import stylisticPlugin from "@stylistic/eslint-plugin";
 import base from "./base.js";
 import tsRules from "../rules/typescript.js";
-import tsDisableStyles from "../disable-styles/typescript.js";
 
 export default [
   ...base,
@@ -32,8 +31,11 @@ export default [
       "no-const-assign": "off",       // TS compiler error
       "no-unused-vars": "off",        // Replaced by @typescript-eslint/no-unused-vars
 
-      // TS-specific formatting (handled by @stylistic/ts/*, disabled by disable-styles layer)
-      ...tsDisableStyles,
+      // TS-specific formatting parity (replaces removed @typescript-eslint formatting rules)
+      "@stylistic/ts/indent": ["error", 2],
+      "@stylistic/ts/member-delimiter-style": "error",
+      "@stylistic/ts/type-annotation-spacing": "error",
+      "@stylistic/ts/semi": ["error", "always"],
 
       // Spread team-specific TypeScript rules (audited & upgraded)
       ...tsRules,
