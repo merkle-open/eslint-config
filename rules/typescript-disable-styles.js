@@ -1,55 +1,15 @@
-import styles from './style-disable-styles.js';
-import variables from './variables-disable-styles.js';
-import errors from './errors-disable-styles.js';
-import es6 from './es6-disable-styles.js';
-import bestPractices from './best-practices-disable-styles.js';
-
-const replaceRule = (name, ruleSet) => {
-	return typeof ruleSet[name] === 'undefined'
-		? {}
-		: { [`@typescript-eslint/${name}`]: ruleSet[name] };
-};
-
-/* [12.04.2019] add typescript support */
 export default {
-	// default overrides
-	...replaceRule('brace-style', styles),
-	...replaceRule('comma-dangle', errors),
-	...replaceRule('comma-spacing', styles),
-	...replaceRule('default-param-last', styles),
-	...replaceRule('dot-notation', bestPractices),
-	...replaceRule('func-call-spacing', styles),
-	...replaceRule('indent', styles),
-	...replaceRule('init-declarations', variables),
-	...replaceRule('keyword-spacing', styles),
-	...replaceRule('lines-between-class-members', styles),
-	...replaceRule('no-array-constructor', styles),
-	...replaceRule('no-dupe-class-members', es6),
-	...replaceRule('no-duplicate-imports', es6),
-	...replaceRule('no-empty-function', bestPractices),
-	...replaceRule('no-extra-parens', errors),
-	...replaceRule('no-extra-semi', errors),
-	...replaceRule('no-implied-eval', bestPractices),
-	...replaceRule('no-invalid-this', bestPractices),
-	...replaceRule('no-loop-func', bestPractices),
-	...replaceRule('no-loss-of-precision', bestPractices),
-	...replaceRule('no-magic-numbers', bestPractices),
-	...replaceRule('no-redeclare', bestPractices),
-	...replaceRule('no-shadow', variables),
-	...replaceRule('no-throw-literal', bestPractices),
-	...replaceRule('no-unused-expressions', bestPractices),
-	...replaceRule('no-unused-vars', variables),
-	...replaceRule('no-use-before-define', variables),
-	...replaceRule('no-useless-constructor', es6),
-	...replaceRule('quotes', styles),
-	...replaceRule('require-await', styles),
-	...replaceRule('return-await', styles),
-	...replaceRule('semi', styles),
-	...replaceRule('space-before-function-paren', styles),
-	...replaceRule('space-infix-ops', styles),
-	'@typescript-eslint/indent': 0,
-	'@typescript-eslint/member-delimiter-style': 0,
-	'@typescript-eslint/type-annotation-spacing': 0,
+	'@stylistic/ts/brace-style': 0,
+	'@stylistic/ts/comma-dangle': 0,
+	'@stylistic/ts/comma-spacing': 0,
+	'@stylistic/ts/func-call-spacing': 0,
+	'@stylistic/ts/indent': 0,
+	'@stylistic/ts/keyword-spacing': 0,
+	'@stylistic/ts/member-delimiter-style': 0,
+	'@stylistic/ts/quotes': 0,
+	'@stylistic/ts/semi': 0,
+	'@stylistic/ts/space-before-function-paren': 0,
+	'@stylistic/ts/space-infix-ops': 0,
+	'@stylistic/ts/type-annotation-spacing': 0,
 	'@typescript-eslint/triple-slash-reference': 0,
 };
-
