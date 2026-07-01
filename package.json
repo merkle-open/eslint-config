@@ -24,12 +24,12 @@
     "./typescript-node-disable-styles": "./configurations/typescript-node-disable-styles.js",
     "./typescript-react": "./configurations/typescript-react.js",
     "./typescript-react-disable-styles": "./configurations/typescript-react-disable-styles.js",
-    "./es-browser": "./configurations/es-browser.js",
-    "./es-browser-disable-styles": "./configurations/es-browser-disable-styles.js",
-    "./es-node": "./configurations/es-node.js",
-    "./es-node-disable-styles": "./configurations/es-node-disable-styles.js",
-    "./es-react": "./configurations/es-react.js",
-    "./es-react-disable-styles": "./configurations/es-react-disable-styles.js"
+    "./es2025-browser": "./configurations/es2025-browser.js",
+    "./es2025-browser-disable-styles": "./configurations/es2025-browser-disable-styles.js",
+    "./es2025-node": "./configurations/es2025-node.js",
+    "./es2025-node-disable-styles": "./configurations/es2025-node-disable-styles.js",
+    "./es2025-react": "./configurations/es2025-react.js",
+    "./es2025-react-disable-styles": "./configurations/es2025-react-disable-styles.js"
   },
   "scripts": {
     "clean": "npx -y rimraf package-lock.json node_modules",
