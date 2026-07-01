@@ -1,5 +1,5 @@
 import tseslint from "typescript-eslint";
-import stylisticPlugin from "@stylistic/eslint-plugin";
+import stylisticTsPlugin from "@stylistic/eslint-plugin-ts";
 import base from "./base.js";
 import tsRules from "../rules/typescript.js";
 
@@ -20,7 +20,7 @@ export default [
       },
     },
     plugins: {
-      "@stylistic": stylisticPlugin,
+      "@stylistic/ts": stylisticTsPlugin,
     },
     rules: {
       // Disable base rules that TS compiler handles

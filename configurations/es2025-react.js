@@ -24,7 +24,8 @@ export default [
       "jsx-a11y": a11yPlugin,
     },
     settings: {
-      react: { version: "detect" },
+      // Use explicit version to avoid ESLint 10 compatibility issues with "detect"
+      react: { version: "18.3" },
     },
     rules: {
       // Spread modular React rules (audited & upgraded)

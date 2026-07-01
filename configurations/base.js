@@ -12,10 +12,8 @@ import importRules from "../rules/imports.js";
 import variables from "../rules/variables.js";
 
 export default [
-  {
-    plugins: { js },
-    extends: ["js/recommended"],
-  },
+  // ESLint recommended rules (flat config format)
+  js.configs.recommended,
   {
     languageOptions: {
       ecmaVersion: 2025,

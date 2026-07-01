@@ -36,7 +36,8 @@
     "lint": "eslint .",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "test": "npm run lint",
+    "test": "node --test test/run-tests.js",
+    "test:lint": "npm run lint",
     "docs": "node bin/write-documentation",
     "prepublishOnly": "npm run lint && npm run test",
     "update-dependencies": "npm-check-updates -u -x node-fetch --deprecated"
@@ -58,6 +59,7 @@
   "devDependencies": {
     "@merkle-open/prettier-config": "2.0.1",
     "@merkle-open/ts-config": "1.1.2",
+    "@stylistic/eslint-plugin-ts": "4.4.1",
     "acorn": "8.15.0",
     "eslint": "10.6.0",
     "node-fetch": "2.7.0",
