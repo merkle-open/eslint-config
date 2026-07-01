@@ -1,4 +1,4 @@
-import esBrowser from "./es-browser.js";
+import esBrowser from "./es2025-browser.js";
 import reactPlugin from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import a11yPlugin from "eslint-plugin-jsx-a11y";
