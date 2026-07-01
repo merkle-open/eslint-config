@@ -109,11 +109,11 @@ This is a major version upgrade with significant breaking changes. See the [Migr
 | `rules/react-a11y.js` | `module.exports` → `export default` |
 | `rules/react-hooks.js` | `module.exports` → `export default` |
 | `rules/typescript.js` | `module.exports` → `export default`; Major rule updates (see below) |
-| `configurations/typescript.js` | Flat config format; uses `typescript-eslint` unified package |
-| `configurations/typescript-browser.js` | Flat config format; extends `typescript.js` + browser globals |
-| `configurations/typescript-node.js` | Flat config format; extends `typescript.js` + node globals |
-| `configurations/typescript-react.js` | Flat config format; explicit React version `18.3` |
-| `configurations/typescript-*-disable-styles.js` | Flat config format; uses `defineConfig()` |
+| `configurations/typescript.js` | Flat config format; uses `typescript-eslint` unified package; uses `@stylistic/eslint-plugin-ts` for TS formatting |
+| `configurations/typescript-browser.js` | Flat config format; plain array export; extends `typescript.js` + browser globals |
+| `configurations/typescript-node.js` | Flat config format; plain array export; extends `typescript.js` + node globals |
+| `configurations/typescript-react.js` | Flat config format; plain array export; explicit React version `18.3` |
+| `configurations/typescript-*-disable-styles.js` | Flat config format; uses `defineConfig()` wrapper |
 | `bin/write-rule-test-files.js` | Full rewrite for ESM and v5 test structure |
 | `bin/utils.js` | `module.exports` → `export default` |
 | `bin/identify-undefined-rules.js` | `require()` → `import` |
