@@ -241,6 +241,57 @@ These deprecated rules were removed:
 | React version | Auto-detect | Explicit `18.3` |
 | TypeScript project | Manual `project` option | Auto-detect via `projectService` |
 
+### Complexity Rule
+
+The `complexity` rule remains set to `["error", 5]` by default. If your codebase needs a higher threshold:
+
+```javascript
+export default [
+  ...merkleConfig,
+  {
+    rules: {
+      complexity: ["warn", 10],  // Override to warn at 10
+    },
+  },
+];
+```
+
+### Interface Naming Convention
+
+The requirement for interfaces to start with `I` prefix has been removed. If you want to keep this convention:
+
+```javascript
+export default [
+  ...merkleConfig,
+  {
+    rules: {
+      "@typescript-eslint/naming-convention": [
+        "error",
+        {
+          selector: "interface",
+          format: ["PascalCase"],
+          prefix: ["I"],
+        },
+      ],
+    },
+  },
+];
+```
+
+### Legacy Decorators (Angular/NestJS)
+
+`experimentalDecorators` and `emitDecoratorMetadata` are no longer in the shared config. If you need legacy decorators:
+
+**tsconfig.json:**
+```json
+{
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  }
+}
+```
+
 ---
 
 ## Troubleshooting
