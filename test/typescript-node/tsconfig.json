@@ -1,12 +1,7 @@
 {
-	"compilerOptions": {
-		"target": "ES2022",
-		"module": "ESNext",
-		"moduleResolution": "bundler",
-		"strict": true,
-		"esModuleInterop": true,
-		"skipLibCheck": true,
-		"noEmit": true
-	},
-	"include": ["**/*.ts"]
+  "extends": "@merkle-open/ts-config/node",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": ["**/*.ts"]
 }
