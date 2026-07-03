@@ -58,7 +58,7 @@
   ],
   "devDependencies": {
     "@merkle-open/prettier-config": "2.0.1",
-    "@merkle-open/ts-config": "1.1.2",
+    "@merkle-open/ts-config": "2.0.0-alpha.1",
     "@stylistic/eslint-plugin-ts": "4.4.1",
     "acorn": "8.15.0",
     "eslint": "10.6.0",
@@ -66,7 +66,7 @@
     "npm-check-updates": "19.0.0",
     "prettier": "3.8.1",
     "react": "18.3.1",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   },
   "peerDependencies": {
     "eslint": "^10.0.0",
