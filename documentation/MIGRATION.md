@@ -217,7 +217,7 @@ Fix any issues and iterate.
 | `@typescript-eslint/ban-types` | Replaced by `@typescript-eslint/no-restricted-types` |
 | `@typescript-eslint/no-empty-interface` | Replaced by `@typescript-eslint/no-empty-object-type` |
 | Interface `I` prefix | No longer required (naming-convention updated) |
-| TS formatting rules | Moved to `@stylistic/ts/*` (handled internally) |
+| TS formatting rules | Moved to `@stylistic/*` equivalents (handled internally) |
 
 ### Removed Rules
 

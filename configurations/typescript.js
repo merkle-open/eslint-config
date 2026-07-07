@@ -1,5 +1,4 @@
 import tseslint from "typescript-eslint";
-import stylisticTsPlugin from "@stylistic/eslint-plugin-ts";
 import base from "./base.js";
 import tsRules from "../rules/typescript.js";
 
@@ -19,9 +18,6 @@ export default [
         // in a shared config would point to node_modules/, which is wrong.
       },
     },
-    plugins: {
-      "@stylistic/ts": stylisticTsPlugin,
-    },
     rules: {
       // Disable base rules that TS compiler handles
       "no-undef": "off",              // TS type system covers this
@@ -32,10 +28,10 @@ export default [
       "no-unused-vars": "off",        // Replaced by @typescript-eslint/no-unused-vars
 
       // TS-specific formatting parity (replaces removed @typescript-eslint formatting rules)
-      "@stylistic/ts/indent": ["error", 2],
-      "@stylistic/ts/member-delimiter-style": "error",
-      "@stylistic/ts/type-annotation-spacing": "error",
-      "@stylistic/ts/semi": ["error", "always"],
+      "@stylistic/indent": ["error", 2],
+      "@stylistic/member-delimiter-style": "error",
+      "@stylistic/type-annotation-spacing": "error",
+      "@stylistic/semi": ["error", "always"],
 
       // Spread team-specific TypeScript rules (audited & upgraded)
       ...tsRules,

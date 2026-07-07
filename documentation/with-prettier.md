@@ -127,7 +127,7 @@ The disable-styles presets disable all formatting-related rules across categorie
 | Category | Examples |
 |----------|----------|
 | Style | `indent`, `quotes`, `semi`, `comma-dangle`, `max-len` |
-| TypeScript | `@stylistic/ts/indent`, `@stylistic/ts/semi`, `@stylistic/ts/member-delimiter-style` |
+| TypeScript | `@stylistic/indent`, `@stylistic/semi`, `@stylistic/member-delimiter-style` |
 | React | `react/jsx-indent`, `react/jsx-max-props-per-line`, `react/jsx-closing-bracket-location` |
 | Best Practices | `curly`, `dot-location`, `wrap-iife` |
 | ES2025 | `arrow-parens`, `arrow-spacing`, `generator-star-spacing` |
@@ -146,4 +146,3 @@ This allows Prettier to handle all formatting while ESLint focuses on code quali
 | Extra dependency | None | Yes |
 
 Both approaches work well. Use whichever fits your workflow.
-
