@@ -24,7 +24,7 @@ export default [
       "jsx-a11y": a11yPlugin,
     },
     settings: {
-      // Use explicit version to avoid ESLint 10 compatibility issues with "detect"
+      // Use explicit version — "detect" requires react as a resolvable dep in consumer project
       react: { version: "18.3" },
     },
     rules: {

@@ -17,8 +17,8 @@ This is a major version upgrade with significant breaking changes. See the [Migr
 
 | Requirement | v4 | v5 | Notes |
 |-------------|----|----|-------|
-| Node.js | >=14 | ^20.19.0 \|\| ^22.13.0 \|\| >=24 | ESLint 10 requirement |
-| ESLint | ^8.x | ^10.x | Flat config only |
+| Node.js | >=14 | ^20.19.0 \|\| ^22.13.0 \|\| >=24 | ESLint 9 requirement |
+| ESLint | ^8.x | ^9.x | Flat config only |
 | TypeScript | ^4.x \|\| ^5.x | ^5.x \|\| ^6.x | Peer dependency |
 
 #### Module System
@@ -85,7 +85,7 @@ This is a major version upgrade with significant breaking changes. See the [Migr
 
 #### New Features
 
-- **Flat Config:** Full ESLint 10 flat config support with array-based composition
+- **Flat Config:** Full ESLint 9 flat config support with array-based composition
 - **ECMAScript 2025:** Updated to `ecmaVersion: 2025` with `globals.es2025`
 - **Package Exports:** Modern `"exports"` field with 13 entry points
 - **Default Export Changed:** Default now exports `typescript-browser` (was `es8-browser`)
@@ -147,7 +147,7 @@ This is a major version upgrade with significant breaking changes. See the [Migr
 | `react/require-extension` | Enabled | **Removed** | Deprecated in eslint-plugin-react |
 | `react/jsx-uses-react` | Enabled | **Disabled** | Not needed with React 17+ JSX transform |
 | `react/react-in-jsx-scope` | Enabled | **Disabled** | Not needed with React 17+ JSX transform |
-| React version detection | `"detect"` | `"18.3"` | Explicit version avoids ESLint 10 compatibility issues |
+| React version detection | `"detect"` | `"18.3"` | Explicit version avoids `getFilename` API issues |
 
 #### Import Rules Changes
 
@@ -268,7 +268,7 @@ This is a major version upgrade with significant breaking changes. See the [Migr
 ### Fixed
 
 - **Flat Config Compatibility:** All configurations now use proper flat config format (no `extends` key)
-- **React Plugin ESLint 10 Compatibility:** Use explicit React version instead of `"detect"` to avoid `getFilename` API error
+- **React Plugin Compatibility:** Use explicit React version instead of `"detect"` to avoid `getFilename` API issues
 - **TypeScript Stylistic Plugin:** Added `@stylistic/eslint-plugin-ts` for TypeScript-specific formatting rules
 
 ---
@@ -442,11 +442,47 @@ export default [...config, prettierConfig];
 
 ---
 
-## [4.0.1] - Previous Release
+## [5.0.0-alpha.4] - 2026-07-14
+
+### Changed
+
+- **ESLint peer downgraded to `^9.3.0`** — drops ESLint 10 requirement; resolves peer dependency conflicts with `eslint-plugin-react`, `eslint-plugin-jsx-a11y`, and other plugins that only peer up to ESLint 9
+- **`@eslint/js` downgraded to `9.39.4`** (was `10.0.1`) — matches ESLint 9 runtime
+- **`eslint` devDependency downgraded to `9.39.4`** (was `10.6.0`) — validated against latest ESLint 9.x
+- React version comment updated in `typescript-react.js` and `es2025-react.js` (clarified reason for explicit version)
+
+### Notes
+
+All configurations, rules, and disable-styles are fully compatible with ESLint 9. The `defineConfig()` API used in disable-styles presets is available since ESLint 9.10.0. All formatting rules in `rules/style.js` exist in ESLint 9 (deprecated in ESLint 8 but not removed until ESLint 10).
+
+---
+
+## [5.0.0-alpha.3] - 2026-07-07
+
+### Changed
+
+- Stability and peer dependency improvements following alpha.2 validation
+- TypeScript peer updated to `^6.0.0`
+- Published as `next` dist-tag
+
+---
+
+## [5.0.0-alpha.2] - 2026-07-05
+
+### Changed
+
+- Minor configuration fixes following alpha.1 internal testing
+
+---
+
+
 
 See [v4 release history](https://github.com/merkle-open/eslint-config/releases) for changes prior to v5.
 
 ---
 
+[5.0.0-alpha.4]: https://github.com/merkle-open/eslint-config/compare/v5.0.0-alpha.3...v5.0.0-alpha.4
+[5.0.0-alpha.3]: https://github.com/merkle-open/eslint-config/compare/v5.0.0-alpha.2...v5.0.0-alpha.3
+[5.0.0-alpha.2]: https://github.com/merkle-open/eslint-config/compare/v5.0.0-alpha.1...v5.0.0-alpha.2
 [5.0.0-alpha.1]: https://github.com/merkle-open/eslint-config/compare/v4.0.1...v5.0.0-alpha.1
 [4.0.1]: https://github.com/merkle-open/eslint-config/releases/tag/v4.0.1
