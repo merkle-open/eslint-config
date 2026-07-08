@@ -3,15 +3,15 @@
 [![Build Status](https://github.com/merkle-open/eslint-config/workflows/ci/badge.svg)](https://github.com/merkle-open/eslint-config/actions)
 [![npm](https://img.shields.io/npm/v/@merkle-open/eslint-config.svg)](https://www.npmjs.com/package/@merkle-open/eslint-config)
 
-Shareable ESLint configuration for Merkle projects. Version 5 uses **ESLint 10 Flat Config** format with native ESM.
+Shareable ESLint configuration for Merkle projects. Version 5 uses **ESLint 9 Flat Config** format with native ESM.
 
 ## Requirements
 
 | Dependency | Version |
 |------------|---------|
 | Node.js | `^20.19.0 \|\| ^22.13.0 \|\| >=24` |
-| ESLint | `^10.0.0` |
-| TypeScript | `^6.0.0` (for TypeScript presets) |
+| ESLint | `^9.3.0` |
+| TypeScript | `^6.0.0` (optional — for TypeScript presets) |
 
 ## Installation
 
