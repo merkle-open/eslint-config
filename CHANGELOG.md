@@ -448,6 +448,19 @@ export default [...config, prettierConfig];
 
 ---
 
+## [5.0.0-rc.2] - 2026-08-07
+
+### Fixed
+
+- **Broken README links on npm** — the npm package page rewrites relative links to `blob/HEAD` (the `master` default branch), where the v5 `CHANGELOG.md` and `documentation/*.md` files don't yet exist, causing 404s. README now uses absolute `blob/develop` URLs for the changelog, migration guide, and rule documentation.
+
+### Changed
+
+- Added `homepage` field to `package.json`.
+- Resolved transitive dev-dependency audit advisories (`brace-expansion`, `minimatch`, `js-yaml`) via lockfile update — `npm audit` reports 0 vulnerabilities.
+
+---
+
 ## [5.0.0-rc.1] - 2026-08-07
 
 First release candidate — the v5 configuration surface is now frozen; only bug fixes are expected before stable `5.0.0`.
