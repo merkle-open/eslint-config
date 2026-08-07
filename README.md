@@ -101,7 +101,7 @@ export default [
 ];
 ```
 
-See [Using with Prettier](./documentation/with-prettier.md) for more details.
+See [Using with Prettier](https://github.com/merkle-open/eslint-config/blob/develop/documentation/with-prettier.md) for more details.
 
 ### Alternative: eslint-config-prettier
 
@@ -233,7 +233,7 @@ Code blocks inside MDX are linted with your existing rules via the MDX processor
 
 ## Migration from v4
 
-See the [Migration Guide](./documentation/MIGRATION.md) for step-by-step instructions.
+See the [Migration Guide](https://github.com/merkle-open/eslint-config/blob/develop/documentation/MIGRATION.md) for step-by-step instructions.
 
 **Key changes:**
 
@@ -245,21 +245,21 @@ See the [Migration Guide](./documentation/MIGRATION.md) for step-by-step instruc
 
 ## Documentation
 
-| Category            | Link                                                                 |
-| ------------------- | -------------------------------------------------------------------- |
-| Best Practices      | [documentation/best-practices.md](./documentation/best-practices.md) |
-| Style               | [documentation/style.md](./documentation/style.md)                   |
-| Variables           | [documentation/variables.md](./documentation/variables.md)           |
-| Errors              | [documentation/errors.md](./documentation/errors.md)                 |
-| ES2025              | [documentation/es6.md](./documentation/es6.md)                       |
-| Imports             | [documentation/imports.md](./documentation/imports.md)               |
-| Node                | [documentation/node.md](./documentation/node.md)                     |
-| React               | [documentation/react.md](./documentation/react.md)                   |
-| React A11y          | [documentation/react-a11y.md](./documentation/react-a11y.md)         |
-| React Hooks         | [documentation/react-hooks.md](./documentation/react-hooks.md)       |
-| TypeScript          | [documentation/typescript.md](./documentation/typescript.md)         |
-| Using with Prettier | [documentation/with-prettier.md](./documentation/with-prettier.md)   |
-| Migration Guide     | [documentation/MIGRATION.md](./documentation/MIGRATION.md)           |
+| Category            | Link                                                                                                                         |
+| ------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| Best Practices      | [documentation/best-practices.md](https://github.com/merkle-open/eslint-config/blob/develop/documentation/best-practices.md) |
+| Style               | [documentation/style.md](https://github.com/merkle-open/eslint-config/blob/develop/documentation/style.md)                   |
+| Variables           | [documentation/variables.md](https://github.com/merkle-open/eslint-config/blob/develop/documentation/variables.md)           |
+| Errors              | [documentation/errors.md](https://github.com/merkle-open/eslint-config/blob/develop/documentation/errors.md)                 |
+| ES2025              | [documentation/es6.md](https://github.com/merkle-open/eslint-config/blob/develop/documentation/es6.md)                       |
+| Imports             | [documentation/imports.md](https://github.com/merkle-open/eslint-config/blob/develop/documentation/imports.md)               |
+| Node                | [documentation/node.md](https://github.com/merkle-open/eslint-config/blob/develop/documentation/node.md)                     |
+| React               | [documentation/react.md](https://github.com/merkle-open/eslint-config/blob/develop/documentation/react.md)                   |
+| React A11y          | [documentation/react-a11y.md](https://github.com/merkle-open/eslint-config/blob/develop/documentation/react-a11y.md)         |
+| React Hooks         | [documentation/react-hooks.md](https://github.com/merkle-open/eslint-config/blob/develop/documentation/react-hooks.md)       |
+| TypeScript          | [documentation/typescript.md](https://github.com/merkle-open/eslint-config/blob/develop/documentation/typescript.md)         |
+| Using with Prettier | [documentation/with-prettier.md](https://github.com/merkle-open/eslint-config/blob/develop/documentation/with-prettier.md)   |
+| Migration Guide     | [documentation/MIGRATION.md](https://github.com/merkle-open/eslint-config/blob/develop/documentation/MIGRATION.md)           |
 
 ## Contributing
 
@@ -281,4 +281,4 @@ See the [Migration Guide](./documentation/MIGRATION.md) for step-by-step instruc
 
 ## Changelog
 
-See [CHANGELOG.md](./CHANGELOG.md) for detailed release notes.
+See [CHANGELOG.md](https://github.com/merkle-open/eslint-config/blob/develop/CHANGELOG.md) for detailed release notes.

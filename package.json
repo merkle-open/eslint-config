@@ -7,6 +7,7 @@
     "type": "git",
     "url": "git+https://github.com/merkle-open/eslint-config.git"
   },
+  "homepage": "https://github.com/merkle-open/eslint-config#readme",
   "license": "MIT",
   "author": "Merkle Inc.",
   "private": false,
