@@ -7,10 +7,10 @@ Shareable ESLint configuration for Merkle projects. Version 5 uses **ESLint 9 Fl
 
 ## Requirements
 
-| Dependency | Version |
-|------------|---------|
-| Node.js | `^20.19.0 \|\| ^22.13.0 \|\| >=24` |
-| ESLint | `^9.3.0` |
+| Dependency | Version                                      |
+| ---------- | -------------------------------------------- |
+| Node.js    | `^20.19.0 \|\| ^22.13.0 \|\| >=24`           |
+| ESLint     | `^9.3.0`                                     |
 | TypeScript | `^6.0.0` (optional — for TypeScript presets) |
 
 ## Installation
@@ -25,32 +25,32 @@ All required plugins are bundled — no additional plugin installations needed.
 
 ### TypeScript (recommended)
 
-| Preset | Description |
-|--------|-------------|
-| `@merkle-open/eslint-config/typescript-browser` | TypeScript + browser globals |
-| `@merkle-open/eslint-config/typescript-node` | TypeScript + Node.js globals |
-| `@merkle-open/eslint-config/typescript-react` | TypeScript + React + JSX A11y |
+| Preset                                          | Description                   |
+| ----------------------------------------------- | ----------------------------- |
+| `@merkle-open/eslint-config/typescript-browser` | TypeScript + browser globals  |
+| `@merkle-open/eslint-config/typescript-node`    | TypeScript + Node.js globals  |
+| `@merkle-open/eslint-config/typescript-react`   | TypeScript + React + JSX A11y |
 
 ### JavaScript (ES2025)
 
-| Preset | Description |
-|--------|-------------|
-| `@merkle-open/eslint-config/es2025-browser` | ES2025 + browser globals |
-| `@merkle-open/eslint-config/es2025-node` | ES2025 + Node.js globals |
-| `@merkle-open/eslint-config/es2025-react` | ES2025 + React + JSX A11y |
+| Preset                                      | Description               |
+| ------------------------------------------- | ------------------------- |
+| `@merkle-open/eslint-config/es2025-browser` | ES2025 + browser globals  |
+| `@merkle-open/eslint-config/es2025-node`    | ES2025 + Node.js globals  |
+| `@merkle-open/eslint-config/es2025-react`   | ES2025 + React + JSX A11y |
 
 ### With Prettier (disable-styles variants)
 
 Each preset has a `-disable-styles` variant that disables all formatting rules, for use with Prettier:
 
-| Preset | Description |
-|--------|-------------|
+| Preset                                                         | Description                                 |
+| -------------------------------------------------------------- | ------------------------------------------- |
 | `@merkle-open/eslint-config/typescript-browser-disable-styles` | TypeScript browser without formatting rules |
-| `@merkle-open/eslint-config/typescript-node-disable-styles` | TypeScript Node without formatting rules |
-| `@merkle-open/eslint-config/typescript-react-disable-styles` | TypeScript React without formatting rules |
-| `@merkle-open/eslint-config/es2025-browser-disable-styles` | ES2025 browser without formatting rules |
-| `@merkle-open/eslint-config/es2025-node-disable-styles` | ES2025 Node without formatting rules |
-| `@merkle-open/eslint-config/es2025-react-disable-styles` | ES2025 React without formatting rules |
+| `@merkle-open/eslint-config/typescript-node-disable-styles`    | TypeScript Node without formatting rules    |
+| `@merkle-open/eslint-config/typescript-react-disable-styles`   | TypeScript React without formatting rules   |
+| `@merkle-open/eslint-config/es2025-browser-disable-styles`     | ES2025 browser without formatting rules     |
+| `@merkle-open/eslint-config/es2025-node-disable-styles`        | ES2025 Node without formatting rules        |
+| `@merkle-open/eslint-config/es2025-react-disable-styles`       | ES2025 React without formatting rules       |
 
 ## Usage
 
@@ -202,12 +202,42 @@ export default [
 ];
 ```
 
+### MDX (opt-in)
+
+MDX (`.mdx`) linting is **not** bundled, as it requires the `remark`/`unified` toolchain that most consumers don't need. If you lint MDX, install `eslint-plugin-mdx` and add it yourself:
+
+```bash
+npm install --save-dev eslint-plugin-mdx
+```
+
+```javascript
+// eslint.config.js
+import merkleConfig from "@merkle-open/eslint-config/typescript-react";
+import * as mdx from "eslint-plugin-mdx";
+
+export default [
+  ...merkleConfig,
+  {
+    ...mdx.flat,
+    files: ["**/*.mdx"],
+    processor: mdx.createRemarkProcessor({ lintCodeBlocks: true }),
+  },
+  {
+    ...mdx.flatCodeBlocks,
+    files: ["**/*.mdx"],
+  },
+];
+```
+
+Code blocks inside MDX are linted with your existing rules via the MDX processor.
+
 ## Migration from v4
 
 See the [Migration Guide](./documentation/MIGRATION.md) for step-by-step instructions.
 
 **Key changes:**
-- ESLint 10 Flat Config format (no more `.eslintrc.js`)
+
+- ESLint 9 Flat Config format (no more `.eslintrc.js`)
 - ESM modules (no more `require()`)
 - New import paths (e.g., `/typescript-browser` instead of `/configurations/typescript-browser`)
 - ES8 presets renamed to ES2025
@@ -215,21 +245,21 @@ See the [Migration Guide](./documentation/MIGRATION.md) for step-by-step instruc
 
 ## Documentation
 
-| Category | Link |
-|----------|------|
-| Best Practices | [documentation/best-practices.md](./documentation/best-practices.md) |
-| Style | [documentation/style.md](./documentation/style.md) |
-| Variables | [documentation/variables.md](./documentation/variables.md) |
-| Errors | [documentation/errors.md](./documentation/errors.md) |
-| ES2025 | [documentation/es6.md](./documentation/es6.md) |
-| Imports | [documentation/imports.md](./documentation/imports.md) |
-| Node | [documentation/node.md](./documentation/node.md) |
-| React | [documentation/react.md](./documentation/react.md) |
-| React A11y | [documentation/react-a11y.md](./documentation/react-a11y.md) |
-| React Hooks | [documentation/react-hooks.md](./documentation/react-hooks.md) |
-| TypeScript | [documentation/typescript.md](./documentation/typescript.md) |
-| Using with Prettier | [documentation/with-prettier.md](./documentation/with-prettier.md) |
-| Migration Guide | [documentation/MIGRATION.md](./documentation/MIGRATION.md) |
+| Category            | Link                                                                 |
+| ------------------- | -------------------------------------------------------------------- |
+| Best Practices      | [documentation/best-practices.md](./documentation/best-practices.md) |
+| Style               | [documentation/style.md](./documentation/style.md)                   |
+| Variables           | [documentation/variables.md](./documentation/variables.md)           |
+| Errors              | [documentation/errors.md](./documentation/errors.md)                 |
+| ES2025              | [documentation/es6.md](./documentation/es6.md)                       |
+| Imports             | [documentation/imports.md](./documentation/imports.md)               |
+| Node                | [documentation/node.md](./documentation/node.md)                     |
+| React               | [documentation/react.md](./documentation/react.md)                   |
+| React A11y          | [documentation/react-a11y.md](./documentation/react-a11y.md)         |
+| React Hooks         | [documentation/react-hooks.md](./documentation/react-hooks.md)       |
+| TypeScript          | [documentation/typescript.md](./documentation/typescript.md)         |
+| Using with Prettier | [documentation/with-prettier.md](./documentation/with-prettier.md)   |
+| Migration Guide     | [documentation/MIGRATION.md](./documentation/MIGRATION.md)           |
 
 ## Contributing
 

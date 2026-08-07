@@ -1,6 +1,4 @@
-import utils  from './utils';
-
-/* eslint "complexity": 0 */
+import utils from './utils.js';
 
 /*
 
@@ -9,93 +7,105 @@ import utils  from './utils';
 
 */
 
-var ig = ['.DS_Store', '.eslintrc'];
-var fileName;
-var data;
+const ig = ['.DS_Store', '.eslintrc'];
 
 /**
- * @method getESLintUrl
- * @param {string} name - fileName
- * @param {string} groupName - name of group
- * @returns {string} eslint documentation url
+ * Rule group -> docs URL builder
+ * @type {Object<string, (name: string) => string>}
+ */
+const ESLINT_URL_BUILDERS = {
+	imports: (name) => `https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/${name}.md`,
+	react: (name) => `https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/${name}.md`,
+	'react-a11y': (name) => `https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/${name}.md`,
+	'react-hooks': () => 'https://reactjs.org/docs/hooks-rules.html',
+	typescript: (name) =>
+		`https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/${name.replace(
+			/.ts$/,
+			'',
+		)}.md`,
+};
+
+/**
+ * Fallback docs URL for core ESLint rules
+ * @param {string} name
+ * @returns {string}
+ */
+const defaultUrlBuilder = (name) => `http://eslint.org/docs/rules/${name}`;
+
+/**
+ * Rule status -> icon
+ * @type {Object<number, string>}
+ */
+const STATUS_ICONS = {
+	0: ':x:',
+	1: ':white_check_mark:',
+	2: ':white_check_mark:',
+};
+
+/**
+ * Rule status -> label
+ * @type {Object<number, string>}
+ */
+const STATUS_LABELS = {
+	0: 'Disabled',
+	1: 'Enabled (warning)',
+	2: 'Enabled (error)',
+};
+
+/**
+ * Build a rule's docs URL
+ * @param {string} name
+ * @param {string} groupName
+ * @returns {string}
  */
 function getESLintUrl(name, groupName) {
-	switch (groupName) {
-		case 'imports':
-			return 'https://github.com/import-js/eslint-plugin-import/tree/main/docs/rules/' + name + '.md';
-		case 'react':
-			return 'https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/' + name + '.md';
-		case 'react-a11y':
-			return 'https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/' + name + '.md';
-		case 'react-hooks':
-			return 'https://reactjs.org/docs/hooks-rules.html';
-		case 'typescript':
-			return (
-				'https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/' +
-				name.replace(/.ts$/, '') +
-				'.md'
-			);
-		default:
-			return 'http://eslint.org/docs/rules/' + name;
-	}
+	const buildUrl = ESLINT_URL_BUILDERS[groupName] || defaultUrlBuilder;
+
+	return buildUrl(name);
 }
 
 /**
- * @method getStatusIcon
- * @param {string} fileData - string read from file
- * @returns {string} statusIcon (unicode character)
+ * Parse the STATUS marker
+ * @param {string} fileData
+ * @returns {number|null}
+ */
+function parseStatus(fileData) {
+	const exp = /STATUS = (.*)/.exec(fileData);
+
+	if (!exp) {
+		return null;
+	}
+
+	return parseInt(exp[1].trim(), 10);
+}
+
+/**
+ * Resolve the status icon
+ * @param {string} fileData
+ * @returns {string}
  */
 function getStatusIcon(fileData) {
-	var exp = /STATUS = (.*)/.exec(fileData);
-
-	if (exp === null || exp.length < 1) {
-		return '';
-	}
-
-	switch (parseInt(exp[1].trim(), 10)) {
-		case 0:
-			return ':x:';
-		case 1:
-		case 2:
-			return ':white_check_mark:';
-		default:
-			return '';
-	}
+	return STATUS_ICONS[parseStatus(fileData)] || '';
 }
 
 /**
- * @method getStatus
- * @param {string} fileData - string read from file
- * @returns {string} status
+ * Resolve the status label
+ * @param {string} fileData
+ * @returns {string}
  */
 function getStatus(fileData) {
-	var exp = /STATUS = (.*)/.exec(fileData);
-
-	if (exp === null || exp.length < 1) {
-		return '';
-	}
-
-	switch (parseInt(exp[1].trim(), 10)) {
-		case 0:
-			return 'Disabled';
-		case 1:
-			return 'Enabled (warning)';
-		case 2:
-			return 'Enabled (error)';
-		default:
-			return '';
-	}
+	return STATUS_LABELS[parseStatus(fileData)] || '';
 }
 
 /**
- * @method getDescription
- * @param {string} fileData string read from file
- * @returns {string} description
+ * Parse the DESCRIPTION marker
+ * @param {string} fileData
+ * @returns {string}
  */
 function getDescription(fileData) {
-	var exp = /DESCRIPTION = (.*)/.exec(fileData);
+	const exp = /DESCRIPTION = (.*)/.exec(fileData);
 
-	if (exp === null || exp.length < 1) {
+	if (!exp) {
 		return '';
 	}
 
@@ -103,58 +113,53 @@ function getDescription(fileData) {
 }
 
 /**
- * @method getTitle
- * @param {string} name fileName
- * @returns {string} title from fileName
+ * Build a title from a rule file name
+ * @param {string} name
+ * @returns {string}
  */
 function getTitle(name) {
 	return utils.capitalize(name.replace('-', ' '));
 }
 
 /**
- * @method addSnippet
- * @param {Array} arr output readme lines array
- * @param {string} fileData string read from file
- * @returns {void}
+ * Append a rule's example snippet to the output lines
+ * @param {Array} arr
+ * @param {string} fileData
  */
 function addSnippet(arr, fileData) {
-	var exp = /<!START([\s\S]*)(END!>)/.exec(fileData);
-	var code;
+	const exp = /<!START([\s\S]*)(END!>)/.exec(fileData);
 
-	if (exp === null || exp.length < 1) {
+	if (!exp) {
 		return;
 	}
 
-	code = exp[1].replace(/\/\/ $/, '').trim();
+	const snippet = exp[1].replace(/\/\/ $/, '');
 
-	if (code === '') {
+	if (snippet.trim() === '') {
 		return;
 	}
 
-	arr.push('```javascript');
-	arr.push(exp[1].replace(/\/\/ $/, ''));
-	arr.push('```');
+	arr.push('```javascript', snippet, '```');
 }
 
 /**
- * @method getESLintUrl
- * @param {Array} arr output readme lines array
- * @param {string} name fileName
- * @param {string} path filepath
- * @param {string} groupName name of group
- * @returns {void}
+ * Append a full rule section to the output lines
+ * @param {Array} arr
+ * @param {string} name
+ * @param {string} path
+ * @param {string} groupName
  */
 function addRule(arr, name, path, groupName) {
-	var fileData = utils.readFile(path);
-	var nameCleaned = name.replace(/\.js$/, '').replace(/\.ts$/, '');
-	var title = utils.capitalize(nameCleaned.replace(/-/g, ' '));
+	const fileData = utils.readFile(path);
+	const nameCleaned = name.replace(/\.js$/, '').replace(/\.ts$/, '');
+	const title = utils.capitalize(nameCleaned.replace(/-/g, ' '));
 
-	arr.push('### [' + title + '](' + getESLintUrl(nameCleaned, groupName) + ')');
+	arr.push(`### [${title}](${getESLintUrl(nameCleaned, groupName)})`);
 	arr.push('');
-	arr.push('> ' + getDescription(fileData));
+	arr.push(`> ${getDescription(fileData)}`);
 	arr.push('');
 	arr.push('');
-	arr.push(getStatusIcon(fileData) + ' ' + getStatus(fileData));
+	arr.push(`${getStatusIcon(fileData)} ${getStatus(fileData)}`);
 	arr.push('');
 	addSnippet(arr, fileData);
 	arr.push('<br />');
@@ -164,52 +169,55 @@ function addRule(arr, name, path, groupName) {
 }
 
 /**
- * @method writeDocumentationFile
- * @param {string} name fileName
- * @param {Array} dataArr array with lines of readme
- * @returns {void}
+ * Write a generated documentation file
+ * @param {string} name
+ * @param {Array} dataArr
  */
 function writeDocumentationFile(name, dataArr) {
-	utils.writeFile('./documentation/' + name + '.md', dataArr.join('\n'));
+	utils.writeFile(`./documentation/${name}.md`, dataArr.join('\n'));
 }
 
-// get all files from fourth directory level in "./test"
-utils.readDir('./test', ig).map(function (fileObj1) {
-	if (!utils.existDir(fileObj1.path)) {
-		return true;
+/**
+ * Emit one documentation file for a rule category directory
+ * @param {{path: string, file: string}} category
+ */
+function processCategory(category) {
+	const data = ['', `## ${getTitle(category.file)}`, '', ''];
+
+	utils
+		.readDir(category.path, ig)
+		.filter((entry) => utils.existFile(entry.path))
+		.forEach((entry) => addRule(data, entry.file, entry.path, category.file));
+
+	writeDocumentationFile(category.file, data);
+}
+
+/**
+ * Process every rule category within a preset subdirectory
+ * @param {{path: string}} group
+ */
+function processGroup(group) {
+	// disable-styles presets mirror their base preset
+	if (!utils.existDir(group.path) || group.path.includes('-disable-styles')) {
+		return;
 	}
-	utils.readDir(fileObj1.path, ig).map(function (fileObj2) {
-		if (!utils.existDir(fileObj2.path)) {
-			return true;
-		}
-		// ignore disable-styles
-		if (fileObj2.path.indexOf('-disable-styles') >= 0) {
-			return true;
-		}
-		utils.readDir(fileObj2.path, ig).map(function (fileObj3) {
-			if (!utils.existDir(fileObj3.path)) {
-				return true;
-			}
 
-			fileName = fileObj3.file;
-			data = [''];
+	utils
+		.readDir(group.path, ig)
+		.filter((entry) => utils.existDir(entry.path))
+		.forEach(processCategory);
+}
 
-			data.push('## ' + getTitle(fileName));
-			data.push('');
-			data.push('');
+/**
+ * Process every subdirectory within a preset directory
+ * @param {{path: string}} preset
+ */
+function processPreset(preset) {
+	if (!utils.existDir(preset.path)) {
+		return;
+	}
 
-			utils.readDir(fileObj3.path, ig).map(function (fileObj4) {
-				if (!utils.existFile(fileObj4.path)) {
-					return true;
-				}
-				addRule(data, fileObj4.file, fileObj4.path, fileName);
-				return true;
-			});
+	utils.readDir(preset.path, ig).forEach(processGroup);
+}
 
-			writeDocumentationFile(fileName, data);
-			return true;
-		});
-		return true;
-	});
-	return true;
-});
+utils.readDir('./test', ig).forEach(processPreset);

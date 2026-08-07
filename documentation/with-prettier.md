@@ -124,13 +124,13 @@ Create a `.prettierrc` file (or use any Prettier config format):
 
 The disable-styles presets disable all formatting-related rules across categories:
 
-| Category | Examples |
-|----------|----------|
-| Style | `indent`, `quotes`, `semi`, `comma-dangle`, `max-len` |
-| TypeScript | `@stylistic/indent`, `@stylistic/semi`, `@stylistic/member-delimiter-style` |
-| React | `react/jsx-indent`, `react/jsx-max-props-per-line`, `react/jsx-closing-bracket-location` |
-| Best Practices | `curly`, `dot-location`, `wrap-iife` |
-| ES2025 | `arrow-parens`, `arrow-spacing`, `generator-star-spacing` |
+| Category       | Examples                                                                                 |
+| -------------- | ---------------------------------------------------------------------------------------- |
+| Style          | `indent`, `quotes`, `semi`, `comma-dangle`, `max-len`                                    |
+| TypeScript     | `@stylistic/indent`, `@stylistic/semi`, `@stylistic/member-delimiter-style`              |
+| React          | `react/jsx-indent`, `react/jsx-max-props-per-line`, `react/jsx-closing-bracket-location` |
+| Best Practices | `curly`, `dot-location`, `wrap-iife`                                                     |
+| ES2025         | `arrow-parens`, `arrow-spacing`, `generator-star-spacing`                                |
 
 This allows Prettier to handle all formatting while ESLint focuses on code quality and best practices.
 
@@ -138,11 +138,11 @@ This allows Prettier to handle all formatting while ESLint focuses on code quali
 
 ## Comparison: disable-styles vs eslint-config-prettier
 
-| Feature | disable-styles | eslint-config-prettier |
-|---------|----------------|------------------------|
-| Maintained by | Merkle team | Prettier team |
-| Customization | Team-curated selection | Comprehensive coverage |
-| Updates | Synced with preset releases | Independent releases |
-| Extra dependency | None | Yes |
+| Feature          | disable-styles              | eslint-config-prettier |
+| ---------------- | --------------------------- | ---------------------- |
+| Maintained by    | Merkle team                 | Prettier team          |
+| Customization    | Team-curated selection      | Comprehensive coverage |
+| Updates          | Synced with preset releases | Independent releases   |
+| Extra dependency | None                        | Yes                    |
 
 Both approaches work well. Use whichever fits your workflow.

@@ -1,12 +1,12 @@
-import typescript from "./typescript.js";
-import globals from "globals";
+import globals from 'globals';
+import typescript from './typescript.js';
 
 export default [
-  ...typescript,
-  {
-    files: ["**/*.{ts,tsx,mts,cts}"],
-    languageOptions: {
-      globals: { ...globals.browser },
-    },
-  },
+	...typescript,
+	{
+		files: ['**/*.{ts,tsx,mts,cts}'],
+		languageOptions: {
+			globals: { ...globals.browser },
+		},
+	},
 ];

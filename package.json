@@ -1,7 +1,7 @@
 {
   "name": "@merkle-open/eslint-config",
   "description": "Default configurations for eslint",
-  "version": "5.0.0-alpha.4",
+  "version": "5.0.0-rc.1",
   "type": "module",
   "repository": {
     "type": "git",

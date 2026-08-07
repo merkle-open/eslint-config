@@ -87,7 +87,7 @@ export default {
 	'import-x/order': [
 		0,
 		{
-			'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+			groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
 			'newlines-between': 'never',
 		},
 	],

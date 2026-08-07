@@ -3,6 +3,5 @@
 **/package.json
 **/package-lock.json
 
-# Project
-test/typescript-disable-styles/__tests__/member-delimiter-style.ts
-test/typescript-react
+# Test tree (fixtures carry intentional formatting; mirrors eslint's ignore scope)
+test

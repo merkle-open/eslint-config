@@ -1,11 +1,8 @@
-
 ## Best practices
-
 
 ### [Accessor pairs](http://eslint.org/docs/rules/accessor-pairs)
 
 > enforces getter/setter pairs in objects
-
 
 :x: Disabled
 
@@ -32,14 +29,12 @@ example = {
 };
 
 ```
+
 <br />
-
-
 
 ### [Array callback return](http://eslint.org/docs/rules/array-callback-return)
 
 > enforces return statements in callbacks of array's methods
-
 
 :white_check_mark: Enabled (error)
 
@@ -69,14 +64,12 @@ var bar = [1, 2].filter(function (x) {
 
 
 ```
+
 <br />
-
-
 
 ### [Block scoped var](http://eslint.org/docs/rules/block-scoped-var)
 
 > treat var statements as if they were block scoped
-
 
 :white_check_mark: Enabled (error)
 
@@ -110,14 +103,12 @@ example = {
 
 
 ```
+
 <br />
-
-
 
 ### [Complexity](http://eslint.org/docs/rules/complexity)
 
 > specify the maximum cyclomatic complexity allowed in a program
-
 
 :white_check_mark: Enabled (error)
 
@@ -173,14 +164,12 @@ function b(x) {
 
 
 ```
+
 <br />
-
-
 
 ### [Consistent return](http://eslint.org/docs/rules/consistent-return)
 
 > require return statements to either always or never specify values
-
 
 :x: Disabled
 
@@ -207,14 +196,12 @@ function doSomething(condition) {
 }
 
 ```
+
 <br />
-
-
 
 ### [Curly](http://eslint.org/docs/rules/curly)
 
 > specify curly brace conventions for all control statements
-
 
 :white_check_mark: Enabled (error)
 
@@ -231,14 +218,12 @@ if (foo) {
 }
 
 ```
+
 <br />
-
-
 
 ### [Default case](http://eslint.org/docs/rules/default-case)
 
 > require default case in switch statements
-
 
 :white_check_mark: Enabled (error)
 
@@ -272,14 +257,12 @@ switch (foo) {
 }
 
 ```
+
 <br />
-
-
 
 ### [Dot location](http://eslint.org/docs/rules/dot-location)
 
 > enforces consistent newlines before or after dots
-
 
 :x: Disabled
 
@@ -294,14 +277,12 @@ var a = universe.
 	galaxy;
 
 ```
+
 <br />
-
-
 
 ### [Dot notation](http://eslint.org/docs/rules/dot-notation)
 
 > encourages use of dot notation whenever possible
-
 
 :white_check_mark: Enabled (error)
 
@@ -317,14 +298,12 @@ var x = foo.bar;
 var x = foo[bar];
 
 ```
+
 <br />
-
-
 
 ### [Eqeqeq](http://eslint.org/docs/rules/eqeqeq)
 
 > require the use of === and !==
-
 
 :white_check_mark: Enabled (error)
 
@@ -342,14 +321,12 @@ if (x === 42) {
 }
 
 ```
+
 <br />
-
-
 
 ### [Guard for in](http://eslint.org/docs/rules/guard-for-in)
 
 > make sure for-in loops have an if statement
-
 
 :white_check_mark: Enabled (error)
 
@@ -369,14 +346,12 @@ for (key in foo) {
 }
 
 ```
+
 <br />
-
-
 
 ### [No alert](http://eslint.org/docs/rules/no-alert)
 
 > disallow the use of alert, confirm, and prompt
-
 
 :white_check_mark: Enabled (error)
 
@@ -388,14 +363,12 @@ alert('hallo');
 */
 
 ```
+
 <br />
-
-
 
 ### [No caller](http://eslint.org/docs/rules/no-caller)
 
 > disallow use of arguments.caller or arguments.callee
-
 
 :white_check_mark: Enabled (error)
 
@@ -422,14 +395,12 @@ function foo(n) {
 }
 
 ```
+
 <br />
-
-
 
 ### [No case declarations](http://eslint.org/docs/rules/no-case-declarations)
 
 > disallow lexical declarations in case/default clauses
-
 
 :white_check_mark: Enabled (error)
 
@@ -471,14 +442,12 @@ switch (foo) {
 }
 
 ```
+
 <br />
-
-
 
 ### [No div regex](http://eslint.org/docs/rules/no-div-regex)
 
 > disallow division operators explicitly at beginning of regular expression
-
 
 :x: Disabled
 
@@ -494,14 +463,12 @@ function bar2() {
 }
 
 ```
+
 <br />
-
-
 
 ### [No else return](http://eslint.org/docs/rules/no-else-return)
 
 > disallow else after a return in an if
-
 
 :white_check_mark: Enabled (error)
 
@@ -528,14 +495,12 @@ function foo() {
 }
 
 ```
+
 <br />
-
-
 
 ### [No empty function](http://eslint.org/docs/rules/no-empty-function)
 
 > disallow empty functions, except for standalone funcs/arrows
-
 
 :x: Disabled
 
@@ -552,14 +517,12 @@ function foo2() {
 }
 
 ```
+
 <br />
-
-
 
 ### [No empty pattern](http://eslint.org/docs/rules/no-empty-pattern)
 
 > disallow empty destructuring patterns
-
 
 :white_check_mark: Enabled (error)
 
@@ -577,14 +540,12 @@ var { a: { b } } = foo;
 var { a = {} } = foo;
 
 ```
+
 <br />
-
-
 
 ### [No eq null](http://eslint.org/docs/rules/no-eq-null)
 
 > disallow comparisons to null without a type-checking operator
-
 
 :white_check_mark: Enabled (error)
 
@@ -602,14 +563,12 @@ if (foo === null) {
 }
 
 ```
+
 <br />
-
-
 
 ### [No eval](http://eslint.org/docs/rules/no-eval)
 
 > disallow use of eval()
-
 
 :white_check_mark: Enabled (error)
 
@@ -623,14 +582,12 @@ var obj = { x: 'foo' },
 */
 
 ```
+
 <br />
-
-
 
 ### [No extend native](http://eslint.org/docs/rules/no-extend-native)
 
 > disallow adding to native types
-
 
 :white_check_mark: Enabled (error)
 
@@ -642,14 +599,12 @@ Object.prototype.extra = 55;
 */
 
 ```
+
 <br />
-
-
 
 ### [No extra bind](http://eslint.org/docs/rules/no-extra-bind)
 
 > disallow unnecessary function binding
-
 
 :white_check_mark: Enabled (error)
 
@@ -672,14 +627,12 @@ console.log(boundGetName2());
 // "ESLint"
 
 ```
+
 <br />
-
-
 
 ### [No extra label](http://eslint.org/docs/rules/no-extra-label)
 
 > disallow Unnecessary Labels
-
 
 :white_check_mark: Enabled (error)
 
@@ -700,14 +653,12 @@ B: switch (a) {
 }
 
 ```
+
 <br />
-
-
 
 ### [No fallthrough](http://eslint.org/docs/rules/no-fallthrough)
 
 > disallow fallthrough of case statements
-
 
 :white_check_mark: Enabled (error)
 
@@ -734,14 +685,12 @@ switch (foo) {
 }
 
 ```
+
 <br />
-
-
 
 ### [No floating decimal](http://eslint.org/docs/rules/no-floating-decimal)
 
 > disallow the use of leading or trailing decimal points in numeric literals
-
 
 :white_check_mark: Enabled (error)
 
@@ -760,14 +709,12 @@ var num2 = 2.0;
 var num3 = -0.7;
 
 ```
+
 <br />
-
-
 
 ### [No implicit coercion](http://eslint.org/docs/rules/no-implicit-coercion)
 
 > disallow the type conversions with shorter notations
-
 
 :white_check_mark: Enabled (error)
 
@@ -792,14 +739,12 @@ var s = String(foo);
 foo = String(foo);
 
 ```
+
 <br />
-
-
 
 ### [No implicit globals](http://eslint.org/docs/rules/no-implicit-globals)
 
 > disallow var and named functions in global scope
-
 
 :x: Disabled
 
@@ -820,14 +765,12 @@ window.bar = function () {};
 })();
 
 ```
+
 <br />
-
-
 
 ### [No implied eval](http://eslint.org/docs/rules/no-implied-eval)
 
 > disallow use of eval()-like methods
-
 
 :white_check_mark: Enabled (error)
 
@@ -842,14 +785,12 @@ setTimeout('doSomething();', 100);
 setTimeout(doSomething, 100);
 
 ```
+
 <br />
-
-
 
 ### [No invalid this](http://eslint.org/docs/rules/no-invalid-this)
 
 > disallow this keywords outside of classes or class-like objects
-
 
 :x: Disabled
 
@@ -861,14 +802,12 @@ foo(function () {
 });
 
 ```
+
 <br />
-
-
 
 ### [No iterator](http://eslint.org/docs/rules/no-iterator)
 
-> disallow usage of __iterator__ property
-
+> disallow usage of **iterator** property
 
 :white_check_mark: Enabled (error)
 
@@ -882,14 +821,12 @@ Foo.prototype.__iterator__ = function () {
 */
 
 ```
+
 <br />
-
-
 
 ### [No labels](http://eslint.org/docs/rules/no-labels)
 
 > disallow use of labels for anything other then loops and switches
-
 
 :white_check_mark: Enabled (error)
 
@@ -905,14 +842,12 @@ label:
 */
 
 ```
+
 <br />
-
-
 
 ### [No lone blocks](http://eslint.org/docs/rules/no-lone-blocks)
 
 > disallow unnecessary nested blocks
-
 
 :white_check_mark: Enabled (error)
 
@@ -926,14 +861,12 @@ label:
 */
 
 ```
+
 <br />
-
-
 
 ### [No loop func](http://eslint.org/docs/rules/no-loop-func)
 
 > disallow creation of functions within loops
-
 
 :white_check_mark: Enabled (error)
 
@@ -949,14 +882,12 @@ for (var i = 0; i < 10; i++) {
 */
 
 ```
+
 <br />
-
-
 
 ### [No magic numbers](http://eslint.org/docs/rules/no-magic-numbers)
 
 > disallow magic numbers
-
 
 :x: Disabled
 
@@ -967,14 +898,12 @@ var now = Date.now(),
 	inOneHour = now + (60 * 60 * 1000);
 
 ```
+
 <br />
-
-
 
 ### [No multi spaces](http://eslint.org/docs/rules/no-multi-spaces)
 
 > disallow use of multiple spaces
-
 
 :white_check_mark: Enabled (error)
 
@@ -986,14 +915,12 @@ if (foo  === 'bar') {}
 */
 
 ```
+
 <br />
-
-
 
 ### [No multi str](http://eslint.org/docs/rules/no-multi-str)
 
 > disallow use of multiline strings
-
 
 :white_check_mark: Enabled (error)
 
@@ -1006,14 +933,12 @@ var x = 'Line 1 \
 */
 
 ```
+
 <br />
-
-
 
 ### [No native reassign](http://eslint.org/docs/rules/no-native-reassign)
 
 > disallow reassignments of native objects
-
 
 :white_check_mark: Enabled (error)
 
@@ -1025,14 +950,12 @@ String = new Object();
 */
 
 ```
+
 <br />
-
-
 
 ### [No new func](http://eslint.org/docs/rules/no-new-func)
 
 > disallow use of new operator for Function object
-
 
 :white_check_mark: Enabled (error)
 
@@ -1044,14 +967,12 @@ var x = new Function('a', 'b', 'return a + b');
 */
 
 ```
+
 <br />
-
-
 
 ### [No new wrappers](http://eslint.org/docs/rules/no-new-wrappers)
 
 > disallows creating new instances of String, Number, and Boolean
-
 
 :white_check_mark: Enabled (error)
 
@@ -1070,14 +991,12 @@ var numberObject = Number(33);
 var booleanObject = Boolean(false);
 
 ```
+
 <br />
-
-
 
 ### [No new](http://eslint.org/docs/rules/no-new)
 
 > disallow use of new operator when not part of the assignment or comparison
-
 
 :white_check_mark: Enabled (error)
 
@@ -1093,14 +1012,12 @@ var person = new Person();
 
 
 ```
+
 <br />
-
-
 
 ### [No octal escape](http://eslint.org/docs/rules/no-octal-escape)
 
 > disallow use of octal escape sequences in string literals, such as var foo = 'Copyright \251';
-
 
 :white_check_mark: Enabled (error)
 
@@ -1112,14 +1029,12 @@ var foo = 'Copyright \251';
 */
 
 ```
+
 <br />
-
-
 
 ### [No octal](http://eslint.org/docs/rules/no-octal)
 
 > disallow use of (old style) octal literals
-
 
 :white_check_mark: Enabled (error)
 
@@ -1131,14 +1046,12 @@ var num = 07;
 */
 
 ```
+
 <br />
-
-
 
 ### [No param reassign](http://eslint.org/docs/rules/no-param-reassign)
 
 > disallow reassignment of function parameters + disallow parameter object manipulation
-
 
 :x: Disabled
 
@@ -1150,14 +1063,12 @@ function foo(bar) {
 }
 
 ```
+
 <br />
-
-
 
 ### [No proto](http://eslint.org/docs/rules/no-proto)
 
-> disallow usage of __proto__ property
-
+> disallow usage of **proto** property
 
 :white_check_mark: Enabled (error)
 
@@ -1169,14 +1080,12 @@ var a = obj.__proto__;
 */
 
 ```
+
 <br />
-
-
 
 ### [No redeclare](http://eslint.org/docs/rules/no-redeclare)
 
 > disallow declaring the same variable more then once
-
 
 :white_check_mark: Enabled (error)
 
@@ -1189,14 +1098,12 @@ var a = 10;
 */
 
 ```
+
 <br />
-
-
 
 ### [No return assign](http://eslint.org/docs/rules/no-return-assign)
 
 > disallow use of assignment in return statement
-
 
 :white_check_mark: Enabled (error)
 
@@ -1210,14 +1117,12 @@ function doSomething() {
 */
 
 ```
+
 <br />
-
-
 
 ### [No script url](http://eslint.org/docs/rules/no-script-url)
 
 > disallow use of `javascript:` urls.
-
 
 :white_check_mark: Enabled (error)
 
@@ -1229,14 +1134,12 @@ location.href = 'javascript:void(0)';
 */
 
 ```
+
 <br />
-
-
 
 ### [No self assign](http://eslint.org/docs/rules/no-self-assign)
 
 > disallow self assignment
-
 
 :white_check_mark: Enabled (error)
 
@@ -1248,14 +1151,12 @@ foo = foo;
 */
 
 ```
+
 <br />
-
-
 
 ### [No self compare](http://eslint.org/docs/rules/no-self-compare)
 
 > disallow comparisons where both sides are exactly the same
-
 
 :white_check_mark: Enabled (error)
 
@@ -1270,14 +1171,12 @@ if (x === x) {
 */
 
 ```
+
 <br />
-
-
 
 ### [No sequences](http://eslint.org/docs/rules/no-sequences)
 
 > disallow use of comma operator
-
 
 :white_check_mark: Enabled (error)
 
@@ -1295,14 +1194,12 @@ var a = (3, 5);
 a = (b += 5, a + b);
 
 ```
+
 <br />
-
-
 
 ### [No throw literal](http://eslint.org/docs/rules/no-throw-literal)
 
 > restrict what can be thrown as an exception
-
 
 :white_check_mark: Enabled (error)
 
@@ -1317,14 +1214,12 @@ throw 'error';
 throw new Error('error');
 
 ```
+
 <br />
-
-
 
 ### [No unmodified loop condition](http://eslint.org/docs/rules/no-unmodified-loop-condition)
 
 > disallow unmodified conditions of loops
-
 
 :x: Disabled
 
@@ -1345,14 +1240,12 @@ while (node) {
 }
 
 ```
+
 <br />
-
-
 
 ### [No unused expressions](http://eslint.org/docs/rules/no-unused-expressions)
 
 > disallow usage of expressions in statement position
-
 
 :white_check_mark: Enabled (error)
 
@@ -1364,14 +1257,12 @@ a && b();
 */
 
 ```
+
 <br />
-
-
 
 ### [No unused labels](http://eslint.org/docs/rules/no-unused-labels)
 
 > disallow unused labels
-
 
 :white_check_mark: Enabled (error)
 
@@ -1398,14 +1289,12 @@ OUTER_LOOP:
 	}
 
 ```
+
 <br />
-
-
 
 ### [No useless call](http://eslint.org/docs/rules/no-useless-call)
 
 > disallow unnecessary .call() and .apply()
-
 
 :x: Disabled
 
@@ -1418,14 +1307,12 @@ foo.call(undefined, 1, 2, 3);
 foo(1, 2, 3);
 
 ```
+
 <br />
-
-
 
 ### [No useless concat](http://eslint.org/docs/rules/no-useless-concat)
 
 > disallow useless string concatenation
-
 
 :white_check_mark: Enabled (error)
 
@@ -1440,14 +1327,12 @@ var foo = 'a' + 'b';
 var foo = 'ab';
 
 ```
+
 <br />
-
-
 
 ### [No useless escape](http://eslint.org/docs/rules/no-useless-escape)
 
 > disallow unnecessary string escaping
-
 
 :white_check_mark: Enabled (error)
 
@@ -1464,14 +1349,12 @@ let foo = 'hola';
 let bar = /:/;
 
 ```
+
 <br />
-
-
 
 ### [No void](http://eslint.org/docs/rules/no-void)
 
 > disallow use of void operator
-
 
 :white_check_mark: Enabled (error)
 
@@ -1489,14 +1372,12 @@ function test() {
 }
 
 ```
+
 <br />
-
-
 
 ### [No warning comments](http://eslint.org/docs/rules/no-warning-comments)
 
 > disallow usage of configurable warning terms in comments: e.g.
-
 
 :x: Disabled
 
@@ -1506,14 +1387,12 @@ function test() {
 // FIXME: this is not a good idea
 
 ```
+
 <br />
-
-
 
 ### [No with](http://eslint.org/docs/rules/no-with)
 
 > disallow use of the with statement
-
 
 :white_check_mark: Enabled (error)
 
@@ -1530,14 +1409,12 @@ with (point) {
 const r = ({ x, y }) => Math.sqrt(x * x + y * y);
 
 ```
+
 <br />
-
-
 
 ### [Radix](http://eslint.org/docs/rules/radix)
 
 > require use of the second argument for parseInt()
-
 
 :white_check_mark: Enabled (error)
 
@@ -1553,14 +1430,12 @@ var num = parseInt('71', 10);
 
 
 ```
+
 <br />
-
-
 
 ### [Vars on top](http://eslint.org/docs/rules/vars-on-top)
 
 > requires to declare all vars on top of their containing scope
-
 
 :x: Disabled
 
@@ -1597,14 +1472,12 @@ function test() {
 
 
 ```
+
 <br />
-
-
 
 ### [Wrap iife](http://eslint.org/docs/rules/wrap-iife)
 
 > require immediate function invocation to be wrapped in parentheses
-
 
 :white_check_mark: Enabled (error)
 
@@ -1619,14 +1492,12 @@ var x = function () { return { y: 1 }; }();
 var x = function () { return { y: 1 }; };
 
 ```
+
 <br />
-
-
 
 ### [Yoda](http://eslint.org/docs/rules/yoda)
 
 > require or disallow Yoda conditions
-
 
 :white_check_mark: Enabled (error)
 
@@ -1645,6 +1516,5 @@ if (color === 'red') {
 }
 
 ```
+
 <br />
-
-

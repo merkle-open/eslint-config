@@ -1,1 +1,1 @@
-export { default } from "./configurations/typescript-browser.js";
+export { default } from './configurations/typescript-browser.js';

@@ -1,121 +1,96 @@
-import fs  from 'fs';
-
-/* eslint "no-console": 0 */
-
+import fs from 'fs';
 
 export default {
 	/**
-	 *
-	 * @method getStats
-	 * @param {string} dirFileName - the directory name
-	 * @returns {Object} getStats
-	 * @public
+	 * Return fs.Stats for a path
+	 * @param {string} dirFileName
+	 * @returns {Object}
 	 */
-	getStats: function (dirFileName) {
+	getStats(dirFileName) {
 		return fs.statSync(dirFileName);
 	},
 
 	/**
-	 *
-	 * @method isDir
-	 * @param {string} dirName - the directory name
-	 * @returns {boolean} isDir - is directory
-	 * @public
+	 * Check whether a path is an existing directory
+	 * @param {string} dirName
+	 * @returns {boolean}
 	 */
-	existDir: function (dirName) {
-		var isDir = false;
-
+	existDir(dirName) {
 		try {
-			isDir = this.getStats(dirName).isDirectory();
-		} catch (err) {
-			isDir = false;
+			return this.getStats(dirName).isDirectory();
+		} catch {
+			return false;
 		}
-
-		return isDir;
 	},
 
 	/**
-	 *
-	 * @method existFile
-	 * @param {string} path - the path
-	 * @returns {boolean} isFile - is given path a file or not
-	 * @public
+	 * Check whether a path is an existing file
+	 * @param {string} path
+	 * @returns {boolean}
 	 */
-	existFile: function (path) {
-		var isFile = false;
-
+	existFile(path) {
 		try {
-			isFile = this.getStats(path).isFile();
-		} catch (err) {
-			isFile = false;
+			return this.getStats(path).isFile();
+		} catch {
+			return false;
 		}
-
-		return isFile;
 	},
 
 	/**
-	 *
-	 * @method writeFile
-	 * @param {string} path - the path
-	 * @param {Object} data - the data object
-	 * @returns {void}
-	 * @public
+	 * Write data to a file, replacing existing content
+	 * @param {string} path
+	 * @param {Object} data
 	 */
-	writeFile: function (path, data) {
+	writeFile(path, data) {
 		fs.writeFileSync(path, data);
 	},
 
 	/**
-	 *
-	 * @method readFile
-	 * @param {string} path - the path
-	 * @returns {string} returns the file data
-	 * @public
+	 * Read a file as UTF-8 text
+	 * @param {string} path
+	 * @returns {string}
 	 */
-	readFile: function (path) {
+	readFile(path) {
 		return fs.readFileSync(path, 'utf8');
 	},
 
 	/**
-	 *
-	 * @method writeFile
-	 * @param {string} dir - the directory path
-	 * @param {Array|undefined} ignoreFiles - the files which should be ignored
-	 * @returns {Array} the result set
-	 * @public
+	 * Read a directory, skipping ignored files
+	 * @param {string} dir
+	 * @param {Array<string>} [ignoreFiles]
+	 * @returns {Array<{path: string, file: string}>}
 	 */
-	readDir: function (dir, ignoreFiles) {
-		var results = [];
-		var list = [];
-
-		ignoreFiles = ignoreFiles || [];
+	readDir(dir, ignoreFiles = []) {
+		let list = [];
 
 		try {
 			list = fs.readdirSync(dir);
 		} catch (err) {
-			console.error('Folder "' + err.path + '" not found!');
+			process.stderr.write(`Folder "${err.path}" not found!\n`);
 		}
 
-		list.forEach(function (file) {
-			if (ignoreFiles.indexOf(file) < 0) {
-				results.push({
-					path: dir + '/' + file,
-					file: file,
-				});
-			}
-		});
-		return results;
+		return list
+			.filter((file) => ignoreFiles.indexOf(file) < 0)
+			.map((file) => ({
+				path: `${dir}/${file}`,
+				file,
+			}));
 	},
 
 	/**
-	 * Capitalizes the first letter of the given string.
-	 *
-	 * @method capitalize
-	 * @param {string} str - The original string
-	 * @returns {string} The capitalized string
+	 * Create a directory, including missing parents
+	 * @param {string} dir
 	 */
-	capitalize: function (str) {
-		// Capitalize the first letter
-		return str.substr(0, 1).toUpperCase().concat(str.substr(1));
+	makeDir(dir) {
+		fs.mkdirSync(dir, { recursive: true });
+	},
+
+	/**
+	 * Capitalize the first letter of a string
+	 * @param {string} str
+	 * @returns {string}
+	 */
+	capitalize(str) {
+		return str.charAt(0).toUpperCase() + str.slice(1);
 	},
 };

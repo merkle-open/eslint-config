@@ -1,8 +1,5 @@
-import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-
-/* eslint "no-console": 0 */
+import utils from './utils.js';
 
 /*
 	USAGE:
@@ -12,65 +9,73 @@ import { fileURLToPath } from 'url';
 	  --ext ts|tsx|jsx|js  File extension for generated test files (default: js)
 */
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const argv = process.argv;
-
 /**
  * Parse command line arguments
+ * @param {Array<string>} args
  * @returns {{filePath: string, destPath: string, ext: string}}
  */
-function parseArgs() {
-	let ext = 'js';
-	let filePath = '';
-	let destPath = '';
-
-	for (let i = 2; i < argv.length; i++) {
-		if (argv[i] === '--ext' && argv[i + 1]) {
-			ext = argv[i + 1];
-			i++;
-		} else if (!filePath) {
-			filePath = argv[i];
-		} else if (!destPath) {
-			destPath = argv[i];
-		}
-	}
+function parseArgs(args) {
+	const extIndex = args.indexOf('--ext');
+	const ext = extIndex >= 0 ? args[extIndex + 1] || 'js' : 'js';
+	const positional = args.filter((arg, index) => arg !== '--ext' && index !== extIndex + 1);
+	const [filePath = '', destPath = ''] = positional;
 
 	return { filePath, destPath, ext };
 }
 
 /**
+ * Check whether a line is a single-line description comment
+ * @param {string} line
+ * @returns {boolean}
+ */
+function isDescriptionComment(line) {
+	return line.startsWith('//') && !line.startsWith('// http') && !line.startsWith('// [');
+}
+
+/**
+ * Extract a rule definition from a line, if present
+ * @param {string} line
+ * @param {string} description
+ * @returns {{name: string, description: string, status: number}|null}
+ */
+function parseRuleLine(line, description) {
+	const ruleMatch = line.match(/^['"]([^'"]+)['"]\s*:\s*(\[?\d)/);
+
+	if (!ruleMatch) {
+		return null;
+	}
+
+	const name = ruleMatch[1];
+	const status = parseInt(ruleMatch[2].replace('[', ''), 10);
+
+	return {
+		name,
+		description: description || name,
+		status,
+	};
+}
+
+/**
  * Parse a rule file and extract rules with descriptions
- * @param {string} content - File content
+ * @param {string} content
  * @returns {Array<{name: string, description: string, status: number}>}
  */
 function parseRules(content) {
 	const rules = [];
-	const lines = content.split('\n');
 	let currentDescription = '';
 
-	for (let i = 0; i < lines.length; i++) {
-		const line = lines[i].trim();
+	for (const rawLine of content.split('\n')) {
+		const line = rawLine.trim();
 
-		// Capture description comments (single line starting with //)
-		if (line.startsWith('//') && !line.startsWith('// http') && !line.startsWith('// [')) {
+		if (isDescriptionComment(line)) {
 			currentDescription = line.replace(/^\/\/\s*/, '').trim();
-			continue;
-		}
+		} else {
+			const rule = parseRuleLine(line, currentDescription);
 
-		// Match rule definitions like: 'rule-name': 0, or 'rule-name': [2, ...],
-		const ruleMatch = line.match(/^['"]([^'"]+)['"]\s*:\s*(\[?\d)/);
-		if (ruleMatch) {
-			const ruleName = ruleMatch[1];
-			const statusChar = ruleMatch[2];
-			// Extract numeric status (0, 1, or 2)
-			const status = parseInt(statusChar.replace('[', ''), 10);
-
-			rules.push({
-				name: ruleName,
-				description: currentDescription || ruleName,
-				status: status,
-			});
-			currentDescription = '';
+			if (rule) {
+				rules.push(rule);
+				currentDescription = '';
+			}
 		}
 	}
 
@@ -78,104 +83,112 @@ function parseRules(content) {
 }
 
 /**
- * Generate test file content for a rule
- * @param {string} description - Rule description
- * @param {number} status - Rule status (0, 1, or 2)
- * @param {string} ext - File extension
- * @returns {string}
+ * Build the eslint-disable header lines for a test file
+ * @param {string} ext
+ * @returns {Array<string>}
  */
-function generateTestContent(description, status, ext) {
-	const lines = [
-		'// DESCRIPTION = ' + description,
-		'// STATUS = ' + status,
-		'',
-		'/* eslint no-unused-vars: 0 */',
-		'/* eslint no-undef: 0 */',
-	];
+function buildDisableHeader(ext) {
+	const lines = ['/* eslint no-unused-vars: 0 */', '/* eslint no-undef: 0 */'];
 
-	// Add TypeScript-specific disables
 	if (ext === 'ts' || ext === 'tsx') {
 		lines.push('/* eslint @typescript-eslint/no-unused-vars: 0 */');
 	}
 
-	// Add React-specific disables
 	if (ext === 'tsx' || ext === 'jsx') {
 		lines.push('/* eslint react/react-in-jsx-scope: 0 */');
 	}
 
-	lines.push('');
-	lines.push('// <!START');
-	lines.push('');
-	lines.push('// Good');
-	lines.push("const example = 'valid code here';");
-	lines.push('');
-	lines.push('// END!>');
-	lines.push('');
-
-	return lines.join('\n');
+	return lines;
 }
 
 /**
- * Ensure directory exists
- * @param {string} dirPath - Directory path
+ * Generate test file content for a rule
+ * @param {string} description
+ * @param {number} status
+ * @param {string} ext
+ * @returns {string}
  */
-function ensureDir(dirPath) {
-	if (!fs.existsSync(dirPath)) {
-		fs.mkdirSync(dirPath, { recursive: true });
+function generateTestContent(description, status, ext) {
+	return [
+		`// DESCRIPTION = ${description}`,
+		`// STATUS = ${status}`,
+		'',
+		...buildDisableHeader(ext),
+		'',
+		'// <!START',
+		'',
+		'// Good',
+		"const example = 'valid code here';",
+		'',
+		'// END!>',
+		'',
+	].join('\n');
+}
+
+/**
+ * Write a test file, skipping if it already exists
+ * @param {string} destDir
+ * @param {{name: string, description: string, status: number}} rule
+ * @param {string} ext
+ * @returns {boolean}
+ */
+function writeRuleFile(destDir, rule, ext) {
+	const fileName = `${rule.name.replace(/^.*\//, '')}.${ext}`;
+	const destFile = path.join(destDir, fileName);
+
+	if (utils.existFile(destFile)) {
+		return false;
 	}
+
+	utils.writeFile(destFile, generateTestContent(rule.description, rule.status, ext));
+	process.stdout.write(`Created: ${destFile}\n`);
+
+	return true;
 }
 
 /**
- * Main function to generate test files
+ * Read and parse the source rule file
+ * @param {string} filePath
+ * @returns {Array<{name: string, description: string, status: number}>}
  */
-async function writeTestFiles() {
-	const { filePath, destPath, ext } = parseArgs();
+function readRules(filePath) {
+	const fullPath = path.resolve(process.cwd(), filePath);
+
+	if (!utils.existFile(fullPath)) {
+		process.stderr.write(`Rule file not found: ${fullPath}\n`);
+		process.exit(1);
+	}
+
+	return parseRules(utils.readFile(fullPath));
+}
+
+/**
+ * Generate all test files
+ */
+function writeTestFiles() {
+	const { filePath, destPath, ext } = parseArgs(process.argv.slice(2));
 
 	if (!filePath || !destPath) {
-		console.error('Usage: node bin/write-rule-test-files.js <rules-file> <dest-dir> [--ext ts|tsx|jsx|js]');
+		process.stderr.write(
+			'Usage: node bin/write-rule-test-files.js <rules-file> <dest-dir> [--ext ts|tsx|jsx|js]\n',
+		);
 		process.exit(1);
 	}
 
-	// Read the rule file
-	const fullPath = path.resolve(process.cwd(), filePath);
-	if (!fs.existsSync(fullPath)) {
-		console.error('Rule file not found: ' + fullPath);
-		process.exit(1);
-	}
-
-	const content = fs.readFileSync(fullPath, 'utf8');
-	const rules = parseRules(content);
+	const rules = readRules(filePath);
 
 	if (rules.length === 0) {
-		console.warn('No rules found in: ' + filePath);
+		process.stderr.write(`No rules found in: ${filePath}\n`);
 		return;
 	}
 
-	// Ensure destination directory exists
-	const destFullPath = path.resolve(process.cwd(), destPath);
-	ensureDir(destFullPath);
+	const destDir = path.resolve(process.cwd(), destPath);
+	utils.makeDir(destDir);
 
-	let created = 0;
-	let skipped = 0;
+	const created = rules.filter((rule) => writeRuleFile(destDir, rule, ext)).length;
+	const skipped = rules.length - created;
 
-	for (const rule of rules) {
-		// Convert rule name to filename (e.g., @typescript-eslint/no-unused-vars -> no-unused-vars)
-		const fileName = rule.name.replace(/^.*\//, '') + '.' + ext;
-		const destFile = path.join(destFullPath, fileName);
-
-		// Skip if file already exists
-		if (fs.existsSync(destFile)) {
-			skipped++;
-			continue;
-		}
-
-		const testContent = generateTestContent(rule.description, rule.status, ext);
-		fs.writeFileSync(destFile, testContent);
-		console.info('Created: ' + destFile);
-		created++;
-	}
-
-	console.info(`\nSummary: ${created} files created, ${skipped} skipped (already exist)`);
+	process.stdout.write(`\nSummary: ${created} files created, ${skipped} skipped (already exist)\n`);
 }
 
 writeTestFiles();

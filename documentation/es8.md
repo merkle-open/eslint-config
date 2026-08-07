@@ -1,11 +1,8 @@
-
 ## Es8
-
 
 ### [No await in loop](http://eslint.org/docs/rules/no-await-in-loop)
 
 > Disallow await inside of loops
-
 
 :white_check_mark: Enabled (error)
 
@@ -35,6 +32,5 @@ async function foo(things) {
 }
 
 ```
+
 <br />
-
-
