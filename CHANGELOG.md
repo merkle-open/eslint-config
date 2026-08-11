@@ -7,6 +7,24 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [5.0.0] - 2026-08-11
+
+### Changed
+
+- Promoted the `5.0.0-rc.*` line to the final stable `5.0.0` release.
+- Clarified ESLint versioning in requirements/docs:
+  - consumer peer dependency: `eslint@^9.3.0`
+  - package development/CI baseline: `eslint@9.39.4` (`devDependencies`)
+- Aligned the internal TypeScript-config devDependency to `@merkle-open/ts-config@2.0.0`
+- Updated README and MIGRATION documentation with flat-config scope guidance:
+  - CLI targets define lint roots
+  - `ignores` excludes files/folders from linting
+  - `files` patterns select which config blocks (rules/parser/overrides) apply
+- Documented parser defaults more explicitly: JavaScript uses `espree` by default; TypeScript uses `typescript-eslint`.
+- Switched README documentation links from `develop` to `master` for the stable release.
+
+---
+
 ## [5.0.0-alpha.1] - 2026-07-01
 
 ### ⚠️ BREAKING CHANGES
@@ -18,7 +36,7 @@ This is a major version upgrade with significant breaking changes. See the [Migr
 | Requirement | v4             | v5                               | Notes                |
 | ----------- | -------------- | -------------------------------- | -------------------- |
 | Node.js     | >=14           | ^20.19.0 \|\| ^22.13.0 \|\| >=24 | ESLint 9 requirement |
-| ESLint      | ^8.x           | ^9.x                             | Flat config only     |
+| ESLint      | ^8.x           | ^9.3.0 (peer dependency)         | Flat config only     |
 | TypeScript  | ^4.x \|\| ^5.x | ^5.x \|\| ^6.x                   | Peer dependency      |
 
 #### Module System
@@ -452,7 +470,7 @@ export default [...config, prettierConfig];
 
 ### Fixed
 
-- **Broken README links on npm** — the npm package page rewrites relative links to `blob/HEAD` (the `master` default branch), where the v5 `CHANGELOG.md` and `documentation/*.md` files don't yet exist, causing 404s. README now uses absolute `blob/develop` URLs for the changelog, migration guide, and rule documentation.
+- **Broken README links on npm** — the npm package page rewrites relative links to `blob/HEAD` (the `master` default branch), where the v5 `CHANGELOG.md` and `documentation/*.md` files don't yet exist, causing 404s. README now uses absolute `blob/master` URLs for the changelog, migration guide, and rule documentation.
 
 ### Changed
 

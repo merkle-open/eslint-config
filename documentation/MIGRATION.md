@@ -16,19 +16,21 @@ v5 is a major rewrite:
 
 Before upgrading, ensure your project meets these requirements:
 
-| Requirement | Minimum Version                        |
-| ----------- | -------------------------------------- |
-| Node.js     | `^20.19.0 \|\| ^22.13.0 \|\| >=24`     |
-| ESLint      | `^9.3.0`                               |
-| TypeScript  | `^6.0.0` (if using TypeScript presets) |
+| Requirement              | Minimum Version                        |
+| ------------------------ | -------------------------------------- |
+| Node.js                  | `^20.19.0 \|\| ^22.13.0 \|\| >=24`     |
+| ESLint (peer dependency) | `^9.3.0`                               |
+| TypeScript               | `^6.0.0` (if using TypeScript presets) |
+
+> Reference: this package is developed and CI-tested with `eslint@9.39.4` in its own `devDependencies`.
 
 ## Step-by-Step Migration
 
 ### 1. Upgrade Dependencies
 
 ```bash
-# Upgrade ESLint to v9
-npm install eslint@^9.3.0 --save-dev
+# Upgrade ESLint to latest validated v9 release
+npm install eslint@^9.39.4 --save-dev
 
 # Upgrade the config package
 npm install @merkle-open/eslint-config@^5.0.0 --save-dev
@@ -93,6 +95,14 @@ export default [
 ```
 
 > The `--ext` flag is not supported in ESLint 9 flat config. ESLint now uses file extensions from the config's `files` patterns.
+
+### 4.1 Understand Scope in Flat Config
+
+In flat config, linting scope comes from three separate controls:
+
+1. **CLI targets** (`eslint src packages`) define where ESLint looks.
+2. **`ignores`** removes folders/files from linting.
+3. **`files`** patterns choose which config objects apply to matched files (rules, parser, overrides); they do not define lint roots.
 
 ### 5. Move Ignores to Config
 
@@ -249,7 +259,7 @@ These deprecated rules were removed:
 | ------------------ | ----------------------- | --------------------------------------------------- |
 | Default export     | `es8-browser`           | `typescript-browser`                                |
 | Parser             | Babel (JavaScript)      | espree (JavaScript), typescript-eslint (TypeScript) |
-| React version      | Auto-detect             | Explicit `18.3`                                     |
+| React version      | Auto-detect             | Auto-detect (`"detect"`)                            |
 | TypeScript project | Manual `project` option | Auto-detect via `projectService`                    |
 
 ### Complexity Rule

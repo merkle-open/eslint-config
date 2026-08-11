@@ -1,7 +1,7 @@
 {
   "name": "@merkle-open/eslint-config",
   "description": "Default configurations for eslint",
-  "version": "5.0.0-rc.2",
+  "version": "5.0.0",
   "type": "module",
   "repository": {
     "type": "git",
@@ -59,7 +59,7 @@
   ],
   "devDependencies": {
     "@merkle-open/prettier-config": "2.0.1",
-    "@merkle-open/ts-config": "2.0.0-alpha.1",
+    "@merkle-open/ts-config": "2.0.0",
     "acorn": "8.15.0",
     "eslint": "9.39.4",
     "node-fetch": "2.7.0",
