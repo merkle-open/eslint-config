@@ -1,79 +1,194 @@
-/* eslint "no-console": 0 */
+import path from 'path';
+import utils from './utils.js';
 
 /*
-
 	USAGE:
-	node bin/write-rule-test-files.js rules/errors.js test/errors/rules/
+	node bin/write-rule-test-files.js rules/errors.js test/typescript-browser/rules/errors/ [--ext ts]
 
+	Options:
+	  --ext ts|tsx|jsx|js  File extension for generated test files (default: js)
 */
 
-var utils = require('./utils');
-var argv = process.argv;
-var filePath;
-var destPath;
-var data;
+/**
+ * Parse command line arguments
+ * @param {Array<string>} args
+ * @returns {{filePath: string, destPath: string, ext: string}}
+ */
+function parseArgs(args) {
+	const extIndex = args.indexOf('--ext');
+	const ext = extIndex >= 0 ? args[extIndex + 1] || 'js' : 'js';
+	const positional = args.filter((arg, index) => arg !== '--ext' && index !== extIndex + 1);
+	const [filePath = '', destPath = ''] = positional;
+
+	return { filePath, destPath, ext };
+}
 
 /**
- * @method writeTestFiles
- * @returns {void}
+ * Check whether a line is a single-line description comment
+ * @param {string} line
+ * @returns {boolean}
+ */
+function isDescriptionComment(line) {
+	return line.startsWith('//') && !line.startsWith('// http') && !line.startsWith('// [');
+}
+
+/**
+ * Extract a rule definition from a line, if present
+ * @param {string} line
+ * @param {string} description
+ * @returns {{name: string, description: string, status: number}|null}
+ */
+function parseRuleLine(line, description) {
+	const ruleMatch = line.match(/^['"]([^'"]+)['"]\s*:\s*(\[?\d)/);
+
+	if (!ruleMatch) {
+		return null;
+	}
+
+	const name = ruleMatch[1];
+	const status = parseInt(ruleMatch[2].replace('[', ''), 10);
+
+	return {
+		name,
+		description: description || name,
+		status,
+	};
+}
+
+/**
+ * Parse a rule file and extract rules with descriptions
+ * @param {string} content
+ * @returns {Array<{name: string, description: string, status: number}>}
+ */
+function parseRules(content) {
+	const rules = [];
+	let currentDescription = '';
+
+	for (const rawLine of content.split('\n')) {
+		const line = rawLine.trim();
+
+		if (isDescriptionComment(line)) {
+			currentDescription = line.replace(/^\/\/\s*/, '').trim();
+		} else {
+			const rule = parseRuleLine(line, currentDescription);
+
+			if (rule) {
+				rules.push(rule);
+				currentDescription = '';
+			}
+		}
+	}
+
+	return rules;
+}
+
+/**
+ * Build the eslint-disable header lines for a test file
+ * @param {string} ext
+ * @returns {Array<string>}
+ */
+function buildDisableHeader(ext) {
+	const lines = ['/* eslint no-unused-vars: 0 */', '/* eslint no-undef: 0 */'];
+
+	if (ext === 'ts' || ext === 'tsx') {
+		lines.push('/* eslint @typescript-eslint/no-unused-vars: 0 */');
+	}
+
+	if (ext === 'tsx' || ext === 'jsx') {
+		lines.push('/* eslint react/react-in-jsx-scope: 0 */');
+	}
+
+	return lines;
+}
+
+/**
+ * Generate test file content for a rule
+ * @param {string} description
+ * @param {number} status
+ * @param {string} ext
+ * @returns {string}
+ */
+function generateTestContent(description, status, ext) {
+	return [
+		`// DESCRIPTION = ${description}`,
+		`// STATUS = ${status}`,
+		'',
+		...buildDisableHeader(ext),
+		'',
+		'// <!START',
+		'',
+		'// Good',
+		"const example = 'valid code here';",
+		'',
+		'// END!>',
+		'',
+	].join('\n');
+}
+
+/**
+ * Write a test file, skipping if it already exists
+ * @param {string} destDir
+ * @param {{name: string, description: string, status: number}} rule
+ * @param {string} ext
+ * @returns {boolean}
+ */
+function writeRuleFile(destDir, rule, ext) {
+	const fileName = `${rule.name.replace(/^.*\//, '')}.${ext}`;
+	const destFile = path.join(destDir, fileName);
+
+	if (utils.existFile(destFile)) {
+		return false;
+	}
+
+	utils.writeFile(destFile, generateTestContent(rule.description, rule.status, ext));
+	process.stdout.write(`Created: ${destFile}\n`);
+
+	return true;
+}
+
+/**
+ * Read and parse the source rule file
+ * @param {string} filePath
+ * @returns {Array<{name: string, description: string, status: number}>}
+ */
+function readRules(filePath) {
+	const fullPath = path.resolve(process.cwd(), filePath);
+
+	if (!utils.existFile(fullPath)) {
+		process.stderr.write(`Rule file not found: ${fullPath}\n`);
+		process.exit(1);
+	}
+
+	return parseRules(utils.readFile(fullPath));
+}
+
+/**
+ * Generate all test files
  */
 function writeTestFiles() {
-	if (argv.length < 4) {
+	const { filePath, destPath, ext } = parseArgs(process.argv.slice(2));
+
+	if (!filePath || !destPath) {
+		process.stderr.write(
+			'Usage: node bin/write-rule-test-files.js <rules-file> <dest-dir> [--ext ts|tsx|jsx|js]\n',
+		);
+		process.exit(1);
+	}
+
+	const rules = readRules(filePath);
+
+	if (rules.length === 0) {
+		process.stderr.write(`No rules found in: ${filePath}\n`);
 		return;
 	}
 
-	filePath = argv[2];
-	destPath = argv[3];
-	data = utils.readFile(filePath);
+	const destDir = path.resolve(process.cwd(), destPath);
+	utils.makeDir(destDir);
 
-	data.split('\n\n').map(function (rule) {
-		var ruleSpl = rule.split('\n');
-		var desc;
-		var destFileName;
-		var nameStatus;
-		var nameStatusSpl;
-		var fileData = [''];
+	const created = rules.filter((rule) => writeRuleFile(destDir, rule, ext)).length;
+	const skipped = rules.length - created;
 
-		if (ruleSpl.length < 1) {
-			return true;
-		}
-
-		desc = ruleSpl[0].replace('//', '').trim();
-		nameStatus = ruleSpl[1]
-			.replace('//', '')
-			.trim()
-			.replace(/\[([^, {]*).*/g, '$1')
-			.replace(/'/g, '');
-
-		if (nameStatus.search(/^http/) >= 0) {
-			nameStatus = ruleSpl[2]
-				.replace('//', '')
-				.trim()
-				.replace(/\[([^, {]*).*/g, '$1')
-				.replace(/'/g, '');
-		}
-
-		nameStatusSpl = nameStatus.split(':');
-
-		destFileName = destPath + nameStatusSpl[0].replace(/^.*\//, '') + '.js';
-		if (utils.existFile(destFileName)) {
-			return true;
-		}
-
-		fileData.push('// DESCRIPTION = ' + desc);
-		fileData.push('// STATUS = ' + parseInt(nameStatusSpl[1] || 0, 10));
-		fileData.push('');
-		fileData.push('// <!START');
-		fileData.push('');
-		fileData.push('// END!>');
-		fileData.push("document.window.append('', null);");
-		fileData.push('');
-
-		utils.writeFile(destFileName, fileData.join('\n'));
-		console.info('File written: ' + destFileName);
-
-		return true;
-	});
+	process.stdout.write(`\nSummary: ${created} files created, ${skipped} skipped (already exist)\n`);
 }
 
 writeTestFiles();

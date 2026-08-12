@@ -1,37 +1,44 @@
-module.exports = {
-	plugins: [
-		'@typescript-eslint',
-		'jsx-a11y',
-		'react',
-		'react-hooks',
-	],
-	extends: [
-		'./typescript.js',
-		'../rules/react.js',
-		'../rules/react-a11y.js',
-		'../rules/react-hooks.js',
-	].map(require.resolve),
-	env: {
-		browser: true,
-		node: false,
-		amd: false,
-		mocha: true,
-		jasmine: true,
-		jest: true,
-		jquery: true,
-		serviceworker: true,
-		worker: true,
-	},
-	parserOptions: {
-		ecmaVersion: 8,
-		sourceType: 'module',
-		ecmaFeatures: {
-			jsx: true,
+import reactPlugin from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import a11yPlugin from 'eslint-plugin-jsx-a11y';
+import typescriptBrowser from './typescript-browser.js';
+import reactRules from '../rules/react.js';
+import reactA11yRules from '../rules/react-a11y.js';
+import reactDisableStyles from '../disable-styles/react.js';
+
+export default [
+	...typescriptBrowser,
+
+	reactHooks.configs.flat.recommended,
+
+	{
+		files: ['**/*.{ts,tsx,mts,cts,js,jsx,mjs,cjs}'],
+		plugins: {
+			react: reactPlugin,
+		},
+		settings: {
+			react: { version: 'detect' },
+		},
+		rules: {
+			...reactRules,
+			// React's own JSX formatting rules are always disabled (formatter owns
+			// layout), even in this non-disable-styles preset.
+			...reactDisableStyles,
 		},
 	},
-	settings: {
-		react: {
-			version: 'detect',
+
+	{
+		files: ['**/*.{tsx,jsx}'],
+		languageOptions: {
+			parserOptions: {
+				ecmaFeatures: { jsx: true },
+			},
+		},
+		plugins: {
+			'jsx-a11y': a11yPlugin,
+		},
+		rules: {
+			...reactA11yRules,
 		},
 	},
-};
+];

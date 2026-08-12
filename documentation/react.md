@@ -1,11 +1,8 @@
-
 ## React
-
 
 ### [Display name](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/display-name.md)
 
 > Prevent missing displayName in a React component definition
-
 
 :white_check_mark: Enabled (error)
 
@@ -21,25 +18,20 @@ const Hello = React.createClass({
 */
 
 ```
+
 <br />
-
-
 
 ### [Forbid prop types](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/forbid-prop-types.md)
 
 > Forbid certain propTypes (any, array, object)
 
-
 :x: Disabled
 
 <br />
 
-
-
 ### [Jsx boolean value](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md)
 
 > Enforce boolean attributes notation in JSX
-
 
 :white_check_mark: Enabled (error)
 
@@ -54,14 +46,12 @@ const Hello = <Hello personal={true} />;
 const Hello = <Hello personal />;
 
 ```
+
 <br />
-
-
 
 ### [Jsx closing bracket location](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-closing-bracket-location.md)
 
 > Validate closing bracket location in JSX
-
 
 :white_check_mark: Enabled (error)
 
@@ -86,14 +76,12 @@ const Hello = <Hello personal />;
 />;
 
 ```
+
 <br />
-
-
 
 ### [Jsx curly spacing](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-curly-spacing.md)
 
 > Enforce or disallow spaces inside of curly braces in JSX attributes
-
 
 :white_check_mark: Enabled (error)
 
@@ -115,14 +103,12 @@ const Hello = <Hello personal />;
 />;
 
 ```
+
 <br />
-
-
 
 ### [Jsx equals spacing](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-equals-spacing.md)
 
 > enforce spacing around jsx equals signs
-
 
 :white_check_mark: Enabled (error)
 
@@ -141,14 +127,12 @@ const Hello = <Hello personal />;
 <Hello {...props} />;
 
 ```
+
 <br />
-
-
 
 ### [Jsx first prop new line](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-first-prop-new-line.md)
 
 > Require that the first prop in a JSX element be on a new line when the element is multiline
-
 
 :white_check_mark: Enabled (error)
 
@@ -167,14 +151,12 @@ const Hello = <Hello personal />;
 />;
 
 ```
+
 <br />
-
-
 
 ### [Jsx handler names](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-handler-names.md)
 
 > Enforce event handler naming conventions in JSX
-
 
 :white_check_mark: Enabled (error)
 
@@ -191,14 +173,12 @@ const Hello = <Hello personal />;
 <MyComponent onChange={this.props.onFoo} />;
 
 ```
+
 <br />
-
-
 
 ### [Jsx indent props](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md)
 
 > Validate props indentation in JSX
-
 
 :white_check_mark: Enabled (error)
 
@@ -223,14 +203,12 @@ firstName="John"
 />;
 
 ```
+
 <br />
-
-
 
 ### [Jsx indent](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-indent.md)
 
 > enforce JSX indentation
-
 
 :white_check_mark: Enabled (error)
 
@@ -256,14 +234,12 @@ firstName="John"
 </App>;
 
 ```
+
 <br />
-
-
 
 ### [Jsx key](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-key.md)
 
 > Validate JSX has key prop when in array or iterator
-
 
 :white_check_mark: Enabled (error)
 
@@ -280,14 +256,12 @@ out.map((x) => <Hello>x</Hello>);
 out.map((x, i) => <Hello key={i}>x</Hello>);
 
 ```
+
 <br />
-
-
 
 ### [Jsx max props per line](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md)
 
 > Limit maximum of props on a single line in JSX
-
 
 :white_check_mark: Enabled (error)
 
@@ -307,14 +281,12 @@ out.map((x, i) => <Hello key={i}>x</Hello>);
 />;
 
 ```
+
 <br />
-
-
 
 ### [Jsx no bind](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-bind.md)
 
 > Prevent usage of .bind() in JSX props
-
 
 :white_check_mark: Enabled (error)
 
@@ -329,14 +301,12 @@ out.map((x, i) => <Hello key={i}>x</Hello>);
 <div onClick={this.handleClick}></div>;
 
 ```
+
 <br />
-
-
 
 ### [Jsx no duplicate props](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-duplicate-props.md)
 
 > Prevent duplicate props in JSX
-
 
 :white_check_mark: Enabled (error)
 
@@ -351,14 +321,12 @@ out.map((x, i) => <Hello key={i}>x</Hello>);
 <Hello firstname="John" lastname="Doe" />;
 
 ```
+
 <br />
-
-
 
 ### [Jsx no literals](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md)
 
 > Prevent usage of unwrapped JSX strings
-
 
 :x: Disabled
 
@@ -371,14 +339,12 @@ const A = <div>test</div>;
 const B = <div>{test}</div>;
 
 ```
+
 <br />
-
-
 
 ### [Jsx no target blank](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-target-blank.md)
 
-> disallow target="_blank" on links
-
+> disallow target="\_blank" on links
 
 :x: Disabled
 
@@ -388,14 +354,12 @@ const B = <div>{test}</div>;
 const Hello = <a target="_blank"></a>;
 
 ```
+
 <br />
-
-
 
 ### [Jsx no undef](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md)
 
 > Disallow undeclared variables in JSX
-
 
 :white_check_mark: Enabled (error)
 
@@ -411,14 +375,12 @@ const Hello2 = require('./Hello');
 <Hello2 name="John" />;
 
 ```
+
 <br />
-
-
 
 ### [Jsx pascal case](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-pascal-case.md)
 
 > Enforce PascalCase for user-defined JSX components
-
 
 :white_check_mark: Enabled (error)
 
@@ -434,25 +396,20 @@ const Hello2 = require('./Hello');
 <TestComponent />;
 
 ```
+
 <br />
-
-
 
 ### [Jsx quotes](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-quotes.md)
 
 > specify whether double or single quotes should be used in JSX attributes
 
-
 :white_check_mark: Enabled (error)
 
 <br />
 
-
-
 ### [Jsx sort props](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-sort-props.md)
 
 > Enforce props alphabetical sorting
-
 
 :white_check_mark: Enabled (error)
 
@@ -481,14 +438,12 @@ const Hello2 = require('./Hello');
 />;
 
 ```
+
 <br />
-
-
 
 ### [Jsx tag spacing](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-tag-spacing.md)
 
 > Enforce spaces before the closing bracket of self-closing JSX elements
-
 
 :white_check_mark: Enabled (error)
 
@@ -505,14 +460,12 @@ const Hello2 = require('./Hello');
 <Hello firstName="John" />;
 
 ```
+
 <br />
-
-
 
 ### [Jsx uses react](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md)
 
 > Prevent React to be incorrectly marked as unused
-
 
 :white_check_mark: Enabled (error)
 
@@ -521,25 +474,20 @@ const Hello2 = require('./Hello');
 const React = require('react');
 
 ```
+
 <br />
-
-
 
 ### [Jsx uses vars](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md)
 
 > Prevent variables used in JSX to be incorrectly marked as unused
 
-
 :white_check_mark: Enabled (error)
 
 <br />
 
-
-
 ### [No danger](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-danger.md)
 
 > Prevent usage of dangerous JSX properties
-
 
 :x: Disabled
 
@@ -548,14 +496,12 @@ const React = require('react');
 const Hello = (<div dangerouslySetInnerHTML={{ __html: 'Hello World' }}></div>);
 
 ```
+
 <br />
-
-
 
 ### [No deprecated](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md)
 
 > Prevent usage of deprecated methods
-
 
 :white_check_mark: Enabled (error)
 
@@ -571,14 +517,12 @@ React.renderToStaticMarkup(<MyComponent />);
 */
 
 ```
+
 <br />
-
-
 
 ### [No did mount set state](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-did-mount-set-state.md)
 
 > Prevent usage of setState in componentDidMount
-
 
 :white_check_mark: Enabled (error)
 
@@ -612,14 +556,12 @@ class Hello extends Component {
 }
 
 ```
+
 <br />
-
-
 
 ### [No did update set state](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-did-update-set-state.md)
 
 > Prevent usage of setState in componentDidUpdate
-
 
 :white_check_mark: Enabled (error)
 
@@ -640,14 +582,12 @@ const Hello = React.createClass({
 */
 
 ```
+
 <br />
-
-
 
 ### [No direct mutation state](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md)
 
 > Prevent direct mutation of this.state
-
 
 :x: Disabled
 
@@ -688,14 +628,12 @@ class Hello extends Component {
 }
 
 ```
+
 <br />
-
-
 
 ### [No is mounted](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md)
 
 > Prevent usage of isMounted
-
 
 :white_check_mark: Enabled (error)
 
@@ -716,14 +654,12 @@ const Hello = React.createClass({
 */
 
 ```
+
 <br />
-
-
 
 ### [No multi comp](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md)
 
 > Prevent multiple component definition per file
-
 
 :white_check_mark: Enabled (error)
 
@@ -745,36 +681,28 @@ const HelloJohn = React.createClass({
 */
 
 ```
+
 <br />
-
-
 
 ### [No set state](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-set-state.md)
 
 > Prevent usage of setState
 
-
 :x: Disabled
 
 <br />
-
-
 
 ### [No string refs](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md)
 
 > Prevent using string references
 
-
 :x: Disabled
 
 <br />
 
-
-
 ### [No unknown property](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md)
 
 > Prevent usage of unknown DOM property
-
 
 :white_check_mark: Enabled (error)
 
@@ -789,14 +717,12 @@ const Hello = <div class="hello">Hello World</div>;
 const Hello = <div className="hello">Hello World</div>;
 
 ```
+
 <br />
-
-
 
 ### [Prefer es6 class](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md)
 
 > Require ES6 class declarations over React.createClass
-
 
 :white_check_mark: Enabled (error)
 
@@ -819,14 +745,12 @@ class Hello extends React.Component {
 }
 
 ```
+
 <br />
-
-
 
 ### [Prefer stateless function](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md)
 
 > Require stateless functions when not using lifecycle methods, setState or ref
-
 
 :white_check_mark: Enabled (error)
 
@@ -850,14 +774,12 @@ const Foo = function (props) {
 };
 
 ```
+
 <br />
-
-
 
 ### [Prop types](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prop-types.md)
 
 > Prevent missing props validation in a React component definition
-
 
 :white_check_mark: Enabled (error)
 
@@ -883,14 +805,12 @@ Hello.propTypes = {
 };
 
 ```
+
 <br />
-
-
 
 ### [React in jsx scope](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/react-in-jsx-scope.md)
 
 > Prevent missing React when using JSX
-
 
 :white_check_mark: Enabled (error)
 
@@ -900,25 +820,20 @@ Hello.propTypes = {
 const React = require('react');
 
 ```
+
 <br />
-
-
 
 ### [Require extension](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/require-extension.md)
 
 > Restrict file extensions that may be required
 
-
 :x: Disabled
 
 <br />
 
-
-
 ### [Require render return](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/require-render-return.md)
 
 > Require render() methods to return something
-
 
 :white_check_mark: Enabled (error)
 
@@ -941,14 +856,12 @@ class Hello extends React.Component {
 }
 
 ```
+
 <br />
-
-
 
 ### [Self closing comp](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md)
 
 > Prevent extra closing tags for components without children
-
 
 :white_check_mark: Enabled (error)
 
@@ -963,14 +876,12 @@ const HelloJohn = <Hello name="John"></Hello>;
 const HelloJohn = <Hello name="John" />;
 
 ```
+
 <br />
-
-
 
 ### [Sort comp](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/sort-comp.md)
 
 > Enforce component methods order
-
 
 :white_check_mark: Enabled (error)
 
@@ -1010,14 +921,12 @@ class Hello extends React.Component {
 }
 
 ```
+
 <br />
-
-
 
 ### [Sort prop types](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/sort-prop-types.md)
 
 > Enforce propTypes declarations alphabetical sorting
-
 
 :white_check_mark: Enabled (error)
 
@@ -1041,17 +950,13 @@ Test2.propTypes = {
 };
 
 ```
+
 <br />
-
-
 
 ### [Wrap multilines](https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/wrap-multilines.md)
 
 > Prevent missing parentheses around multilines JSX
 
-
 :white_check_mark: Enabled (error)
 
 <br />
-
-

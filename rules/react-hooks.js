@@ -1,11 +1,9 @@
-module.exports = {
-	rules: {
-		// Checks rules of Hooks
-		// https://reactjs.org/docs/hooks-rules.html
-		'react-hooks/rules-of-hooks': 2,
+export default {
+	// Checks rules of Hooks
+	// https://reactjs.org/docs/hooks-rules.html
+	'react-hooks/rules-of-hooks': 2,
 
-		// Checks effect dependencies
-		// https://reactjs.org/docs/hooks-rules.html
-		'react-hooks/exhaustive-deps': 1,
-	},
+	// Checks effect dependencies
+	// https://reactjs.org/docs/hooks-rules.html
+	'react-hooks/exhaustive-deps': 1,
 };

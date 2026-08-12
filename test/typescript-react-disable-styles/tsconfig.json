@@ -1,0 +1,7 @@
+{
+  "extends": "@merkle-open/ts-config/browser",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": ["**/*.ts", "**/*.tsx"]
+}

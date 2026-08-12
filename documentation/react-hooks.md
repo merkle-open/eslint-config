@@ -1,11 +1,8 @@
-
 ## React hooks
-
 
 ### [Exhaustive deps](https://reactjs.org/docs/hooks-rules.html)
 
 > Checks effect dependencies
-
 
 :white_check_mark: Enabled (error)
 
@@ -31,14 +28,12 @@ function MyComponent2() {
 }
 
 ```
+
 <br />
-
-
 
 ### [Rules of hooks](https://reactjs.org/docs/hooks-rules.html)
 
 > Checks rules of Hooks
-
 
 :white_check_mark: Enabled (error)
 
@@ -94,6 +89,5 @@ function Foo2({ alt, src }) {
 }
 
 ```
+
 <br />
-
-

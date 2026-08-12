@@ -1,0 +1,12 @@
+// DESCRIPTION = enforces consistent naming when capturing the current execution context
+// STATUS = 2
+
+/* eslint no-unused-vars: 0 */
+/* eslint no-undef: 0 */
+
+// <!START
+
+// Good
+const example = 'valid code here';
+
+// END!>

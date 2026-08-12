@@ -1,11 +1,8 @@
-
 ## Variables
-
 
 ### [Init declarations](http://eslint.org/docs/rules/init-declarations)
 
 > enforce or disallow variable initializations at definition
-
 
 :x: Disabled
 
@@ -28,25 +25,20 @@ function good() {
 }
 
 ```
+
 <br />
-
-
 
 ### [No catch shadow](http://eslint.org/docs/rules/no-catch-shadow)
 
 > disallow the catch clause parameter name being the same as a variable in the outer scope
 
-
 :x: Disabled
 
 <br />
 
-
-
 ### [No delete var](http://eslint.org/docs/rules/no-delete-var)
 
 > disallow deletion of variables
-
 
 :white_check_mark: Enabled (error)
 
@@ -59,36 +51,28 @@ delete x;
 */
 
 ```
+
 <br />
-
-
 
 ### [No label var](http://eslint.org/docs/rules/no-label-var)
 
 > disallow labels that share a name with a variable
 
-
 :x: Disabled
 
 <br />
-
-
 
 ### [No restricted globals](http://eslint.org/docs/rules/no-restricted-globals)
 
 > disallow specific globals
 
-
 :x: Disabled
 
 <br />
 
-
-
 ### [No shadow restricted names](http://eslint.org/docs/rules/no-shadow-restricted-names)
 
 > disallow shadowing of names such as arguments
-
 
 :white_check_mark: Enabled (error)
 
@@ -104,14 +88,12 @@ var undefined;
 */
 
 ```
+
 <br />
-
-
 
 ### [No shadow](http://eslint.org/docs/rules/no-shadow)
 
 > disallow declaration of variables already declared in the outer scope
-
 
 :white_check_mark: Enabled (error)
 
@@ -132,14 +114,12 @@ function b() {
 }
 
 ```
+
 <br />
-
-
 
 ### [No undef init](http://eslint.org/docs/rules/no-undef-init)
 
 > disallow use of undefined when initializing variables
-
 
 :x: Disabled
 
@@ -150,14 +130,12 @@ var foo = undefined;
 let bar = undefined;
 
 ```
+
 <br />
-
-
 
 ### [No undef](http://eslint.org/docs/rules/no-undef)
 
-> disallow use of undeclared variables unless mentioned in a /*global */ block
-
+> disallow use of undeclared variables unless mentioned in a /_global _/ block
 
 :white_check_mark: Enabled (error)
 
@@ -170,14 +148,12 @@ b = 10;
 */
 
 ```
+
 <br />
-
-
 
 ### [No undefined](http://eslint.org/docs/rules/no-undefined)
 
 > disallow use of undefined variable
-
 
 :x: Disabled
 
@@ -187,14 +163,12 @@ b = 10;
 var foo = undefined;
 
 ```
+
 <br />
-
-
 
 ### [No unused vars](http://eslint.org/docs/rules/no-unused-vars)
 
 > disallow declaration of variables that are not used in the code
-
 
 :white_check_mark: Enabled (error)
 
@@ -212,14 +186,12 @@ z = z + 1;
 */
 
 ```
+
 <br />
-
-
 
 ### [No use before define](http://eslint.org/docs/rules/no-use-before-define)
 
 > disallow use of variables before they are defined
-
 
 :white_check_mark: Enabled (error)
 
@@ -242,6 +214,5 @@ function f() {}
 f();
 
 ```
+
 <br />
-
-

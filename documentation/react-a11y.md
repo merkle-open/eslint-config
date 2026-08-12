@@ -1,11 +1,8 @@
-
 ## React a11y
-
 
 ### [Alt tag](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/alt-tag.md)
 
 > Require <img> to have a non-empty `alt` prop, or role="presentation"
-
 
 :white_check_mark: Enabled (error)
 
@@ -24,14 +21,12 @@ function Foo({ alt, src }) {
 }
 
 ```
+
 <br />
-
-
 
 ### [Aria props](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/aria-props.md)
 
-> Enforce all aria-* props are valid.
-
+> Enforce all aria-\* props are valid.
 
 :white_check_mark: Enabled (error)
 
@@ -48,14 +43,12 @@ function Foo({ alt, src }) {
 <input aria-labelledby="address_label" />;
 
 ```
+
 <br />
-
-
 
 ### [Aria proptypes](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/aria-proptypes.md)
 
 > Enforce ARIA state and property values are valid.
-
 
 :white_check_mark: Enabled (error)
 
@@ -70,14 +63,12 @@ function Foo({ alt, src }) {
 <span aria-hidden="true">foo</span>;
 
 ```
+
 <br />
-
-
 
 ### [Aria role](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/aria-role.md)
 
 > Require ARIA roles to be valid and non-abstract
-
 
 :white_check_mark: Enabled (error)
 
@@ -96,14 +87,12 @@ function Foo({ alt, src }) {
 <div></div>;
 
 ```
+
 <br />
-
-
 
 ### [Aria unsupported elements](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/aria-unsupported-elements.md)
 
 > Enforce that elements that do not support ARIA roles, states, and properties do not have those attributes.
-
 
 :white_check_mark: Enabled (error)
 
@@ -118,14 +107,12 @@ function Foo({ alt, src }) {
 <meta charSet="UTF-8" />;
 
 ```
+
 <br />
-
-
 
 ### [Href no hash](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/href-no-hash.md)
 
 > disallow href "#"
-
 
 :x: Disabled
 
@@ -143,14 +130,12 @@ function Foo({ alt, src }) {
 <a href={undefined} />;
 
 ```
+
 <br />
-
-
 
 ### [Img redundant alt](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/img-redundant-alt.md)
 
 > Prevent img alt text from containing redundant words like "image", "picture", or "photo"
-
 
 :white_check_mark: Enabled (error)
 
@@ -173,14 +158,12 @@ function Foo({ alt, src }) {
 <img alt={`Baz taking a ${photo}`} src="baz" />;
 
 ```
+
 <br />
-
-
 
 ### [Label has for](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/label-has-for.md)
 
 > require that JSX labels use "htmlFor"
-
 
 :x: Disabled
 
@@ -199,14 +182,12 @@ function Foo({ htmlFor, props }) {
 }
 
 ```
+
 <br />
-
-
 
 ### [Mouse events have key events](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/mouse-events-have-key-events.md)
 
 > require that mouseover/out come with focus/blur, for keyboard-only users
-
 
 :x: Disabled
 
@@ -225,14 +206,12 @@ function Foo({ htmlFor, props }) {
 <div onMouseOut={() => {}} onBlur={() => {}} />;
 
 ```
+
 <br />
-
-
 
 ### [No access key](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/no-access-key.md)
 
 > Prevent use of `accessKey`
-
 
 :white_check_mark: Enabled (error)
 
@@ -247,14 +226,12 @@ function Foo({ htmlFor, props }) {
 <div />;
 
 ```
+
 <br />
-
-
 
 ### [No onchange](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/no-onchange.md)
 
 > require onBlur instead of onChange
-
 
 :x: Disabled
 
@@ -277,14 +254,12 @@ function Foo({ htmlFor, props }) {
 );
 
 ```
+
 <br />
-
-
 
 ### [Onclick has focus](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/onclick-has-focus.md)
 
 > Enforce that elements with onClick handlers must be focusable.
-
 
 :x: Disabled
 
@@ -301,14 +276,12 @@ function Foo({ htmlFor, props }) {
 <button onClick="doSomething();">Click the button :)</button>;
 
 ```
+
 <br />
-
-
 
 ### [Onclick has role](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/onclick-has-role.md)
 
 > require things with onClick to have an aria role
-
 
 :x: Disabled
 
@@ -338,14 +311,12 @@ function Foo({ htmlFor, props }) {
 <Input onClick={() => {}} type="hidden" />;
 
 ```
+
 <br />
-
-
 
 ### [Role has required aria props](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/role-has-required-aria-props.md)
 
 > Enforce that elements with ARIA roles must have all required attributes for that role.
-
 
 :white_check_mark: Enabled (error)
 
@@ -371,14 +342,12 @@ function Foo({ htmlFor, props }) {
 </span>;
 
 ```
+
 <br />
-
-
 
 ### [Role supports aria props](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/role-supports-aria-props.md)
 
-> Enforce that elements with explicit or implicit roles defined contain only aria-* properties supported by that role.
-
+> Enforce that elements with explicit or implicit roles defined contain only aria-\* properties supported by that role.
 
 :white_check_mark: Enabled (error)
 
@@ -405,14 +374,12 @@ function Foo({ htmlFor, props }) {
 );
 
 ```
+
 <br />
-
-
 
 ### [Tabindex no positive](https://github.com/devsenexx/eslint-plugin-jsx-a11y/blob/main/docs/rules/tabindex-no-positive.md)
 
 > Enforce tabIndex value is not greater than zero.
-
 
 :x: Disabled
 
@@ -430,6 +397,5 @@ function Foo({ htmlFor, props }) {
 <span tabIndex={0}>baz</span>;
 
 ```
+
 <br />
-
-

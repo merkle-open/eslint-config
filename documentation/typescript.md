@@ -1,11 +1,8 @@
-
 ## Typescript
-
 
 ### [Adjacent overload signatures](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/adjacent-overload-signatures.md)
 
 > Require that member overloads be consecutive (adjacent-overload-signatures from TSLint)
-
 
 :white_check_mark: Enabled (error)
 
@@ -29,14 +26,12 @@ interface IFoo {
 }
 
 ```
+
 <br />
-
-
 
 ### [Array type](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/array-type.md)
 
 > Requires using either T[] or Array<T> for arrays (array-type)
-
 
 :white_check_mark: Enabled (error)
 
@@ -54,14 +49,12 @@ interface IFoo {
 })();
 
 ```
+
 <br />
-
-
 
 ### [Ban ts comment](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/ban-ts-comment.md)
 
 > Bans // @ts-<directive> comments from being used or requires descriptions after directive (ban-ts-comment)
-
 
 :white_check_mark: Enabled (error)
 
@@ -84,14 +77,12 @@ interface IFoo {
 */
 
 ```
+
 <br />
-
-
 
 ### [Ban types](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/ban-types.md)
 
 > Enforces that types will not to be used (ban-types)
-
 
 :white_check_mark: Enabled (error)
 
@@ -111,21 +102,19 @@ interface IFoo {
 })();
 
 ```
+
 <br />
-
-
 
 ### [Consistent type assertions](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/consistent-type-assertions.md)
 
 > Enforces consistent usage of type assertions. (consistent-type-assertions)
-
 
 :white_check_mark: Enabled (error)
 
 ```javascript
 
 // Bad
-/* 
+/*
 (() => {
 	type Foo2 = object;
 	const foo = <Foo2>{};
@@ -146,14 +135,12 @@ interface IFoo {
 })();
 
 ```
+
 <br />
-
-
 
 ### [Explicit function return type](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/explicit-function-return-type.md)
 
 > Require explicit return types on functions and class methods (explicit-function-return-type)
-
 
 :x: Disabled
 
@@ -181,14 +168,12 @@ class Test {
 }
 
 ```
+
 <br />
-
-
 
 ### [Explicit member accessibility](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/explicit-member-accessibility.md)
 
 > Require explicit return types on functions and class methods (explicit-function-return-type)
-
 
 :white_check_mark: Enabled (error)
 
@@ -230,14 +215,12 @@ class Animal {
 }
 
 ```
+
 <br />
-
-
 
 ### [Generic type naming](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/generic-type-naming.md)
 
 > Enforces naming of generic type variables (generic-type-naming)
-
 
 :white_check_mark: Enabled (error)
 
@@ -259,14 +242,12 @@ class Animal {
 })();
 
 ```
+
 <br />
-
-
 
 ### [Indent](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/indent.md)
 
 > Enforce consistent indentation (indent)
-
 
 :white_check_mark: Enabled (error)
 
@@ -284,14 +265,12 @@ type ReadOnly<TSomeType extends object> = {
 };
 
 ```
+
 <br />
-
-
 
 ### [Interface name prefix](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/interface-name-prefix.md)
 
 > Require that interface names be prefixed with I (interface-name-prefix)
-
 
 :white_check_mark: Enabled (error)
 
@@ -309,14 +288,12 @@ interface IAnimal {
 }
 
 ```
+
 <br />
-
-
 
 ### [Member delimiter style](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/member-delimiter-style.md)
 
 > Require a specific member delimiter style for interfaces and type literals (member-delimiter-style)
-
 
 :white_check_mark: Enabled (error)
 
@@ -336,14 +313,12 @@ interface IFoo {
 }
 
 ```
+
 <br />
-
-
 
 ### [Member ordering](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/member-ordering.md)
 
 > Require a consistent member declaration order (member-ordering)
-
 
 :white_check_mark: Enabled (error)
 
@@ -379,14 +354,12 @@ class Foo {
 }
 
 ```
+
 <br />
-
-
 
 ### [Naming convention](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/naming-convention.md)
 
 > Enforces naming conventions for everything across a codebase (naming-convention)
-
 
 :white_check_mark: Enabled (error)
 
@@ -524,14 +497,12 @@ import { no_camelcased as noCamelcased } from 'eslint';
 })();
 
 ```
+
 <br />
-
-
 
 ### [No array constructor](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-array-constructor.md)
 
 > Disallow generic Array constructors (no-array-constructor)
-
 
 :white_check_mark: Enabled (error)
 
@@ -555,14 +526,12 @@ import { no_camelcased as noCamelcased } from 'eslint';
 })();
 
 ```
+
 <br />
-
-
 
 ### [No empty interface](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-empty-interface.md)
 
 > Disallow the declaration of empty interfaces (no-empty-interface)
-
 
 :white_check_mark: Enabled (error)
 
@@ -595,14 +564,12 @@ import { no_camelcased as noCamelcased } from 'eslint';
 })();
 
 ```
+
 <br />
-
-
 
 ### [No explicit any](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-explicit-any.md)
 
 > Disallow usage of the any type (no-explicit-any)
-
 
 :x: Disabled
 
@@ -618,14 +585,12 @@ const age: any = 'seventeen';
 const age: any = 'seventeen';
 
 ```
+
 <br />
-
-
 
 ### [No extraneous class](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-extraneous-class.md)
 
 > Forbids the use of classes as namespaces (no-extraneous-class)
-
 
 :white_check_mark: Enabled (error)
 
@@ -648,14 +613,12 @@ class ConstructorOnly {
 }
 
 ```
+
 <br />
-
-
 
 ### [No for in array](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-for-in-array.md)
 
 > Disallow iterating over an array with a for-in loop (no-for-in-array)
-
 
 :white_check_mark: Enabled (error)
 
@@ -674,14 +637,12 @@ for (const x in { a: 3, b: 4, c: 5 }) {
 }
 
 ```
+
 <br />
-
-
 
 ### [No inferrable types](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-inferrable-types.md)
 
 > Disallows explicit type declarations for variables or parameters initialized to a number, string, or boolean.
-
 
 :white_check_mark: Enabled (error)
 
@@ -703,14 +664,12 @@ for (const x in { a: 3, b: 4, c: 5 }) {
 })();
 
 ```
+
 <br />
-
-
 
 ### [No misused new](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-misused-new.md)
 
 > Enforce valid definition of new and constructor. (no-misused-new)
-
 
 :white_check_mark: Enabled (error)
 
@@ -740,14 +699,12 @@ for (const x in { a: 3, b: 4, c: 5 }) {
 })();
 
 ```
+
 <br />
-
-
 
 ### [No namespace](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-namespace.md)
 
 > Disallow the use of custom TypeScript modules and namespaces (no-namespace)
-
 
 :white_check_mark: Enabled (error)
 
@@ -764,14 +721,12 @@ declare namespace foo {}
 declare module 'foo' {}
 
 ```
+
 <br />
-
-
 
 ### [No non null assertion](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-non-null-assertion.md)
 
 > Disallows non-null assertions using the ! postfix operator (no-non-null-assertion)
-
 
 :white_check_mark: Enabled (error)
 
@@ -799,14 +754,12 @@ declare module 'foo' {}
 })();
 
 ```
+
 <br />
-
-
 
 ### [No require imports](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-require-impo.md)
 
 > Disallows invocation of require() (no-require-imports)
-
 
 :white_check_mark: Enabled (error)
 
@@ -820,14 +773,12 @@ const eslint = require('eslint');
 import eslint from 'eslint';
 
 ```
+
 <br />
-
-
 
 ### [No this alias](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-this-alias.md)
 
 > Disallow aliasing this (no-this-alias)
-
 
 :x: Disabled
 
@@ -854,14 +805,12 @@ import eslint from 'eslint';
 })();
 
 ```
+
 <br />
-
-
 
 ### [No type alias](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-type-alias.md)
 
 > Disallow the use of type aliases (no-type-alias)
-
 
 :x: Disabled
 
@@ -884,14 +833,12 @@ import eslint from 'eslint';
 })();
 
 ```
+
 <br />
-
-
 
 ### [No unnecessary qualifier](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-unnecessary-qualifier.md)
 
 > Warns when a namespace qualifier is unnecessary. (no-unnecessary-qualifier)
-
 
 :white_check_mark: Enabled (error)
 
@@ -913,14 +860,12 @@ namespace Y {
 }
 
 ```
+
 <br />
-
-
 
 ### [No unnecessary type assertion](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-unnecessary-type-assertion.md)
 
 > Warns if a type assertion does not change the type of an expression (no-unnecessary-type-assertion)
-
 
 :white_check_mark: Enabled (error)
 
@@ -942,14 +887,12 @@ namespace Y {
 })();
 
 ```
+
 <br />
-
-
 
 ### [No unused vars](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-unused-vars.md)
 
 > Disallow unused variables (no-unused-vars)
-
 
 :white_check_mark: Enabled (error)
 
@@ -977,14 +920,12 @@ z = z + y;
 console.log(z);
 
 ```
+
 <br />
-
-
 
 ### [No use before define](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-use-before-define.md)
 
 > Disallow the use of variables before they are defined (no-use-before-define)
-
 
 :white_check_mark: Enabled (error)
 
@@ -1004,14 +945,12 @@ console.log(z);
 })();
 
 ```
+
 <br />
-
-
 
 ### [No useless constructor](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-useless-constructor.md)
 
 > Disallow the use of variables before they are defined (no-use-before-define)
-
 
 :white_check_mark: Enabled (error)
 
@@ -1038,14 +977,12 @@ console.log(z);
 })();
 
 ```
+
 <br />
-
-
 
 ### [No var requires](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/no-var-requires.md)
 
 > Disallows the use of require statements except in import statements (no-var-requires)
-
 
 :white_check_mark: Enabled (error)
 
@@ -1063,14 +1000,12 @@ console.log(z);
 import eslint from 'eslint';
 
 ```
+
 <br />
-
-
 
 ### [Prefer function type](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/prefer-function-type.md)
 
 > Use function types instead of interfaces with call signatures (prefer-function-type)
-
 
 :white_check_mark: Enabled (error)
 
@@ -1112,14 +1047,12 @@ import eslint from 'eslint';
 })();
 
 ```
+
 <br />
-
-
 
 ### [Prefer interface](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/prefer-interface.md)
 
 > Prefer an interface declaration over a type literal (type T = { ... }) (prefer-interface)
-
 
 :white_check_mark: Enabled (error)
 
@@ -1139,14 +1072,12 @@ import eslint from 'eslint';
 })();
 
 ```
+
 <br />
-
-
 
 ### [Promise function async](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/promise-function-async.md)
 
 > Functions that return promises must be async (promise-function-async)
-
 
 :white_check_mark: Enabled (error)
 
@@ -1172,14 +1103,12 @@ import eslint from 'eslint';
 })();
 
 ```
+
 <br />
-
-
 
 ### [Restrict plus operands](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/restrict-plus-operands.md)
 
 > When adding two variables, operands must both be of type number or of type string.
-
 
 :white_check_mark: Enabled (error)
 
@@ -1197,14 +1126,12 @@ import eslint from 'eslint';
 })();
 
 ```
+
 <br />
-
-
 
 ### [Triple slash reference](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/triple-slash-reference.md)
 
 > Disallow /// <reference path="" /> comments (triple-slash-reference)
-
 
 :white_check_mark: Enabled (error)
 
@@ -1216,14 +1143,12 @@ import eslint from 'eslint';
 })();
 
 ```
+
 <br />
-
-
 
 ### [Type annotation spacing](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/type-annotation-spacing.md)
 
 > Require consistent spacing around type annotations
-
 
 :white_check_mark: Enabled (error)
 
@@ -1241,14 +1166,12 @@ import eslint from 'eslint';
 })();
 
 ```
+
 <br />
-
-
 
 ### [Unified signatures](https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/unified-signatures.md)
 
 > Warns for any two overloads that could be unified into one by using a union or an optional/rest parameter.
-
 
 :white_check_mark: Enabled (error)
 
@@ -1274,6 +1197,5 @@ import eslint from 'eslint';
 })();
 
 ```
+
 <br />
-
-

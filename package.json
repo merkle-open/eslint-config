@@ -1,38 +1,46 @@
 {
   "name": "@merkle-open/eslint-config",
   "description": "Default configurations for eslint",
-  "version": "4.0.1",
+  "version": "5.0.0",
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/merkle-open/eslint-config.git"
   },
+  "homepage": "https://github.com/merkle-open/eslint-config#readme",
   "license": "MIT",
   "author": "Merkle Inc.",
   "private": false,
   "engines": {
-    "node": ">=18.18.0"
+    "node": "^20.19.0 || ^22.13.0 || >=24"
   },
   "bugs": {
     "url": "https://github.com/merkle-open/eslint-config/issues"
   },
-  "main": "configurations/es8-browser.js",
+  "exports": {
+    ".": "./index.js",
+    "./typescript-browser": "./configurations/typescript-browser.js",
+    "./typescript-browser-disable-styles": "./configurations/typescript-browser-disable-styles.js",
+    "./typescript-node": "./configurations/typescript-node.js",
+    "./typescript-node-disable-styles": "./configurations/typescript-node-disable-styles.js",
+    "./typescript-react": "./configurations/typescript-react.js",
+    "./typescript-react-disable-styles": "./configurations/typescript-react-disable-styles.js",
+    "./es2025-browser": "./configurations/es2025-browser.js",
+    "./es2025-browser-disable-styles": "./configurations/es2025-browser-disable-styles.js",
+    "./es2025-node": "./configurations/es2025-node.js",
+    "./es2025-node-disable-styles": "./configurations/es2025-node-disable-styles.js",
+    "./es2025-react": "./configurations/es2025-react.js",
+    "./es2025-react-disable-styles": "./configurations/es2025-react-disable-styles.js"
+  },
   "scripts": {
     "clean": "npx -y rimraf package-lock.json node_modules",
-    "lint": "npm run lint:js",
-    "lint:js": "eslint . --ext .jsx,.js,.ts,.tsx",
-    "test": "npm run lint",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test": "node --test test/run-tests.js",
+    "test:lint": "npm run lint",
     "docs": "node bin/write-documentation",
-    "prepublishOnly": "npx pkg-ok@2.3.1",
-    "prestart": "npx -y env-linter --versions --saveExact --dependenciesExactVersion",
-    "prettier": "npm-run-all prettier:*",
-    "prettier:es5": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es5-disable-styles/**/*.js\"",
-    "prettier:es5node": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es5-node-disable-styles/**/*.js\"",
-    "prettier:es6": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es6-disable-styles/**/*.js\"",
-    "prettier:es6react": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es6-react-disable-styles/**/*.js\"",
-    "prettier:es8": "prettier --config \".prettierrc.unstyled.js\" --write \"test/es8-disable-styles/**/*.js\"",
-    "prettier:typescript": "prettier --config \".prettierrc.unstyled.js\" --write \"test/typescript-disable-styles/**/*.ts\"",
-    "prettier:typescriptreact": "prettier --config \".prettierrc.unstyled.js\" --write \"test/typescript-react-disable-styles/**/*.tsx\"",
-    "start": "npm-run-all test prettier",
+    "prepublishOnly": "npm run lint && npm run test",
     "update-dependencies": "npm-check-updates -u -x node-fetch --deprecated"
   },
   "keywords": [
@@ -51,30 +59,33 @@
   ],
   "devDependencies": {
     "@merkle-open/prettier-config": "2.0.1",
-    "@merkle-open/ts-config": "1.1.2",
+    "@merkle-open/ts-config": "2.0.0",
     "acorn": "8.15.0",
-    "eslint": "8.57.1",
-    "eslint-plugin-import": "2.32.0",
+    "eslint": "9.39.4",
     "node-fetch": "2.7.0",
     "npm-check-updates": "19.0.0",
-    "npm-run-all": "4.1.5",
     "prettier": "3.8.1",
     "react": "18.3.1",
-    "typescript": "5.9.3"
+    "typescript": "6.0.3"
   },
   "peerDependencies": {
-    "eslint": "^8.0.0",
-    "eslint-plugin-import": ">=2"
+    "eslint": "^9.3.0",
+    "typescript": "^6.0.0"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
   },
   "dependencies": {
+    "@eslint/js": "9.39.4",
+    "@stylistic/eslint-plugin": "4.4.1",
     "@types/react": "18.3.28",
-    "@typescript-eslint/eslint-plugin": "7.18.0",
-    "@typescript-eslint/parser": "7.18.0",
-    "@babel/core": "7.29.0",
-    "@babel/eslint-parser": "7.28.6",
-    "@babel/preset-react": "7.28.5",
+    "eslint-plugin-import-x": "4.17.1",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-react": "7.37.5",
-    "eslint-plugin-react-hooks": "4.6.2"
+    "eslint-plugin-react-hooks": "7.1.1",
+    "globals": "17.7.0",
+    "typescript-eslint": "8.62.0"
   }
 }

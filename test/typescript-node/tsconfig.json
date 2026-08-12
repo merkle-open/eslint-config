@@ -1,0 +1,7 @@
+{
+  "extends": "@merkle-open/ts-config/node",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  "include": ["**/*.ts"]
+}
