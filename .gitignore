@@ -1,5 +1,6 @@
 .nodes
 .DS_Store
+.zed
 .idea
 .vscode
 npm-debug.log

@@ -1,89 +1,83 @@
-# Migration Guide: v4 to v5
+# Migration Guide: v4.0.0 → v5.0.0
 
-This guide walks you through upgrading from `@merkle-open/eslint-config` v4 to v5.
+This guide explains how to migrate from `@merkle-open/eslint-config` v4 to v5.
 
-## Overview of Changes
+Version 5 is a major release based on **ESLint 9 Flat Config** and **native ESM**.
 
-v5 is a major rewrite:
+## Breaking Changes at a Glance
 
-- **ESLint 9 Flat Config** replaces legacy `.eslintrc.*` format
-- **ESM modules** replace CommonJS
-- **New import paths** — simplified, no `/configurations/` prefix
-- **ES2025 targeting** replaces ES8/ES2017
-- **Removed presets**: ES5, ES6, ES7
+| Area            | v4 (`@merkle-open/eslint-config@4.0.0`)         | v5                                                            |
+| --------------- | ----------------------------------------------- | ------------------------------------------------------------- |
+| Node.js         | `>=18.18.0`                                     | `^20.19.0 \|\| ^22.13.0 \|\| >=24`                            |
+| ESLint          | `^8.0.0`                                        | `^9.3.0` (peer dependency)                                    |
+| Config format   | `.eslintrc.*`                                   | `eslint.config.js` (flat config)                              |
+| Module system   | CommonJS                                        | ESM (`import` / `export default`)                             |
+| JS preset names | `es8-*`                                         | `es2025-*`                                                    |
+| Removed presets | `es5-*`, `es6-*`, `es7-*` available             | `es5-*`, `es6-*`, `es7-*` removed                             |
+| Import rules    | `import/*`                                      | `import-x/*`                                                  |
+| Default export  | `es8-browser`                                   | `typescript-browser`                                          |
+| TS support      | `@typescript-eslint/*` (no TS peer declaration) | TypeScript peer `^6.0.0`; `typescript-eslint` project service |
 
 ## Prerequisites
 
-Before upgrading, ensure your project meets these requirements:
+Before upgrading:
 
-| Requirement              | Minimum Version                        |
-| ------------------------ | -------------------------------------- |
-| Node.js                  | `^20.19.0 \|\| ^22.13.0 \|\| >=24`     |
-| ESLint (peer dependency) | `^9.3.0`                               |
-| TypeScript               | `^6.0.0` (if using TypeScript presets) |
+| Requirement                       | Minimum Version                    |
+| --------------------------------- | ---------------------------------- |
+| Node.js                           | `^20.19.0 \|\| ^22.13.0 \|\| >=24` |
+| ESLint (consumer peer dependency) | `^9.3.0`                           |
+| TypeScript (for TS presets)       | `^6.0.0`                           |
 
-> Reference: this package is developed and CI-tested with `eslint@9.39.4` in its own `devDependencies`.
+> Reference: this package is developed and CI-tested with `eslint@9.39.4`.
 
 ## Step-by-Step Migration
 
-### 1. Upgrade Dependencies
+### 1) Upgrade Dependencies
 
 ```bash
-# Upgrade ESLint to latest validated v9 release
-npm install eslint@^9.39.4 --save-dev
+npm install --save-dev eslint@^9.3.0 @merkle-open/eslint-config@^5.0.0
 
-# Upgrade the config package
-npm install @merkle-open/eslint-config@^5.0.0 --save-dev
-
-# If using TypeScript, upgrade to v6
-npm install typescript@^6.0.0 --save-dev
+# only if you use TypeScript presets
+npm install --save-dev typescript@^6.0.0
 ```
 
-### 2. Delete Legacy Config Files
+### 2) Replace Legacy ESLint Config Files
 
-Remove these files from your project root:
+Remove v4 config files:
 
 ```bash
 rm .eslintrc.js .eslintrc.json .eslintrc.yaml .eslintrc 2>/dev/null
 rm .eslintignore 2>/dev/null
 ```
 
-### 3. Create `eslint.config.js`
+Create `eslint.config.js` in your project root.
 
-Create a new flat config file in your project root.
-
-**Before (v4 — `.eslintrc.js`):**
+**Before (v4):**
 
 ```javascript
+// .eslintrc.js
 module.exports = {
-  extends: require.resolve('@merkle-open/eslint-config/configurations/typescript-react'),
+  extends: ['@merkle-open/eslint-config/configurations/typescript-react'],
 };
 ```
 
-**After (v5 — `eslint.config.js`):**
+**After (v5):**
 
 ```javascript
-import merkleConfig from "@merkle-open/eslint-config/typescript-react";
+// eslint.config.js
+import merkleConfig from '@merkle-open/eslint-config/typescript-react';
 
 export default [
   ...merkleConfig,
   {
-    ignores: ["dist/**", "node_modules/**"],
+    ignores: ['dist/**', 'node_modules/**'],
   },
 ];
 ```
 
-### 4. Update `package.json`
+### 3) Update Lint Scripts
 
-**Add `"type": "module"`** if your project uses ESM (required for `eslint.config.js`):
-
-```json
-{
-  "type": "module"
-}
-```
-
-**Update lint scripts** — remove `--ext` flag:
+Use flat-config-friendly scripts and remove `--ext`:
 
 ```json
 {
@@ -94,204 +88,119 @@ export default [
 }
 ```
 
-> The `--ext` flag is not supported in ESLint 9 flat config. ESLint now uses file extensions from the config's `files` patterns.
+### 4) Understand Flat Config Scope
 
-### 4.1 Understand Scope in Flat Config
+In flat config, lint scope is controlled by three separate mechanisms:
 
-In flat config, linting scope comes from three separate controls:
+1. **CLI targets** (`eslint src packages`) define where ESLint searches.
+2. **`ignores`** exclude files/directories from linting.
+3. **`files`** select which config objects apply to discovered files; they do not define lint roots.
 
-1. **CLI targets** (`eslint src packages`) define where ESLint looks.
-2. **`ignores`** removes folders/files from linting.
-3. **`files`** patterns choose which config objects apply to matched files (rules, parser, overrides); they do not define lint roots.
-
-### 5. Move Ignores to Config
-
-The `.eslintignore` file is not used in flat config. Move ignores to your config:
-
-**Before (`.eslintignore`):**
-
-```
-dist/
-node_modules/
-coverage/
-```
-
-**After (`eslint.config.js`):**
+Example:
 
 ```javascript
+import merkleConfig from '@merkle-open/eslint-config/typescript-react';
+
 export default [
   ...merkleConfig,
   {
-    ignores: ["dist/**", "node_modules/**", "coverage/**"],
+    files: ['**/*.test.ts', '**/*.test.tsx'],
+    rules: {
+      'no-console': 'off',
+    },
+  },
+  {
+    ignores: ['dist/**', 'coverage/**', 'node_modules/**'],
   },
 ];
 ```
 
-### 6. Update Import Paths
+### 5) Update Preset Import Paths
 
-| v4 Path                                           | v5 Path                            |
-| ------------------------------------------------- | ---------------------------------- |
-| `/configurations/typescript-browser`              | `/typescript-browser`              |
-| `/configurations/typescript-node`                 | `/typescript-node`                 |
-| `/configurations/typescript-react`                | `/typescript-react`                |
-| `/configurations/es8-browser`                     | `/es2025-browser`                  |
-| `/configurations/es8-node`                        | `/es2025-node`                     |
-| `/configurations/es8-react`                       | `/es2025-react`                    |
-| `/configurations/es8-browser-disable-styles`      | `/es2025-browser-disable-styles`   |
-| `/configurations/typescript-react-disable-styles` | `/typescript-react-disable-styles` |
+| v4 Import Path                                       | v5 Import Path                                                              |
+| ---------------------------------------------------- | --------------------------------------------------------------------------- |
+| `@merkle-open/eslint-config`                         | `@merkle-open/eslint-config` _(default now points to `typescript-browser`)_ |
+| `.../configurations/typescript-browser`              | `.../typescript-browser`                                                    |
+| `.../configurations/typescript-node`                 | `.../typescript-node`                                                       |
+| `.../configurations/typescript-react`                | `.../typescript-react`                                                      |
+| `.../configurations/es8-browser`                     | `.../es2025-browser`                                                        |
+| `.../configurations/es8-node`                        | `.../es2025-node`                                                           |
+| `.../configurations/es8-react`                       | `.../es2025-react`                                                          |
+| `.../configurations/typescript-react-disable-styles` | `.../typescript-react-disable-styles`                                       |
+| `.../configurations/es8-react-disable-styles`        | `.../es2025-react-disable-styles`                                           |
 
-### 7. Handle Disable-Styles
+`es5-*`, `es6-*`, and `es7-*` preset families do not exist in v5. Migrate to the closest `es2025-*` preset.
 
-If you were using `*-disable-styles` configs with Prettier:
+### 6) Choose Your Formatting Strategy
 
-**Before (v4):**
-
-```javascript
-module.exports = {
-  extends: [
-    '@merkle-open/eslint-config/configurations/es8-react',
-    '@merkle-open/eslint-config/configurations/es8-react-disable-styles',
-  ].map(require.resolve),
-};
-```
-
-**After (v5):**
+#### Option A (recommended): Use bundled `-disable-styles` presets
 
 ```javascript
-// Use the combined disable-styles preset (recommended)
-import merkleConfig from "@merkle-open/eslint-config/es2025-react-disable-styles";
+import merkleConfig from '@merkle-open/eslint-config/typescript-react-disable-styles';
 
 export default [...merkleConfig];
 ```
 
-Or use `eslint-config-prettier`:
+#### Option B: Keep standard preset + `eslint-config-prettier`
 
 ```javascript
-import merkleConfig from "@merkle-open/eslint-config/es2025-react";
-import prettierConfig from "eslint-config-prettier";
+import merkleConfig from '@merkle-open/eslint-config/typescript-react';
+import prettierConfig from 'eslint-config-prettier';
 
 export default [...merkleConfig, prettierConfig];
 ```
 
-### 8. Update Custom Rules
+### 7) Update Custom Rule Overrides
 
-If you have custom rule overrides, update the syntax:
-
-**Before (v4):**
+#### 7.1 `import/*` → `import-x/*`
 
 ```javascript
-module.exports = {
-  extends: require.resolve('@merkle-open/eslint-config/configurations/typescript-react'),
-  rules: {
-    "complexity": ["warn", 10],
-    "@typescript-eslint/no-explicit-any": "warn",
-  },
-};
-```
-
-**After (v5):**
-
-```javascript
-import merkleConfig from "@merkle-open/eslint-config/typescript-react";
-
 export default [
   ...merkleConfig,
   {
     rules: {
-      "complexity": ["warn", 10],
-      "@typescript-eslint/no-explicit-any": "warn",
+      'import-x/no-unresolved': 'error',
     },
   },
 ];
 ```
 
-### 9. Handle Removed Presets
+#### 7.2 TypeScript rule replacements
 
-ES5, ES6, and ES7 presets are removed. Migrate to ES2025:
+| v4 Rule                                      | v5 Status / Replacement                               |
+| -------------------------------------------- | ----------------------------------------------------- |
+| `@typescript-eslint/ban-types`               | Replaced by `@typescript-eslint/no-restricted-types`  |
+| `@typescript-eslint/no-empty-interface`      | Replaced by `@typescript-eslint/no-empty-object-type` |
+| `@typescript-eslint/indent`                  | Replaced by `@stylistic/indent`                       |
+| `@typescript-eslint/member-delimiter-style`  | Replaced by `@stylistic/member-delimiter-style`       |
+| `@typescript-eslint/type-annotation-spacing` | Replaced by `@stylistic/type-annotation-spacing`      |
 
-| Removed Preset | Migration Path                       |
-| -------------- | ------------------------------------ |
-| `es5-*`        | Use `es2025-*` (transpile if needed) |
-| `es6-*`        | Use `es2025-*`                       |
-| `es7-*`        | Use `es2025-*`                       |
+> Note: this preset configures `@stylistic/indent` to use tabs instead of the common 2-space stylistic default.
 
-### 10. Verify
+#### 7.3 React rule removals/behavior
 
-Run ESLint to verify the migration:
+| Rule                        | v5 Behavior                        |
+| --------------------------- | ---------------------------------- |
+| `react/jsx-sort-prop-types` | Removed                            |
+| `react/require-extension`   | Removed                            |
+| `react/jsx-uses-react`      | Disabled (React 17+ JSX transform) |
+| `react/react-in-jsx-scope`  | Disabled (React 17+ JSX transform) |
 
-```bash
-npm run lint
-```
+#### 7.4 Optional: keep `I` prefix for interfaces
 
-Fix any issues and iterate.
-
----
-
-## Breaking Changes Reference
-
-### Rule Changes
-
-| Change                                  | Details                                                  |
-| --------------------------------------- | -------------------------------------------------------- |
-| `import/*` → `import-x/*`               | Import plugin rules now use `import-x/` prefix           |
-| `@typescript-eslint/ban-types`          | Replaced by `@typescript-eslint/no-restricted-types`     |
-| `@typescript-eslint/no-empty-interface` | Replaced by `@typescript-eslint/no-empty-object-type`    |
-| Interface `I` prefix                    | No longer required (naming-convention updated)           |
-| TS formatting rules                     | Moved to `@stylistic/*` equivalents (handled internally) |
-
-### Removed Rules
-
-These deprecated rules were removed:
-
-- `no-native-reassign` (use `no-global-assign`)
-- `no-negated-in-lhs` (use `no-unsafe-negation`)
-- `valid-jsdoc` (use `eslint-plugin-jsdoc`)
-- `require-jsdoc` (use `eslint-plugin-jsdoc`)
-- `no-spaced-func` (use `func-call-spacing`)
-- `id-blacklist` (use `id-denylist`)
-- `no-new-object` (use `no-object-constructor`)
-- `react/jsx-sort-prop-types` (removed)
-- `react/require-extension` (removed)
-
-### Behavior Changes
-
-| Change             | v4                      | v5                                                  |
-| ------------------ | ----------------------- | --------------------------------------------------- |
-| Default export     | `es8-browser`           | `typescript-browser`                                |
-| Parser             | Babel (JavaScript)      | espree (JavaScript), typescript-eslint (TypeScript) |
-| React version      | Auto-detect             | Auto-detect (`"detect"`)                            |
-| TypeScript project | Manual `project` option | Auto-detect via `projectService`                    |
-
-### Complexity Rule
-
-The `complexity` rule remains set to `["error", 5]` by default. If your codebase needs a higher threshold:
+v5 no longer enforces `I` prefixes by default. If your team wants to keep it:
 
 ```javascript
 export default [
   ...merkleConfig,
   {
     rules: {
-      complexity: ["warn", 10],  // Override to warn at 10
-    },
-  },
-];
-```
-
-### Interface Naming Convention
-
-The requirement for interfaces to start with `I` prefix has been removed. If you want to keep this convention:
-
-```javascript
-export default [
-  ...merkleConfig,
-  {
-    rules: {
-      "@typescript-eslint/naming-convention": [
-        "error",
+      '@typescript-eslint/naming-convention': [
+        'error',
         {
-          selector: "interface",
-          format: ["PascalCase"],
-          prefix: ["I"],
+          selector: 'interface',
+          format: ['PascalCase'],
+          prefix: ['I'],
         },
       ],
     },
@@ -299,19 +208,18 @@ export default [
 ];
 ```
 
-### Legacy Decorators (Angular/NestJS)
+### 8) Verify the Migration
 
-`experimentalDecorators` and `emitDecoratorMetadata` are no longer in the shared config. If you need legacy decorators:
+Run ESLint and resolve remaining issues:
 
-**tsconfig.json:**
+```bash
+npm run lint
+```
 
-```json
-{
-  "compilerOptions": {
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
-  }
-}
+If needed:
+
+```bash
+npm run lint -- --fix
 ```
 
 ---
@@ -320,39 +228,30 @@ export default [
 
 ### "Cannot use import statement outside a module"
 
-Add `"type": "module"` to your `package.json`.
+Add `"type": "module"` to your `package.json`, or rename your config to `eslint.config.mjs`.
 
-### "Unknown rule 'import/...'
+### "Unknown rule 'import/...'"
 
-Rules are now prefixed with `import-x/`:
+Rename rule keys from `import/*` to `import-x/*`.
 
-```javascript
-{
-  rules: {
-    "import-x/no-unresolved": "error",  // not "import/no-unresolved"
-  },
-}
-```
+### TypeScript files are not being linted
 
-### TypeScript files not being linted
+Check all three scope controls:
 
-Ensure your config includes TypeScript file patterns. The preset handles this, but custom configs may need:
-
-```javascript
-{
-  files: ["**/*.ts", "**/*.tsx"],
-}
-```
+1. CLI target includes your source path (for example `eslint src`).
+2. `ignores` does not exclude your TS paths.
+3. `files` patterns include `**/*.ts` and `**/*.tsx` where needed.
 
 ### "Parsing error: Cannot read file 'tsconfig.json'"
 
-v5 uses `projectService: true` for auto-detection. Ensure you have a `tsconfig.json` in your project root or adjust:
+TypeScript presets use `projectService: true`. Ensure your repo has a discoverable `tsconfig.json`,
+or override parser options explicitly:
 
 ```javascript
 {
   languageOptions: {
     parserOptions: {
-      project: "./tsconfig.eslint.json",
+      project: './tsconfig.eslint.json',
       projectService: false,
     },
   },
@@ -361,8 +260,9 @@ v5 uses `projectService: true` for auto-detection. Ensure you have a `tsconfig.j
 
 ---
 
-## Need Help?
+## References
 
-- [ESLint Flat Config Documentation](https://eslint.org/docs/latest/use/configure/configuration-files)
-- [typescript-eslint v8 Migration](https://typescript-eslint.io/blog/announcing-typescript-eslint-v8/)
-- [Report Issues](https://github.com/merkle-open/eslint-config/issues)
+- [Changelog](https://github.com/merkle-open/eslint-config/blob/master/CHANGELOG.md)
+- [ESLint Flat Config docs](https://eslint.org/docs/latest/use/configure/configuration-files)
+- [typescript-eslint v8 announcement](https://typescript-eslint.io/blog/announcing-typescript-eslint-v8/)
+- [Issue tracker](https://github.com/merkle-open/eslint-config/issues)

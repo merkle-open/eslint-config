@@ -6,15 +6,6 @@
 
 Shareable ESLint configuration for Merkle projects. Version 5 uses **ESLint 9 Flat Config** format with native ESM.
 
-## Requirements
-
-| Dependency                          | Version                                      |
-| ----------------------------------- | -------------------------------------------- |
-| Node.js                             | `^20.19.0 \|\| ^22.13.0 \|\| >=24`           |
-| ESLint (peer dependency)            | `^9.3.0`                                     |
-| ESLint (this package devDependency) | `9.39.4`                                     |
-| TypeScript                          | `^6.0.0` (optional — for TypeScript presets) |
-
 ## Installation
 
 ```bash
@@ -212,7 +203,7 @@ Parser selection follows normal flat-config matching: the parser from the matchi
 If you need Babel-specific syntax (decorators, Flow, etc.), install and configure `@babel/eslint-parser`:
 
 ```bash
-npm install --save-dev @babel/eslint-parser @babel/core
+npm install --save-dev @babel/eslint-parser @babel/core @babel/preset-react
 ```
 
 ```javascript
@@ -275,26 +266,27 @@ See the [Migration Guide](https://github.com/merkle-open/eslint-config/blob/mast
 - ESLint 9 Flat Config format (no more `.eslintrc.js`)
 - ESM modules (no more `require()`)
 - New import paths (e.g., `/typescript-browser` instead of `/configurations/typescript-browser`)
+- TypeScript formatting rules moved from `@typescript-eslint/*` style rules to `@stylistic/*`
 - ES8 presets renamed to ES2025
 - ES5/ES6/ES7 presets removed
 
 ## Documentation
 
-| Category            | Link                                                                                                                        |
-| ------------------- | --------------------------------------------------------------------------------------------------------------------------- |
-| Best Practices      | [documentation/best-practices.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/best-practices.md) |
-| Style               | [documentation/style.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/style.md)                   |
-| Variables           | [documentation/variables.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/variables.md)           |
-| Errors              | [documentation/errors.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/errors.md)                 |
-| ES2025              | [documentation/es6.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/es6.md)                       |
-| Imports             | [documentation/imports.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/imports.md)               |
-| Node                | [documentation/node.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/node.md)                     |
-| React               | [documentation/react.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/react.md)                   |
-| React A11y          | [documentation/react-a11y.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/react-a11y.md)         |
-| React Hooks         | [documentation/react-hooks.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/react-hooks.md)       |
-| TypeScript          | [documentation/typescript.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/typescript.md)         |
-| Using with Prettier | [documentation/with-prettier.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/with-prettier.md)   |
-| Migration Guide     | [documentation/MIGRATION.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/MIGRATION.md)           |
+| Category            | Link                                                                                                                                                                                                         |
+| ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Best Practices      | [documentation/best-practices.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/best-practices.md)                                                                                  |
+| Style               | [documentation/style.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/style.md)                                                                                                    |
+| Variables           | [documentation/variables.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/variables.md)                                                                                            |
+| Errors              | [documentation/errors.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/errors.md)                                                                                                  |
+| ES2025              | [documentation/es6.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/es6.md), [documentation/es8.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/es8.md) |
+| Imports             | [documentation/imports.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/imports.md)                                                                                                |
+| Node                | [documentation/node.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/node.md)                                                                                                      |
+| React               | [documentation/react.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/react.md)                                                                                                    |
+| React A11y          | [documentation/react-a11y.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/react-a11y.md)                                                                                          |
+| React Hooks         | [documentation/react-hooks.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/react-hooks.md)                                                                                        |
+| TypeScript          | [documentation/typescript.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/typescript.md)                                                                                          |
+| Using with Prettier | [documentation/with-prettier.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/with-prettier.md)                                                                                    |
+| Migration Guide     | [documentation/MIGRATION.md](https://github.com/merkle-open/eslint-config/blob/master/documentation/MIGRATION.md)                                                                                            |
 
 ## Contributing
 
@@ -307,8 +299,6 @@ See the [Migration Guide](https://github.com/merkle-open/eslint-config/blob/mast
 
 - [Merkle](https://www.merkleinc.ch/)
 - [ESLint](https://github.com/eslint/eslint) — [eslint.org](http://eslint.org/)
-- [Walmart](https://github.com/walmartlabs) — [eslint-config-walmart](https://github.com/walmartlabs/eslint-config-walmart)
-- [Airbnb](https://github.com/airbnb) — [JavaScript Style Guide](https://github.com/airbnb/javascript)
 
 ## License
 
