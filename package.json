@@ -59,12 +59,12 @@
   ],
   "devDependencies": {
     "@merkle-open/prettier-config": "2.0.1",
-    "@merkle-open/ts-config": "2.0.0",
-    "acorn": "8.15.0",
-    "eslint": "9.39.4",
+    "@merkle-open/ts-config": "2.0.1",
+    "acorn": "8.19.0",
+    "eslint": "9.39.5",
     "node-fetch": "2.7.0",
-    "npm-check-updates": "19.0.0",
-    "prettier": "3.8.1",
+    "npm-check-updates": "23.1.1",
+    "prettier": "3.9.10",
     "react": "18.3.1",
     "typescript": "6.0.3"
   },
@@ -78,14 +78,14 @@
     }
   },
   "dependencies": {
-    "@eslint/js": "9.39.4",
+    "@eslint/js": "9.39.5",
     "@stylistic/eslint-plugin": "4.4.1",
-    "@types/react": "18.3.28",
-    "eslint-plugin-import-x": "4.17.1",
+    "@types/react": "18.3.31",
+    "eslint-plugin-import-x": "4.18.1",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-react": "7.37.5",
     "eslint-plugin-react-hooks": "7.1.1",
-    "globals": "17.7.0",
-    "typescript-eslint": "8.62.0"
+    "globals": "17.14.0",
+    "typescript-eslint": "8.72.2"
   }
 }
